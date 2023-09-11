@@ -45,3 +45,8 @@ Nuestra tienda está dirigida a todas las personas que disfrutan de actividades 
 En nuestra tienda, creemos en la importancia de equiparse adecuadamente para disfrutar de manera segura y cómoda de la belleza de la naturaleza. Esperamos que encuentres todo lo que necesitas para tus próximas aventuras en nuestra tienda.
 
 ¡Gracias por visitarnos y disfruta de tus aventuras al aire libre!
+
+
+## Inspiraciones 
+- **"Ansilta" indumentaria técnica de montaña**:  https://www.ansilta.com/ .
+- **"Montagne" accesorios para camping, indumentaria para montañismo, trekking, running, urbano**: https://www.montagne.com.ar/ .
