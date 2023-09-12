@@ -46,5 +46,17 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 
 
 ## Inspiraciones 
-- **"Ansilta" indumentaria técnica de montaña**:  https://www.ansilta.com/ .
-- **"Montagne" accesorios para camping, indumentaria para montañismo, trekking, running, urbano**: https://www.montagne.com.ar/ .
+
+- *Ansilta, indumentaria técnica de montaña*:  https://www.ansilta.com/ 
+
+- *Montagne, accesorios para camping, indumentaria de montañismo, trekking, running, urbano*: https://www.montagne.com.ar/ 
+
+- *Salomon, calzado, ropa y accesorios para trail running, senderismo o montañismo*:
+https://salomonstore.com.ar/ 
+
+- *Universo Aventura, multimarca de productos para deportes extremos*: https://www.universoaventura.com.ar/
+
+- *Scandinavian, multimarca de productos técnicos de ski, snowboard, indumentaria y accesorios para la vida al aire libre*: https://www.scandinavian.com.ar/ 
+
+Elegimos estos sitios webs ya que los productos que ofrecen son semejantes a los de nuestro e-commerce. Nos inspiramos en sus funcionalidades como carrito de compras, formulario de ingreso, carrusel de imágenes. Además, en la estética similar que presentan. 
+
