@@ -44,6 +44,18 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 
 ¡Gracias por visitarnos y disfruta de tus aventuras al aire libre!
 
+## Nosotros
+*Rocio Martinez:*
+
+*Juan Manuel Francesconi:*
+
+*Josefina Eberhardt:*
+
+*Matias Leglise:*
+
+*Camila Gon:*
+
+*Andrea Toledo:*
 
 ## Inspiraciones 
 
