@@ -51,7 +51,7 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 
 *Josefina Eberhardt:*
 
-*Matias Leglise:*
+*Matias Leglise:* ¡Hola! Mi nombre es Mati, tengo 30 años, soy de Coronel Brandsen, provincia de Buenos Aires, aunque ya hace 5 años que me mude por trabajo a la hermosa ciudad de La Plata, lugar donde naci (o ciudad e las diagonales como le llaman algunos) ya que empece a trabajar en Sancor Salud. Tengo 6 hermanos y unos cuantos sobrinos. Si bien tuve trabajos muy variados y soy estudiante avanzado de la carrera de Derecho, me considero un "geek" lo que segun google es "persona fascinada por la tecnología y la informática", todo lo que tenga que ver con formatear, armar, desarmar casi cada dispositivo que pasaba por mis manos, nunca se me paso por la cabeza la programacion porque lo asimilaba a algo con una complejidad mayor a mi entendimiento lo cual hoy cambio, ya que pasa de ser un imposible a una meta. 
 
 *Camila Gon:* vivo en Rafaela, Santa Fe pero nací en Humberto I. Soy de julio del '93, fan de los michis (porque son los seres más lindos y esponjosos que existen) y disfruto de jugar a los videojuegos (sobre todo los de survival horror). Soy Licenciada en Comunicación Social, estudié un año y medio de diseño UX/UI y actualmente también estoy en tercer año de Inglés. Disfruto estar y aprendo todos los días de mis hermanos Alan y Alexis y de mi novio Lucas, a quienes, junto a mi mamá, les debo mucho de mis progresos. 
 
