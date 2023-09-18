@@ -55,7 +55,7 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 
 *Camila Gon:* vivo en Rafaela, Santa Fe pero nací en Humberto I. Soy de julio del '93, fan de los michis (porque son los seres más lindos y esponjosos que existen) y disfruto de jugar a los videojuegos (sobre todo los de survival horror). Soy Licenciada en Comunicación Social, estudié un año y medio de diseño UX/UI y actualmente también estoy en tercer año de Inglés. Disfruto estar y aprendo todos los días de mis hermanos Alan y Alexis y de mi novio Lucas, a quienes, junto a mi mamá, les debo mucho de mis progresos. 
 
-*Andrea Toledo:*
+*Andrea Toledo:* ¡Hola! Soy Andrea y resido en San Miguel de Tucumán, Tucumán. Durante más de una década, me desempeñé como Técnica en Higiene y Seguridad Laboral. Sin embargo, tomé la decisión de emprender un nuevo camino en el mundo IT. Recientemente, completé un curso de Testing QA Manual y ahora estoy embarcada en esta emocionante aventura, con el apoyo incondicional de mi novio y mis padres.
 
 ## Inspiraciones 
 
