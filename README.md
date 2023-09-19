@@ -47,7 +47,7 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 ## Nosotros
 *Rocio Martinez:* Hola soy Rocío, me gusta que me digan Ro, actualmente vivo en Rafaela, Santa Fe. Pero siempre viví en los pueblos cercanos a Rafaela. Disfruto de la naturaleza, me gusta tocar la guitarra como hobby, ir a recitales y hacer escapadas con mis amigos a conocer distintos lugares, amo viajar. Me apasiona todo lo de desarrollo desde que empecé a investigar un poco y este año comencé la tecnicatura en programación en la universidad UTN de Rafaela.
 
-*Juan Manuel Francesconi:*
+*Juan Manuel Francesconi:* ¡Hola! Me llamo Juan, tengo 23 años y soy de Rafaela, Santa Fe. Estudio una tecnicatura en Programacion en la UTN, trabajo en la panaderia de mi familia, si les gustan los Pan Dulce o Pan del Cielo en las fiestas seguramente nos conozcan, es Colsani. Me gusta mucho tocar la guitarra, el basquet (mido 2 metros) y los videojuegos. 
 
 *Josefina Eberhardt:*
 
