@@ -49,7 +49,7 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 
 *Juan Manuel Francesconi:* ¡Hola! Me llamo Juan, tengo 23 años y soy de Rafaela, Santa Fe. Estudio una tecnicatura en Programacion en la UTN, trabajo en la panaderia de mi familia, si les gustan los Pan Dulce o Pan del Cielo en las fiestas seguramente nos conozcan, es Colsani. Me gusta mucho tocar la guitarra, el basquet (mido 2 metros) y los videojuegos. 
 
-*Josefina Eberhardt:*
+*Josefina Eberhardt:* ¡Hola! Soy Josefina, tengo 25 años. Vivo en Rafaela, Santa Fe. Soy una persona muy familiera, me gusta mucho viajar y disfruto cocinar para mi familia. Mi actividad favorita en la vida es jugar con mi hija, quien es mi mayor motivación. Hace un tiempito que vengo adentrandome en el mundo de la programación, lo encuentro divertido y desafiante. 
 
 *Matias Leglise:* ¡Hola! Mi nombre es Mati, tengo 30 años, soy de Coronel Brandsen, provincia de Buenos Aires, aunque ya hace 5 años que me mude por trabajo a la hermosa ciudad de La Plata, lugar donde naci (o ciudad e las diagonales como le llaman algunos) ya que empece a trabajar en Sancor Salud. Tengo 6 hermanos y unos cuantos sobrinos. Si bien tuve trabajos muy variados y soy estudiante avanzado de la carrera de Derecho, me considero un "geek" lo que segun google es "persona fascinada por la tecnología y la informática", todo lo que tenga que ver con formatear, armar, desarmar casi cada dispositivo que pasaba por mis manos, nunca se me paso por la cabeza la programacion porque lo asimilaba a algo con una complejidad mayor a mi entendimiento lo cual hoy cambio, ya que pasa de ser un imposible a una meta. 
 
