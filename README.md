@@ -45,7 +45,7 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 ¡Gracias por visitarnos y disfruta de tus aventuras al aire libre!
 
 ## Nosotros
-*Rocio Martinez:*
+*Rocio Martinez:* Hola soy Rocío, me gusta que me digan Ro, actualmente vivo en Rafaela, Santa Fe. Pero siempre viví en los pueblos cercanos a Rafaela. Disfruto de la naturaleza, me gusta tocar la guitarra como hobie, ir a recitales y hacer escapadas con mis amigos a conocer distintos lugares, amo viajar. Me apasiona todo lo de desarrollo desde que empecé a investigar un poco y este año comencé la tecnicatura en programación en la universidad UTN de rafaela.
 
 *Juan Manuel Francesconi:*
 
