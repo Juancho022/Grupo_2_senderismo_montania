@@ -72,5 +72,7 @@ https://salomonstore.com.ar/
 
 Elegimos estos sitios webs ya que los productos que ofrecen son semejantes a los de nuestro e-commerce. Nos inspiramos en sus funcionalidades como carrito de compras, formulario de ingreso, carrusel de imágenes. Además, en la estética similar que presentan. 
 
-## Tablero
+## Tableros
 https://www.figma.com/file/JErK4RRbHUTOJBHhXUsjlQ/Grupo-2---Proyecto?type=whiteboard&node-id=0-1&t=CW0wbQPGv4fV6v6l-0 
+
+https://trello.com/b/JhTLTmVy/grupo2senderismomontania
