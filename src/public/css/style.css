@@ -9,6 +9,7 @@ html {
     font-size: 62.5%;  
 }
 
+/* HERO STYLES */
 main section#hero {
     position: relative;
     width: 100%;
@@ -29,6 +30,7 @@ main section div#rightBox {
     top: 251px;
     left: 780px;
     padding-right: 40px;
+    width: auto;
 }
 
 main section div span#heroTitle {
@@ -50,15 +52,34 @@ button#buttonHero {
     width: max-content;
 }
 
-button#buttonHero:hover{
+main section button#buttonHero:hover{
     background-color: rgb(0, 0, 0);
     color: rgb(239, 227, 89);
     cursor: pointer;
     border: 1px solid rgb(0, 0, 0);
 }
 
-
-section.benefits {
+/* BENEFITS STYLES */
+main section.benefits {
+    display: flex;
     background-color: black;
+    flex-direction: row;
+    align-items: center;
+    color: aliceblue;
+    justify-content: center;
+    font-size: 1.6rem;
 }
+
+section.benefits #delivery, #personalize, #creditCard, #productReturn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 16px;
+}
+
+section.benefits span#titleDelivery, span#titlePersonalize, span#titlecreditCard, span#titleProductReturn{
+    color: #EFC84C;
+    font-weight: 800;
+}
+
 
