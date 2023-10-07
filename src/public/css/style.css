@@ -60,21 +60,27 @@ main section button#buttonHero:hover{
 }
 
 /* BENEFITS STYLES */
+main section.benefits span {
+    width: 100%;
+}
+
 main section.benefits {
     display: flex;
+    flex-wrap: wrap;
     background-color: black;
     flex-direction: row;
     align-items: center;
     color: aliceblue;
     justify-content: center;
     font-size: 1.6rem;
+    padding-left: 20px;
 }
 
 section.benefits #delivery, #personalize, #creditCard, #productReturn {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 16px;
+    margin: 30px;
 }
 
 section.benefits span#titleDelivery, span#titlePersonalize, span#titlecreditCard, span#titleProductReturn{
@@ -83,3 +89,67 @@ section.benefits span#titleDelivery, span#titlePersonalize, span#titlecreditCard
 }
 
 
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+    display: flex;
+    position: relative;
+    top: 29px;
+    left: -30px; 
+}
+
+
+
+@media (max-width: 480px) {
+
+    main section#hero {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+    }
+
+    main section img#heroImage {
+        width: 992px;
+        height: auto;
+        background-size: cover;
+        position: relative;
+        left: -200px;
+    }
+    
+    main section div#rightBox {
+        display: flex;
+        flex-direction: column;
+        color: azure;
+        position: absolute;
+        top: 77px;
+        left: 40px;
+        padding-right: 74px;
+        width: 100%;
+    }
+    
+    main section div span#heroTitle {
+        font-size: 2.4rem;
+    }
+    
+    main section div p#paragraph {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        font-weight: 200;
+    }
+    
+    button#buttonHero {
+        border: 1px solid white;
+        background: none;
+        color: inherit;
+        font-size: 1.6rem;
+        padding: 10px;
+        margin-top: 10px;
+        width: max-content;
+    }
+
+    main section.benefits {
+        display: none;
+    }
+
+
+}
