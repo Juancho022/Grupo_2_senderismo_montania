@@ -26,10 +26,36 @@ main section div#rightBox {
     flex-direction: column;
     color: azure;
     position: absolute;
-    top: 65px;
-    left: 196px;
+    top: 251px;
+    left: 780px;
+    padding-right: 40px;
 }
 
+main section div span#heroTitle {
+    font-size: 5rem;
+}
+
+main section div p#paragraph {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+button#buttonHero {
+    border: 1px solid white;
+    background: none;
+    color: inherit;
+    font-size: 1.6rem;
+    padding: 10px;
+    margin-top: 10px;
+    width: max-content;
+}
+
+button#buttonHero:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(239, 227, 89);
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+}
 
 
 section.benefits {
