@@ -1,7 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;  
+}
+
+main section#hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+main section img#heroImage {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+main section div#rightBox {
+    display: flex;
+    flex-direction: column;
+    color: azure;
+    position: absolute;
+    top: 65px;
+    left: 196px;
+}
+
+
+
 section.benefits {
     background-color: black;
 }
 
-span {
-    color: blueviolet;
-}
