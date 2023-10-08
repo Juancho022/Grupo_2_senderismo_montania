@@ -1,0 +1,228 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  main section.card-product {
+    top: 0px;
+    left: 0px;
+    width: 375px;
+    height: 930px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  div.card-image {
+    top: 126px;
+    left: 36px;
+    width: 146px;
+    height: 244px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 3px 6px #00000029;
+    border-radius: 33px 0px 0px 33px;
+    opacity: 1;
+  }
+
+  div.card-image img {
+    width: 100%;
+  }
+
+  h1 {
+    top: 126px;
+    left: 194px;
+    width: 113px;
+    height: 60px;
+    text-align: left;
+    font: normal normal bold 24px/27px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    font: Open Sans, bold;
+  }
+
+  div p.choice-green {
+    top: 194px;
+    left: 192px;
+    width: 21px;
+    height: 21px;
+    background: #358D67 0% 0% no-repeat padding-box;
+    border: 3px solid #C7C7C7;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  div p.choice-yelow {
+    top: 196px;
+    left: 219px;
+    width: 21px;
+    height: 21px;
+    background: #EFC84C 0% 0% no-repeat padding-box;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  div p.total-quantity {
+    top: 223px;
+    left: 192px;
+    width: 68px;
+    height: 20px;
+    text-align: left;
+    font: normal normal normal 14px/28px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+
+  main section div .total-quantity {
+    top: 223px;
+    left: 299px;
+    width: 9px;
+    height: 18px;
+    text-align: left;
+    font: normal normal bold 14px/28px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+
+  main section div button.submit-less {
+    top: 226px;
+    left: 270px;
+    width: 17px;
+    height: 12px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  main section div p.total-quantity-number {
+    top: 223px;
+    left: 299px;
+    width: 9px;
+    height: 18px;
+    text-align: left;
+    font: normal normal bold 14px/28px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+
+  main section div button.submit-more {
+    top: 226px;
+    left: 321px;
+    width: 17px;
+    height: 12px;
+    background: #D3573C 0% 0% no-repeat padding-box;
+    border: 1px solid #D3573C;
+    color: #FFFFFF;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  main section div p.price {
+    top: 246px;
+    left: 192px;
+    width: 103px;
+    height: 33px;
+    text-align: left;
+    font: normal normal bold 24px/67px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+
+  main section div button.add-to-cart {
+    top: 284px;
+    left: 192px;
+    width: 128px;
+    height: 39px;
+    background: #000000 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+
+  main section div button.add-to-fav {
+    top: 331px;
+    left: 192px;
+    width: 128px;
+    height: 39px;
+    border: 1px solid #000000;
+    opacity: 1;
+  }
+
+  .info-buy {
+    top: 385px;
+    left: 97px;
+    width: 223px;
+    height: 38px;
+    text-align: left;
+    font: normal normal normal 14px/19px Open Sans;
+    letter-spacing: 0px;
+    color: #7EC989;
+    opacity: 1;
+  }
+
+  .info-buy p i {
+    top: 392px;
+    left: 48px;
+    width: 30px;
+    height: 24px;
+    opacity: 1;
+   }
+
+  main section div.product-description {
+    top: 436px;
+    left: 38px;
+    width: 300px;
+    height: 264px;
+    text-align: left;
+    font: normal normal normal 16px/22px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+
+  main section div.custome-product {
+    top: 720px;
+    left: 37px;
+    width: 301px;
+    height: 19px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+
+  main section div p.detail-1 {
+    top: 746px;
+    left: 37px;
+    width: 190px;
+    height: 5px;
+    background: #EFC84C 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  main section div p.detail-2 {
+    top: 746px;
+    left: 213px;
+    width: 125px;
+    height: 5px;
+    background: #E9E9E9 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  main section div.specific-description p {
+    top: 762px;
+    left: 35px;
+    width: 303px;
+    height: 57px;
+    text-align: left;
+    font: normal normal normal 14px/19px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+
