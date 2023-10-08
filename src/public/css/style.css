@@ -27,18 +27,18 @@ main section div#rightBox {
     flex-direction: column;
     color: azure;
     position: absolute;
-    top: 251px;
-    left: 780px;
+    top: 30%;
+    left: 50%;
     padding-right: 40px;
-    width: auto;
+    width: 50%;
 }
 
 main section div span#heroTitle {
-    font-size: 5rem;
+    font-size: 4vw;
 }
 
 main section div p#paragraph {
-    font-size: 2rem;
+    font-size: 1.6vw;
     font-weight: 200;
 }
 
@@ -46,7 +46,7 @@ button#buttonHero {
     border: 1px solid white;
     background: none;
     color: inherit;
-    font-size: 1.6rem;
+    font-size: 1.4vw;
     padding: 10px;
     margin-top: 10px;
     width: max-content;
@@ -69,12 +69,12 @@ div.title2 {
 }
 
 div.title2 p{
-    font-size: 1.6rem;
+    font-size: 1.6vw;
     font-weight: 500;
 }
 
 div.title2 h2{
-    font-size: 3.2rem;
+    font-size: 2.4vw;
     font-weight: 500;
 }
 
@@ -92,7 +92,7 @@ main section.benefits {
     align-items: center;
     color: aliceblue;
     justify-content: center;
-    font-size: 1.6rem;
+    font-size: 1.5vw;
     padding-left: 20px;
 }
 
@@ -122,7 +122,7 @@ section#cardsHome  {
     width: 100%;
     flex-wrap: wrap;
     padding: 15px;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 section#cardsHome div.card {
@@ -156,24 +156,25 @@ section#cardsHome div.card div#imgBackpack {
 }
 
 p#Senderism {
-    font-size: 1.6rem;
+    font-size: 1.4vw;
 }
 
 h2#backpackPeak {
-    font-size: 3.2rem;
+    font-size: 2.8vw;
     border-bottom: 6px solid #D3573C;
-    width: 282px;
     margin-bottom: 16px;
 }
 
 span#backpackDescription {
-    font-size: 2rem;
+    font-size: 1.8vw;
     height: auto;
 }
 
 p#cost {
-    font-size: 3.2rem;
+    font-size: 2.8vw;
     font-weight: 800;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 section#cardsHome div.card button#buttonCard {
