@@ -7,14 +7,8 @@
 header {
     background-color: rgba(0, 0, 0, 0.54);
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-}
-
-header div.top-header {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
+    display:flex;
+    justify-content: space-between;
 }
 
 header div.logo img {
@@ -23,67 +17,39 @@ header div.logo img {
     margin-left: 10px;
 }
 
-header div.search {
-    margin-left: auto;
+header div.right-elements{
+    display: flex;
+    align-self: flex-end;
+    margin-right: 15px;
 }
 
+header div.burguer-menu i,
 header div.search i {
     color: #EFC84C;
     width: 30px;
     height: 30px;
-    text-align: center;
+    text-align: right;
 }
 
-header div.burguer-menu i {
-    color: #EFC84C;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
-
-
-header nav .nav-bar,
-.icon-bar-top {
+header nav{
     display: none;
 }
-
 header ul {
-    display: flex;
-}
-
-header ul li {
     list-style-type: none;
-    padding: 0 30px;
 }
 
-header ul li a,
-ul div.icon {
+header ul a{
     text-decoration: none;
-    color: #EFC84C;
-    display: inline-flex;
+    color:#EFC84C;
+    display: inline-block;
     font-size: 16px;
-    padding: 0 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 481px) {
-    header div.top-header {
-        align-items: center;
-        justify-content: space-between;
-    }
-
     header div.logo img {
         width: 139px;
         height: 59px;
-    }
-
-    header nav .nav-bar,
-    .icon-bar-top {
-        display: inline-flex;
-    }
-
-    header div.search,
-    header div.burguer-menu {
-        display: none;
     }
 
 }
