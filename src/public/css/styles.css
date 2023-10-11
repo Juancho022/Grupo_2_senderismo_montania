@@ -38,6 +38,59 @@ header nav.center-bar {
     display: none;
 }
 
+footer {
+    background-color: #000;
+    display: flex;
+}
+
+footer div.copyright{
+    display: flex;
+    width: 70%;
+}
+
+
+footer div.copyright p {
+    font-family: "Open Sans";
+    font-size: 12px;
+    color: #EFC84C;
+    text-align: left;
+}
+
+
+
+footer div.social-media-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:20%;
+}
+
+footer div.social-media-icons a{
+    display:flex;
+    text-decoration: none;
+}
+
+footer div.social-media-icons i {
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    transition: all .4s ease-in-out;
+}
+
+footer div.social-media-icons a:hover{
+    transform: scale(1.2);
+}
+
+footer div.form-suscription {
+    display: none;
+}
+
+
 @media (min-width: 768px) {
     header div.logo img {
         width: 139px;
@@ -52,17 +105,19 @@ header nav.center-bar {
         display: flex;
         align-items: center;
     }
-    
-    header  ul {
+
+    header ul {
         list-style-type: none;
         display: flex;
     }
-    
-    header ul  li {
+
+    header ul li {
+        font-family: "Open Sans";
         font-size: 1.6vw;
         margin: 0 15px;
+        transition: all .4s ease-in-out;
     }
-    
+
     header nav.right-bar {
         display: flex;
         justify-content: space-between;
@@ -70,17 +125,77 @@ header nav.center-bar {
         align-self: center;
         margin-right: 10px;
     }
-    
-    header ul  a {
+
+    header ul a {
         text-decoration: none;
         color: #EFC84C;
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans";
+        font-size: small;
     }
-    
+
+    header ul li:hover{
+        transform: scale(1.2);
+    }
+
     header nav.right-bar i {
         color: #EFC84C;
         font-size: 18px;
         margin-right: 12px;
     }
 
+    footer div.form-suscription p {
+        color:#EFC84C;
+        margin-bottom: 10px;
+        font-family: "Open Sans";
+        text-align: center;
+        font-size:small;
+    }
+
+    footer div.form-suscription {
+        margin-top: 5px;
+        display: flex;
+    }
+
+    footer div.form-suscription input {
+        background-color: #000;
+        border: none;
+        margin-bottom: 10px;
+        border-bottom: solid 1px white;
+        text-decoration: underline;
+    }
+
+    footer div.form-suscription input::placeholder {
+        color: white;
+        font-size: 10px;
+        font-family: "Open Sans";
+    }
+
+    footer div.form-suscription button {
+        border: 1px solid #EFC84C;
+        border-radius: 11px;
+        padding: 3px;
+        cursor: pointer;
+        background-color: #000;
+        font-family: "Open Sans";
+        color: white;
+        font-size: 10px;
+    }
+    footer div.form-suscription{
+        width: 40%;
+    }
+
+    footer div.copyright{
+        width: 40%;
+        cursor: pointer;
+    }
+
+    footer div.copyright p{
+        text-align: center;
+        align-self:center;
+    }
+
+    footer div.social-media-icons{
+        width: 20%
+    }
+    
 }
