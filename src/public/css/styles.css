@@ -767,7 +767,7 @@ section#cardsHome div.card button.buttonCard:hover {
     color: #EFC84C;
     opacity: 1;
 }
-button, #button-1, #button-2 , #button-3 , #button-4   
+main section.cards button, #button-1, #button-2 , #button-3 , #button-4   
  {
     position: relative;
     top: 25px;
