@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b373cc5067.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/stylesCart.css">
+
 </head>
+
 <body>
-    <header>
+        <section class="product-list">
+            <h5>Productos > Carrito de compras</h5>
+            <div class="chosen-product">
+                <h4 class="name-product">MOCHILA PEAK</h4>
+                <img src="\images\mochila1.png" alt="mochila1" class="backpack">
+                <p class="color">Sea green</p>
+                <div class="product-quantity">
+                    <input type="number" value="1" min="1" max="10">
+                    <button class="trash-can"><i class="fa fa-trash"></i></button>
+                </div>
+                <button class="modify">Modificar</button>
+            </div>
 
-    </header>
-    <main>
+            <div class="chosen-product">
+                <h4 class="name-product">REMERA TÉRMICA</h4>
+                <img src="\images\remera-térmica.png" alt="remera-térmica" class="t-shirt">
+                <p class="waist">Talle L</p>
+                <div class="product-quantity">
+                    <input type="number" value="1" min="1" max="10">
+                    <button class="trash-can"><i class="fa fa-trash"></i></button>
+                </div>
+                <button class="modify">Modificar</button>
+            </div>
+        </section>
 
+        <section>
+            <form action="/" method="POST" class="form">
+                <label class="discount-code" for="discount-code">¿Tenés un código de descuento?</label>
+                <textarea name="discount-code" id="discount-code"></textarea>
+                <button class="apply" type="submit">Aplicar</button>
+            </form>
+        </section>
+
+        <section>
+            <div>
+                <ul>
+                    <li><span class="product-count">2 productos</span></li>
+                    <li><span class="product-price">$237.00</span></li>
+                    <li><span class="shipment">Envío</span></li>
+                    <li><span class="shipping-type">Gratis</span></li>
+                    <li><span class="total">TOTAL</span></li>
+                    <li><span class="product-price-total">$237.00</span></li>
+                </ul>
+                <button class="go-pay" type="submit">IR A PAGAR</button>
+            </div>
+        </section>
     </main>
-    <footer>
-
-    </footer> 
-    
 </body>
+
 </html>
