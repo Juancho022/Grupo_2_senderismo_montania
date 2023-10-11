@@ -75,9 +75,7 @@ footer div.social-media-icons i {
     width: 30px;
     height: 30px;
     text-decoration: none;
-    color: black;
-    background-color: white;
-    border-radius: 50%;
+    color: white;
     text-align: center;
     transition: all .4s ease-in-out;
 }
@@ -88,6 +86,7 @@ footer div.social-media-icons a:hover{
 
 footer div.form-suscription {
     display: none;
+    margin-left: 10px;
 }
 
 
@@ -135,6 +134,7 @@ footer div.form-suscription {
 
     header ul li:hover{
         transform: scale(1.2);
+        font-weight: bold;
     }
 
     header nav.right-bar i {
