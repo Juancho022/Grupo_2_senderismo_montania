@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/styles.css" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesForm.css">
 </head>
 <body>
     <header>
-        <div class="logo">
+          <div class="logo">
             <img src="/images/peaklogo.png" alt="Peak's logo">
         </div>
         <div class="right-elements">
@@ -36,8 +39,17 @@
         </nav>
 
     </header>
-    <main>
-
+    <main class="login">
+        <img src="images/bg-signup.jpg" />
+        <div id="iniciar-sesion">Iniciar Sesión</div>
+        <div id="descripcion">Para guardar elementos como favoritos o realizar compras</div>
+        <div>
+            <form action="/" method="POST">
+                <input type="text" name="user" placeholder="Email">
+                <input type="password" name="pass" placeholder="Contraseña">
+                <input type="submit" value="Iniciar Sesion">
+            </form>
+        </div>
     </main>
     <footer>
         <div class="form-suscription">
@@ -56,8 +68,6 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-    </footer> 
-    
+        </div>    </footer>
 </body>
 </html>
