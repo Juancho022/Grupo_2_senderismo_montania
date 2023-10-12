@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
+    <title>Registro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesForm.css">
     <link href="/css/styles.css" rel="stylesheet">
-    <title>Document</title>
 </head>
 <body>
     <header>
@@ -37,8 +40,20 @@
 
 
     </header>
-    <main>
-
+    <main class="login">
+        <img src="images/bg-signup.jpg" />
+        <div id="crear-cuenta">Crear Cuenta</div>
+        <div id="descripcion">Comenzá a vivir la aventura de llegar a la cima</div>
+        <div>
+            <form action="/" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="text" name="apellido" placeholder="Apellido">
+                <input type="email" name="correo" placeholder="Correo Electrónico">
+                <input type="password" name="contrasena" placeholder="Contraseña">
+                <input type="password" name="repetir-contrasena" placeholder="Repetir Contraseña">
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
     </main>
     <footer>
         <div class="form-suscription">
