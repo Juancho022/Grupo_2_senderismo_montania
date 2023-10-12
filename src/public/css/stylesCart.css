@@ -146,13 +146,13 @@ padding-right: 12px;
 
 
 
-body {
-    /*dejo*/
+/*body {
+    dejo
     background-color:#FFFFFF;
 }
 
 h5 {
-    /* dejo */
+    /* dejo 
     top: 98px;
     left: 36px;
     width: 268px;
@@ -251,7 +251,7 @@ h5 {
 
     .icon-search,
     .icon-menu {
-        /* dejo */
+        /* dejo 
         color: #EFC84C;
         width: 10%;
     }
@@ -278,7 +278,7 @@ h5 {
     color: #000000;
     opacity: 0.59;
 
-}
+}*/
 
 /*seccion del detalle de pago
 
@@ -461,4 +461,4 @@ h5 {
     color: #D3573C;
     background-color: #FFFFFF;
     font-size: 20px;
-}
+}*/
