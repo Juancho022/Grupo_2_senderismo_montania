@@ -1,11 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a PEAK</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Bienvenidos Peak</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="/images/peaklogo.png" alt="Peak's logo">
+        </div>
+        <div class="right-elements">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="burguer-menu">
+                <a class="burguer"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+
+        <nav class="center-bar">
+            <ul class="nav-bar">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="#">OUTLET</a></li>
+                <li><a href="#">DEPORTES</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <nav class="right-bar">
+            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+            <div class="icon"><a href="#"><i class="fa-solid fa-user"></i></a></div>
+            <div class="icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+        </nav>
+
+    </header>
+    <main>
+        <main>
+            <!-- HERO SECTION STARTS -->
+                <section id="hero">
+                    <img src="\images\hero.jpg" alt="Personas sentadas de espalda a un acantilado" id="heroImage">
+                    <div id="rightBox">
+                        <span id="heroTitle"> Si llegaste hasta acá, llegaste a la cima</span>
+                        <p id="paragraph">
+                            En Peak ofrecemos una amplia gama de productos y servicios diseñados para los amantes del senderismo, la montaña y las actividades al aire libre. Nos enorgullece brindar a nuestros clientes productos de alta calidad y equipos confiables para que puedan disfrutar al máximo de sus aventuras en la naturaleza.
+                        </p>
+                        <button id="buttonHero">
+                            Elegí tu equipamiento
+                        </button>
+                    </div>
+                </section>
+        
+                <section class="benefits">
+                    <div id="delivery">
+                        <i class="fas fa-truck truck" style="color: #ffffff;"></i>
+                        <span id="titleDelivery">Envío gratis</span>
+                        <span>Para compras mayores a $70.000</span>
+                    </div>
+                    <div id="personalize">
+                        <i class="far fa-heart" style="color: #ffffff;"></i>
+                        <span id="titlePersonalize">Personalizá</span>
+                        <span>tu equipamiento</span>
+                    </div>
+                    <div id="creditCard">
+                        <i class="far fa-credit-card" style="color: #ffffff;"></i>
+                        <span id="titlecreditCard">Cuotas</span>
+                        <span> sin interés según Banco</span>
+                    </div>
+                    <div id="productReturn">
+                        <i class="fas fa-exchange-alt" style="color: #ffffff;"></i>
+                        <span id="titleProductReturn">Devoluciones</span>
+                        <span>gratis dentro de los 20 días</span>
+                    </div>
+                </section>
+                <div class="title2">
+                    <p>Destacados</p>
+                    <h2> En Peak, la marca la dejás vos</h2>
+                </div>
+        
+                    
+            <!-- CARD SECTION STARTS -->
+                <section id="cardsHome">
+                    <div class="card">
+                        <div class="imgCards">
+                            <img src="images\backpack.png" alt="mochilaPeak">
+                        </div>
+                        <div class="cardDescription">
+                            <p class="category">Senderismo</p>
+                            <h2 class="productName">MOCHILA PEAK</h2>
+                            <span class="productDescription"> Incluye una funda especial y puerto de paso para una bolsa de hidratación, enganches y correas adicionales para sujetar equipo extra como bastones de senderismo. </span>
+                            <p class="cost">$150.000</p>
+                            <button class="buttonCard">
+                                Añadir al carrito
+                                <i class="far fa-heart favorite"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgCards">
+                            <img src="images\termic.png" alt="mochilaPeak">
+                        </div>
+                        <div class="cardDescription">
+                            <p class="category">Escalada</p>
+                            <h2 class="productName">REMERA TÉRMICA</h2>
+                            <span class="productDescription"> Fabricada con un tejido transpirable y de secado rápido que elimina la humedad de tu piel, evitando que te enfríes por la sudoración durante tus ascensos. </span>
+                            <p class="cost">$87.000</p>
+                            <button class="buttonCard">
+                                Añadir al carrito
+                                <i class="far fa-heart favorite"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+        <section>
+            <!--Section de Juan para la imagen del viejito -->
+        </section>
+        <br>
+        <br>
+        <section class="cards">                                   <!--Section de Juan para las ultimas 4 cards-->
+            <div class="card-nro1">
+                <img src="\images\shoes (0).png" alt="zapatillaNro1" class="shoesNro1" >
+                <i id="heart1"   class="far fa-heart"></i>
+                <p class="orange-line"></p>
+                <div class="description1"><b>BOTAS P22</b></div>
+                <br>
+                <p id="little-description" >Entresuela de EVA para absorber impactos.</p>
+                <p id="price-1"    class="price"><b>220.000$</b></p>
+                <button  id="button-1"><i  id="shop-cart"  class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="separate"></div>
+            <div class="card-nro2">
+                <img src="\images\shoes (1).jpg" alt="zapatillaNro2" class="shoesNro2">
+                <i id="heart2"   class="far fa-heart"></i>
+                <p class="orange-line"></p>
+                <div class="description2"><b>ZAPATILLAS BELL</b></div>
+                <br>
+                <p id="little-description">Suela de caucho con patron de agarre</p>
+                <p  id="price-2"   class="price"><b>174.056$</b></p>
+                <button id="button-2"><i id="shop-cart"  class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div id="separate-only-769"   class="separate"></div>
+            <div class="card-nro3">
+                <img src="\images\shoes (2).jpg" alt="zapatillaNro3" class="shoesNro3">
+                <i id="heart3"   class="far fa-heart"></i>
+                <p class="orange-line"></p>
+                <div class="description3"><b>BOTAS MAGIC</b></div>
+                <br>
+                <p id="little-description">Ajuste ceñido para un mayor control y precisión.</p>
+                <p id="price-3"      class="price"><b>185.670$</b></p>
+                <button  id="button-3"><i id="shop-cart"  class="fas fa-shopping-cart"></i></button>
+            </div>
+            <div class="separate"></div>
+            <div class="card-nro4">
+                <img src="\images\shoes (3).jpg" alt="zapatillaNro4" class="shoesNro4">
+                <i id="heart4"   class="far fa-heart"></i>
+                <p class="orange-line"></p>
+                <div class="description4"><b>Botas CBEST</b></div>
+                <br>
+                <p id="little-description">Cordones y sistemas de cierre de velcro</p>
+                <p id="price-4"     class="price"><b>124.890$</b></p>
+                <button  id="button-4"><i id="shop-cart"  class="fas fa-shopping-cart"></i></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+            <div class="form-suscription">
+            <form action="#" method="POST">
+                <p>Suscribite para recibir las mejores ofertas</p>
+                <input type="email" name="email" placeholder="Correo electrónico">
+                <button type="submit">Suscribirme</button>
+            </form>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
+        </div>
+        <div class="social-media-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </footer>
+
 </body>
+
 </html>
+
