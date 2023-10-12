@@ -1,18 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
+    <title>Registro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesForm.css">
+    <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="/images/peaklogo.png" alt="Peak's logo">
+        </div>
+        <div class="right-elements">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="burguer-menu">
+                <a class="burguer"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+
+        <nav class="center-bar">
+            <ul class="nav-bar">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="#">OUTLET</a></li>
+                <li><a href="#">DEPORTES</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <nav class="right-bar">
+            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+            <div class="icon"><a href="#"><i class="fa-solid fa-user"></i></a></div>
+            <div class="icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+        </nav>
+
 
     </header>
-    <main>
-
+    <main class="login">
+        <img src="images/bg-signup.jpg" />
+        <div id="crear-cuenta">Crear Cuenta</div>
+        <div id="descripcion">Comenzá a vivir la aventura de llegar a la cima</div>
+        <div>
+            <form action="/" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="text" name="apellido" placeholder="Apellido">
+                <input type="email" name="correo" placeholder="Correo Electrónico">
+                <input type="password" name="contrasena" placeholder="Contraseña">
+                <input type="password" name="repetir-contrasena" placeholder="Repetir Contraseña">
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
     </main>
     <footer>
+        <div class="form-suscription">
+            <form action="#" method="POST">
+                <p>Suscribite para recibir las mejores ofertas</p>
+                <input type="email" name="email" placeholder="Correo electrónico">
+                <button type="submit">Suscribirme</button>
+            </form>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
+        </div>
+        <div class="social-media-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
 
     </footer> 
     

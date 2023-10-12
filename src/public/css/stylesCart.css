@@ -145,14 +145,14 @@ padding-right: 12px;
 
 
 
-/*
+
 body {
-    dejo
-    background-color: #FFFFFF;
+    /*dejo*/
+    background-color:#FFFFFF;
 }
 
 h5 {
-    dejo
+    /* dejo */
     top: 98px;
     left: 36px;
     width: 268px;
@@ -251,7 +251,7 @@ h5 {
 
     .icon-search,
     .icon-menu {
-        dejo
+        /* dejo */
         color: #EFC84C;
         width: 10%;
     }
