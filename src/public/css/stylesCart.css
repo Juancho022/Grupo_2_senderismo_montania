@@ -254,5 +254,20 @@ section article div.billing button{
     padding:10px;
 }
 
+@media (max-width: 481px) {
+    section.product-list article.products {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    section.product-list article.products div.cost-delete p {
+        font-size: 24px;
+    }
+
+    img {
+        width: 50%;
+    }
+}
 
 
