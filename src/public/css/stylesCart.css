@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Open Sans, sans-serif;
 }
 
 h5 {
@@ -293,6 +294,13 @@ section.product-detail p{
 
 input.input{
     width:130px;
+}
+section.product-detail {
+    justify-content: center;
+}
+
+section.product-detail article.discount-product {
+    justify-content: center;
 }
 
 }
