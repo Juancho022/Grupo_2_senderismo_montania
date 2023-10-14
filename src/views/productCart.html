@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2? family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -16,103 +17,165 @@
 
 <body>
     <h5>Productos > Carrito de compras</h5>
-        <section class="product-list">
-            <article class="products">
-                <img src="images\mochila1.png" alt="Mochila Peak">
-                <div class="description">
-                    <p>
-                        MOCHILA PEAK
-                    </p>
-                    <div class="color-elements">
-                        <span class="color-text">
-                            Sea green
-                        </span>
-                        <div class="color">
-                        </div>
+    <section class="product-list">
+        <article class="products">
+            <img src="images\mochila1.png" alt="Mochila Peak">
+            <div class="description">
+                <p>
+                    MOCHILA PEAK
+                </p>
+                <div class="color-elements">
+                    <span class="color-text">
+                        Sea green
+                    </span>
+                    <div class="color">
                     </div>
-                    <button>
-                        Modificar
-                    </button>
                 </div>
-                <div class="product-quantity">
-                    <p>
-                        Cantidad
-                    </p>
+                <button>
+                    Modificar
+                </button>
+            </div>
+            <div class="product-quantity">
+                <p>
+                    Cantidad
+                </p>
+                <div>
+                    <div class="less">
+                        <p>
+                            -
+                        </p>
+                    </div>
                     <div>
-                        <div class="less">
-                            <p>
-                                -
-                            </p>
-                        </div>
-                        <div>
-                            <p class="quantity">
-                                1
-                            </p>
-                        </div>
-                        <div>
-                            <p class="more">
-                                +
-                            </p>
-                        </div>
+                        <p class="quantity">
+                            1
+                        </p>
                     </div>
-                </div>
-                <div class="cost-delete">
-                    <p>
-                        $150.000
-                    </p>
-                    <i class="fa fa-trash"></i>
-                </div>
-            </article>
-        </section>   
-
-        <section class="product-list">
-            <article class="products">
-                <img src="images\mochila1.png" alt="Mochila Peak">
-                <div class="description">
-                    <p>
-                        MOCHILA PEAK
-                    </p>
-                    <div class="color-elements">
-                        <span class="color-text">
-                            Sea green
-                        </span>
-                        <div class="color">
-                        </div>
-                    </div>
-                    <button>
-                        Modificar
-                    </button>
-                </div>
-                <div class="product-quantity">
-                    <p>
-                        Cantidad
-                    </p>
                     <div>
-                        <div class="less">
-                            <p>
-                                -
-                            </p>
-                        </div>
-                        <div>
-                            <p class="quantity">
-                                1
-                            </p>
-                        </div>
-                        <div>
-                            <p class="more">
-                                +
-                            </p>
-                        </div>
+                        <p class="more">
+                            +
+                        </p>
                     </div>
                 </div>
-                <div class="cost-delete">
-                    <p>
-                        $150.000
-                    </p>
-                    <i class="fa fa-trash"></i>
+            </div>
+            <div class="cost-delete">
+                <p>
+                    $150.000
+                </p>
+                <i class="fa fa-trash"></i>
+            </div>
+        </article>
+    </section>
+
+    <section class="product-list">
+        <article class="products">
+            <img src="images\remera-térmica.png" alt="Remera Térmica">
+            <div class="description">
+                <p>
+                    REMERA TÉRMICA
+                </p>
+                <div class="color-elements">
+                    <span class="color-text">
+                        Talle L
+                    </span>
                 </div>
-            </article>
-        </section>    
+                <button>
+                    Modificar
+                </button>
+            </div>
+            <div class="product-quantity">
+                <p>
+                    Cantidad
+                </p>
+                <div>
+                    <div class="less">
+                        <p>
+                            -
+                        </p>
+                    </div>
+                    <div>
+                        <p class="quantity">
+                            1
+                        </p>
+                    </div>
+                    <div>
+                        <p class="more">
+                            +
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cost-delete">
+                <p>
+                    $87.000
+                </p>
+                <i class="fa fa-trash"></i>
+            </div>
+        </article>
+    </section>
+
+    <section class="product-detail">
+        <article class="discount-product">
+            <div class="discount">
+
+                <div class="discount-code">
+                    <p>
+                        ¿Tenés un código de descuento?
+                    </p>
+
+
+                    <div class="apply-code">
+
+                        <form action="#" method="POST">
+                            <input class="input" type="text" name="code">
+                        </form>
+
+                        <button>
+                            Aplicar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="invoice-item">
+            <div class="billing">
+                <div class="products">
+                    <p> 2 productos</p>
+
+                <div class="price">
+                    <p>$237.000</p>
+                </div>
+                </div>
+                <div class="invoice-detail">
+                    <div class="shipment">
+                        <p>
+                            Envío
+                        </p>
+                    </div>
+                    <div class="shipping-type">
+                        <p>
+                            Gratis
+                        </p>
+                    </div>
+                </div>
+                <div class="total">
+                    <div>
+                        <p>
+                            TOTAL
+                        </p>
+                    </div>
+                    <div class="total-price">
+                        <p>
+                            $237.000
+                        </p>
+                    </div>
+                </div>
+                <button>
+                    IR A PAGAR
+                </button>
+            </div>
+        </article>
+    </section>
 
 
 
@@ -123,7 +186,7 @@
 
 
 
-            <!-- <div class="chosen-product">
+    <!-- <div class="chosen-product">
                 <h4 class="name-product">MOCHILA PEAK</h4>
                 <img src="\images\mochila1.png" alt="mochila1" class="backpack">
                 <p class="color">Sea green</p>
@@ -168,17 +231,17 @@
                 </ul>
                 <button class="go-pay" type="submit">IR A PAGAR</button>
             </div>
-        </section> -->
+        </section> 
     </main>
-    <footer>
+    /*<footer>
         <div class="form-suscription">
             <form action="#" method="POST">
                 <p>Suscribite para recibir las mejores ofertas</p>
                 <input type="email" name="email" placeholder="Correo electrónico">
                 <button type="submit">Suscribirme</button>
             </form>
-            </div>
-            
+        </div>
+
         </div>
         <div class="copyright">
             <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
@@ -188,8 +251,8 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
-    </footer> 
-    
+    </footer>-->
+
 </body>
 
 </html>

@@ -34,27 +34,27 @@ section.product-list article.products div.description {
     gap: 8px;
 }
 
-section.product-list article.products div.description p{
+section.product-list article.products div.description p {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-section.product-list article.products div.description span.color-text{
-color: #000000;
-opacity: 0.59;
+section.product-list article.products div.description span.color-text {
+    color: #000000;
+    opacity: 0.59;
 }
 
 section.product-list article.products div.description div.color-elements {
     display: flex;
 }
 
-section.product-list article.products div.description div.color-elements div.color{
-    width: 15px;
+section.product-list article.products div.description div.color-elements div.color {
+    width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: #358D67;
     margin-left: 16px;
-    }
+}
 
 section.product-list article.products div.description button {
     background: none;
@@ -72,13 +72,13 @@ section.product-list article.products div.product-quantity {
     align-items: center;
 }
 
-section.product-list article.products div.product-quantity div{
+section.product-list article.products div.product-quantity div {
     display: flex;
     align-items: center;
 }
 
 
-section.product-list article.products div.product-quantity div.less{
+section.product-list article.products div.product-quantity div.less {
     border: 1px solid #000000;
     border-radius: 7px;
     margin: 6px;
@@ -117,348 +117,142 @@ section.product-list article.products div.cost-delete {
     align-items: center;
 }
 
-section.product-list article.products div.cost-delete i{
+section.product-list article.products div.cost-delete i {
     margin-left: 64px;
     color: #D3563B;
     font-size: 24px;
 }
- 
-section.product-list article.products div.cost-delete p{
+
+section.product-list article.products div.cost-delete p {
     font-size: 2.4vw;
     font-weight: 600;
 }
 
 
-section.product-list article.products div p.quantity{
-margin-left: 8px;
-margin-right: 8px;
-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-border-radius: 7px;
-margin: 6px;
-padding-top: 2px;
-padding-bottom: 2px;
-padding-left: 12px;
-padding-right: 12px;
+section.product-list article.products div p.quantity {
+    margin-left: 8px;
+    margin-right: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    margin: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 
-
-
-
-
-/*body {
-    dejo
-    background-color:#FFFFFF;
-}
-
-h5 {
-    /* dejo 
-    top: 98px;
-    left: 36px;
-    width: 268px;
-    height: 19px;
-    text-align: left;
-    font: normal normal normal 14px/19px Open Sans;
-    letter-spacing: 1.05px;
-    color: #000000;
-    opacity: 1;
-    margin: 10px;
-    text-align: center;
-}
-
-.chosen-product {
-    display: block;
-    margin-left: 10%;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    top: 12px;
-    left: 36px;
-    width: 80%;
-    height: 171px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    opacity: 1;
-}
-
-.product_img {
-    align-items: center;
-    margin-top: 25px;
-    top: 170px;
-    left: 42px;
-    width: 62px;
-    height: 77px;
-    background: transparent url('img/Imagen 2.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-}
-
-.name-product {
-    top: 145px;
-    width: 181px;
-    height: 27px;
-    text-align: right;
-    margin-left: 10px;
-    justify-content: space-between;
-    font: normal normal bold 20px/67px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-}
-
-.product-quantity {
+section.product-detail {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    justify-content: flex-end;
-    align-items: flex-star;
-    align-items: center;
-    bottom: 90px;
-    right: 50px;
-}
-
-
-.product-quantity input {
-    width: 50px;
-    margin-right: 10px;
-}
-
-.modify {
-    top: -60px;
-    left: 60px;
-    width: 76px;
-    height: 23px;
-    background: transparent url('img/Modificar.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    display: flex;
+    justify-content: space-between;
+    margin: 16px;
     flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    align-items: flex-star;
-    align-items: center;
-    z-index: 1;
-    border-radius: 19px
 }
 
-
-@media (min-width: 361px) {
-
-    .icon-user,
-    .icon-card {
-        opacity: 0;
-    }
-
-    .icon-search,
-    .icon-menu {
-        /* dejo 
-        color: #EFC84C;
-        width: 10%;
-    }
-
-    header ul li a {
-        display: none;
-    }
-}
-
-
-.label {
-    display: block;
-    margin-bottom: 15px;
-}
-
-.product-count {
-    top: 643px;
-    left: 66px;
-    width: 101px;
-    height: 24px;
-    text-align: left;
-    font: normal normal normal 18px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.59;
-
-}*/
-
-/*seccion del detalle de pago
-
-.product-count {
+section.product-detail article.discount-product {
+    background-color: #D3563B;
     display: flex;
-    top: 643px;
-    left: 66px;
-    width: 101px;
-    height: 24px;
-    text-align: left;
-    font: normal normal normal 18px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.59;
+    justify-content: space-between;
+    width: 35%;
+
 }
 
-.product-price {
-    display: flex;
-    top: 643px;
-    left: 231px;
-    width: 82px;
-    height: 24px;
-    text-align: left;
-    font: normal normal normal 18px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.59;
-}
-
-.shipment {
-    top: 683px;
-    left: 66px;
-    width: 49px;
-    height: 24px;
-    /* UI Properties 
-    text-align: left;
-    font: normal normal normal 18px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.59;
-}
-
-.shipping-type {
-    top: 683px;
-    left: 231px;
-    width: 58px;
-    height: 24px;
-    text-align: left;
-    font: normal normal bold 18px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.59;
-}
-
-.total {
-    top: 739px;
-    left: 66px;
-    width: 77px;
-    height: 33px;
-    text-align: left;
-    font: normal normal bold 24px/67px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-}
-
-.product-price-total {
-    top: 739px;
-    left: 231px;
-    width: 103px;
-    height: 33px;
-    text-align: left;
-    font: normal normal bold 24px/67px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-}
-
-.go-pay {
-    /*boton ir a pagar
-    display: block;
-    margin-left: 10%;
-    top: 802px;
-    left: 36px;
-    width: 80%;
-    height: 39px;
-    background: #000000 0% 0% no-repeat padding-box;
-    opacity: 1;
-    text-align: center;
-    font: normal normal bold 11px/15px Open Sans;
-    letter-spacing: 0.55px;
-    color: #FFFFFF;
-    opacity: 1;
-}
-
-.apply {
-    /*boton aplicar
-    top: 537px;
-    left: 233px;
-    width: 94px;
-    height: 41px;
-    background: #D3563B 0% 0% no-repeat padding-box;
-    border-radius: 27px;
-    opacity: 1;
-    color: #FFFFFF
-}
-
-.label {
-    top: 520px;
-    left: 49px;
-    width: 129px;
-    height: 46px;
-    text-align: left;
-    font: normal normal normal 16px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-
-.color {
-    top: 179px;
-    left: 114px;
-    width: 82px;
-    height: 22px;
-    text-align: left;
-    font: normal normal normal 16px/22px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.59;
-}
-
-.waist {
-    top: 368px;
-    left: 115px;
-    width: 67px;
-    height: 22px;
-    text-align: left;
-    font: normal normal normal 16px/22px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.59;
-}
-
-.backpack {
-    align-items: center;
-    margin-top: 25px;
-    top: 170px;
-    left: 42px;
-    width: 62px;
-    height: 77px;
-}
-
-.t-shirt {
-    align-items: center;
-    margin-top: 25px;
-    top: 368px;
-    left: 36px;
-    width: 67px;
-    height: 77px;
-    background: transparent url('img/ropa2.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-}
-
-.discount-code {
-    margin-left: 10%;
-    top: 520px;
-    left: 49px;
-    width: 129px;
-    height: 46px;
-    text-align: left;
-    font: normal normal normal 16px/24px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-
-.trash-can {
-    color: #D3573C;
+section.product-detail article.discount-product div.discount {
     background-color: #FFFFFF;
-    font-size: 20px;
-}*/
+}
+
+section.product-detail article.discount-product div.discount div.discount-code p {
+    background-color: #FFFFFF;
+    text-align: left;
+    font-family: Open Sans;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+section.product-detail article.discount-product div.discount div.discount-code div.apply-code form {
+    background-color: #FFFFFF;
+    border: 1px solid #D3563B;
+    border-radius: 22px;
+    padding: 10px;
+    width: 260px;
+}
+
+section.product-detail article.discount-product div.discount button {
+    background-color: #D3563B;
+    justify-content: flex-end;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: Open Sans;
+    width: 120px;
+    height: 47px;
+    border-radius: 20px;
+    margin: 0px 10px;
+}
+
+input.input {
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+div.apply-code {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom:30px
+}
+
+section article div.billing{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+section article div.billing div{
+    box-sizing:boder-box;
+    display: flex;
+    gap:130px ;
+    padding:5px;
+   justify-content:space-between; 
+}
+
+section article div.billing div.products,
+section article div.billing div.price,
+section article div.billing div.shipment,
+section article div.billing div.shipping-type{
+    font-family: Open Sans;
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.80;
+}
+
+section article div.billing div.shipping-type{
+    font-weight:600
+    
+}
+
+section article div.billing div.total,
+section article div.billing div.total-price{
+     font-family: Open Sans;
+    font-size: 16px;
+    color: #000000;
+    font-weight:800;
+    
+}
+
+section article div.billing div.invoice-detail{
+    border-bottom-style:solid;
+    border-width: 0.8px;
+    
+}
+
+section article div.billing button{
+    background-color:#000000;
+    color:#FFFFFF;
+    font-size: 16px;
+    font-family: Open Sans;
+    padding:10px;
+}
+
+
+
