@@ -151,7 +151,6 @@ section.product-detail {
 }
 
 section.product-detail article.discount-product {
-    background-color: #D3563B;
     display: flex;
     justify-content: space-between;
     width: 35%;
@@ -188,6 +187,7 @@ section.product-detail article.discount-product div.discount button {
     height: 47px;
     border-radius: 20px;
     margin: 0px 10px;
+    border:none;
 }
 
 input.input {
@@ -262,12 +262,50 @@ section article div.billing button{
     }
 
     section.product-list article.products div.cost-delete p {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     img {
         width: 50%;
     }
+
+    section article div.billing{
+        margin-top:20px;
+}
+
+section.product-detail article.discount-product div.discount div.discount-code p {
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+    section.product-detail article.discount-product div.discount div.discount-code div.apply-code form {
+    width: 150px;
+        margin-right:10px;
+}
+    section.product-detail article.discount-product div.discount button{
+    font-size: 12px;
+    width: 100px;
+    height: 40px;
+}
+
+section.product-detail p{
+    font-size:14px;
+}
+
+input.input{
+    width:130px;
+}
+
+}
+
+
+
+
+@media(min-width: 769px){
+    
+section article div.billing{
+    margin-right:160px;
+
+}
 }
 
 
