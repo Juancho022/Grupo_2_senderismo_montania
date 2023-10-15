@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -39,27 +39,44 @@
             <div class="icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
         </nav>
     </header>
-
     <main>
-        <section id="hero">
+        <section id="sectionLogin">
             <img src="\images/bg-login.jpg" alt="Hombre mirando al horizonte" id="heroImage">
-            <div id="rightBox">
-                <span id="heroTitle">Crear Cuenta</span>
-                <p id="paragraph">
+            <div id="loginBox">
+                <span id="loginTitle">Crear Cuenta</span>
+                <p id="paragraphTitle">
                 Comenza a vivir la aventura de llegar a la cima                
                 </p>
-            <div id="form-register">
-                <form action="/" method="POST">
-                    <input type="text" name="nombre" placeholder="Nombre">
-                    <input type="text" name="apellido" placeholder="Apellido">
-                    <input type="email" name="correo" placeholder="Correo Electrónico">
-                    <input type="password" name="contrasena" placeholder="Contraseña">
-                    <input type="password" name="repetir-contrasena" placeholder="Repetir Contraseña">
-                    <input type="submit" value="Registrarse">
-                </form>
+            <div id="formLogin">
+                <form action="" method="POST">
+                    <div>
+                        <label>Nombre:</label>
+                        <input type="text" name="nombreUsuario">
+                    </div>
+                    <div>
+                        <label>Apellido:</label>
+                        <input type="text" name="apellidoUsuario">
+                    </div>
+                    <div>
+                        <label>Correo Electrónico:</label>
+                        <input type="email" name="emailUsuario">
+                    </div>
+                    <div>
+                        <label>Contraseña:</label>
+                        <input type="password" name="passwordusuario">
+                    </div>
+                    <div>
+                        <label>Repetir contraseña:</label>
+                        <input type="password" name="repetirContrasena">
+                    </div>   
+                        <button type="submit">Registrarse</button>
+                    </form>
+
             </div>
         </section>
     </main>
+
+
     <footer>
         <div class="form-suscription">
             <form action="#" method="POST">

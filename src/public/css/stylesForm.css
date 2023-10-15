@@ -1,73 +1,151 @@
+html, body {
+    height: 100%;
+    overflow: visible;
+  }
+
+main section#sectionLogin {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+main section div span#loginTitle {
+    font-size: 3vw;
+    position: relative;
+    text-align: center;
+}
+
+main section div p#paragraphTitle {
+    font-size: 1.4vw;
+    font-weight: 200;
+}
+
+main section div#loginBox {
+    display: flex;
+    flex-direction: column;
+    color: azure;
+    position: absolute;
+    flex-direction: column;
+}
+
 main form {
     display: flex;
     top: 84px;
     position: absolute;
-    border-radius: 46px;
-    box-shadow: 16px 14px 9px 2px rgba(0, 0, 0, 0.2);
-    border: 1px solid white;
-    background: none;
-    color: inherit;
-    font-size: 1.3vw;
-    padding: 10px;
     margin-top: 25px;
     width: max-content;
+    flex-direction: column;
 }
 
 main form input {
-    width: 100%;
-    padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    border: 1px solid white;
     background: none;
-    color: inherit;
-    font-size: 1.3vw;
-    padding: 10px;
     margin-top: 10px;
-    width: max-content;
-    
-    margin: 11px 0;
-    border-radius: 15px;
-    border: 1px solid #869ba6;
-    background: bottom;
-    color: currentColor;
-    font-size: 1.3vw;
-    padding: 8px;
     width: -webkit-fill-available;
+    color: white;
+    display: inline-block;
+    padding: 0.4rem 0;
+    border-bottom: 2px solid #FFFFFF;
+    border-left: hidden;
+    border-top: hidden;
+    border-right: hidden;
+}
+main section button {
+    background: none;
+    font-size: 1.6rem;
+    padding: 10px;
+    margin-top: 38px;
+    width: max-content;
+    background-color: rgb(0, 0, 0);
+    color: rgb(239, 227, 89);
+    border: 1px solid rgb(0, 0, 0);
 }
 
-main form .submit-button {
-    background-color: #EFC84C;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    border: 1px solid white;
-    background: none;
-    color: inherit;
-    font-size: 1.3vw;
-    padding: 10px;
-    margin-top: 10px;
-    width: max-content;
-} 
-
-button#buttonHero {
-    border: 1px solid white;
-    background: none;
-    color: inherit;
-    font-size: 1.3vw;
-    padding: 10px;
-    margin-top: 10px;
-    width: max-content;
-}
-
-main section button#buttonHero:hover{
+main section button:hover{
     background-color: rgb(0, 0, 0);
     color: rgb(239, 227, 89);
     cursor: pointer;
     border: 1px solid rgb(0, 0, 0);
+}
+
+main section form div#recordarUsuario{
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+    align-items: center;
+    top: 60%;
+}
+
+
+/* QUERIES START */
+
+/*************MOBILE**************************/
+@media (max-width: 480px) {
+
+    main section img#heroImage {
+        width: 925px;
+        left: -395px;
+        height: auto;
+    }
+    
+    main section div#loginBox {
+        top: 35px;
+        left: 40px;
+        padding-right: 74px;
+        width: 100%;
+    }
+    
+    main section div span#loginTitle {
+        font-size: 3rem;
+    }
+    
+    main section div p#paragraphTitle {
+        font-size: 1.8rem;
+        font-weight: 200;
+    }
+    
+}
+/*************TABLET**************************/
+@media (min-width: 768px) {
+
+    main section div#loginBox {
+        top: 20%;
+        left: 40%;
+        width: 60%;
+    }
+    
+    main section div span#loginTitle {
+        font-size: 3rem;
+    }
+    
+    main section div p#paragraphTitle {
+        font-size: 1.6rem;
+    }
+
+    main section button {
+        font-size: 1.6rem;
+    }
+}
+
+/*************PC*************************/
+@media (min-width: 1440px) {
+    main section div#loginBox {
+        top: 20%;
+        left: 50%;
+        width: 40%;
+    }
+
+    main section div span#loginTitle {
+        font-size: 3.2vw;
+    }
+    
+    main section div p#paragraphTitle {
+        font-size: 1.6vw;
+    }
+
+   main section button {
+        font-size: 1.4vw;
+
+    }
+
 }
