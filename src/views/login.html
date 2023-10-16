@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/css/stylesForm.css">
+    <title>Ingresá</title>
 </head>
 <body>
     <header>
@@ -39,18 +40,33 @@
         </nav>
 
     </header>
-    <main class="login">
-        <img src="images/bg-signup.jpg" />
-        <div id="iniciar-sesion">Iniciar Sesión</div>
-        <div id="descripcion">Para guardar elementos como favoritos o realizar compras</div>
-        <div>
-            <form action="/" method="POST">
-                <input type="text" name="user" placeholder="Email">
-                <input type="password" name="pass" placeholder="Contraseña">
-                <input type="submit" value="Iniciar Sesion">
-            </form>
-        </div>
+    <main>
+        <section id="sectionLogin">
+            <img src="\images/bg-login.jpg" alt="Hombre mirando al horizonte" id="login-image">
+            <div id="loginBox">
+                <span id="loginTitle"><strong>Iniciá sesión</strong></span>
+                <p id="paragraphTitle">
+                    Para guardar elementos como favoritos o realizar compras
+                </p>
+                <div id="formLogin">
+                        <form action="" method="POST">
+                        <div>
+                            <label><strong>Correo Electrónico:</strong></label>
+                            <input type="email" name="emailUsuario">
+                            <label><strong>Contraseña:</strong></label>
+                            <input type="password" name="passwordusuario">
+                        </div>  
+                        <div id="recordarUsuario">
+                            <label class="recordarme">Recordarme</label>
+                            <input type="checkbox" name="recordarUsuario">
+                        </div>  
+                            <button type="submit">Iniciar sesión</button>
+                        </form>
+                </div> 
+            </div> 
+        </section>  
     </main>
+    
     <footer>
         <div class="form-suscription">
             <form action="#" method="POST">
