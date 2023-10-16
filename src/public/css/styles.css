@@ -6,10 +6,13 @@
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.54);
+    background-color: rgba(0, 0, 0, 0.86);
     display: flex;
     justify-content: space-between;
     width: 100%;
+    position: fixed;
+    top: -1px;
+    z-index: 2;
 }
 
 header div.logo {
