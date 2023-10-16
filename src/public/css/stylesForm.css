@@ -33,14 +33,15 @@ main form {
     top: 84px;
     position: absolute;
     margin-top: 25px;
-    width: max-content;
+    width: 78%;
     flex-direction: column;
+
 }
 
 main form input {
     margin: 5px 0;
     background: none;
-    margin-top: 10px;
+    margin-top: -3px;
     width: -webkit-fill-available;
     color: white;
     display: inline-block;
@@ -50,15 +51,26 @@ main form input {
     border-top: hidden;
     border-right: hidden;
 }
+main section img#register-image {
+    display: flex;
+    height: auto;
+}
+main section img#login-image{
+display: flex;
+width: 820px;
+left: -491px;
+height: auto;
+position: relative;
+}
 main section button {
-    background: none;
-    font-size: 1.6rem;
-    padding: 10px;
-    margin-top: 38px;
-    width: max-content;
     background-color: rgb(0, 0, 0);
-    color: rgb(239, 227, 89);
+    color: white;
     border: 1px solid rgb(0, 0, 0);
+    font-size: 1.6rem;
+    padding: 4px;
+    margin-top: 29px;
+    width: 100%;
+    color: inherit;
 }
 
 main section button:hover{
@@ -68,50 +80,113 @@ main section button:hover{
     border: 1px solid rgb(0, 0, 0);
 }
 
+.recordarme{
+    position: relative;
+    bottom: 4px;
+    display: flex;
+}
 main section form div#recordarUsuario{
     display: flex;
     position: absolute;
     flex-direction: row-reverse;
     align-items: center;
-    top: 60%;
+    top: 64%;
 }
+input[type="checkbox" i] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #fafafa;
+    border-radius: 3px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    position: relative;
+}
+input[type="checkbox" i]:checked {
+    background-color:white;
+  }
 
+input[type="checkbox" i]:before {
+    content: "✔";
+    font-size: 15px;
+    color: white;
+    position: relative;
+    top: -9px;
+  }
+  
+  .mensaje {
+    font-size: 13px;
+  }
+  
+  .mensaje a {
+    text-decoration: underline;
+    color: #007bff; 
+    font-weight: bold;
+  }
 
 /* QUERIES START */
 
 /*************MOBILE**************************/
 @media (max-width: 480px) {
 
-    main section img#heroImage {
-        width: 925px;
-        left: -395px;
+    main section img#login-image {
+        width: 805px;
+        left: -430px;
         height: auto;
+        position: relative;
     }
     
+    main section img#register-image {
+        width: 820px;
+        left: -1px;
+        height: auto;
+        position: relative;
+    }
+
     main section div#loginBox {
-        top: 35px;
+        top: 99px;
+        left: 40px;
+        padding-right: 74px;
+        width: 100%;
+    }
+
+    main section div#formLogin {
+        top: 99px;
         left: 40px;
         padding-right: 74px;
         width: 100%;
     }
     
     main section div span#loginTitle {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
     main section div p#paragraphTitle {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 200;
     }
     
 }
 /*************TABLET**************************/
 @media (min-width: 768px) {
-
+    main section img#login-image {
+        display: flex;
+        width: auto;
+        left: -609px;
+        position: relative;
+    }
+    main section form {
+        width: 445px;
+    }
+    main section img#register-image {
+        display: flex;
+        left: -1px;
+        position: relative;
+    }
     main section div#loginBox {
         top: 20%;
-        left: 40%;
-        width: 60%;
+        left: 20%;
     }
     
     main section div span#loginTitle {
@@ -129,22 +204,44 @@ main section form div#recordarUsuario{
 
 /*************PC*************************/
 @media (min-width: 1440px) {
-    main section div#loginBox {
-        top: 20%;
-        left: 50%;
-        width: 40%;
+    main section img#login-image {
+        display: flex;
+        width: inherit;
+        left: 0px;
+        position: relative;
     }
-
+    main section img#register-image {
+        display: flex;
+        width: inherit;
+        left: 0px;
+        position: relative;
+    }
+    main section div#loginBox {
+        position: absolute;
+        width: 80%;
+    }
+    main section form {
+        font-size: 1.6rem;
+        width: 611px;
+        position: absolute;
+        top: 140px;
+        left: 150px;
+    }
     main section div span#loginTitle {
-        font-size: 3.2vw;
+        font-size: 4rem;
+        right: 10%;
     }
     
     main section div p#paragraphTitle {
-        font-size: 1.6vw;
+        font-size: 2.6rem;
+        position: relative;
+        left: 13%;
+        top: 20px;
+
     }
 
    main section button {
-        font-size: 1.4vw;
+        font-size: 2rem;
 
     }
 
