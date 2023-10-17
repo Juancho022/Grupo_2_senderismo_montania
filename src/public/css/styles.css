@@ -414,19 +414,20 @@ section#cardsHome div.card button.buttonCard:hover {
     }
     
     main section div#rightBox {
-        top: 35px;
+        top: 88px;
         left: 40px;
         padding-right: 74px;
         width: 100%;
     }
     
     main section div span#heroTitle {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     
     main section div p#paragraph {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 200;
+        margin-top: 8px;
     }
     
     button#buttonHero {
@@ -505,7 +506,7 @@ section#cardsHome div.card button.buttonCard:hover {
 @media (min-width: 768px) {
 
     main section div#rightBox {
-        top: 20%;
+        top: 26%;
         left: 40%;
         width: 60%;
     }
