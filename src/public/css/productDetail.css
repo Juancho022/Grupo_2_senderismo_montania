@@ -410,15 +410,20 @@
     }
   
     main section div button.add-to-cart {
-      width: 30%;
-      background: #358D67;
+      top: 428px;
+      left: 880px;
+      width: 219px;
+      height: 46px;
+      background: #000000 0% 0% no-repeat padding-box;
       border: 1px solid #000000;
       opacity: 1;
-      color: #FFFFFF;
     }
   
     main section div button.add-to-fav {
-      width: 30%;
+      top: 428px;
+      left: 1112px;
+      width: 219px;
+      height: 46px;
       border: 1px solid #000000;
       opacity: 1;
     }
