@@ -7,7 +7,7 @@
   h2 {
     width: 273px;
     height: 19px;
-    margin: 25px;
+    margin: 55px 0 20px 25px;
     text-align: left;
     font: normal normal normal 14px/19px Open Sans;
     letter-spacing: 1.05px;
@@ -17,12 +17,9 @@
 
   main section {
     width: 375px;
-    height: 750px;
+    height: 730px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     margin: auto;
-  }
-
-  main section div.card-product {
     display: flex;
     flex-wrap: wrap;
   }
@@ -110,7 +107,7 @@
     text-align: center;
     margin-right: 5px;
     width: 17px;
-    height: 12px;
+    height: 15px;
     border: 1px solid #000000;
     border-radius: 4px;
     opacity: 1;
@@ -130,7 +127,7 @@
   main section div button.submit-more {
     margin-left: 5px;
     width: 17px;
-    height: 12px;
+    height: 15px;
     background: #D3573C 0% 0% no-repeat padding-box;
     border: 1px solid #D3573C;
     color: #FFFFFF;
@@ -140,7 +137,7 @@
 
   main section div p.price {
     width: 103px;
-    margin-left: 5px;
+    margin: 0 0 10px 5px;
     text-align: left;
     font: normal normal bold 24px Open Sans;
     color: #000000;
@@ -171,28 +168,32 @@
   }
 
   main section div.info-buy {
+    width: 100%;
+    margin: 15px 0 10px 10px;
     display: flex;
-    margin: 15px 0 15px 20px;
+    align-items: center;
+    justify-content: center;
   }
 
   main section div.info-buy p {
     width: 260px;
     height: 38px;
-    margin-left: 7px;
     text-align: left;
     font: 14px/19px Open Sans;
     color: #7EC989;
     opacity: 1;
   }
 
-  main section div.info-buy i{
+  main section div.info-buy i {
     width: 30px;
     height: 24px;
+    margin-right: 10px;
     font-size: 22px;
     color: #7EC989;
-    opacity: 1;
-    justify-content: center;
-   }
+    position: relative;   
+    top: 0px;   
+    left: 0px;  
+  }
 
   main section div.product-description {
     width: 300px;
@@ -278,7 +279,7 @@
     h2 {
       width: 332px;
       height: 23px;
-      text-align: left;
+      margin: 70px 0 20px 25px;
       font: normal normal normal 17px/23px Open Sans;
       letter-spacing: 1.27px;
       color: #000000;
@@ -295,12 +296,6 @@
       background: #FFFFFF
     }
 
-    main section div.card-product {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-    }
-  
     main section div.card-image {
       width: 25%;
       height: 200px;
@@ -415,15 +410,20 @@
     }
   
     main section div button.add-to-cart {
-      width: 30%;
-      background: #358D67;
+      top: 428px;
+      left: 880px;
+      width: 219px;
+      height: 46px;
+      background: #000000 0% 0% no-repeat padding-box;
       border: 1px solid #000000;
       opacity: 1;
-      color: #FFFFFF;
     }
   
     main section div button.add-to-fav {
-      width: 30%;
+      top: 428px;
+      left: 1112px;
+      width: 219px;
+      height: 46px;
       border: 1px solid #000000;
       opacity: 1;
     }
