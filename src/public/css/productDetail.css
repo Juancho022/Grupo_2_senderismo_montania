@@ -1,528 +1,314 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-
-  h2 {
-    width: 273px;
-    height: 19px;
-    margin: 55px 0 20px 25px;
-    text-align: left;
-    font: normal normal normal 14px/19px Open Sans;
-    letter-spacing: 1.05px;
-    color: #000000;
-    opacity: 1;
-  }
-
-  main section {
-    width: 375px;
-    height: 730px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  main section div.card-image {
-    width: 145px;
-    height: 244px;
-    margin-left: 15px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: inset 0px 3px 6px #00000029;
-    border-radius: 33px 0px 0px 33px;
-    opacity: 1;
-  }
-
-  main section div.card-image img {
-    margin: 30px 0 0 8px;
-    width: 132px;
-    height: 165px;
-    opacity: 1;
-  }
-
-  main section div.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 200px;
-    height: 244px;
-  }
-
-  h1 {
-    width: 113px;
-    height: 60px;
-    margin-left: 5px;
-    text-align: left;
-    font: normal normal bold 24px/27px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-  }
-
-  main section div.choice-colors {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-left: 5px;
-  }
-
-  div p.choice-green {
-    margin-right: 5px;
-    width: 21px;
-    height: 21px;
-    background: #358D67 0% 0% no-repeat padding-box;
-    border: 3px solid #C7C7C7;
-    border-radius: 50%;
-    opacity: 1;
-  }
-
-  div p.choice-yelow {
-    width: 21px;
-    height: 21px;
-    background: #EFC84C 0% 0% no-repeat padding-box;
-    border-radius: 50%;
-    opacity: 1;
-  }
+main {
+  padding: 16px;
+}
   
-  main section div.option-quantity {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-left: 5px;
-    align-items: center;
-  }
+p.step {
+  margin-left: 24px;
+  font-size: 1.1vw;
+}
 
-  main section div p.total-quantity {
-    width: 68px;
-    height: 20px;
-    text-align: left;
-    font: normal normal normal 14px/28px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-  }
+article.article-detail {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 24px;
+  justify-content: center;
+}
 
-  main section div button.submit-less {
-    text-align: center;
-    margin-right: 5px;
-    width: 17px;
-    height: 15px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    opacity: 1;
-  }
+article.article-detail .img-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 24%;
+  height: 50%;
+  box-shadow: inset 0px 3px 6px #00000029;
+  border-radius: 33px 0px 0px 33px;
+  opacity: 1;
+}
 
-  main section div p.total-quantity-number {
-    width: 23px;
-    height: 21px;
-    font: bold 14px Open Sans;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: inset 0px 3px 6px #00000029;
-    border-radius: 7px;
-    opacity: 1;
-    text-align: center;
-  }
+article.article-detail .img-container img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
 
-  main section div button.submit-more {
-    margin-left: 5px;
-    width: 17px;
-    height: 15px;
-    background: #D3573C 0% 0% no-repeat padding-box;
-    border: 1px solid #D3573C;
-    color: #FFFFFF;
-    border-radius: 4px;
-    opacity: 1;
-  }
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-left: 24px;
+}
 
-  main section div p.price {
-    width: 103px;
-    margin: 0 0 10px 5px;
-    text-align: left;
-    font: normal normal bold 24px Open Sans;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-  }
+div.title-detail h2 {
+  font-size: 2.2vw;
+  display: flex;
+  margin-bottom: 6px;
+}
 
-  main section div button.add-to-cart {
-    width: 128px;
-    height: 39px;
-    margin-left: 5px;
-    background: #358D67;
-    color: #FFFFFF;
-  }
+.color-n-quantity {
+  display: flex;
+  align-items: center;
+}
 
-  main section div button.add-to-fav {
-    width: 128px;
-    height: 39px;
-    margin-left: 5px;
-    border: 1px solid #000000;
-    opacity: 1;
-  }
+div.colors {
+  display: flex;
+}
 
-  main section div.all-product-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 375px;
-  }
-
-  main section div.info-buy {
-    width: 100%;
-    margin: 15px 0 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  main section div.info-buy p {
-    width: 260px;
-    height: 38px;
-    text-align: left;
-    font: 14px/19px Open Sans;
-    color: #7EC989;
-    opacity: 1;
-  }
-
-  main section div.info-buy i {
+div.colors div.color-green {
     width: 30px;
-    height: 24px;
-    margin-right: 10px;
-    font-size: 22px;
-    color: #7EC989;
-    position: relative;   
-    top: 0px;   
-    left: 0px;  
+    height: 30px;
+    background-color: #358D67;
+    border-radius: 50%;
+    border: solid 3px #C7C7C7;
+    margin-right: 8px;
+}
+
+div.colors div.color-yellow {
+  width: 30px;
+  height: 30px;
+  background-color: #EFC84C;
+  border-radius: 50%;
+}
+
+.count-detail {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-left: 32px;
+  font-size: 16px;
+}
+
+div.less {
+  border: 1px solid #000000;
+  border-radius: 7px;
+  margin: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+p.quantity {
+  margin-left: 8px;
+  margin-right: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  margin: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+p.more {
+  border: 1px solid #D3563B;
+  background-color: #D3563B;
+  border-radius: 7px;
+  margin: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+}
+
+.price-n-cta {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  justify-items: center;
+}
+
+p.price150000 {
+  font-size: 2vw;
+  font-weight: 800;
+  margin-right: 16px;
+}
+
+button.add-cart {
+    background-color: #080202;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #080202;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 16px;
+}
+
+button.add-fav {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border: 1px solid #080202;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+.off {
+  display: flex;
+  font-size: 18px;
+  color: #7ec989;
+  margin-bottom: 16px;
+}
+
+i.fa-solid.fa-credit-card {
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+p.article-description {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.text-detail {
+  font-size: 16px;
+  display: flex;
+}
+
+div.text-detail span.tec-espec {
+  display: flex;
+  font-weight: 600;
+  border-bottom: solid 6px #EFC84C;
+  padding-bottom: 6px;
+  width: 215px;
+}
+
+div.text-detail span.personalize {
+  display: flex;
+  font-weight: 600;
+  border-bottom: solid 6px #dad9d9;
+  padding-bottom: 6px;
+  width: 124px;
+  padding-left: 6px;
+}
+
+p.tec-espec-description {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+/* MEDIA QUERIES START********************************** */
+
+@media (max-width: 481px) {
+  main {
+  position: relative;
+  top: 74px;
   }
 
-  main section div.product-description {
-    width: 300px;
-    height: 264px;
-    margin-left: 25px;
-    text-align: left;
-    font: normal normal normal 16px/22px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
+  p.step {
+    font-size: 4vw;
   }
 
-  main section div.product-detail {
-    display: flex;
-    flex-wrap: wrap;
-    width: 301px;
-    height: 19px;
-    margin: 15px 0 10px 20px;
-    text-align: left;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
+  article.article-detail {
+    display: block;
   }
 
-  main section div p.technical-specifications {
-    width: 207px;
-    height: 19px;
-    text-align: left;
-    font: normal normal bold 14px/19px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
+  article.article-detail .img-container {
+    display: block; 
+    width: 50%;
+    height: auto;
   }
 
-  main section div p.custome-product {
-    width: 81px;
-    height: 19px;
-    text-align: left;
-    font: normal normal normal 14px/19px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
+  .details-container {
+    width: 100%;
   }
 
-  main section div.product-detail-colors {
-    display: flex;
-    margin-left: 15px;
-    height: 8px;
+  .title-detail {
+    position: absolute;
+    top: 13vw;
+    left: 54vw;
   }
 
-  main section div p.detail-1 {
-    width: 190px;
-    height: 5px;
-    background: #EFC84C 0% 0% no-repeat padding-box;
-    opacity: 1;
+  div.title-detail h2 {
+    font-size: 5vw;
   }
 
-  main section div p.detail-2 {
-    top: 746px;
-    left: 213px;
-    width: 125px;
-    height: 5px;
-    background: #E9E9E9 0% 0% no-repeat padding-box;
-    opacity: 1;
+  .color-n-quantity {
+    position: absolute;
+    top: 22vw;
+    left: 54vw;
+    flex-direction: column;
+    align-items: baseline;
   }
 
-  main section div.specific-description {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px 0 15px 20px;
+  div.colors div.color-green {
+    width: 25px;
+    height: 25px; 
   }
 
-  main section div.specific-description p {
-    top: 762px;
-    left: 35px;
-    width: 303px;
-   
-    text-align: left;
-    font: normal normal normal 14px/19px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
+  div.colors div.color-yellow {
+    width: 25px;
+    height: 25px; 
   }
 
-  @media (min-width: 768px) {
-    h2 {
-      width: 332px;
-      height: 23px;
-      margin: 70px 0 20px 25px;
-      font: normal normal normal 17px/23px Open Sans;
-      letter-spacing: 1.27px;
-      color: #000000;
-    }
+  .count-detail {
+    margin-left: 0px;
+    flex-wrap: nowrap;
+  }
 
-    main {
-      margin: auto;
-    }
-  
-    main section {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      background: #FFFFFF
-    }
-
-    main section div.card-image {
-      width: 25%;
-      height: 200px;
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      box-shadow: inset 0px 3px 6px #00000029;
-      border-radius: 33px 0px 0px 33px;
-    }
-  
-    div.card-image img {
-      width: 100%;
-      margin: 30px 0 0 8px;
-    }
-
-    main section div.product-container {
-      width: 70%;
-      height: 200px;
-      background: #F9F9F9 0% 0% no-repeat padding-box;
-      border-radius: 0px 33px 33px 33px;
-    }
-  
-    h1 {
-      width: 100%;
-      text-align: left;
-      font: normal normal bold 40px/67px Open Sans;
-      letter-spacing: 0px;
-      color: #000000;
-      text-transform: uppercase;
-      opacity: 1;
-    }
-
-    main section div.choice-colors {
-      display: flex;
-      flex-wrap: wrap;
-      width: 30%;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 25px;
-    }
-  
-    div p.choice-green {
-      width: 35px;
-      height: 35px;
-      background: #358D67 0% 0% no-repeat padding-box;
-      border: 6px solid #C7C7C7;
-      opacity: 1;
-    }
-  
-    div p.choice-yelow {
-      width: 35px;
-      height: 35px;
-      background: #EFC84C 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
-    
-    main section div.option-quantity {
-      display: flex;
-      flex-wrap: wrap;
-      width: 65%;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 25px
-    }
-  
-    main section div p.total-quantity {
-      width: 95px;
-      height: 32px;
-      text-align: left;
-      font: normal normal normal 20px/28px Open Sans;
-      letter-spacing: 0px;
-      color: #000000;
-      opacity: 1;
-    }
-  
-    main section div button.submit-less {
-      width: 28px;
-      height: 20px;
-      border: 1px solid #000000;
-      border-radius: 7px;
-      opacity: 1;
-    }
-  
-    main section div p.total-quantity-number {
-      width: 73px;
-      height: 35px;
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      box-shadow: inset 0px 3px 6px #00000029;
-      border-radius: 10px;
-      text-align: center;
-      font: normal normal bold 24px/28px Open Sans;
-      letter-spacing: 0px;
-      color: #000000;
-    }
-  
-    main section div button.submit-more {
-      top: 351px;
-      left: 1023px;
-      width: 28px;
-      height: 20px;
-      background: #D3573C 0% 0% no-repeat padding-box;
-      border: 1px solid #D3573C;
-      border-radius: 7px;
-      opacity: 1;
-    }
-  
-    main section div p.price {
-      width: 30%;
-      text-align: left;
-      margin-left: 10px;
-      font: bold 30px Open Sans;
-      color: #000000;
-      
-    }
-  
-    main section div button.add-to-cart {
-      top: 428px;
-      left: 880px;
-      width: 219px;
-      height: 46px;
-      background: #000000 0% 0% no-repeat padding-box;
-      border: 1px solid #000000;
-      opacity: 1;
-    }
-  
-    main section div button.add-to-fav {
-      top: 428px;
-      left: 1112px;
-      width: 219px;
-      height: 46px;
-      border: 1px solid #000000;
-      opacity: 1;
-    }
-
-    main section div.all-product-container {
-      width: 100%;
-    }
-  
-    main section div.info-buy {
-      width: 100%;
-    }    
-
-    main section div.info-buy p {
-      width: 100%;
-      text-align: left;
-      font: normal normal normal 20px/27px Open Sans;
-      letter-spacing: 0px;
-      color: #7EC989;
-   
-    }
-  
-    main section div.info-buy i {
-      width: 41px;
-      height: 32px;
-      color: #7EC989;
-     }
-  
-    main section div.product-description {
-      width: 100%;
-      text-align: left;
-      font: normal normal normal 20px/27px Open Sans;
-      letter-spacing: 0px;
-      color: #000000;
-      padding: 10px;
-      
-    }
-
-    main section div.product-detail {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      height: 19px;
-      margin: 15px 0 10px 20px;
-      text-align: left;
-      letter-spacing: 0px;
-      color: #000000;
-      opacity: 1;
-    }
-  
-    main section div p.technical-specifications {
-      width: 296px;
-      height: 27px;
-      text-align: left;
-      font: normal normal bold 20px/27px Open Sans;
-      letter-spacing: 0px;
-      color: #000000;
-    }
-  
-    main section div p.custome-product {
-      width: 115px;
-      height: 27px;
-      text-align: left;
-      font: normal normal normal 20px/27px Open Sans;
-      letter-spacing: 0px;
-      color: #000000;
-    }
-
-    main section div.product-detail-colors {
-      display: flex;
-      margin-left: 20px;
-      height: 8px;
-    }
-  
-    main section div p.detail-1 {
-      width: 251px;
-      height: 7px;
-      background: #EFC84C 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
-  
-    main section div p.detail-2 {
-      width: 251px;
-      height: 7px;
-      background: #E3E3E3 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
-
-    main section div.specific-description {
-      display: flex;
-      flex-wrap: wrap;
-    }  
-  
-    main section div.specific-description p {
-      width: 100%;
-      text-align: left;
-      font: normal normal normal 20px/27px Open Sans;
-      letter-spacing: 0px;
-      color: #000000;
-    }
+  div.less, p.quantity, p.more {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
 
   }
+
+  .price-n-cta {
+    flex-direction: column;
+    position: absolute;
+    top: 33vw;
+    left: 54vw;
+    gap: 8px;
+  }
+
+  p.price150000 {
+    font-size: 6vw;
+  }
+
+  button.add-cart, button.add-fav {
+    width: 151px;
+    height: 42px;
+    padding: 0px;
+  }
+
+  .off {
+    position: relative;
+    top: 27px;
+    left: -25px;
+    align-items: center;
+  }
+
+  p.article-description {
+    position: relative;
+    top: 76px;
+  }
+
+  p.article-description {
+    position: relative;
+    top: 19px;
+    left: -25px;
+  }
+
+  .text-detail {
+    position: relative;
+    top: 16px;
+    left: -25px;
+  }
+
+  p.tec-espec-description {
+    position: relative;
+    top: 13px;
+    left: -25px;
+  }
+}
+
+
+
+
 
