@@ -3,7 +3,7 @@ main {
 }
   
 p.step {
-  margin-left: 24px;
+  margin: 60px 0 0 24px;
   font-size: 1.1vw;
 }
 
@@ -189,6 +189,12 @@ div.text-detail span.personalize {
 p.tec-espec-description {
   font-size: 16px;
   margin-top: 16px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* MEDIA QUERIES START********************************** */
