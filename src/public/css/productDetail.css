@@ -198,7 +198,7 @@ footer {
 
 /* MEDIA QUERIES START********************************** */
 
-@media (min-width: 481px) {
+@media (max-width: 481px) {
   main {
   position: relative;
   top: 74px;
@@ -315,7 +315,7 @@ footer {
   }
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
 
   main p.step {
     margin: 70px 0 0 24px;
