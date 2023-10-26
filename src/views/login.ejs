@@ -1,0 +1,37 @@
+<%- include('partials/head', { styles: ['stylesForm'] }) %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <main>
+        <section id="sectionLogin">
+            <img src="\images/bg-login.jpg" alt="Hombre mirando al horizonte" id="login-image">
+            <div id="loginBox">
+                <span id="loginTitle"><strong>Iniciá sesión</strong></span>
+                <p id="paragraphTitle">
+                    Para guardar elementos como favoritos o realizar compras
+                </p>
+                <div id="formLogin">
+                        <form action="" method="POST">
+                        <div>
+                            <label><strong>Correo Electrónico</strong></label>
+                            <input type="email" name="emailUsuario">
+                            <label><strong>Contraseña</strong></label>
+                            <input type="password" name="passwordusuario">
+                        </div>  
+                        <div id="recordarUsuario">
+                            <label class="recordarme">Recordarme</label>
+                            <input type="checkbox" name="recordarUsuario">
+                        </div>  
+                            <button type="submit">Iniciar sesión</button>
+                        </form>
+                </div> 
+            </div> 
+        </section>  
+    </main>
+
+    <%- include('./partials/footer') %>      
+ 
+</body>
+</html>

@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "name": "Campera impermeable",
+      "description": "Campera resistente al agua para senderismo",
+      "price": 89000,
+      "discount": 15,
+      "category": "Ropa para Senderismo",
+      "image": "campera-impermeable.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Botas de senderismo",
+      "description": "Botas cómodas para caminatas largas",
+      "price": 129000,
+      "discount": 10,
+      "category": "Calzado para Senderismo",
+      "image": "botas-senderismo.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mochila de senderismo",
+      "description": "Mochila espaciosa para llevar todo lo necesario",
+      "price": 60000,
+      "discount": 20,
+      "category": "Accesorios para Senderismo",
+      "image": "mochila-senderismo.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Pantalones de trekking",
+      "description": "Pantalones cómodos y resistentes",
+      "price": 35000,
+      "discount": 5,
+      "category": "Ropa para Senderismo",
+      "image": "pantalones-trekking.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Remera Térmica",
+      "description": "Remera ligera que mantiene la frescura",
+      "price": 30000,
+      "discount": 0,
+      "category": "Ropa para Senderismo",
+      "image": "remera-Termica.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Gorra",
+      "description": "Gorra con vicera",
+      "price": 19.99,
+      "discount": 10,
+      "category": "Accesorios para Senderismo",
+      "image": "gorra-vicera.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Medias de senderismo",
+      "description": "Medias acolchadas para largas caminatas",
+      "price": 12.99,
+      "discount": 0,
+      "category": "Ropa para Senderismo",
+      "image": "medias-senderismo.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Gorra térmica",
+      "description": "Gorra que mantiene el calor en climas fríos",
+      "price": 24.99,
+      "discount": 15,
+      "category": "Accesorios para Senderismo",
+      "image": "gorra-termica.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Rompevientos ligero",
+      "description": "Chaqueta rompevientos para senderismo",
+      "price": 74.99,
+      "discount": 10,
+      "category": "Ropa para Senderismo",
+      "image": "rompevientos.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Linterna recargable",
+      "description": "Linterna potente para excursiones nocturnas",
+      "price": 39.99,
+      "discount": 5,
+      "category": "Accesorios para Senderismo",
+      "image": "linterna-recargable.jpg"
+    }
+  ]
+  

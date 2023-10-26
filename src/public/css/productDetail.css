@@ -3,7 +3,6 @@ main {
 }
   
 p.step {
-  margin: 60px 0 0 24px;
   font-size: 1.1vw;
 }
 
@@ -207,6 +206,8 @@ footer {
 
   p.step {
     font-size: 4vw;
+    margin: 60px 0 0 24px;
+        
   }
 
   article.article-detail {
@@ -313,6 +314,18 @@ footer {
     left: -25px;
   }
 }
+
+@media (max-width: 1280px) {
+
+  main p.step {
+    margin: 70px 0 0 24px;
+  }
+  
+
+
+
+}
+
 
 
 
