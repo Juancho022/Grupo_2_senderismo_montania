@@ -1,8 +1,9 @@
 <%- include('partials/head', { styles: ['stylesForm'] }) %>
 
 <body>
+
     <%- include('./partials/header') %>
-    
+
     <main>
         <section id="sectionLogin">
             <img src="\images/bg-login.jpg" alt="Hombre mirando al horizonte" id="login-image">
@@ -14,9 +15,9 @@
                 <div id="formLogin">
                         <form action="" method="POST">
                         <div>
-                            <label><strong>Correo Electrónico:</strong></label>
+                            <label><strong>Correo Electrónico</strong></label>
                             <input type="email" name="emailUsuario">
-                            <label><strong>Contraseña:</strong></label>
+                            <label><strong>Contraseña</strong></label>
                             <input type="password" name="passwordusuario">
                         </div>  
                         <div id="recordarUsuario">
@@ -29,24 +30,8 @@
             </div> 
         </section>  
     </main>
-    
-    <footer>
-        <div class="form-suscription">
-            <form action="#" method="POST">
-                <p>Suscribite para recibir las mejores ofertas</p>
-                <input type="email" name="email" placeholder="Correo electrónico">
-                <button type="submit">Suscribirme</button>
-            </form>
-            </div>
-            
-        </div>
-        <div class="copyright">
-            <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
-        </div>
-        <div class="social-media-icons">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>    </footer>
+
+    <%- include('./partials/footer') %>      
+ 
 </body>
 </html>

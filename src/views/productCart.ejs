@@ -1,8 +1,9 @@
 <%- include('partials/head', { styles: ['stylesCart'] }) %>
 
 <body>
+
     <%- include('./partials/header') %>
-    
+
     <main>
     <h5>Productos > Carrito de compras</h5>
     <section class="product-list">
@@ -165,26 +166,9 @@
         </article>
     </section>
     </main>
-    <footer>
-        <div class="form-suscription">
-        <form action="#" method="POST">
-            <p>Suscribite para recibir las mejores ofertas</p>
-            <input type="email" name="email" placeholder="Correo electrónico">
-            <button type="submit">Suscribirme</button>
-        </form>
-        </div>
-        
-    </div>
-    <div class="copyright">
-        <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
-    </div>
-    <div class="social-media-icons">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    </div>
 
-</footer>
+    <%- include('./partials/footer') %>
+
 </body>
 
 </html>
