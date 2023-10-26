@@ -1,35 +1,8 @@
 <%- include('partials/head', { styles: ['stylesCart'] }) %>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="/images/peaklogo.png" alt="Peak's logo">
-        </div>
-        <div class="right-elements">
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="burguer-menu">
-                <a class="burguer"><i class="fa-solid fa-bars"></i></a>
-            </div>
-        </div>
-
-        <nav class="center-bar">
-            <ul class="nav-bar">
-                <li><a href="/">INICIO</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">OUTLET</a></li>
-                <li><a href="#">DEPORTES</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-        </nav>
-        <nav class="right-bar">
-            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-user"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
-        </nav>
-
-    </header>
+    <%- include('./partials/header') %>
+    
     <main>
     <h5>Productos > Carrito de compras</h5>
     <section class="product-list">
