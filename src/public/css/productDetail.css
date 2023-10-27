@@ -56,12 +56,12 @@ div.colors {
 }
 
 div.colors div.color-green {
-    width: 30px;
-    height: 30px;
-    background-color: #358D67;
-    border-radius: 50%;
-    border: solid 3px #C7C7C7;
-    margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #358D67;
+  border-radius: 50%;
+  border: solid 3px #C7C7C7;
+  margin-right: 8px;
 }
 
 div.colors div.color-yellow {
@@ -128,13 +128,13 @@ p.price150000 {
 }
 
 button.add-cart {
-    background-color: #080202;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #080202;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-right: 16px;
+  background-color: #080202;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #080202;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 16px;
 }
 
 button.add-fav {
@@ -400,11 +400,4 @@ footer {
     top: 45px;
     left: -25px;
   }
-
 }
-
-
-
-
-
-
