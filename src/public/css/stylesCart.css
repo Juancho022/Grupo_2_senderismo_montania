@@ -289,6 +289,12 @@ section article div.billing button{
     padding:10px;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
 @media (max-width: 481px) {
     section.product-list article.products {
         display: flex;

@@ -3,8 +3,8 @@ main {
 }
   
 p.step {
-  margin: 60px 0 0 24px;
   font-size: 1.1vw;
+  margin: 60px 0 0 10px;
 }
 
 article.article-detail {
@@ -56,12 +56,12 @@ div.colors {
 }
 
 div.colors div.color-green {
-    width: 30px;
-    height: 30px;
-    background-color: #358D67;
-    border-radius: 50%;
-    border: solid 3px #C7C7C7;
-    margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #358D67;
+  border-radius: 50%;
+  border: solid 3px #C7C7C7;
+  margin-right: 8px;
 }
 
 div.colors div.color-yellow {
@@ -128,13 +128,13 @@ p.price150000 {
 }
 
 button.add-cart {
-    background-color: #080202;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #080202;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-right: 16px;
+  background-color: #080202;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #080202;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 16px;
 }
 
 button.add-fav {
@@ -200,13 +200,10 @@ footer {
 /* MEDIA QUERIES START********************************** */
 
 @media (max-width: 481px) {
-  main {
-  position: relative;
-  top: 74px;
-  }
-
+ 
   p.step {
     font-size: 4vw;
+    margin: 45px 0 0 10px;
   }
 
   article.article-detail {
@@ -225,7 +222,7 @@ footer {
 
   .title-detail {
     position: absolute;
-    top: 13vw;
+    top: 25vw;
     left: 54vw;
   }
 
@@ -235,7 +232,7 @@ footer {
 
   .color-n-quantity {
     position: absolute;
-    top: 22vw;
+    top: 35vw;
     left: 54vw;
     flex-direction: column;
     align-items: baseline;
@@ -262,13 +259,12 @@ footer {
     margin: 3px;
     padding-left: 8px;
     padding-right: 8px;
-
   }
 
   .price-n-cta {
     flex-direction: column;
     position: absolute;
-    top: 33vw;
+    top: 45vw;
     left: 54vw;
     gap: 8px;
   }
@@ -285,7 +281,7 @@ footer {
 
   .off {
     position: relative;
-    top: 27px;
+    top: 40px;
     left: -25px;
     align-items: center;
   }
@@ -297,24 +293,111 @@ footer {
 
   p.article-description {
     position: relative;
-    top: 19px;
+    top: 35px;
     left: -25px;
   }
 
   .text-detail {
     position: relative;
-    top: 16px;
+    top: 45px;
     left: -25px;
   }
 
   p.tec-espec-description {
     position: relative;
-    top: 13px;
+    top: 45px;
     left: -25px;
   }
 }
 
+@media (min-width: 482px) and (max-width: 1279px) {
 
+  main {
+    height: auto;
+    margin-bottom: 100px;
+  }
 
+  p.step {
+    font-size: 2vw;
+    margin: 55px 0 0 5px;
+  }
 
+  article.article-detail {
+    display: block;
+  }
 
+  article.article-detail .img-container {
+    display: block; 
+    width: 50%;
+    height: auto;
+  }
+
+  .details-container {
+    width: 100%;
+  }
+
+  .title-detail {
+    position: absolute;
+    top: 15vw;
+    left: 51vw;
+  }
+
+  div.title-detail h2 {
+    font-size: 4.5vw;
+  }
+
+  .color-n-quantity {
+    position: absolute;
+    top: 23vw;
+    left: 46vw;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+  }
+
+  .count-detail {
+    margin-top: 10px;
+  }
+
+  .price-n-cta {
+    flex-direction: column;
+    position: absolute;
+    top: 35vw;
+    left: 52vw;
+    gap: 18px;
+  }
+
+  p.price150000 {
+    font-size: 4vw;
+  }
+
+  .off {
+    position: relative;
+    top: 40px;
+    left: -25px;
+    align-items: center;
+  }
+
+  p.article-description {
+    position: relative;
+    top: 76px;
+  }
+
+  p.article-description {
+    position: relative;
+    top: 35px;
+    left: -25px;
+  }
+
+  .text-detail {
+    position: relative;
+    top: 45px;
+    left: -25px;
+  }
+
+  p.tec-espec-description {
+    position: relative;
+    top: 45px;
+    left: -25px;
+  }
+}

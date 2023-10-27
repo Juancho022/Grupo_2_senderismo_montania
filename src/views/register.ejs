@@ -1,68 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<% let pageTitle = 'Registrate' %>
+<%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/stylesForm.css">
-    <title>Registrate</title>
-</head>
 <body>
-    <header>
-          <div class="logo">
-            <img src="/images/peaklogo.png" alt="Peak's logo">
-        </div>
-        <div class="right-elements">
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="burguer-menu">
-                <a class="burguer"><i class="fa-solid fa-bars"></i></a>
-            </div>
-        </div>
+    
+    <%- include('./partials/header') %>
 
-        <nav class="center-bar">
-            <ul class="nav-bar">
-                <li><a href="/">INICIO</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">OUTLET</a></li>
-                <li><a href="#">DEPORTES</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-        </nav>
-        <nav class="right-bar">
-            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-user"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
-        </nav>
-    </header>
     <main>
         <section id="sectionLogin">
             <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
             <div id="loginBox">
                 <span id="loginTitle"><strong>Crear Cuenta</strong></span>
                 <p id="paragraphTitle">
-                Comenza a vivir la aventura de llegar a la cima                
+                Comenzá a vivir la aventura de llegar a la cima                
                 </p>
             <div id="formLogin">
                 <form action="" method="POST">
                     <div>
-                        <label>Nombre:</label>
+                        <label>Nombre</label>
                         <input type="text" name="nombreUsuario">
                     </div>
                     <div>
-                        <label>Apellido:</label>
+                        <label>Apellido</label>
                         <input type="text" name="apellidoUsuario">
                     </div>
                     <div>
-                        <label>Correo Electrónico:</label>
+                        <label>Correo Electrónico</label>
                         <input type="email" name="emailUsuario">
                     </div>
                     <div>
-                        <label>Contraseña:</label>
+                        <label>Contraseña</label>
                         <input type="password" name="passwordusuario">
                     </div>
                     <div>
@@ -71,32 +37,11 @@
                     </div>   
                         <button type="submit">Registrarse</button>
                     </form>
-
             </div>
         </section>
     </main>
 
-
-    <footer>
-        <div class="form-suscription">
-            <form action="#" method="POST">
-                <p>Suscribite para recibir las mejores ofertas</p>
-                <input type="email" name="email" placeholder="Correo electrónico">
-                <button type="submit">Suscribirme</button>
-            </form>
-            </div>
-            
-        </div>
-        <div class="copyright">
-            <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
-        </div>
-        <div class="social-media-icons">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-
-    </footer> 
+    <%- include('./partials/footer') %>
     
 </body>
 </html>

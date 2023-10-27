@@ -1,50 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTOS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="/css/productDetail.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
-</head>
+<% let pageTitle = 'Productos' %>
+<%- include('partials/head', { styles: ['productDetail'], pageTitle: pageTitle }) %>
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="/images/peaklogo.png" alt="Peak's logo">
-        </div>
-        <div class="right-elements">
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="burguer-menu">
-                <a class="burguer"><i class="fa-solid fa-bars"></i></a>
-            </div>
-        </div>
+    
+    <%- include('./partials/header') %>
 
-        <nav class="center-bar">
-            <ul class="nav-bar">
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">OUTLET</a></li>
-                <li><a href="#">DEPORTES</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-        </nav>
-        <nav class="right-bar">
-            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-user"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
-        </nav>
-
-    </header>
     <main>
         <p class="step">Productos > Camping > Mochila Cap</p>
         <article class="article-detail">
             <div class="img-container">
-                <img src="images\backpack.png" alt="Mochila Peak">
+                <img src="\images\backpack.png" alt="Mochila Peak">
             </div>
             <div class="details-container">
                 <div class="title-detail" >
@@ -58,28 +23,19 @@
                             <div class="color-yellow">
                             </div>
                         </div>
-
                         <div class="count-detail">
                             <p>Cantidad</p>
                             <div class="less">
-                                <p>
-                                    -
-                                </p>
+                                <p>-</p>
                             </div>
                             <div>
-                                <p class="quantity">
-                                    1
-                                </p>
+                                <p class="quantity">1</p>
                             </div>
                             <div>
-                                <p class="more">
-                                    +
-                                </p>
+                                <p class="more">+</p>
                             </div>
                         </div>
                     </div>
-                    
-
                     <div class="price-n-cta">
                         <p class="price150000"> $150.000 </p>
                         <button class="add-cart"> Añadir al carrito </button>
@@ -88,9 +44,7 @@
                     <div>
                         <div class="off">
                             <i class="fa-solid fa-credit-card" style="color: #7ec989;"></i>
-                            <p>
-                                3 y 6 cuotas sin interés con VISA o MASTERCARD
-                            </p>
+                            <p>3 y 6 cuotas sin interés con VISA o MASTERCARD</p>
                         </div>
                         <p class="article-description">
                             Está diseñada con múltiples compartimentos y bolsillos para organizar eficazmente el equipo, con materiales resistentes al agua y abrasión para protegerlo de las inclemencias del tiempo y el desgaste. Su sistema de suspensión ajustable incluye correas para los hombros acolchadas, un cinturón lumbar y un panel trasero transpirable para una distribución equitativa del peso y comodidad.
@@ -102,28 +56,11 @@
                     </div>
                     <p class="tec-espec-description">Peso soportado: 18 kg Medidas: 80 cm de alto, 40 cm de ancho y 30 cm de profundidad.</p>
                 </div>
-
             </div>
         </article>
-        <footer>
-            <div class="form-suscription">
-            <form action="#" method="POST">
-                <p>Suscribite para recibir las mejores ofertas</p>
-                <input type="email" name="email" placeholder="Correo electrónico">
-                <button type="submit">Suscribirme</button>
-            </form>
-            </div>
-            
-        </div>
-        <div class="copyright">
-            <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
-        </div>
-        <div class="social-media-icons">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
+    </main>
 
-    </footer>
+    <%- include('./partials/footer') %>
+
 </body>
 </html>

@@ -1,52 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b373cc5067.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/stylesCart.css">
-
-</head>
+<% let pageTitle = 'Carrito' %>
+<%- include('partials/head', { styles: ['stylesCart'], pageTitle: pageTitle }) %>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="/images/peaklogo.png" alt="Peak's logo">
-        </div>
-        <div class="right-elements">
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="burguer-menu">
-                <a class="burguer"><i class="fa-solid fa-bars"></i></a>
-            </div>
-        </div>
 
-        <nav class="center-bar">
-            <ul class="nav-bar">
-                <li><a href="/">INICIO</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">OUTLET</a></li>
-                <li><a href="#">DEPORTES</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-        </nav>
-        <nav class="right-bar">
-            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-user"></i></a></div>
-            <div class="icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
-        </nav>
+    <%- include('./partials/header') %>
 
-    </header>
     <main>
     <h5>Productos > Carrito de compras</h5>
     <section class="product-list">
         <article class="products">
-            <img src="images\mochila1.png" alt="Mochila Peak">
+            <img src="\images\mochila1.png" alt="Mochila Peak">
             <div class="description">
                 <p>
                     MOCHILA PEAK
@@ -95,7 +58,7 @@
 
     <section class="product-list">
         <article class="products">
-            <img src="images\remera-térmica.png" alt="Remera Térmica">
+            <img src="\images\remera-térmica.png" alt="Remera Térmica">
             <div class="description">
                 <p>
                     REMERA TÉRMICA
@@ -204,26 +167,9 @@
         </article>
     </section>
     </main>
-    <footer>
-        <div class="form-suscription">
-        <form action="#" method="POST">
-            <p>Suscribite para recibir las mejores ofertas</p>
-            <input type="email" name="email" placeholder="Correo electrónico">
-            <button type="submit">Suscribirme</button>
-        </form>
-        </div>
-        
-    </div>
-    <div class="copyright">
-        <p><u>Términos y condiciones</u> - <u>Créditos</u> - PEAK. - © 2023. Todos los derechos reservados.</p>
-    </div>
-    <div class="social-media-icons">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    </div>
 
-</footer>
+    <%- include('./partials/footer') %>
+
 </body>
 
 </html>
