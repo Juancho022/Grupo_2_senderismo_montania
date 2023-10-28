@@ -5,7 +5,6 @@ const controller = {
         const products = productModel.getProducts();
         return res.render('index', { products });
     }
-
 }
 
 module.exports = controller;
