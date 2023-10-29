@@ -1,8 +1,8 @@
 [
     {
       "id": 1,
-      "name": "Campera impermeable",
-      "description": "Campera resistente al agua para senderismo",
+      "name": "Sudadera impermeable",
+      "description": "Sudadera resistente al agua para senderismo. Apta para soportar alrededor de 5 horas de exposición a la llovizna.",
       "price": 89000,
       "discount": 15,
       "category": "Ropa para Senderismo",
@@ -14,7 +14,7 @@
       "description": "Botas cómodas para caminatas largas",
       "price": 129000,
       "discount": 10,
-      "category": "Calzado para Senderismo",
+      "category": "Calzados",
       "image": "botas-senderismo.jpg"
     },
     {
