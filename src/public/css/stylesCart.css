@@ -223,8 +223,8 @@ section article div.billing div{
    justify-content:space-between; 
 }
 
-section article div.billing div.products,
-section article div.billing div.price,
+section article div.billing div.product-price div.products,
+section article div.billing div.product-price div.price,
 section article div.billing div.shipment,
 section article div.billing div.shipping-type{
     font-family: Open Sans;

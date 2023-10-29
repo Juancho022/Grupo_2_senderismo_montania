@@ -1,175 +1,176 @@
-<% let pageTitle = 'Carrito' %>
-<%- include('partials/head', { styles: ['stylesCart'], pageTitle: pageTitle }) %>
+<% let pageTitle='Carrito' %>
+    <%- include('partials/head', { styles: ['stylesCart'], pageTitle: pageTitle }) %>
 
-<body>
+        <body>
 
-    <%- include('./partials/header') %>
+            <%- include('./partials/header') %>
 
-    <main>
-    <h5>Productos > Carrito de compras</h5>
-    <section class="product-list">
-        <article class="products">
-            <img src="\images\mochila1.png" alt="Mochila Peak">
-            <div class="description">
-                <p>
-                    MOCHILA PEAK
-                </p>
-                <div class="color-elements">
-                    <span class="color-text">
-                        Sea green
-                    </span>
-                    <div class="color">
-                    </div>
-                </div>
-                <button>
-                    Modificar
-                </button>
-            </div>
-            <div class="product-quantity">
-                <p>
-                    Cantidad
-                </p>
-                <div>
-                    <div class="less">
-                        <p>
-                            -
-                        </p>
-                    </div>
-                    <div>
-                        <p class="quantity">
-                            1
-                        </p>
-                    </div>
-                    <div>
-                        <p class="more">
-                            +
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="cost-delete">
-                <p>
-                    $150.000
-                </p>
-                <i class="fa fa-trash"></i>
-            </div>
-        </article>
-    </section>
+                <main>
+                    <h5>Productos > Carrito de compras</h5>
+                    <section class="product-list">
+                        <article class="products">
+                            <img src="\images\mochila1.png" alt="Mochila Peak">
+                            <div class="description">
+                                <p>
+                                    MOCHILA PEAK
+                                </p>
+                                <div class="color-elements">
+                                    <span class="color-text">
+                                        Sea green
+                                    </span>
+                                    <div class="color">
+                                    </div>
+                                </div>
+                                <button>
+                                    Modificar
+                                </button>
+                            </div>
+                            <div class="product-quantity">
+                                <p>
+                                    Cantidad
+                                </p>
+                                <div>
+                                    <div class="less">
+                                        <p>
+                                            -
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="quantity">
+                                            1
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="more">
+                                            +
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost-delete">
+                                <p>
+                                    $150.000
+                                </p>
+                                <i class="fa fa-trash"></i>
+                            </div>
+                        </article>
+                    </section>
 
-    <section class="product-list">
-        <article class="products">
-            <img src="\images\remera-térmica.png" alt="Remera Térmica">
-            <div class="description">
-                <p>
-                    REMERA TÉRMICA
-                </p>
-                <div class="color-elements">
-                    <span class="color-text">
-                        Talle L
-                    </span>
-                </div>
-                <button>
-                    Modificar
-                </button>
-            </div>
-            <div class="product-quantity">
-                <p>
-                    Cantidad
-                </p>
-                <div>
-                    <div class="less">
-                        <p>
-                            -
-                        </p>
-                    </div>
-                    <div>
-                        <p class="quantity">
-                            1
-                        </p>
-                    </div>
-                    <div>
-                        <p class="more">
-                            +
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="cost-delete">
-                <p>
-                    $87.000
-                </p>
-                <i class="fa fa-trash"></i>
-            </div>
-        </article>
-    </section>
+                    <section class="product-list">
+                        <article class="products">
+                            <img src="\images\remera-térmica.png" alt="Remera Térmica">
+                            <div class="description">
+                                <p>
+                                    REMERA TÉRMICA
+                                </p>
+                                <div class="color-elements">
+                                    <span class="color-text">
+                                        Talle L
+                                    </span>
+                                </div>
+                                <button>
+                                    Modificar
+                                </button>
+                            </div>
+                            <div class="product-quantity">
+                                <p>
+                                    Cantidad
+                                </p>
+                                <div>
+                                    <div class="less">
+                                        <p>
+                                            -
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="quantity">
+                                            1
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="more">
+                                            +
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cost-delete">
+                                <p>
+                                    $87.000
+                                </p>
+                                <i class="fa fa-trash"></i>
+                            </div>
+                        </article>
+                    </section>
 
-    <section class="product-detail">
-        <article class="discount-product">
-            <div class="discount">
+                    <section class="product-detail">
+                        <article class="discount-product">
+                            <div class="discount">
 
-                <div class="discount-code">
-                    <p>
-                        ¿Tenés un código de descuento?
-                    </p>
+                                <div class="discount-code">
+                                    <p>
+                                        ¿Tenés un código de descuento?
+                                    </p>
 
 
-                    <div class="apply-code">
+                                    <div class="apply-code">
 
-                        <form action="#" method="POST">
-                            <input class="input" type="text" name="code">
-                        </form>
+                                        <form action="#" method="POST">
+                                            <input class="input" type="text" name="code">
+                                        </form>
 
-                        <button>
-                            Aplicar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </article>
+                                        <button>
+                                            Aplicar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-        <article class="invoice-item">
-            <div class="billing">
-                <div class="products">
-                    <p> 2 productos</p>
+                        <article class="invoice-item">
+                            <div class="billing">
+                                <div class="product-price">
+                                    <div class="products">
+                                        <p> 2 productos</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>$237.000</p>
+                                    </div>
+                                </div>
+                                <div class="invoice-detail">
+                                    <div class="shipment">
+                                        <p>
+                                            Envío
+                                        </p>
+                                    </div>
+                                    <div class="shipping-type">
+                                        <p>
+                                            Gratis
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <div>
+                                        <p>
+                                            TOTAL
+                                        </p>
+                                    </div>
+                                    <div class="total-price">
+                                        <p>
+                                            $237.000
+                                        </p>
+                                    </div>
+                                </div>
+                                <button>
+                                    IR A PAGAR
+                                </button>
+                            </div>
+                        </article>
+                    </section>
+                </main>
 
-                <div class="price">
-                    <p>$237.000</p>
-                </div>
-                </div>
-                <div class="invoice-detail">
-                    <div class="shipment">
-                        <p>
-                            Envío
-                        </p>
-                    </div>
-                    <div class="shipping-type">
-                        <p>
-                            Gratis
-                        </p>
-                    </div>
-                </div>
-                <div class="total">
-                    <div>
-                        <p>
-                            TOTAL
-                        </p>
-                    </div>
-                    <div class="total-price">
-                        <p>
-                            $237.000
-                        </p>
-                    </div>
-                </div>
-                <button>
-                    IR A PAGAR
-                </button>
-            </div>
-        </article>
-    </section>
-    </main>
+                <%- include('./partials/footer') %>
 
-    <%- include('./partials/footer') %>
+        </body>
 
-</body>
-
-</html>
+        </html>
