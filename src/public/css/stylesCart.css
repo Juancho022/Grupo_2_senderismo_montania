@@ -5,38 +5,8 @@
     font-family: Open Sans, sans-serif;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.54);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-header div.logo {
-    display: flex;
-}
-
-header div.logo img {
-    width: 84px;
-    height: 36px;
-}
-
-header div.right-elements {
-    display: flex;
-}
-
-header div.burguer-menu i,
-header div.search i {
-    color: #EFC84C;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-header nav.right-bar,
-header nav.center-bar {
-    display: none;
+main{
+    padding:60px 0px;
 }
 
 h5 {
@@ -156,6 +126,8 @@ section.product-list article.products div.cost-delete i {
     margin-left: 13px;
     color: #D3563B;
     font-size: 24px;
+    position: static;
+    margin-bottom: 5px;
 }
 
 section.product-list article.products div.cost-delete p {
@@ -351,6 +323,9 @@ section.product-detail article.discount-product {
 section article div.billing{
     margin-right:160px;
 
+}
+main{
+    width:90%;
 }
 }
 
