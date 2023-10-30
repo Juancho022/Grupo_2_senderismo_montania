@@ -1,0 +1,368 @@
+* {
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin-top: 100px;
+}
+
+div#search-products {
+    position: relative;
+}
+
+div#header-products {
+    display: flex;
+    margin: 32px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input[type="text-search"] {
+    padding: 8px 47px;
+    border: 1px solid #ccc;
+    border-radius: 32px;
+    width: 469px;
+    position: relative;
+}
+
+.search-button {
+    background-color: transparent;
+    color: #ccc;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    left: 19px;
+}
+
+button.new-product {
+    background-color: transparent;
+    color: #D3573C;
+    border: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 96px;
+    border-bottom: solid 0.5px #d4d4d4;
+}
+
+span.first-row, span.second-row,span.third-row,span.fourth-row,span.fifth-row,span.sixth-row {
+    font-size: 16px;
+    color: #7f7f7f;
+    margin: 8px;
+    font-weight: 600;
+}
+
+/* Styles products starts */
+i.pencil-edit {
+    color: #efc84c;
+    background-color: #2e2e2e;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+img.product {
+    display: flex;
+    border-radius: 20%;
+    width: 30%;
+}
+
+.table-product {
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 108px;
+    padding-bottom: 8px;
+    border-bottom: solid 0.5px #d4d4d4;
+    align-items: center;
+    font-size: 16px;
+    width: 86%;
+}
+
+div.product-image {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 10%;
+}
+
+.counter {
+    display: flex;
+    gap: 16px;
+}
+
+div#decrease, #increase {
+    background-color: #2e2e2e;
+    width: 15px;
+    border-radius: 2px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #efc84c;
+}
+
+.product-edit {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 24px;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    padding: 16px;
+}
+
+.edit-img {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.product-collapse-button {
+    display: flex;
+    justify-content: end;
+    margin-right: 98px;
+    background-color: #f2f2f2;
+    margin-left: 100px;
+    padding-top: 8px;
+    padding-right: 8px;
+}
+
+button#collapse-button {
+    color: #efc84c;
+    background-color: #2e2e2e;
+    padding: 8px;
+    border-radius: 8px;
+    height: 32px;
+}
+
+img.img-edit-product {
+    margin-bottom: 16px;
+    border-radius: 10%;
+}
+
+button.edit-image-button {
+    background-color: transparent;
+    color: #D3573C;
+    border: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+form.product-edit-form {
+    margin-left: 32px;
+    font-size: 16px;
+    width: max-content;
+}
+
+input.product-imput,.label-product-price,.size-options,.color-options,.counter-edit-product, #edit-product-title {
+    width: 50vw;
+    margin-bottom: 16px;
+}
+
+label {
+    margin-bottom: 6px;
+}
+
+.label-product, .label-product-price {
+    display: flex;
+    flex-direction: column;
+}
+
+label, label[for="color-options"],label[for="size"], span#stock, span#category  {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+input.product-imput, input.product-imput, input.product-imput-price { 
+    border: none;
+    border-bottom: solid 0.2px rgb(147, 147, 147,0.5);
+    background-color: transparent;
+    
+}
+
+.counter-edit-product {
+    display: flex;
+    gap: 16px;
+}
+
+div.product-category {
+    margin-bottom: 8px;
+}
+
+input[type="submit"] {
+    background-color: #2e2e2e;
+    border-radius: 45px;
+    color: #efc84c;
+    padding: 4px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+/* QUERIES START */
+
+/*************TABLET**************************/
+@media (max-width: 1023px) {
+    html {
+        font-size: 100%;
+    }
+
+    .table-product {
+        margin: 13px 60px;
+    }
+
+    .table-row {
+        justify-content: normal;
+        gap: 100px;
+        margin: 0 60px;
+    }
+
+    span.first-row, span.product-code {
+        display: none;
+    }
+}
+
+/*************MOBILE**************************/
+@media (max-width: 480px) {
+    html {
+        font-size: 100%;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    input[type="text-search"] {
+        width: 161px;
+    }
+
+    .search-button {
+        top: -19px;
+        left: 53px;
+    }
+
+    .table-row {
+        gap: 60px;
+        margin: 0 17px;
+    }
+
+    .table-product {
+        margin: 13px 17px;
+        justify-content: space-between;
+        gap: 33px;
+    }
+
+    img.product {
+        width: 100%;
+    }
+
+    span.product-price {
+        margin-left: 93px;
+    }
+
+    i.pencil-edit {
+        color: #efc84c;
+        background-color: #2e2e2e;
+        padding: 8px;
+        border-radius: 8px;
+        position: relative;
+        top: -1px;
+    }
+
+    span.third-row, select.product-category {
+        display: none;
+    }
+
+    .counter {
+        gap: 2px;
+    }
+
+    .product-edit {
+        margin-left: 17px;
+        margin-right: 21px;
+        flex-direction: column;
+    }
+
+    .edit-img {
+        width: 70%;
+        margin-bottom: 16px;
+    }
+
+    form.product-edit-form {
+        margin-left: 12px;
+        width: 100%;
+    }
+
+    .label-product, .label-product-price {
+        flex-direction: row;
+    }
+
+    input.product-imput, .label-product-price, .size-options, .color-options, .counter-edit-product, #edit-product-title {
+        width: 62vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form.product-edit-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 16px;
+    height: 124px;
+    margin-left: 16px;
+}
+
+div.label-product {
+    width: 45%;
+    margin-bottom: 16px;
+}
+
+div.label-product-price {
+    width: 24%;
+}
+
+input.product-imput {
+    width: 80%;
+}
+
+.size-options {
+    margin-right: 32px;
+    margin-bottom: 16px;
+}
+
+.counter-edit-product {
+    display: flex;
+    gap: 16px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+} */
+
+
+
+
