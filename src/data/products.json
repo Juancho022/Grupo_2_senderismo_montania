@@ -5,23 +5,23 @@
       "description": "Sudadera resistente al agua para senderismo. Apta para soportar alrededor de 5 horas de exposición a la llovizna.",
       "price": 89000,
       "discount": 15,
-      "category": "Ropa para Senderismo",
-      "image": "campera-impermeable.jpg"
+      "category": "Senderismo",
+      "image": "xxxxxxxxxxxxxxxxx"
     },
     {
       "id": 2,
-      "name": "Botas de senderismo",
-      "description": "Botas cómodas para caminatas largas",
-      "price": 129000,
+      "name": "Gorro térmico",
+      "description": "Gorro que mantiene el calor en climas fríos",
+      "price": 15000,
       "discount": 10,
-      "category": "Calzados",
-      "image": "botas-senderismo.jpg"
+      "category": "Escalada",
+      "image": "xxxxxxxxxxxxxxxxxxxxx"
     },
     {
       "id": 3,
-      "name": "Mochila de senderismo",
-      "description": "Mochila espaciosa para llevar todo lo necesario",
-      "price": 60000,
+      "name": "Campera impermeable mujer",
+      "description": "Campera resistente al agua con doble protección interna, 6 bolsillos, reversible",
+      "price": 162.378,
       "discount": 20,
       "category": "Accesorios para Senderismo",
       "image": "mochila-senderismo.jpg"
@@ -64,8 +64,8 @@
     },
     {
       "id": 8,
-      "name": "Gorra térmica",
-      "description": "Gorra que mantiene el calor en climas fríos",
+      "name": "Gorro térmico",
+      "description": "Gorro que mantiene el calor en climas fríos",
       "price": 24.99,
       "discount": 15,
       "category": "Accesorios para Senderismo",
