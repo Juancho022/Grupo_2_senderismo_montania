@@ -6,7 +6,7 @@
     <%- include('./partials/header') %>
 
     <main>
-        <main>
+        
             <!-- HERO SECTION STARTS -->
                 <section id="hero">
                     <img src="\images\hero.jpg" alt="Personas sentadas de espalda a un acantilado" id="heroImage">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </section>
-        <section>
+        
             <section class="publicity">                         <!--Section de Juan para la imagen del viejito --> 
 
                 <div class="box1">
@@ -91,54 +91,62 @@
                     </div>
                 </div>
                 <img src="\images\deportista.jpg"  alt="Publicidad Deportista" class="deportist">
-        </section>
-        <br>
-        <br>
-        <section class="cards">                                   <!--Section de Juan para las ultimas 4 cards-->
-            <div class="card-nro1">
-                <img src="\images\shoes (0).png" alt="zapatillaNro1" class="shoesNro1" >
-                <i id="heart1"   class="far fa-heart"></i>
-                <p class="orange-line"></p>
-                <div class="description1"><b>BOTAS P22</b></div>
-                <br>
-                <p id="little-description" >Entresuela de EVA para absorber impactos.</p>
-                <p id="price-1"    class="price"><b>220.000$</b></p>
-                <button  id="button-1"><i  id="shop-cart"  class="fas fa-shopping-cart"></i></button>
-            </div>
-            <div class="separate"></div>
-            <div class="card-nro2">
-                <img src="\images\shoes (1).jpg" alt="zapatillaNro2" class="shoesNro2">
-                <i id="heart2"   class="far fa-heart"></i>
-                <p class="orange-line"></p>
-                <div class="description2"><b>ZAPATILLAS BELL</b></div>
-                <br>
-                <p id="little-description">Suela de caucho con patron de agarre</p>
-                <p  id="price-2"   class="price"><b>174.056$</b></p>
-                <button id="button-2"><i id="shop-cart"  class="fas fa-shopping-cart"></i></button>
-            </div>
-            <div id="separate-only-769"   class="separate"></div>
-            <div class="card-nro3">
-                <img src="\images\shoes (2).jpg" alt="zapatillaNro3" class="shoesNro3">
-                <i id="heart3"   class="far fa-heart"></i>
-                <p class="orange-line"></p>
-                <div class="description3"><b>BOTAS MAGIC</b></div>
-                <br>
-                <p id="little-description">Ajuste ceñido para un mayor control y precisión.</p>
-                <p id="price-3"      class="price"><b>185.670$</b></p>
-                <button  id="button-3"><i id="shop-cart"  class="fas fa-shopping-cart"></i></button>
-            </div>
-            <div class="separate"></div>
-            <div class="card-nro4">
-                <img src="\images\shoes (3).jpg" alt="zapatillaNro4" class="shoesNro4">
-                <i id="heart4"   class="far fa-heart"></i>
-                <p class="orange-line"></p>
-                <div class="description4"><b>Botas CBEST</b></div>
-                <br>
-                <p id="little-description">Cordones y sistemas de cierre de velcro</p>
-                <p id="price-4"     class="price"><b>124.890$</b></p>
-                <button  id="button-4"><i id="shop-cart"  class="fas fa-shopping-cart"></i></button>
-            </div>
-        </section>
+            </section>
+            <br>
+            <br>
+            <section class="cardsBottom">                                   <!--Section de Juan para las ultimas 4 cards-->
+                <div class="cards">
+                    <img src="\images\shoes (0).png" alt="zapatillaNro1" class="shoesImage--1">
+                    <p class="orange-line"></p>
+                    <div class="shoesDescription">
+                        <h4 class="shoesName"><b>BOTAS P22</b></h4>
+                        <p id="description" >Entresuela de EVA para absorber impactos.</p>
+                        <p class="price"><b>220.000$</b></p>
+                        <button  class="buttonShop">
+                            <i  id="shop-cart"  class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="separate"></div>
+                <div class="cards">
+                    <img src="\images\shoes (1).jpg" alt="zapatillaNro2" class="shoesImage--2">
+                    <p class="orange-line"></p>
+                    <div class="shoesDescription">
+                        <h2 class="shoesName"><b>BOTAS BELL</b></h2>
+                        <p id="description">Suela de caucho con patron de agarre</p>
+                        <p class="price"><b>174.056$</b></p>
+                        <button class="buttonShop">
+                            <i id="shop-cart"  class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="separate-only-769"   class="separate"></div>
+                <div class="cards">
+                    <img src="\images\shoes (2).jpg" alt="zapatillaNro3" class="shoesImage--3">
+                    <p class="orange-line"></p>
+                    <div class="shoesDescription">
+                        <h2 class="shoesName"><b>BOTAS MAGIC</b></h2>
+                        <p id="description">Ajuste ceñido para un mayor control y precisión.</p>
+                        <p class="price"><b>185.670$</b></p>
+                        <button  class="buttonShop">
+                            <i id="shop-cart"  class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="separate"></div>
+                <div class="cards">
+                    <img src="\images\shoes (3).jpg" alt="zapatillaNro4" class="shoesImage--4">
+                    <p class="orange-line"></p>
+                    <div class="shoesDescription">
+                        <h2 class="shoesName"><b>Botas CBEST</b></h2>
+                        <p id="description">Cordones y sistemas de cierre de velcro</p>
+                        <p class="price"><b>124.890$</b></p>
+                        <button  class="buttonShop">
+                            <i id="shop-cart"  class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
     </main>
 
     <%- include('./partials/footer') %>
