@@ -6,7 +6,7 @@
       "price": 89000,
       "discount": 15,
       "category": "Senderismo",
-      "image": "xxxxxxxxxxxxxxxxx"
+      "image": "xxxxxxIMAGEN 1xxxxxxxxxxx"
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "price": 15000,
       "discount": 10,
       "category": "Escalada",
-      "image": "xxxxxxxxxxxxxxxxxxxxx"
+      "image": "xxxxxxxxxxxxIMAGEN 2xxxxxxxxx"
     },
     {
       "id": 3,
@@ -23,62 +23,62 @@
       "description": "Campera resistente al agua con doble protección interna, 6 bolsillos, reversible",
       "price": 162.378,
       "discount": 20,
-      "category": "Accesorios para Senderismo",
-      "image": "mochila-senderismo.jpg"
+      "category": "Escalada",
+      "image": "xxxxxxxxIMAGEN 3xxxxxxxxx"
     },
     {
       "id": 4,
-      "name": "Pantalones de trekking",
-      "description": "Pantalones cómodos y resistentes",
-      "price": 35000,
+      "name": "Conjunto deportivo hombre",
+      "description": "xxxxxxxxxxxxxxxxxxxxx",
+      "price": 0,
       "discount": 5,
-      "category": "Ropa para Senderismo",
-      "image": "pantalones-trekking.jpg"
+      "category": "Trekking",
+      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 4 xxx"
     },
     {
       "id": 5,
       "name": "Remera Térmica",
-      "description": "Remera ligera que mantiene la frescura",
-      "price": 30000,
+      "description": "xxxxxxxxxxxxxxxx",
+      "price": 0,
       "discount": 0,
-      "category": "Ropa para Senderismo",
-      "image": "remera-Termica.jpg"
+      "category": "Senderismo",
+      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 5 xxx"
     },
     {
       "id": 6,
       "name": "Gorra",
-      "description": "Gorra con vicera",
-      "price": 19.99,
+      "description": "xxxxxxxxxxxxxxxxxxx",
+      "price": 0,
       "discount": 10,
-      "category": "Accesorios para Senderismo",
-      "image": "gorra-vicera.jpg"
+      "category": "Accesorios",
+      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 6 xxx"
     },
     {
       "id": 7,
-      "name": "Medias de senderismo",
-      "description": "Medias acolchadas para largas caminatas",
-      "price": 12.99,
+      "name": "Botella térmica",
+      "description": "xxxxxxxxxxxxxxx",
+      "price": 0,
       "discount": 0,
-      "category": "Ropa para Senderismo",
-      "image": "medias-senderismo.jpg"
+      "category": "Accesorios",
+      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 7 xxx"
     },
     {
       "id": 8,
-      "name": "Gorro térmico",
-      "description": "Gorro que mantiene el calor en climas fríos",
-      "price": 24.99,
+      "name": "Calza impermeable mujer",
+      "description": "xxxxxxxxxxxxx",
+      "price": 0,
       "discount": 15,
-      "category": "Accesorios para Senderismo",
-      "image": "gorra-termica.jpg"
+      "category": "Senderismo",
+      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 8 xxx"
     },
     {
       "id": 9,
-      "name": "Rompevientos ligero",
-      "description": "Chaqueta rompevientos para senderismo",
-      "price": 74.99,
+      "name": "Zapatos para escalar",
+      "description": "xxxxxxxxxxxxxxxxxx",
+      "price": 0,
       "discount": 10,
-      "category": "Ropa para Senderismo",
-      "image": "rompevientos.jpg"
+      "category": "Calzados",
+      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 9 xxx"
     },
     {
       "id": 10,
@@ -86,8 +86,8 @@
       "description": "Linterna potente para excursiones nocturnas",
       "price": 39.99,
       "discount": 5,
-      "category": "Accesorios para Senderismo",
-      "image": "linterna-recargable.jpg"
+      "category": "Accesorios",
+      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 10 xxx"
     }
   ]
   
