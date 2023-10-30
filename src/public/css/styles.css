@@ -622,14 +622,12 @@ section#cardsHome div.card button.buttonCard:hover {
 
 .publicity {
     display: flex;
-    top: 150px;
     align-items: center;
 } 
  
  .deportist {
     position: relative;
     width: 90%;
-    height: 180px;
     opacity: 1;
     margin: auto;
     z-index: 0;
@@ -638,7 +636,7 @@ section#cardsHome div.card button.buttonCard:hover {
 .box1 {
     position: absolute;
     z-index: 1;
-    width: 182px;
+    width: 213px;
     height: 65px;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -646,9 +644,8 @@ section#cardsHome div.card button.buttonCard:hover {
 
 .text {
     position: absolute;
-    display: flex;
-    bottom: 15px;
-    align-self: center;
+    bottom: 14px;
+    left: 7px;
     z-index: 2;
     text-align: left;
     font: normal normal 300 16px/19px Calibri;
@@ -656,11 +653,100 @@ section#cardsHome div.card button.buttonCard:hover {
     color: #FFFFFF
 }
 
-.cards {
+section.cardsBottom {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+}
+
+section.cardsBottom div.cards {
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     
+    border-radius: 8px;
+    /*
+    margin-right: 16px;*/
+    
+}
+
+ .shoesImage--1, .shoesImage--2, .shoesImage--3, .shoesImage--4{
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.shoesImage--1{
+    height: 39%;
+}
+
+.shoesImage--4{
+    height: 43%;
+}
+
+section.cardsBottom div.cards div.shoesDescription {
+    height: fit-content;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+    margin-top: 5%;
+}
+
+.orange-line{
+    position: relative;
+    width: 50px;
+    height: 5px;
+    top: 15px;
+    right: -4px;
+    background: #D3573C 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+div.shoesDescription .shoesName, div.shoesDescription .price {
+    text-align: left;
+    font: normal normal bold 16px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#description {
+    text-align: left;
+    font: normal normal normal 14px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+
+
+main section.cardsBottom div.cards button.buttonShop {
+    position: relative;
+    background-color: #000000;
+    border-color: #000000;
+    border-radius: 9px;
+    width: 30px;
+    height: 30px;   
+    z-index: 0;
+}
+
+button.buttonShop #shop-cart {
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    z-index: 1;
+    width: 15px;
+    height: 14px;
+    color: #EFC84C;
+    opacity: 1;
 }
 
 .separate {
@@ -671,128 +757,7 @@ section#cardsHome div.card button.buttonCard:hover {
     opacity: 1;
     background-color: grey;
 }
-
-
-
-.shoesNro1 {
-    width: 100%;
-    height: 43%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border-radius: 26px;
-    opacity: 1;
-}
-
-.shoesNro2{
-    width: 100%;
-    box-shadow: 0px 0px 12px rgb(100, 100, 100);
-    border-radius: 20px;
-    opacity: 1;
-}
-.shoesNro3{
-    width: 100%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border-radius: 20px;
-    opacity: 1;
-}
-.shoesNro4{
-    width: 100%;
-    height: 47%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border-radius: 20px;
-    opacity: 1;
-}
-
-.description1, .description2, .description3, .description4, .price {
-    text-align: left;
-    font: normal normal bold 16px/67px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-}
-
-#little-description {
-    text-align: left;
-    font: normal normal normal 14px Open Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-
-.description1{
-    width: 100%;
-    height: 20px;
-}
-.description2{
-    width: 150px;
-    height: 20px;
-}
-.description3{
-    width: 150px;
-    height: 20px;
-}
-.description4{
-    width: 150px;
-    height: 20px;
-}
-
-.price , #price-1, #price-2, #price-3, #price-4{
-    position: relative;
-    width: 70px;
-    height: 20px;
-    bottom: 10px
-}
-
-.card-nro1 {
-    width: 40%;
-    padding: 20px;
-    
-}
-.card-nro2 {
-    width: 40%;
-    padding: 20px;
-
-}
-.card-nro3 {
-    width: 40%;
-    padding: 20px;
-}
-.card-nro4 {
-    width: 40%;
-    padding: 20px;
-}
-
-#shop-cart {
-    position: absolute;
-    top: 7px;
-    left: 6px;
-    z-index: 1;
-    width: 15px;
-    height: 14px;
-    color: #EFC84C;
-    opacity: 1;
-}
-main section.cards button, #button-1, #button-2 , #button-3 , #button-4   
- {
-    position: relative;
-    top: 25px;
-    background-color: #000000;
-    border-color: #000000;
-    border-radius: 9px;
-    width: 30px;
-    height: 30px;   
-    z-index: 0;
-}
-
-.orange-line{
-    position: relative;
-    width: 40px;
-    height: 5px;
-    top: 15px;
-    background: #D3573C 0% 0% no-repeat padding-box;
-    opacity: 1;
-}
-
+/*
 #heart1 {
     position: relative;
     color: #D3573C;
@@ -826,45 +791,39 @@ main section.cards button, #button-1, #button-2 , #button-3 , #button-4
     left: 106px;
     top: -100px;
 }
+*/
 
+
+
+/* START QUERIS  */
+
+/* TABLET AND MOVILE */
 @media (max-width: 768px) {
-    #little-description{
+    #description{
         display: none;
     }
     #separate-only-769{
         display: none;
     }
-    .text{
-        bottom: 4px;
-        left: 10px;
-        font-size: 17px;
-    }
+    
 }
 
+/* TABLET  */
 
 @media (min-width: 480px) {
-    .shoesNro1{
-        height: 54%;
-    }
-
-    .shoesNro4{
-        height: 62%;
-    }
-    .deportist {
-        height: 350px;
-    }
+    
     .box1 {
-        width: 300px;
-        height: 180px;
+        width: 330px;
+        height: 130px;
     }
     .text {
         font-size: 25px;
-        line-height: 30px;
-        text-align: center;
-        bottom: 55px;
+        line-height: 35px;
+        text-align: left;
+        bottom: 36px;
     }
     .orange-line{
-        width: 90px;
+        width: 110px;
     }
     .separate{
         height: 340px;
@@ -872,7 +831,8 @@ main section.cards button, #button-1, #button-2 , #button-3 , #button-4
     #separate-only-769{
         display: none;
     }
-    #heart1 {
+
+    /*#heart1 {
         left: 231px;
         top: -209px;
     }
@@ -888,162 +848,128 @@ main section.cards button, #button-1, #button-2 , #button-3 , #button-4
     #heart4{
         left: 231px;
         top: -201px;
-    }
-    #shop-cart {
+    }*/
+    button.buttonShop #shop-cart {
         top: 6px;
         left: 4px;
     }
+    .shoesImage--1{
+        height: 51%;
+    }
+    .shoesImage--4{
+        height: 58%;
+    }
 }
+
+ /* NOTEBOOKS  */
 
 @media (min-width: 769px) {
 
-    .card-nro1 {
+    .deportist{
+        width: 55%;
+        left: 130px;
+    }
+    .box1{
+        width: 359px;
+        height: 232px;
+        left: 125px;
+    }
+
+    .text{
+        font-size: 30px;
+        line-height: 45px;
+        bottom: 77px;
+    }
+
+    section.cardsBottom div.cards {
         width: 18%;
-    }
-    
-    .card-nro2{
-        width: 18%;
-    }
-    .card-nro3{
-        width: 18%;
-    }
-    .card-nro4{
-        width: 18%;
-    }
-    .shoesNro1{
-        height: 35%;
-    }
-    .shoesNro4{
-        height: 35%;
     }
     .orange-line{
-        width: 29px;
-        top: -12px;
+        width: 68px;
+        top: 9px;
     }
     .separate{
         height: 280px;
     }
-    .price{
-        bottom: 15px;
-    }
-    #price-2{
-        top: 9px;
-    }
-    #price-3{
-        bottom: 5px;
-    }
-    #price-4{
-        top: 2px;
-    }
     #separate-only-769{
         display: block;
     }
-    #button-1{
-        top: -15px;
-        left: 95px;
+    .shoesImage--1{
+        height: 34%;
     }
-    #button-2{
-        top: 8px;
-        left: 95px;
+    .shoesImage--4{
+        height: 34%;
     }
-    #button-3{
-        top: -7px;
-        left: 95px;
+    .shoesImage--2{
+        height: 34%;
     }
-    #button-4{
-        top: -1px;
-        left: 95px;
+    button.buttonShop{
+        bottom: 22%;
+        left: 55%;
     }
-    #heart1{
-        top: -113px;
-        left: 115px;
-    }
-    #heart2{
-        top: -113px;
-        left: 115px;
-    }
-    #heart3{
-        top: -113px;
-        left: 119px;
-    }
-    #heart4{
-        top: -113px;
-        left: 117px;
-    }
-    
 }
 
+/* DESKTOP PC  */
 
 @media (min-width: 1200px) {
     
-    .card-nro1 {
-        width: 14%;
-    }
-    
-    .card-nro2{
-        width: 14%;
-    }
-    .card-nro3{
-        width: 14%;
-    }
-    .card-nro4{
-        width: 14%;
-    }
-    .shoesNro1 {
-        height: 39%;
-    }
-    .shoesNro4{
-        height: 39%;
-    }
     .deportist {
-        width: 80%;
-        height: 450px;
+        width: 55%;
+        left: 188px;
+    }
+    .box1 {
+        width: 477px;
+        height: 345px;
+        left: 202px;
     }
     .text {
         font-size: 40px;
-        line-height: 45px;
-        text-align: center;
+        line-height: 65px;
+        bottom: 126px;
     }
-    .box1 {
-        width: 400px;
-        height: 240px;
+    section.cardsBottom div.cards {
+        width: 14%;
     }
+    
     #separate-only-769{
         display: block;
     }
-    #price-1{
-        top: 13px;
+    .shoesImage--1{
+        height: 37%;
     }
-    #price-2{
-        bottom: 16px;
+    .shoesImage--4{
+        height: 37%;
     }
-    #price-3{
-        bottom: 5px;
+    .shoesImage--2{
+        height: 37%;
     }
-    #price-4{
-        top: 13px;
+    .orange-line{
+        width: 75px;
     }
-    #button-1{
-        top: 10px;
+}
+
+@media (min-width: 1900px) {
+    .shoesImage--1{
+        height: 43%;
     }
-    #button-4{
-        top: 7px;
+    .shoesImage--4{
+        height: 43%;
     }
-    #heart1{
-        top: -124px;
-        left: 131px;
+    .shoesImage--2{
+        height: 43%;
     }
-    #heart2{
-        top: -124px;
-        left: 132px;
+    .deportist {
+        width: 55%;
+        left: 239px;
     }
-    #heart3{
-        top: -124px;
-        left: 132px;
+    .box1 {
+        width: 616px;
+        height: 436px;
+        left: 275px;
     }
-    #heart4{
-        top: -124px;
-        left: 131px;
+    .text {
+        font-size: 50px;
+        line-height: 75px;
+        bottom: 170px;
     }
-    
 }

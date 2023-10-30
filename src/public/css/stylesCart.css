@@ -5,38 +5,8 @@
     font-family: Open Sans, sans-serif;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.54);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-header div.logo {
-    display: flex;
-}
-
-header div.logo img {
-    width: 84px;
-    height: 36px;
-}
-
-header div.right-elements {
-    display: flex;
-}
-
-header div.burguer-menu i,
-header div.search i {
-    color: #EFC84C;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-header nav.right-bar,
-header nav.center-bar {
-    display: none;
+main{
+    padding:80px 0px;
 }
 
 h5 {
@@ -153,9 +123,11 @@ section.product-list article.products div.cost-delete {
 }
 
 section.product-list article.products div.cost-delete i {
-    margin-left: 64px;
+    margin-left: 13px;
     color: #D3563B;
     font-size: 24px;
+    position: static;
+    margin-bottom: 5px;
 }
 
 section.product-list article.products div.cost-delete p {
@@ -251,8 +223,8 @@ section article div.billing div{
    justify-content:space-between; 
 }
 
-section article div.billing div.products,
-section article div.billing div.price,
+section article div.billing div.product-price div.products,
+section article div.billing div.product-price div.price,
 section article div.billing div.shipment,
 section article div.billing div.shipping-type{
     font-family: Open Sans;
@@ -288,6 +260,12 @@ section article div.billing button{
     font-family: Open Sans;
     padding:10px;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 
 @media (max-width: 481px) {
     section.product-list article.products {
@@ -336,7 +314,6 @@ section.product-detail {
 section.product-detail article.discount-product {
     justify-content: center;
 }
-
 }
 
 
@@ -346,59 +323,10 @@ section article div.billing{
     margin-right:160px;
 
 }
+main{
+    width:90%;
 }
-
-footer {
-    background-color: #000;
-    display: flex;
 }
-
-footer div.copyright{
-    display: flex;
-    width: 70%;
-}
-
-
-footer div.copyright p {
-    font-family: "Open Sans";
-    font-size: 12px;
-    color: #EFC84C;
-    text-align: left;
-}
-
-
-
-footer div.social-media-icons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:20%;
-}
-
-footer div.social-media-icons a{
-    display:flex;
-    text-decoration: none;
-}
-
-footer div.social-media-icons i {
-    font-size: 16px;
-    width: 30px;
-    height: 30px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    transition: all .4s ease-in-out;
-}
-
-footer div.social-media-icons a:hover{
-    transform: scale(1.2);
-}
-
-footer div.form-suscription {
-    display: none;
-    margin-left: 10px;
-}
-
 
 @media (min-width: 768px) {
     header div.logo img {
@@ -451,61 +379,6 @@ footer div.form-suscription {
         color: #EFC84C;
         font-size: 18px;
         margin-right: 12px;
-    }
-
-    footer div.form-suscription p {
-        color:#EFC84C;
-        margin-bottom: 10px;
-        font-family: "Open Sans";
-        text-align: center;
-        font-size:small;
-    }
-
-    footer div.form-suscription {
-        margin-top: 5px;
-        display: flex;
-    }
-
-    footer div.form-suscription input {
-        background-color: #000;
-        border: none;
-        margin-bottom: 10px;
-        border-bottom: solid 1px white;
-        text-decoration: underline;
-    }
-
-    footer div.form-suscription input::placeholder {
-        color: white;
-        font-size: 10px;
-        font-family: "Open Sans";
-    }
-
-    footer div.form-suscription button {
-        border: 1px solid #EFC84C;
-        border-radius: 11px;
-        padding: 3px;
-        cursor: pointer;
-        background-color: #000;
-        font-family: "Open Sans";
-        color: white;
-        font-size: 10px;
-    }
-    footer div.form-suscription{
-        width: 40%;
-    }
-
-    footer div.copyright{
-        width: 40%;
-        cursor: pointer;
-    }
-
-    footer div.copyright p{
-        text-align: center;
-        align-self:center;
-    }
-
-    footer div.social-media-icons{
-        width: 20%
     }
 }
 
