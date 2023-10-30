@@ -2,8 +2,16 @@ html, body {
     height: 100%;
     overflow: visible;
   }
-
+main div{
+    display: flex;
+    flex-direction: column;   
+}
 main section#sectionLogin {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+main section#sectionRegister {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -14,20 +22,34 @@ main section div span#loginTitle {
     position: relative;
     text-align: center;
 }
+main section div span#registerTitle {
+    font-size: 3vw;
+    position: relative;
+    text-align: center;
+}
 
 main section div p#paragraphTitle {
     font-size: 1.4vw;
     font-weight: 200;
 }
-
+main section div p#paragraphRegister {
+    font-size: 1.4vw;
+    font-weight: 200;
+}
 main section div#loginBox {
     display: flex;
     flex-direction: column;
     color: azure;
     position: absolute;
-    flex-direction: column;
+    font-size: medium;
 }
-
+main section div#registerBox {
+    display: flex;
+    flex-direction: column;
+    color: azure;
+    position: absolute;
+    font-size: medium;
+}
 main form {
     display: flex;
     top: 84px;
@@ -131,20 +153,26 @@ input[type="checkbox" i]:before {
 @media (max-width: 480px) {
 
     main section img#login-image {
-        width: 805px;
-        left: -430px;
+        width: max-content;
+        left: -935px;
         height: auto;
         position: relative;
     }
     
     main section img#register-image {
-        width: 820px;
-        left: -1px;
+        width: max-content;
+        left: -175px;
         height: auto;
         position: relative;
     }
 
     main section div#loginBox {
+        top: 99px;
+        left: 40px;
+        padding-right: 74px;
+        width: 100%;
+    }
+    main section div#registerBox {
         top: 99px;
         left: 40px;
         padding-right: 74px;
@@ -161,19 +189,25 @@ input[type="checkbox" i]:before {
     main section div span#loginTitle {
         font-size: 2rem;
     }
+    main section div span#registerTitle {
+        font-size: 2rem;
+    }
     
     main section div p#paragraphTitle {
         font-size: 1.6rem;
         font-weight: 200;
     }
-    
+    main section div p#paragraphRegister {
+        font-size: 1.6rem;
+        font-weight: 200;
+    }
 }
 /*************TABLET**************************/
 @media (min-width: 768px) {
     main section img#login-image {
         display: flex;
         width: auto;
-        left: -609px;
+        left: -351px;
         position: relative;
     }
     main section form {
@@ -186,15 +220,32 @@ input[type="checkbox" i]:before {
     }
     main section div#loginBox {
         top: 20%;
-        left: 30%;
+        left: 20%;
+    }
+    main section div#registerBox {
+        top: 20%;
+        left: 20%;
     }
     
     main section div span#loginTitle {
         font-size: 3rem;
     }
+    main section div span#registerTitle {
+        font-size: 3rem;
+        left: 20%;
+    }
     
     main section div p#paragraphTitle {
         font-size: 1.6rem;
+        display: flex;
+        position: relative;
+        left: 10px;
+    }
+    main section div p#paragraphRegister {
+        font-size: 1.6rem;
+        display: flex;
+        position: relative;
+        left: 70px;
     }
 
     main section button {
@@ -220,6 +271,10 @@ input[type="checkbox" i]:before {
         position: absolute;
         width: 80%;
     }
+    main section div#registerBox {
+        position: absolute;
+        width: 80%;
+    }
     main section form {
         font-size: 1.6rem;
         width: 611px;
@@ -229,15 +284,25 @@ input[type="checkbox" i]:before {
     }
     main section div span#loginTitle {
         font-size: 4rem;
-        right: 10%;
+        right: 105px;
     }
-    
+    main section div span#registerTitle {
+        font-size: 4rem;
+        display: flex;
+        position: relative;
+        left: 328px;
+    }
     main section div p#paragraphTitle {
         font-size: 2.6rem;
         position: relative;
         left: 13%;
         top: 20px;
-
+    }
+    main section div p#paragraphRegister {
+        font-size: 2.6rem;
+        position: relative;
+        left: 188px;
+        top: 20px;
     }
 
    main section button {
