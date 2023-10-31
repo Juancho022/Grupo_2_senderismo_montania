@@ -121,7 +121,7 @@ p.more {
   justify-items: center;
 }
 
-p.price150000 {
+div.price-n-cta p.price-final {
   font-size: 2vw;
   font-weight: 800;
   margin-right: 16px;
@@ -269,7 +269,7 @@ footer {
     gap: 8px;
   }
 
-  p.price150000 {
+  div.price-n-cta p.price-final {
     font-size: 6vw;
   }
 
@@ -367,7 +367,7 @@ footer {
     gap: 18px;
   }
 
-  p.price150000 {
+  div.price-n-cta p.price-final {
     font-size: 4vw;
   }
 
