@@ -6,16 +6,16 @@
       "price": 89000,
       "discount": 15,
       "category": "Senderismo",
-      "image": "xxxxxxIMAGEN 1xxxxxxxxxxx"
+      "image": "/images/1sudadera.webp"
     },
     {
       "id": 2,
-      "name": "Gorro térmico",
+      "name": "Gorro de lana",
       "description": "Gorro que mantiene el calor en climas fríos",
       "price": 15000,
       "discount": 10,
       "category": "Escalada",
-      "image": "xxxxxxxxxxxxIMAGEN 2xxxxxxxxx"
+      "image": "/images/2gorra.jpg"
     },
     {
       "id": 3,
@@ -24,70 +24,107 @@
       "price": 162.378,
       "discount": 20,
       "category": "Escalada",
-      "image": "xxxxxxxxIMAGEN 3xxxxxxxxx"
+      "image": "/images/3campera-impermeable.jpg"
     },
     {
       "id": 4,
       "name": "Conjunto deportivo hombre",
-      "description": "xxxxxxxxxxxxxxxxxxxxx",
-      "price": 0,
+      "description": "Conjunto de ropa diseñado específicamente para actividades físicas y deportivas",
+      "price": 135.000,
       "discount": 5,
       "category": "Trekking",
-      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 4 xxx"
+      "image": "/images/4conjunto-hombre.jpg"
     },
     {
       "id": 5,
       "name": "Remera Térmica",
-      "description": "xxxxxxxxxxxxxxxx",
-      "price": 0,
+      "description": "Remera térmica confeccionada con materiales aislantes y transpirables que ayudan a mantener el calor corporal y evacuar la humedad del sudor",
+      "price": 42.000,
       "discount": 0,
       "category": "Senderismo",
-      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 5 xxx"
+      "image": "/images/5remera-termica.jpg"
     },
     {
       "id": 6,
       "name": "Gorra",
-      "description": "xxxxxxxxxxxxxxxxxxx",
-      "price": 0,
+      "description": "Gorra con vicera para proporcionar sombra y protección solar a los ojos y el rostro",
+      "price": 12.000,
       "discount": 10,
       "category": "Accesorios",
-      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 6 xxx"
+      "image": "/images/6gorra.jpg"
     },
     {
       "id": 7,
       "name": "Botella térmica",
-      "description": "xxxxxxxxxxxxxxx",
-      "price": 0,
-      "discount": 0,
+      "description": "Botella con gran capacidad para mantener la temperatura de los líquidos. Compuesta por una doble pared de acero inoxidable",
+      "price": 9.000,
+      "discount": 7,
       "category": "Accesorios",
-      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 7 xxx"
+      "image": "/images/7botella.jpg"
     },
     {
       "id": 8,
       "name": "Calza impermeable mujer",
-      "description": "xxxxxxxxxxxxx",
-      "price": 0,
+      "description": "Calza ideal para situaciones en las que se necesita mantener las piernas secas en climas húmedos o en actividades al aire libre donde puedas estar expuesto a la lluvia",
+      "price": 33.000,
       "discount": 15,
       "category": "Senderismo",
-      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 8 xxx"
+      "image": "/images/8calza-senderismo.jpg"
     },
     {
       "id": 9,
-      "name": "Zapatos para escalar",
-      "description": "xxxxxxxxxxxxxxxxxx",
-      "price": 0,
-      "discount": 10,
-      "category": "Calzados",
-      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 9 xxx"
-    },
-    {
-      "id": 10,
       "name": "Linterna recargable",
       "description": "Linterna potente para excursiones nocturnas",
       "price": 39.99,
       "discount": 5,
       "category": "Accesorios",
-      "image": "xxxxxxxxxxxxxxxxxxxxx IMAGEN 10 xxx"
+      "image": "/images/10linterna.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Botas para escalada 1",
+      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "price": 87.000,
+      "discount": 0,
+      "category": "Calzados",
+      "image": "/images/shoes (0).png"
+    },
+    {
+      "id": 11,
+      "name": "Botas para escalada 2",
+      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "price": 107.000,
+      "discount": 5,
+      "category": "Calzados",
+      "image": "/images/shoes (1).jpg"
+    },
+    {
+      "id": 12,
+      "name": "Zapatos para escalada 3",
+      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "price": 180.000,
+      "discount": 15,
+      "category": "Calzados",
+      "image": "/images/shoes (2).jpg"
+    },
+    {
+      "id": 13,
+      "name": "Zapatos para escalada 4",
+      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "price": 143.000,
+      "discount": 10,
+      "category": "Calzados",
+      "image": "/images/shoes (3).jpg"
+    },
+    {
+      "id": 14,
+      "name": "Mochila para escalada",
+      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "price": 95.000,
+      "discount": 14,
+      "category": "Senderismo",
+      "image": "/images/backpack.png"
     }
+    
   ]
   
