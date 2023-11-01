@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "name": "Sudadera impermeable",
+      "name": "Sudadera",
       "description": "Sudadera resistente al agua para senderismo. Apta para soportar alrededor de 5 horas de exposición a la llovizna.",
       "price": 89000,
       "discount": 0,
@@ -21,7 +21,7 @@
     },
     {
       "id": 3,
-      "name": "Campera impermeable mujer",
+      "name": "Campera impermeable",
       "description": "Campera resistente al agua con doble protección interna, 6 bolsillos, reversible",
       "price": 162378,
       "discount": 0,
@@ -31,7 +31,7 @@
     },
     {
       "id": 4,
-      "name": "Conjunto deportivo hombre",
+      "name": "Conjunto deportivo",
       "description": "Conjunto de ropa diseñado específicamente para actividades físicas y deportivas",
       "price": 135000,
       "discount": 0,
@@ -71,7 +71,7 @@
     },
     {
       "id": 8,
-      "name": "Calza impermeable mujer",
+      "name": "Calza",
       "description": "Calza ideal para situaciones en las que se necesita mantener las piernas secas en climas húmedos o en actividades al aire libre donde puedas estar expuesto a la lluvia",
       "price": 33000,
       "discount": 0,
@@ -91,8 +91,8 @@
     },
     {
       "id": 10,
-      "name": "Botas para escalada 1",
-      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "name": "Botas urbanas",
+      "description": "Estas botas son el equilibrio perfecto entre estilo y funcionalidad. Diseñadas para ofrecer un ajuste preciso, tracción en superficies variadas y comodidad duradera, estas botas son ideales para enfrentar los desafíos de la vida en la ciudad.",
       "price": 87000,
       "discount": 0,
       "category": "footwear",
@@ -101,7 +101,7 @@
     },
     {
       "id": 11,
-      "name": "Botas para escalada 2",
+      "name": "Botas",
       "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
       "price": 107000,
       "discount": 0,
@@ -111,7 +111,7 @@
     },
     {
       "id": 12,
-      "name": "Zapatos para escalada 3",
+      "name": "Botines",
       "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
       "price": 180000,
       "discount": 0,
@@ -121,17 +121,17 @@
     },
     {
       "id": 13,
-      "name": "Zapatos para escalada 4",
-      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "name": "Botines para nieve",
+      "description": "Son la elección perfecta para aventureros que desean enfrentar las condiciones más frías y desafiantes de la montaña. Las mismas están diseñadas para proporcionar un ajuste preciso, una tracción excepcional en superficies resbaladizas y, lo más importante, una comodidad insuperable durante largas jornadas en la montaña, incluso en climas extremos.",
       "price": 143000,
       "discount": 0,
       "category": "footwear",
-      "technical": "Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Azul, Gris",
+      "technical": "Estas botas están confeccionadas con cuero y goma de alta calidad para garantizar resistencia y durabilidad en entornos nevados y húmedos.. Tallas disponibles: 38-45. Colores disponibles: Azul, Gris",
       "image": "shoes (3).jpg"
     },
     {
       "id": 14,
-      "name": "Mochila para escalada",
+      "name": "Mochila Peak",
       "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
       "price": 95000,
       "discount": 0,

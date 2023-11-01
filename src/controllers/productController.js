@@ -23,7 +23,7 @@ const controller = {
     // Detail - Detail from one product
     productDetail(req, res) {
         const product = products.find((product) => product.id == req.params.id);
-        res.render('productDetail', { products });
+        res.render('productDetail', { product });
     },
 }
 

@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="price-n-cta">
-                        <p class="price-final">$<%= locals.product?.price %></p>
+                        <p class="price-final"><%= locals.product?.price %></p>
                         <button class="add-cart"> Añadir al carrito </button>
                         <button class="add-fav">Agregar a favoritos</button>
                     </div>
@@ -54,7 +54,7 @@
                     <span class="tec-espec">Especificaciones técnicas</span>
                     <span class="personalize">Personalizar</span>
                     </div>
-                    <p class="tec-espec-description">Peso soportado: 18 kg Medidas: 80 cm de alto, 40 cm de ancho y 30 cm de profundidad.</p>
+                    <p class="tec-espec-description"><%= locals.product?.technical %></p>
                 </div>
             </div>
         </article>
