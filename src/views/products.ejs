@@ -6,18 +6,22 @@
             <%- include('./partials/header') %>
 
                 <main>
+                    <h1>Escalada</h1>
+                    <% locals.hiking && hiking.forEach(product => { %>
                     <article>
+                        <a href="/products/<%= product.id %>"></a>
                         <div class="img-product">
-                            <img src="/images/6gorra.jpg" class="img-product-products" alt="Mujer con gorra">
+                            <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
                             <div class="img-hover">
                                 <i class="fas fa-shopping-cart"></i>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <h3>Gorra ligera</h3>
+                            <h3><%= product.name %></h3>
                             <p class="price">$42.000</p>
                         </div>
                     </article>
+                    <% }) %>
                 </main>
 
                 <%- include('./partials/footer') %>

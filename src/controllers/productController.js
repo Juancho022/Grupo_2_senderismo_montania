@@ -9,8 +9,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
     // Root - Show all products
 	products: (req, res) => {
-		// Do the magic
-		res.render('products', { products })
+        const hiking = products.filter((product) => product.category === 'hiking');
+        const climbing = products.filter((product) => product.category === 'climbing');
+        const accessories = products.filter((product) => product.category === 'accessories');
+        const footwear = products.filter((product) => product.category === 'footwear');
+		res.render('products', { hiking, climbing, accessories, footwear })
 	},
 
     /*productCart(req, res) {
