@@ -6,7 +6,6 @@
             <%- include('./partials/header') %>
 
                 <main>
-                    <h1>Escalada</h1>
                     <% locals.hiking && hiking.forEach(product => { %>
                     <article>
                         <a href="/products/<%= product.id %>"></a>
@@ -18,7 +17,55 @@
                         </div>
                         <div class="product-detail">
                             <h3><%= product.name %></h3>
-                            <p class="price">$42.000</p>
+                            <p class="price">$<%= product.price %></p>
+                        </div>
+                    </article>
+                    <% }) %>
+
+                    <% locals.climbing && climbing.forEach(product => { %>
+                    <article>
+                        <a href="/products/<%= product.id %>"></a>
+                        <div class="img-product">
+                            <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
+                            <div class="img-hover">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <h3><%= product.name %></h3>
+                            <p class="price">$<%= product.price %></p>
+                        </div>
+                    </article>
+                    <% }) %>
+
+                    <% locals.accessories && accessories.forEach(product => { %>
+                    <article>
+                        <a href="/products/<%= product.id %>"></a>
+                        <div class="img-product">
+                            <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
+                            <div class="img-hover">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <h3><%= product.name %></h3>
+                            <p class="price">$<%= product.price %></p>
+                        </div>
+                    </article>
+                    <% }) %>
+
+                    <% locals.footwear && footwear.forEach(product => { %>
+                    <article>
+                        <a href="/products/<%= product.id %>"></a>
+                        <div class="img-product">
+                            <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
+                            <div class="img-hover">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <h3><%= product.name %></h3>
+                            <p class="price">$<%= product.price %></p>
                         </div>
                     </article>
                     <% }) %>
