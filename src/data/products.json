@@ -7,7 +7,7 @@
       "discount": 0,
       "category": "hiking",
       "technical": "Fibra sintética impermeable. Durabilidad: Resistente al agua durante 5 horas. Tallas disponibles: S, M, L, XL. Colores disponibles: Negro, Gris, Azul. Peso: 350 gramos.",
-      "image": "/images/1sudadera.webp"
+      "image": "1sudadera.webp"
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
       "discount": 0,
       "category": "climbing",
       "technical": "Lana. Aislamiento térmico. Tallas disponibles: Único. Colores disponibles: Beige, Negro, Rojo.",
-      "image": "/images/2gorra.jpg"
+      "image": "2gorra.jpg"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "discount": 0,
       "category": "climbing",
       "technical": "Fibra sintética impermeable. Doble protección interna. 6 bolsillos. Reversible. Tallas disponibles: S, M, L. Colores disponibles: Negro, Azul, Verde. Peso: 600 gramos.",
-      "image": "/images/3campera-impermeable.jpg"
+      "image": "3campera-impermeable.jpg"
     },
     {
       "id": 4,
@@ -37,7 +37,7 @@
       "discount": 0,
       "category": "hiking",
       "technical": "Tejido transpirable. Diseñado para actividades físicas. Tallas disponibles: S, M, L, XL. Colores disponibles: Negro, Azul, Gris.",
-      "image": "/images/4conjunto-hombre.jpg"
+      "image": "4conjunto-hombre.jpg"
     },
     {
       "id": 5,
@@ -47,7 +47,7 @@
       "discount": 0,
       "category": "hiking",
       "technical": "Materiales aislantes y transpirables. Ayuda a mantener el calor corporal y evacuar la humedad del sudor. Tallas disponibles: S, M, L, XL. Colores disponibles: Blanco, Gris, Negro.",
-      "image": "/images/5remera-termica.jpg"
+      "image": "5remera-termica.jpg"
     },
     {
       "id": 6,
@@ -57,7 +57,7 @@
       "discount": 0,
       "category": "accessories",
       "technical": " Tejido ligero. Visera para proporcionar sombra y protección solar a los ojos y el rostro. Tallas disponibles: Única. Colores disponibles: Negro, Azul, Blanco.",
-      "image": "/images/6gorra.jpg"
+      "image": "6gorra.jpg"
     },
     {
       "id": 7,
@@ -67,7 +67,7 @@
       "discount": 0,
       "category": "accessories",
       "technical": "Doble pared de acero inoxidable. Gran capacidad para mantener la temperatura de los líquidos. Colores disponibles: Acero inoxidable, Negro, Rojo.",
-      "image": "/images/7botella.jpg"
+      "image": "7botella.jpg"
     },
     {
       "id": 8,
@@ -77,7 +77,7 @@
       "discount": 0,
       "category": "hiking",
       "technical": "Fibra sintética impermeable. Ideal para mantener las piernas secas en climas húmedos. Tallas disponibles: S, M, L. Colores disponibles: Negro, Azul. Peso: 250 gramos.",
-      "image": "/images/8calza-senderismo.jpg"
+      "image": "8calza-senderismo.jpg"
     },
     {
       "id": 9,
@@ -87,7 +87,7 @@
       "discount": 0,
       "category": "accessories",
       "technical": "Potente linterna para excursiones nocturnas. Batería recargable. Resistente al agua.",
-      "image": "/images/10linterna.jpg"
+      "image": "10linterna.jpg"
     },
     {
       "id": 10,
@@ -97,7 +97,7 @@
       "discount": 0,
       "category": "footwear",
       "technical": "Material: Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Negro, Verde.",
-      "image": "/images/shoes (0).png"
+      "image": "shoes (0).png"
     },
     {
       "id": 11,
@@ -107,7 +107,7 @@
       "discount": 0,
       "category": "footwear",
       "technical": "Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Marrón, Rojo.",
-      "image": "/images/shoes (1).jpg"
+      "image": "shoes (1).jpg"
     },
     {
       "id": 12,
@@ -117,7 +117,7 @@
       "discount": 0,
       "category": "footwear",
       "technical": "Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Negro, Amarillo.",
-      "image": "/images/shoes (2).jpg"
+      "image": "shoes (2).jpg"
     },
     {
       "id": 13,
@@ -127,7 +127,7 @@
       "discount": 0,
       "category": "footwear",
       "technical": "Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Azul, Gris",
-      "image": "/images/shoes (3).jpg"
+      "image": "shoes (3).jpg"
     },
     {
       "id": 14,
@@ -137,7 +137,7 @@
       "discount": 0,
       "category": "hiking",
       "technical": "Nylon resistente. Diseñada para llevar equipo de escalada. Varios compartimentos. Capacidad: 40 litros. Colores disponibles: Verde y Amarillo",
-      "image": "/images/backpack.png"
+      "image": "backpack.png"
     }
   ]
   
