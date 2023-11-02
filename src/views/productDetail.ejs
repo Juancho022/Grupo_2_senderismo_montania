@@ -9,11 +9,11 @@
         <p class="step">Productos > Camping > Mochila Cap</p>
         <article class="article-detail">
             <div class="img-container">
-                <img src="\images\backpack.png" alt="Mochila Peak">
+                <img src="\images\<%= locals.product?.image %>" alt="Mochila Peak">
             </div>
             <div class="details-container">
                 <div class="title-detail" >
-                    <h2>MOCHILA PEAK</h2>
+                    <h2><%= locals.product?.name %></h2>
                 </div>
                 <div class="especs-detail">
                     <div class="color-n-quantity">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="price-n-cta">
-                        <p class="price150000"> $150.000 </p>
+                        <p class="price-final"><%= locals.product?.price %></p>
                         <button class="add-cart"> Añadir al carrito </button>
                         <button class="add-fav">Agregar a favoritos</button>
                     </div>
@@ -47,14 +47,14 @@
                             <p>3 y 6 cuotas sin interés con VISA o MASTERCARD</p>
                         </div>
                         <p class="article-description">
-                            Está diseñada con múltiples compartimentos y bolsillos para organizar eficazmente el equipo, con materiales resistentes al agua y abrasión para protegerlo de las inclemencias del tiempo y el desgaste. Su sistema de suspensión ajustable incluye correas para los hombros acolchadas, un cinturón lumbar y un panel trasero transpirable para una distribución equitativa del peso y comodidad.
+                            <%= locals.product?.description %>                            
                         </p>
                     </div>
                     <div class="text-detail">
                     <span class="tec-espec">Especificaciones técnicas</span>
                     <span class="personalize">Personalizar</span>
                     </div>
-                    <p class="tec-espec-description">Peso soportado: 18 kg Medidas: 80 cm de alto, 40 cm de ancho y 30 cm de profundidad.</p>
+                    <p class="tec-espec-description"><%= locals.product?.technical %></p>
                 </div>
             </div>
         </article>
