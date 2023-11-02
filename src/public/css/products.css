@@ -56,12 +56,14 @@ img.img-product-products {
 
 .product-detail {
     width: 100%;
+    height: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
     background-color: #eee;
     border-bottom-right-radius: 32px;
     padding: 16px;
+    text-align: center;
 }
 
 .img-hover {
@@ -83,4 +85,26 @@ article:hover .img-hover {
     transform: scale(1); 
     cursor: pointer;
 }
+
+/* QUERY STARTS */
+
+@media (max-width: 1023px) {
+    article {
+        width: 30%
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        width: 100%
+    }
+
+    i.fas.fa-shopping-cart {
+        position: relative;
+        top: 20%;
+        left: 10%;
+    }
+}
+
+
 
