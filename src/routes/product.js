@@ -12,6 +12,9 @@ router.get('/products', productController.products);
 //router.???('/???/', productsController.create); 
 //router.???('/', productsController.store); 
 
+/*********     CART ROUTE    *********/ 
+router.get('/productCart', productController.productCart); 
+
 /*** GET ONE PRODUCT ***/ 
 router.get('/productDetail/:id/', productController.productDetail); 
 

@@ -16,9 +16,9 @@ const controller = {
 		res.render('products', { hiking, climbing, accessories, footwear })
 	},
 
-    /*productCart(req, res) {
-        res.render('productCart', { products })
-    },*/
+    productCart(req, res) {
+        res.render('productCart')
+    },
 
     // Detail - Detail from one product
     productDetail(req, res) {
