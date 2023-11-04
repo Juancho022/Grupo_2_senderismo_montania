@@ -200,6 +200,12 @@ section.product-detail article.discount-product div.discount button {
     border: none;
 }
 
+section.product-detail div.discount div.apply-code button:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transition: font-weight 1s ease-in-out 0.3s;
+}
+
 input.input {
     border: none;
     font-size: 16px;
@@ -261,6 +267,12 @@ section article div.billing button {
     font-size: 16px;
     font-family: Open Sans;
     padding: 10px;
+}
+
+section article div.billing button:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transition: font-weight 1s ease-in-out 0.2ms;
 }
 
 footer {
