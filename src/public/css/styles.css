@@ -45,6 +45,7 @@ header nav.center-bar {
 footer {
     background-color: #000;
     display: flex;
+    padding: 5px;
 }
 
 footer div.copyright{
@@ -58,6 +59,7 @@ footer div.copyright p {
     font-size: 12px;
     color: #EFC84C;
     text-align: left;
+    margin: 0px 3px;
 }
 
 
