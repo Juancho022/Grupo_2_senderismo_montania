@@ -25,7 +25,7 @@ article {
     flex-direction: column;
     align-items: center;
     width: 16%;
-    margin: 10px 10px 10px;
+    margin: 10px 10px 32px;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
     border-top-left-radius: 10%;
@@ -48,18 +48,22 @@ div.img-product {
 img.img-product-products {
     display: flex;
     width: 100%;
+    height: 268px;
+    object-fit: cover;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
 }
 
 .product-detail {
     width: 100%;
+    height: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
     background-color: #eee;
     border-bottom-right-radius: 32px;
     padding: 16px;
+    text-align: center;
 }
 
 .img-hover {
@@ -81,4 +85,26 @@ article:hover .img-hover {
     transform: scale(1); 
     cursor: pointer;
 }
+
+/* QUERY STARTS */
+
+@media (max-width: 1023px) {
+    article {
+        width: 30%
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        width: 100%
+    }
+
+    i.fas.fa-shopping-cart {
+        position: relative;
+        top: 20%;
+        left: 10%;
+    }
+}
+
+
 
