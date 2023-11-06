@@ -21,23 +21,6 @@ const controller = {
         res.render('productCart')
     },
 
-    //Create -Form to create 
-    create: (req, res) => {
-        res.render('productCreateForm');
-    },
-
-    //create - Method to store
-    store: (req, res) => {
-        const newProduct = {
-            id: products[products.length-1].id + 1,
-            ...req.body,
-            image: "default-img.jpg"
-        }
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
-    },
-
     // Detail - Detail from one product
     productDetail(req, res) {
         const product = products.find((product) => product.id == req.params.id);
