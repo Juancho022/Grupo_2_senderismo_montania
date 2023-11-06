@@ -153,7 +153,7 @@ img.img-edit-product {
 
 button.edit-image-button {
     background-color: transparent;
-    color: #D3573C;
+    color: #164734;
     border: 20px;
     cursor: pointer;
     font-weight: 700;
@@ -200,13 +200,22 @@ div.product-category {
     margin-bottom: 8px;
 }
 
-input[type="submit"] {
+input.button-submit {
     background-color: #2e2e2e;
     border-radius: 45px;
     color: #efc84c;
     padding: 4px;
     width: 100%;
     margin-top: 16px;
+}
+
+input.button-delete {
+    background-color: transparent;
+    color: #d3573c;
+    width: 100%;
+    margin-top: 16px;
+    border: none;
+    font-weight: 700;
 }
 
 /* QUERIES START */
