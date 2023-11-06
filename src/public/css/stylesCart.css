@@ -5,13 +5,13 @@
     font-family: Open Sans, sans-serif;
 }
 
-main{
-    padding:80px 0px;
+main {
+    padding: 80px 0px;
 }
 
 p.cart-selection {
     margin-left: 16px;
-    font-size:12px;
+    font-size: 12px;
 }
 
 section.product-list {
@@ -42,12 +42,13 @@ section.product-list article.products div.description {
 
 section.product-list article.products div.description p {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 section.product-list article.products div.description span.color-text {
     color: #000000;
     opacity: 0.59;
+    font-size: 13px;
 }
 
 section.product-list article.products div.description div.color-elements {
@@ -69,8 +70,9 @@ section.product-list article.products div.description button {
     font: inherit;
     border: 1px solid black;
     border-radius: 19px;
-    width: 100%;
+    width: 106px;
     height: 32px;
+    font-size: 12px;
 }
 
 section.product-list article.products div.product-quantity {
@@ -129,6 +131,7 @@ section.product-list article.products div.cost-delete i {
     font-size: 24px;
     position: static;
     margin-bottom: 5px;
+    font-weight: 200;
 }
 
 section.product-list article.products div.cost-delete p {
@@ -194,7 +197,13 @@ section.product-detail article.discount-product div.discount button {
     height: 47px;
     border-radius: 20px;
     margin: 0px 10px;
-    border:none;
+    border: none;
+}
+
+section.product-detail div.discount div.apply-code button:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transition: font-weight 1s ease-in-out 0.3s;
 }
 
 input.input {
@@ -206,66 +215,71 @@ input.input {
 div.apply-code {
     display: flex;
     justify-content: flex-end;
-    padding-bottom:30px
+    padding-bottom: 30px
 }
 
-section article div.billing{
+section article div.billing {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-section article div.billing div{
-    box-sizing:boder-box;
+section article div.billing div {
+    box-sizing: boder-box;
     display: flex;
-    gap:130px ;
-    padding:5px;
-   justify-content:space-between; 
+    gap: 130px;
+    padding: 5px;
+    justify-content: space-between;
 }
 
 section article div.billing div.product-price div.products,
 section article div.billing div.product-price div.price,
 section article div.billing div.shipment,
-section article div.billing div.shipping-type{
+section article div.billing div.shipping-type {
     font-family: Open Sans;
     font-size: 16px;
     color: #000000;
     opacity: 0.80;
 }
 
-section article div.billing div.shipping-type{
-    font-weight:600
-    
+section article div.billing div.shipping-type {
+    font-weight: 600
 }
 
 section article div.billing div.total,
-section article div.billing div.total-price{
-     font-family: Open Sans;
+section article div.billing div.total-price {
+    font-family: Open Sans;
     font-size: 16px;
     color: #000000;
-    font-weight:800;
-    
+    font-weight: 800;
+
 }
 
-section article div.billing div.invoice-detail{
-    border-bottom-style:solid;
+section article div.billing div.invoice-detail {
+    border-bottom-style: solid;
     border-width: 0.8px;
-    
+
 }
 
-section article div.billing button{
-    background-color:#000000;
-    color:#FFFFFF;
+section article div.billing button {
+    background-color: #000000;
+    color: #FFFFFF;
     font-size: 16px;
     font-family: Open Sans;
-    padding:10px;
+    padding: 10px;
+}
+
+section article div.billing button:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transition: font-weight 1s ease-in-out 0.2ms;
 }
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
+}
 
 @media (max-width: 481px) {
     section.product-list article.products {
@@ -282,50 +296,58 @@ footer {
         width: 50%;
     }
 
-    section article div.billing{
-        margin-top:20px;
-}
+    section article div.billing {
+        margin-top: 20px;
+    }
 
-section.product-detail article.discount-product div.discount div.discount-code p {
-    font-size: 16px;
-    padding-bottom: 20px;
-}
+    section.product-detail article.discount-product div.discount div.discount-code p {
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+
     section.product-detail article.discount-product div.discount div.discount-code div.apply-code form {
-    width: 150px;
-        margin-right:10px;
-}
-    section.product-detail article.discount-product div.discount button{
-    font-size: 12px;
-    width: 100px;
-    height: 40px;
-}
+        width: 150px;
+        margin-right: 10px;
+    }
 
-section.product-detail p{
-    font-size:14px;
-}
+    section.product-detail article.discount-product div.discount button {
+        font-size: 12px;
+        width: 100px;
+        height: 40px;
+    }
 
-input.input{
-    width:130px;
-}
-section.product-detail {
-    justify-content: center;
-}
+    section.product-detail p {
+        font-size: 14px;
+    }
 
-section.product-detail article.discount-product {
-    justify-content: center;
-}
-}
+    input.input {
+        width: 130px;
+    }
 
+    section.product-detail {
+        justify-content: center;
+    }
 
-@media(min-width: 768px){
-p.cart-selection {
-    font-size:16px;
-}
-
-main{
-    width:90%;
-}
+    section.product-detail article.discount-product {
+        justify-content: center;
+    }
 }
 
 
+@media(min-width: 768px) {
 
+    p.cart-selection {
+        font-size: 16px;
+    }
+
+    section.product-list article.products div.description span.color-text {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    main {
+        width: 90%;
+    }
+}
