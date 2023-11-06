@@ -1,7 +1,13 @@
 html, body {
-    height: 100%;
     overflow: visible;
-  }
+    background: url(/images/bg-login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 97%;
+}
+
 main div{
     display: flex;
     flex-direction: column;   
@@ -40,7 +46,7 @@ main section div#loginBox {
     display: flex;
     flex-direction: column;
     color: azure;
-    position: absolute;
+    position: fixed;
     font-size: medium;
 }
 main section div#registerBox {
@@ -167,11 +173,12 @@ input[type="checkbox" i]:before {
     }
 
     main section div#loginBox {
-        top: 99px;
-        left: 40px;
+        top: 150px;
+        left: 10%;
         padding-right: 74px;
         width: 100%;
     }
+
     main section div#registerBox {
         top: 99px;
         left: 40px;
@@ -204,6 +211,12 @@ input[type="checkbox" i]:before {
 }
 /*************TABLET**************************/
 @media (min-width: 768px) {
+    html body {
+        background-image: url('/images/bg-login.jpg');
+        background-size: cover;
+        background-position: center bottom;
+    }
+
     main section img#login-image {
         display: flex;
         width: auto;
@@ -219,8 +232,8 @@ input[type="checkbox" i]:before {
         position: relative;
     }
     main section div#loginBox {
-        top: 20%;
-        left: 20%;
+        top: 27%;
+        left: 22%;
     }
     main section div#registerBox {
         top: 20%;
@@ -268,8 +281,10 @@ input[type="checkbox" i]:before {
         position: relative;
     }
     main section div#loginBox {
-        position: absolute;
-        width: 80%;
+        position: fixed;
+        width: 40%;
+        left: 20%;
+        top: 15%;
     }
     main section div#registerBox {
         position: absolute;
@@ -284,7 +299,8 @@ input[type="checkbox" i]:before {
     }
     main section div span#loginTitle {
         font-size: 4rem;
-        right: 105px;
+        text-align: center;
+        left: 23%;
     }
     main section div span#registerTitle {
         font-size: 4rem;
@@ -293,9 +309,9 @@ input[type="checkbox" i]:before {
         left: 328px;
     }
     main section div p#paragraphTitle {
-        font-size: 2.6rem;
+        font-size: 2.3rem;
         position: relative;
-        left: 13%;
+        left: 25%;
         top: 20px;
     }
     main section div p#paragraphRegister {
@@ -310,4 +326,11 @@ input[type="checkbox" i]:before {
 
     }
 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
