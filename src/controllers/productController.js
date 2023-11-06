@@ -8,17 +8,34 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     // Root - Show all products
-	products: (req, res) => {
+    products: (req, res) => {
         const hiking = products.filter((product) => product.category === 'hiking');
         const climbing = products.filter((product) => product.category === 'climbing');
         const accessories = products.filter((product) => product.category === 'accessories');
         const footwear = products.filter((product) => product.category === 'footwear');
-		res.render('products', { hiking, climbing, accessories, footwear })
-	},
+        res.render('products', { hiking, climbing, accessories, footwear })
+    },
 
     // Cart
     productCart(req, res) {
         res.render('productCart')
+    },
+
+    //Create -Form to create 
+    create: (req, res) => {
+        res.render('productCreateForm');
+    },
+
+    //create - Method to store
+    store: (req, res) => {
+        const newProduct = {
+            id: products[products.length-1].id + 1,
+            ...req.body,
+            image: "default-img.jpg"
+        }
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.redirect('/products');
     },
 
     // Detail - Detail from one product
