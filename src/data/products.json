@@ -6,7 +6,8 @@
       "price": 89000,
       "discount": 0,
       "category": "hiking",
-      "technical": "Este buzo está confeccionado con materiales resistentes que pueden soportar el desgaste constante del trekking y el senderismo. Tallas disponibles: S, M, L, XL. Colores disponibles: Negro, Gris, Azul. Peso: 350 gramos.",
+      "sizes": "Talles disponibles: S, M, L, XL.",
+      "colors": "Colores disponibles: Negro, Gris, Azul.",
       "image": "1sudadera.webp"
     },
     {
@@ -16,7 +17,8 @@
       "price": 15000,
       "discount": 0,
       "category": "climbing",
-      "technical": "Lana. Aislamiento térmico. Tallas disponibles: Único. Colores disponibles: Beige, Negro, Rojo.",
+      "sizes": "Talles disponibles: Único.",  
+      "colors": "Colores disponibles: Negro, Gris, Azul.",
       "image": "2gorra.jpg"
     },
     {
@@ -26,7 +28,8 @@
       "price": 162378,
       "discount": 0,
       "category": "climbing",
-      "technical": "Fibra sintética impermeable. Doble protección interna. 6 bolsillos. Reversible. Tallas disponibles: S, M, L. Colores disponibles: Negro, Blanco, Verde. Peso: 600 gramos.",
+      "sizes": "Talles disponibles: S, M, L.",
+      "colors": "Colores disponibles:  Negro, Blanco, Verde.",
       "image": "3campera-impermeable.jpg"
     },
     {
@@ -36,7 +39,8 @@
       "price": 135000,
       "discount": 0,
       "category": "hiking",
-      "technical": "El conjunto está confeccionado con algodón suave y transpirable que te mantiene cómodo en cualquier clima. Tallas disponibles: S, M, L, XL. Colores disponibles: Negro, Azul, Gris.",
+      "sizes": "Talles disponibles: S, M, L, XL.", 
+      "colors": "Colores disponibles: Negro, Azul, Gris.",
       "image": "4conjunto-hombre.jpg"
     },
     {
@@ -46,7 +50,8 @@
       "price": 42000,
       "discount": 0,
       "category": "hiking",
-      "technical": "Materiales aislantes y transpirables. Ayuda a mantener el calor corporal y evacuar la humedad del sudor. Tallas disponibles: S, M, L, XL. Colores disponibles: Blanco, Gris, Negro.",
+      "sizes": "Talles disponibles: S, M, L, XL.",
+      "colors": "Colores disponibles: Blanco, Gris, Negro.",
       "image": "5remera-termica.jpg"
     },
     {
@@ -56,7 +61,8 @@
       "price": 12000,
       "discount": 0,
       "category": "accessories",
-      "technical": " Tejido ligero. Visera para proporcionar sombra y protección solar a los ojos y el rostro. Tallas disponibles: Único. Colores disponibles: Negro, Azul, Blanco.",
+      "sizes": "Talles disponibles: Único.",
+      "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
       "image": "6gorra.jpg"
     },
     {
@@ -66,7 +72,8 @@
       "price": 9000,
       "discount": 0,
       "category": "accessories",
-      "technical": "Doble pared de acero inoxidable. Gran capacidad para mantener la temperatura de los líquidos. Colores disponibles: Acero inoxidable: Blanco, Negro, Rojo.",
+      "sizes": "Talles disponibles: Único.",
+      "colors": "Colores disponibles: Blanco, Negro, Rojo.",
       "image": "7botella.jpg"
     },
     {
@@ -76,7 +83,8 @@
       "price": 33000,
       "discount": 0,
       "category": "hiking",
-      "technical": "Fibra sintética impermeable. Ideal para mantener las piernas secas en climas húmedos. Tallas disponibles: S, M, L. Colores disponibles: Negro, Azul. Peso: 250 gramos.",
+      "sizes": "Talles disponibles: S, M, L.",
+      "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
       "image": "8calza-senderismo.jpg"
     },
     {
@@ -86,7 +94,8 @@
       "price": 15000,
       "discount": 0,
       "category": "accessories",
-      "technical": "Potente linterna para excursiones nocturnas. Batería recargable. Resistente al agua.",
+      "sizes": "Talles disponibles: Único.",
+      "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
       "image": "10linterna.jpg"
     },
     {
@@ -96,7 +105,8 @@
       "price": 87000,
       "discount": 0,
       "category": "footwear",
-      "technical": "Material: Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Negro, Azul, Marrón.",
+      "sizes": "Talles disponibles: 38-45.",
+      "colors": "Colores disponibles: Negro, Azul, Marrón.",
       "image": "shoes (0).png"
     },
     {
@@ -106,7 +116,8 @@
       "price": 107000,
       "discount": 0,
       "category": "footwear",
-      "technical": "Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Marrón, Rojo.",
+      "sizes": "Talles disponibles: 38-45.",
+      "colors": "Colores disponibles: Azul, Marrón.",
       "image": "shoes (1).jpg"
     },
     {
@@ -116,7 +127,8 @@
       "price": 180000,
       "discount": 0,
       "category": "footwear",
-      "technical": "Cuero y goma. Ajuste preciso. Tracción en superficies rocosas. Comodidad durante largas jornadas en la montaña. Tallas disponibles: 38-45. Colores disponibles: Negro, Amarillo.",
+      "sizes": "Talles disponibles: 38-45.",
+      "colors": "Colores disponibles: Negro, Amarillo.",
       "image": "shoes (2).jpg"
     },
     {
@@ -126,7 +138,8 @@
       "price": 143000,
       "discount": 0,
       "category": "footwear",
-      "technical": "Estas botas están confeccionadas con cuero y goma de alta calidad para garantizar resistencia y durabilidad en entornos nevados y húmedos.. Tallas disponibles: 38-45. Colores disponibles: Azul, Gris",
+      "sizes": "Talles disponibles: 38-45.",
+      "colors": "Colores disponibles: Azul, Gris.",
       "image": "shoes (3).jpg"
     },
     {
@@ -136,7 +149,8 @@
       "price": 95000,
       "discount": 0,
       "category": "hiking",
-      "technical": "Peso soportado: 18 kg Medidas: 80 cm de alto, 40 cm de ancho y 30 cm de profundidad. Colores disponibles: Verde y Amarillo",
+      "sizes": "Talles disponibles: Único.",
+      "colors": "Colores disponibles:  Verde y Amarillo.",
       "image": "backpack.png"
     }
   ]
