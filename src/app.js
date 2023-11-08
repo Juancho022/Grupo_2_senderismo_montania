@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', mainRoutes);
 app.use('/user', userRoutes);
-app.use('/product', productRoutes);
+app.use('/products', productRoutes);
 app.use('/inventory', inventoryRoutes);
 
 
