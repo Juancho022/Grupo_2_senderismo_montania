@@ -23,7 +23,7 @@ router.get('/productDetail/:id/', productController.productDetail);
 //router.???('/:id', productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
-//router.???('/:id', productsController.destroy); 
+router.delete('/:id/delete', productController.destroy); 
 
 module.exports = router;
 
