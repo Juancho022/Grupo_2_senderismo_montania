@@ -6,3 +6,4 @@ const inventoryController = {
         return res.render('inventory', { products });
     }
 }
+
