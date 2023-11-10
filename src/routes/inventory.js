@@ -18,7 +18,7 @@ const upload = multer({storage: storage});
 
 
 const inventoryController = require('../controllers/inventoryController');
-const productController = require('../controllers/productController');
+
 
 router.get('/', inventoryController.inventory)
 /*** CREATE ONE PRODUCT ***/ 
@@ -27,6 +27,6 @@ router.post('/create', upload.single('image'), inventoryController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', inventoryController.edit); 
-//router.???('/:id', productsController.update); 
+router.put('/:id/edit', inventoryController.update); 
 
 module.exports = router;

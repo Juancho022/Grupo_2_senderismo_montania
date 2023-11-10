@@ -15,9 +15,6 @@ router.get('/productCart', productController.productCart);
 /*** GET ONE PRODUCT ***/ 
 router.get('/productDetail/:id/', productController.productDetail); 
 
-/*** EDIT ONE PRODUCT ***/ 
-//router.???('/:id/???', productsController.edit); 
-//router.???('/:id', productsController.update); 
 
 /*** DELETE ONE PRODUCT***/ 
 //router.???('/:id', productsController.destroy); 

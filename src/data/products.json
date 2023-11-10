@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "name": "Buzo de algodón",
-    "description": "Este buzo está diseñado para mantenerte cómodo en diversas condiciones climáticas. Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. Protégete del sol, el viento o la lluvia ligera, y si no la necesitas, simplemente ajústala o quítala según prefieras. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
-    "price": 89000,
-    "discount": 0,
+    "name": "Gorro",
+    "description": "                                                                                                                                                                                                                        Este buzo está diseñado para mantenerte cómodo en diversas condiciones climáticas. Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. Protégete del sol, el viento o la lluvia ligera, y si no la necesitas, simplemente ajústala o quítala según prefieras. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
+    "price": "300000",
+    "discount": "20",
     "category": "hiking",
-    "sizes": "Talles disponibles: S, M, L, XL.",
-    "colors": "Colores disponibles: Negro, Gris, Azul.",
+    "sizes": "false",
+    "colors": "false",
     "image": "1sudadera.webp"
   },
   {
     "id": 2,
     "name": "Gorro de lana",
-    "description": "Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
-    "price": 15000,
-    "discount": 0,
+    "description": "                                    Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
+    "price": "15000",
+    "discount": "0",
     "category": "climbing",
     "sizes": "Talles disponibles: Único.",
     "colors": "Colores disponibles: Negro, Gris, Azul.",
@@ -152,5 +152,38 @@
     "sizes": "Talles disponibles: Único.",
     "colors": "Colores disponibles:  Verde y Amarillo.",
     "image": "backpack.png"
+  },
+  {
+    "id": 15,
+    "name": "jose",
+    "description": "dddd",
+    "price": "2000",
+    "discount": "20",
+    "sizes": "L",
+    "colors": "yellow",
+    "category": "accessories",
+    "image": "default-img.jpg"
+  },
+  {
+    "id": 16,
+    "name": "hdhd",
+    "description": "ddf",
+    "price": "30",
+    "discount": "",
+    "sizes": "XS",
+    "colors": "black",
+    "category": "accessories",
+    "image": "default-img.jpg"
+  },
+  {
+    "id": 17,
+    "name": "ccc",
+    "description": "ffff",
+    "price": "23",
+    "discount": "",
+    "sizes": "XL",
+    "colors": "white",
+    "category": "hiking",
+    "image": "default-image.jpg"
   }
 ]

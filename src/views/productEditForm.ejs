@@ -4,12 +4,11 @@
         <body>
             <%- include('./partials/header') %>
                 <main>
-                    <form class="product-edit-form">
+                    <form class="product-edit-form" action="/inventory/<%= productToEdit.id %>/edit?_method=PUT" method="post">
                         <h2 id="edit-product-title">Editar producto</h2>
                         <div class="product-edit">
                             <div class="edit-img">
-                                <img class="img-edit-product" src="images/3campera-impermeable.jpg"
-                                    alt="Mujer con campera impermeable blanca">
+                                <img class="img-edit-product" src="/images/<%= productToEdit.image %>">
                                 <button class="edit-image-button">
                                     Editar imágenes
                                 </button>
@@ -17,51 +16,59 @@
                             <div class="label-product">
                                 <label for="product">Producto</label>
                                 <input type="text" class="product-imput" name="name" id="name"
-                                    placeholder="Nombre del producto" required value="Campera impermeable mujer">
+                                    placeholder="Nombre del producto" required value="<%= productToEdit.name %>">
                             </div>
 
                             <div class="label-product">
                                 <label for="description">Descripción</label>
-                                <input type="text" class="product-imput" name="description" id="description"
-                                    placeholder="Descripción del producto" required
-                                    value="Campera resistente al agua con doble protección interna, 6 bolsillos, reversible">
+                                <textarea type="text" class="product-imput" name="description" id="description">
+                                    <%= productToEdit.description %></textarea>
                             </div>
 
                             <div class="label-product-price">
                                 <label for="price">Precio</label>
                                 <input type="text" class="product-imput-price" name="price" id="price"
-                                    placeholder="Precio del producto" required value="$162.378">
+                                    placeholder="Precio del producto" required value="<%= productToEdit.price %>">
+                            </div>
+
+                            <div class="discount">
+                                <label for="discount">Descuento</label>
+                                <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="product-imput-price"
+                                value="<%= productToEdit.discount %>">
                             </div>
 
                             <div class="size-options">
                                 <label for="size">Talles disponibles</label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="XL"> XL
+                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'XL' && checked ? productToEdit.sizes %>"> XL
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="L"> L
+                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'L' && checked ? productToEdit.sizes %>"> L
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="M"> M
+                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'XL' && checked ? productToEdit.sizes %>"> M
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="S"> S
+                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === "XL" && checked ? productToEdit.sizes %>""> S
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="XS"> XS
+                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'XS' && 'checked' %>"> XS
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'UNICO' && 'checked' %>"> UNICO
                                 </label>
                             </div>
 
                             <div class="color-options">
                                 <label for="color-options">Colores disponibles</label>
                                 <label>
-                                    <input type="checkbox" name="colors" id="colors" value="white"> Blanca
+                                    <input type="checkbox" name="colors" id="colors" value="<%= productToEdit.sizes === 'Blanca' && 'checked' %>"> Blanca
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="colors" id="colors" value="yellow"> Amarilla
+                                    <input type="checkbox" name="colors" id="colors" value="<%= productToEdit.sizes === 'Amarilla' && 'checked' %>"> Amarilla
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="colors" id="colors" value="black"> Negra
+                                    <input type="checkbox" name="colors" id="colors" value="<%= productToEdit.sizes === 'Negra' && 'checked' %>"> Negra
                                 </label>
                             </div>
 
@@ -75,11 +82,11 @@
                             <div class="product-category">
                                 <span id="category">Categoría</span>
                                 <select class="product-category-detail" id="category">
-                                    <option value="montagne">Escalada</option>
-                                    <option value="accessories">Accesorios</option>
-                                    <option value="senderism">Senderismo</option>
-                                    <option value="montagne">Trekking</option>
-                                    <option value="shoes">Calzados</option>
+                                    <option value="<%= productToEdit.category %>">Escalada</option>
+                                    <option value="<%= productToEdit.category %>">Accesorios</option>
+                                    <option value="<%= productToEdit.category %>">Senderismo</option>
+                                    <option value="<%= productToEdit.category %>">Trekking</option>
+                                    <option value="<%= productToEdit.category %>">Calzados</option>
                                 </select>
                             </div>
                             <div class="button-submit">

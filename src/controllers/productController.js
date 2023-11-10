@@ -6,20 +6,21 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const controller = {
+const productController = {
     // Root - Show all products
     products: (req, res) => {
         const hiking = products.filter((product) => product.category === 'hiking');
         const climbing = products.filter((product) => product.category === 'climbing');
         const accessories = products.filter((product) => product.category === 'accessories');
         const footwear = products.filter((product) => product.category === 'footwear');
-        res.render('products', { hiking, climbing, accessories, footwear })
+        res.render('products', {hiking, climbing,  accessories, footwear})
     },
 
     // Cart
-    productCart(req, res) {
+    productCart:(req, res)=>{
         res.render('productCart')
     },
+    
     store: (req, res) => {
         const newProduct = {
             id: products[products.length-1].id + 1,
@@ -39,4 +40,4 @@ const controller = {
     },
 }
 
-module.exports = controller;
+module.exports = productController;
