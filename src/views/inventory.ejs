@@ -57,7 +57,9 @@
                             <div class="button" id="increase">+</div>
                         </div>
                         <div class="edit-n-delete">
-                            <i class="fa fa-trash trash"></i>
+                            <form action="/inventory/<%= locals.product?.id %>/delete?_method=DELETE" method="POST" style="display: inline-flex;">
+                                <button type="submit"><i class="fa fa-trash trash"></i></button>
+                            </form>
                             <i class="fas fa-pencil-alt pencil-edit"></i>
                         </div>
                     </div>
