@@ -4,17 +4,17 @@ const productModel = require('../models/product');
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const inventoryController = {
-    inventory(req, res) {
+    inventory: (req, res) =>{
         const products = productModel.getProducts();
-        return res.render('inventory', { products });
+        res.render('inventory', { products });
     },
     //Create -Form to create 
     create: (req, res) => {
-        res.render('inventory');
+        res.render('productCreateForm');
     },
 
     //create - Method to store
@@ -22,12 +22,17 @@ const inventoryController = {
         const newProduct = {
             id: products[products.length-1].id + 1,
             ...req.body,
-            image: "default-img.jpg"
-        }
+            image: req.file?.filename || "default-img.jpg"
+        };
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect('/products');
     },
+
+    edit: (req, res)=>{
+        const product = products.find((product) => product.id == req.params.id);
+		res.render('productEditForm', { productToEdit: product });
+    }
 }
 
 module.exports = inventoryController;

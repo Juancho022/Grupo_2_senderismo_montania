@@ -9,6 +9,8 @@ const inventoryRoutes = require('./routes/inventory');
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({extended: true})); //Esto es para formData
+app.use(express.json())
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));

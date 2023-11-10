@@ -20,6 +20,17 @@ const controller = {
     productCart(req, res) {
         res.render('productCart')
     },
+    store: (req, res) => {
+        const newProduct = {
+            id: products[products.length-1].id + 1,
+            ...req.body,
+            image: req.file?.filename || "default-img.jpg"
+        };
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.redirect('/products');
+    },
+
 
     // Detail - Detail from one product
     productDetail(req, res) {
