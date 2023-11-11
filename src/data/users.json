@@ -1,56 +1,20 @@
 [
     {
         "id": 1,
-        "firstName": "Andrea",
-        "lastName": "Toledo",
-        "email": "andretoledo@example.com",
+        "firstName": "Pedro",
+        "lastName": "Garcia",
+        "email": "pedro@gmail.com",
         "password": "password123",
-        "category": "A",
+        "category": "user",
         "image": "https://i.imgur.com/abc123.jpg"
     },
     {
         "id": 2,
-        "firstName": "Camila",
-        "lastName": "Gon",
-        "email": "camigon@example.com",
+        "firstName": "Ana",
+        "lastName": "Perez",
+        "email": "ana@gmail.com",
         "password": "password456",
-        "category": "B",
+        "category": "admin",
         "image": "https://i.imgur.com/def456.jpg"
-    },
-    {
-        "id": 3,
-        "firstName": "Matias",
-        "lastName": "Legise",
-        "email": "matilegise@example.com",
-        "password": "password456",
-        "category": "C",
-        "image": "https://i.imgur.com/def466.jpg"
-    },
-    {
-        "id": 4,
-        "firstName": "Juan",
-        "lastName": "Fracesconi",
-        "email": "juanma@example.com",
-        "password": "password456",
-        "category": "D",
-        "image": "https://i.imgur.com/def416.jpg"
-    },
-    {
-        "id": 5,
-        "firstName": "Josefina",
-        "lastName": "Eberhardt",
-        "email": "joseeber@example.com",
-        "password": "password456",
-        "category": "E",
-        "image": "https://i.imgur.com/def436.jpg"
-    },
-    {
-        "id": 6,
-        "firstName": "Rocio",
-        "lastName": "Martinez",
-        "email": "rocimartinez@example.com",
-        "password": "password456",
-        "category": "F",
-        "image": "https://i.imgur.com/def436.jpg"
     }
 ]
