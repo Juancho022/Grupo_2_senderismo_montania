@@ -8,7 +8,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L, XL.",
       "colors": "Colores disponibles: Negro, Gris, Azul.",
-      "image": "1sudadera.webp"
+      "image": "1sudadera.webp",
+      "code": "G4586"
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
       "category": "climbing",
       "sizes": "Talles disponibles: Único.",  
       "colors": "Colores disponibles: Negro, Gris, Azul.",
-      "image": "2gorra.jpg"
+      "image": "2gorra.jpg",
+      "code": "H4782"
     },
     {
       "id": 3,
@@ -30,7 +32,8 @@
       "category": "climbing",
       "sizes": "Talles disponibles: S, M, L.",
       "colors": "Colores disponibles:  Negro, Blanco, Verde.",
-      "image": "3campera-impermeable.jpg"
+      "image": "3campera-impermeable.jpg",
+      "code": "I4553"
     },
     {
       "id": 4,
@@ -41,7 +44,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L, XL.", 
       "colors": "Colores disponibles: Negro, Azul, Gris.",
-      "image": "4conjunto-hombre.jpg"
+      "image": "4conjunto-hombre.jpg",
+      "code": "L4882"
     },
     {
       "id": 5,
@@ -52,7 +56,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L, XL.",
       "colors": "Colores disponibles: Blanco, Gris, Negro.",
-      "image": "5remera-termica.jpg"
+      "image": "5remera-termica.jpg",
+      "code": "B4173"
     },
     {
       "id": 6,
@@ -63,7 +68,8 @@
       "category": "accessories",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "6gorra.jpg"
+      "image": "6gorra.jpg",
+      "code": "C4902"
     },
     {
       "id": 7,
@@ -74,7 +80,8 @@
       "category": "accessories",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles: Blanco, Negro, Rojo.",
-      "image": "7botella.jpg"
+      "image": "7botella.jpg",
+      "code": "X4040"
     },
     {
       "id": 8,
@@ -85,7 +92,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L.",
       "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "8calza-senderismo.jpg"
+      "image": "8calza-senderismo.jpg",
+      "code": "V4383"
     },
     {
       "id": 9,
@@ -96,7 +104,8 @@
       "category": "accessories",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "10linterna.jpg"
+      "image": "10linterna.jpg",
+      "code": "N4120"
     },
     {
       "id": 10,
@@ -107,7 +116,8 @@
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Negro, Azul, Marrón.",
-      "image": "shoes (0).png"
+      "image": "shoes (0).png",
+      "code": "T4618"
     },
     {
       "id": 11,
@@ -118,7 +128,8 @@
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Azul, Marrón.",
-      "image": "shoes (1).jpg"
+      "image": "shoes (1).jpg",
+      "code": "Q4591"
     },
     {
       "id": 12,
@@ -129,7 +140,8 @@
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Negro, Amarillo.",
-      "image": "shoes (2).jpg"
+      "image": "shoes (2).jpg",
+      "code": "F4956"
     },
     {
       "id": 13,
@@ -140,7 +152,8 @@
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Azul, Gris.",
-      "image": "shoes (3).jpg"
+      "image": "shoes (3).jpg",
+      "code": "A4505"
     },
     {
       "id": 14,
@@ -151,7 +164,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles:  Verde y Amarillo.",
-      "image": "backpack.png"
+      "image": "backpack.png",
+      "code": "R4107"
     }
   ]
   

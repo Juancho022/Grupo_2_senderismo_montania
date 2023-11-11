@@ -1,6 +1,6 @@
 html, body {
     overflow: visible;
-    background: url(/images/bg-login.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/bg-login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -78,6 +78,7 @@ main form input {
     border-left: hidden;
     border-top: hidden;
     border-right: hidden;
+    outline: none;
 }
 main section img#register-image {
     display: flex;
@@ -212,7 +213,7 @@ input[type="checkbox" i]:before {
 /*************TABLET**************************/
 @media (min-width: 768px) {
     html body {
-        background-image: url('/images/bg-login.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg-login.jpg');
         background-size: cover;
         background-position: center bottom;
     }
@@ -253,6 +254,7 @@ input[type="checkbox" i]:before {
         display: flex;
         position: relative;
         left: 10px;
+        margin-top: 10px;
     }
     main section div p#paragraphRegister {
         font-size: 1.6rem;
