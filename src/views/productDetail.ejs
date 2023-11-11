@@ -8,14 +8,17 @@
     <main>
         <p class="step">Productos > Camping > Mochila Cap</p>
         <article class="article-detail">
-            <div class="img-container">
-                <img src="\images\<%= locals.product?.image %>" alt="Mochila Peak">
-            </div>
+            <img src="\images\<%= locals.product?.image %>" alt="Mochila Peak">
+
+                
+
+            
             <div class="details-container">
-                <div class="title-detail" >
-                    <h2><%= locals.product?.name %></h2>
-                </div>
+
                 <div class="especs-detail">
+                    <div class="title-detail" >
+                        <h2><%= locals.product?.name %></h2>
+                    </div>
                     <div class="color-n-quantity">
                         <div class="colors">
                             <div class="color-green">
@@ -37,15 +40,12 @@
                         </div>
                     </div>
                     <div class="price-n-cta">
-                        <p class="price-final"><%= locals.product?.price %></p>
+                        <p class="price-final">$<%= locals.product?.price %></p>
                         <button class="add-cart"> Añadir al carrito </button>
                         <button class="add-fav">Agregar a favoritos</button>
                     </div>
                     <div>
-                        <div class="off">
-                            <i class="fa-solid fa-credit-card" style="color: #7ec989;"></i>
-                            <p>3 y 6 cuotas sin interés con VISA o MASTERCARD</p>
-                        </div>
+
                         <p class="article-description">
                             <%= locals.product?.description %>                            
                         </p>

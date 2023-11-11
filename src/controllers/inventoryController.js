@@ -11,4 +11,6 @@ const inventoryController = {
     }
 }
 
+
 module.exports = controller;
+
