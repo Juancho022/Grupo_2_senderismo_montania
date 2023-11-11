@@ -7,9 +7,8 @@
       "discount": 0,
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L, XL.",
-      "colors": "Colores disponibles: Negro, Gris, Azul.",
-      "image": "1sudadera.webp",
-      "code": "G4586"
+      "colors": "Colores disponibles: Verde, Amarillo, Gris",
+      "image": "1sudadera.webp"
     },
     {
       "id": 2,
