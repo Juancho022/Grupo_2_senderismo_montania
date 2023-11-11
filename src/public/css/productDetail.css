@@ -53,9 +53,10 @@ div.title-detail h2 {
 
 div.colors {
   display: flex;
+  margin-top: -6px;
 }
 
-div.colors div.color-green {
+div.colors div.color-one {
   width: 30px;
   height: 30px;
   background-color: #358D67;
@@ -64,11 +65,19 @@ div.colors div.color-green {
   margin-right: 8px;
 }
 
-div.colors div.color-yellow {
+div.colors div.color-two {
   width: 30px;
   height: 30px;
   background-color: #EFC84C;
   border-radius: 50%;
+}
+
+div.colors div.color-three {
+  width: 30px;
+  height: 30px;
+  background-color: #6D6D6D;
+  border-radius: 50%;
+  margin-left: 8px;
 }
 
 .count-detail {
@@ -208,6 +217,7 @@ footer {
 
   article.article-detail {
     display: block;
+    margin-bottom: 40%;
   }
 
   article.article-detail .img-container {
@@ -251,6 +261,7 @@ footer {
   .count-detail {
     margin-left: 0px;
     flex-wrap: nowrap;
+    margin-top: 2px;
   }
 
   div.less, p.quantity, p.more {
@@ -324,6 +335,7 @@ footer {
 
   article.article-detail {
     display: block;
+    margin-bottom: 10%;
   }
 
   article.article-detail .img-container {
@@ -400,4 +412,14 @@ footer {
     top: 45px;
     left: -25px;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+.color-n-quantity {
+    left: 48vw;
+}
+
+div.title-detail h2 {
+  margin-left: 8px;
+}
 }
