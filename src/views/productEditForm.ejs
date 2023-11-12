@@ -40,35 +40,32 @@
                             <div class="size-options">
                                 <label for="size">Talles disponibles</label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'XL' && checked ? productToEdit.sizes %>"> XL
+                                    <input type="checkbox" name="sizes" id="talle4" value="<%= productToEdit.sizes.size4 === 'XL' ? 'XL' : '' %>""> XL
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'L' && checked ? productToEdit.sizes %>"> L
+                                    <input type="checkbox" name="sizes" id="talle3" value="<%= productToEdit.sizes.size3 === 'L' ? 'L' : '' %>"> L
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'XL' && checked ? productToEdit.sizes %>"> M
+                                    <input type="checkbox" name="sizes" id="talle2" value="<%= productToEdit.sizes.size2 === 'M' ? 'M' : '' %>"> M
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === "XL" && checked ? productToEdit.sizes %>""> S
+                                    <input type="checkbox" name="sizes" id="talle1" value="<%= productToEdit.sizes.size1 === 'S' ? 'S' : '' %>"> S
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'XS' && 'checked' %>"> XS
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="sizes" id="sizes" value="<%= productToEdit.sizes === 'UNICO' && 'checked' %>"> UNICO
+                                    <input type="checkbox" name="sizes" id="talle5" value="<%= productToEdit.sizes.size5 === 'UNICO'? 'UNICO' : '' %>"> UNICO
                                 </label>
                             </div>
 
                             <div class="color-options">
                                 <label for="color-options">Colores disponibles</label>
                                 <label>
-                                    <input type="checkbox" name="colors" id="colors" value="<%= productToEdit.sizes === 'Blanca' && 'checked' %>"> Blanca
+                                    <input type="checkbox" name="colors" id="color1" value="<%= productToEdit.colors.cblanca === 'Blanca'? 'Blanca' : '' %>" > Blanca
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="colors" id="colors" value="<%= productToEdit.sizes === 'Amarilla' && 'checked' %>"> Amarilla
+                                    <input type="checkbox" name="colors" id="color2" value="<%= productToEdit.colors.camarilla === 'Amarilla'? 'Amarilla' : '' %>"> Amarilla
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="colors" id="colors" value="<%= productToEdit.sizes === 'Negra' && 'checked' %>"> Negra
+                                    <input type="checkbox" name="colors" id="color3" value="<%= productToEdit.colors.cnegra === 'Negra'? 'Negra' : '' %>"> Negra
                                 </label>
                             </div>
 
@@ -82,18 +79,15 @@
                             <div class="product-category">
                                 <span id="category">Categoría</span>
                                 <select class="product-category-detail" id="category">
-                                    <option value="<%= productToEdit.category %>">Escalada</option>
-                                    <option value="<%= productToEdit.category %>">Accesorios</option>
-                                    <option value="<%= productToEdit.category %>">Senderismo</option>
-                                    <option value="<%= productToEdit.category %>">Trekking</option>
-                                    <option value="<%= productToEdit.category %>">Calzados</option>
+                                    <option value="<%= productToEdit.category && 'selected' %>">Escalada</option>
+                                    <option value="<%= productToEdit.category && 'selected' %>">Accesorios</option>
+                                    <option value="<%= productToEdit.category && 'selected' %>">Senderismo</option>
+                                    <option value="<%= productToEdit.category && 'selected' %>">Trekking</option>
+                                    <option value="<%= productToEdit.category && 'selected' %>">Calzados</option>
                                 </select>
                             </div>
                             <div class="button-submit">
                                 <input type="submit" class="button-submit" value="Guardar cambios">
-                            </div>
-                            <div class="button-delete">
-                                <input type="submit" class="button-delete" value="Borrar producto">
                             </div>
                     </form>
                     </div>

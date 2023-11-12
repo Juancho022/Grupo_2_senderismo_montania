@@ -1,24 +1,44 @@
 [
   {
     "id": 1,
-    "name": "Gorro",
-    "description": "                                                                                                                                                                                                                        Este buzo está diseñado para mantenerte cómodo en diversas condiciones climáticas. Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. Protégete del sol, el viento o la lluvia ligera, y si no la necesitas, simplemente ajústala o quítala según prefieras. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
-    "price": "300000",
-    "discount": "20",
+    "name": "Buzo de algodón",
+    "description": "Este buzo está diseñado para mantenerte cómodo en diversas condiciones climáticas. Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. Protégete del sol, el viento o la lluvia ligera, y si no la necesitas, simplemente ajústala o quítala según prefieras. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
+    "price": 89000,
+    "discount": 0,
     "category": "hiking",
-    "sizes": "false",
-    "colors": "false",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "1sudadera.webp"
   },
   {
     "id": 2,
     "name": "Gorro de lana",
-    "description": "                                    Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
-    "price": "15000",
-    "discount": "0",
+    "description": "Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
+    "price": 15000,
+    "discount": 0,
     "category": "climbing",
-    "sizes": "Talles disponibles: Único.",
-    "colors": "Colores disponibles: Negro, Gris, Azul.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "2gorra.jpg"
   },
   {
@@ -28,8 +48,18 @@
     "price": 162378,
     "discount": 0,
     "category": "climbing",
-    "sizes": "Talles disponibles: S, M, L.",
-    "colors": "Colores disponibles:  Negro, Blanco, Verde.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "3campera-impermeable.jpg"
   },
   {
@@ -39,8 +69,18 @@
     "price": 135000,
     "discount": 0,
     "category": "hiking",
-    "sizes": "Talles disponibles: S, M, L, XL.",
-    "colors": "Colores disponibles: Negro, Azul, Gris.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "4conjunto-hombre.jpg"
   },
   {
@@ -50,8 +90,18 @@
     "price": 42000,
     "discount": 0,
     "category": "hiking",
-    "sizes": "Talles disponibles: S, M, L, XL.",
-    "colors": "Colores disponibles: Blanco, Gris, Negro.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "5remera-termica.jpg"
   },
   {
@@ -61,8 +111,18 @@
     "price": 12000,
     "discount": 0,
     "category": "accessories",
-    "sizes": "Talles disponibles: Único.",
-    "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "6gorra.jpg"
   },
   {
@@ -72,8 +132,18 @@
     "price": 9000,
     "discount": 0,
     "category": "accessories",
-    "sizes": "Talles disponibles: Único.",
-    "colors": "Colores disponibles: Blanco, Negro, Rojo.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "7botella.jpg"
   },
   {
@@ -83,8 +153,18 @@
     "price": 33000,
     "discount": 0,
     "category": "hiking",
-    "sizes": "Talles disponibles: S, M, L.",
-    "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "8calza-senderismo.jpg"
   },
   {
@@ -94,8 +174,18 @@
     "price": 15000,
     "discount": 0,
     "category": "accessories",
-    "sizes": "Talles disponibles: Único.",
-    "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "10linterna.jpg"
   },
   {
@@ -105,8 +195,18 @@
     "price": 87000,
     "discount": 0,
     "category": "footwear",
-    "sizes": "Talles disponibles: 38-45.",
-    "colors": "Colores disponibles: Negro, Azul, Marrón.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "shoes (0).png"
   },
   {
@@ -116,8 +216,18 @@
     "price": 107000,
     "discount": 0,
     "category": "footwear",
-    "sizes": "Talles disponibles: 38-45.",
-    "colors": "Colores disponibles: Azul, Marrón.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "shoes (1).jpg"
   },
   {
@@ -127,8 +237,18 @@
     "price": 180000,
     "discount": 0,
     "category": "footwear",
-    "sizes": "Talles disponibles: 38-45.",
-    "colors": "Colores disponibles: Negro, Amarillo.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "shoes (2).jpg"
   },
   {
@@ -138,8 +258,18 @@
     "price": 143000,
     "discount": 0,
     "category": "footwear",
-    "sizes": "Talles disponibles: 38-45.",
-    "colors": "Colores disponibles: Azul, Gris.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "shoes (3).jpg"
   },
   {
@@ -149,41 +279,18 @@
     "price": 95000,
     "discount": 0,
     "category": "hiking",
-    "sizes": "Talles disponibles: Único.",
-    "colors": "Colores disponibles:  Verde y Amarillo.",
+    "sizes": {
+      "size1": "S",
+      "size2": "M",
+      "size3": "L",
+      "size4": "XL",
+      "size5": "UNICO"
+    },
+    "colors": {
+      "color1": "Negro",
+      "color2": "Gris",
+      "color3": "Azul"
+    },
     "image": "backpack.png"
-  },
-  {
-    "id": 15,
-    "name": "jose",
-    "description": "dddd",
-    "price": "2000",
-    "discount": "20",
-    "sizes": "L",
-    "colors": "yellow",
-    "category": "accessories",
-    "image": "default-img.jpg"
-  },
-  {
-    "id": 16,
-    "name": "hdhd",
-    "description": "ddf",
-    "price": "30",
-    "discount": "",
-    "sizes": "XS",
-    "colors": "black",
-    "category": "accessories",
-    "image": "default-img.jpg"
-  },
-  {
-    "id": 17,
-    "name": "ccc",
-    "description": "ffff",
-    "price": "23",
-    "discount": "",
-    "sizes": "XL",
-    "colors": "white",
-    "category": "hiking",
-    "image": "default-image.jpg"
   }
 ]
