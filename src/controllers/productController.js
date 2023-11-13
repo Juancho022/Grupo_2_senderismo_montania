@@ -38,6 +38,13 @@ const productController = {
         const product = products.find((product) => product.id == req.params.id);
         res.render('productDetail', { product });
     },
-}
+    
+    destroy: (req, res) => {
+        const indexProduct = products.findIndex((product) => product.id == req.params.id);
+        products.splice(indexProduct, 1);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.redirect('/products');
+    }
+};
 
 module.exports = productController;

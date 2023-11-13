@@ -29,15 +29,16 @@
                         <span class="sixth-row"> </span>
                     </div>
 
-                    <div class="table-product">
+                    
+                    <div class="table-product"  <% locals.products && products.forEach(product => { %>>
                         <span class="product-code">
-                            G4586
+                            <%= locals.product?.code %>
                         </span>
                         <div class="product-image">
-                            <img class="product" src="images\1sudadera.webp"
+                            <img class="product" src="images\<%= locals.product?.image %>"
                                 alt="Mujer mirando hacia atrás con un gorro de lana">
                             <span class="product-name">
-                                Sudadera impermeable
+                                <%= locals.product?.name %>
                             </span>
                         </div>
                         <select class="product-category">
@@ -48,7 +49,7 @@
                             <option value="accessories">Accesorios</option>
                         </select>
                         <span class="product-price">
-                            $89.000
+                            <%= locals.product?.price %>
                         </span>
                         <div class="counter">
                             <div class="button" id="decrease">-</div>
@@ -56,43 +57,13 @@
                             <div class="button" id="increase">+</div>
                         </div>
                         <div class="edit-n-delete">
-                            <i class="fa fa-trash trash"></i>
-                            <a href="/inventory/<%= locals.products?.id %>/edit"><i class="fas fa-pencil-alt pencil-edit"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="table-product">
-                        <span class="product-code">
-                            H4782
-                        </span>
-                        <div class="product-image">
-                            <img class="product" src="images\2gorra.jpg"
-                                alt="Hombre con sudadera gris parado bajo la lluvia">
-                            <span class="product-name">
-                                Gorro térmico
-                            </span>
-                        </div>
-                        <select class="product-category">
-                            <option value="accessories">Accesorios</option>
-                            <option value="senderism">Senderismo</option>
-                            <option value="montagne">Escalada</option>
-                            <option value="montagne">Trekking</option>
-                            <option value="shoes">Calzados</option>
-                        </select>
-                        <span class="product-price">
-                            $15.000
-                        </span>
-
-                        <div class="counter">
-                            <div class="button" id="decrease">-</div>
-                            <span id="count">13</span>
-                            <div class="button" id="increase">+</div>
-                        </div>
-                        <div class="edit-n-delete">
-                            <i class="fa fa-trash trash"></i>
+                            <form action="/inventory/<%= locals.product?.id %>/delete?_method=DELETE" method="POST" style="display: inline-flex;">
+                                <button type="submit"><i class="fa fa-trash trash"></i></button>
+                            </form>
                             <i class="fas fa-pencil-alt pencil-edit"></i>
                         </div>
                     </div>
+                    <% }) %>
                     
 
                     <%- include('./partials/footer') %>

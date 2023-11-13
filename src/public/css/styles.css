@@ -171,7 +171,8 @@ footer div.form-suscription {
         border: none;
         margin-bottom: 10px;
         border-bottom: solid 1px white;
-        text-decoration: underline;
+        outline: none;
+        color: #ffffff;
     }
 
     footer div.form-suscription input::placeholder {
@@ -217,7 +218,7 @@ html {
 main section#hero {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: overlay;
 }
 
 main section img#heroImage {
