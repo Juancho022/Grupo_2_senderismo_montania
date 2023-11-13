@@ -11,13 +11,41 @@ const User = {
     getData: function (){
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
     },
-
-    findAll: function () {
-        return this.getData;
+    //Como el ID no lo carga el usuario, se lo asigna el sistema, se hace otro método:
+    generateId:function () {
+        let allUsers = this.findAll(); 
+        let lastUser = allUsers.pop();
+        return lastUser.id + 1; 
     },
 
+
+    //Traer todos los usuarios 
+    findAll: function () {
+        return this.getData();
+    },
+    //Crear un nuevo usuario y guardarlo. 
     create: function (userData) {
-    }
+        let allUsers = this.findAll();
+        allUsers.push(userData); //esto es un array, tengo que transformarlo para que lo lea el archivo JSON
+        fs.writeFileSync(this.fileName, JSON.stringify(allUsers,null, ' ')); //prestar atención que entre comillas va espacio vacio
+        return true;
+
+    },
+    //Traer a un usuario por ID. PK es primary key
+    findByPk: function (id){
+        let allUsers = this.findAll();
+        let userFound = allUsers.find(oneUser => oneUser.id === id) //quiero que recorra todos los usuarios y me traiga solo el que tiene el id
+        return userFound;
+    },
+
+    //Traer a un usuario por cualquier campo. Se puede hacer mejor porque puede que le pongas un campo que sea en todos lo mismo (país por ejemplo) y sólo te traiga uno. Hay que hacer un método para eso
+    findByField: function (field,text){
+        let allUsers = this.findAll();
+        let userFound = allUsers.find(oneUser => oneUser[field] === text) //quiero que recorra todos los usuarios y me traiga solo el que tiene el id
+        return userFound;
+    },
+
 }
 
-console.log(User.getData());
+//Para probar que funcione. Si se le pasa un número valor que no está en la base devuelve undefinded
+console.log(User.generateId());
