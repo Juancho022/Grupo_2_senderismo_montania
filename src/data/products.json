@@ -2,12 +2,12 @@
     {
       "id": 1,
       "name": "Buzo de algodón",
-      "description": "Este buzo está diseñado para mantenerte cómodo en diversas condiciones climáticas. Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. Protégete del sol, el viento o la lluvia ligera, y si no la necesitas, simplemente ajústala o quítala según prefieras. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
+      "description": "Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
       "price": 89000,
       "discount": 0,
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L, XL.",
-      "colors": "Colores disponibles: Negro, Gris, Azul.",
+      "colors": "Colores disponibles: Verde, Amarillo, Gris",
       "image": "1sudadera.webp"
     },
     {
@@ -19,7 +19,8 @@
       "category": "climbing",
       "sizes": "Talles disponibles: Único.",  
       "colors": "Colores disponibles: Negro, Gris, Azul.",
-      "image": "2gorra.jpg"
+      "image": "2gorra.jpg",
+      "code": "H4782"
     },
     {
       "id": 3,
@@ -30,7 +31,8 @@
       "category": "climbing",
       "sizes": "Talles disponibles: S, M, L.",
       "colors": "Colores disponibles:  Negro, Blanco, Verde.",
-      "image": "3campera-impermeable.jpg"
+      "image": "3campera-impermeable.jpg",
+      "code": "I4553"
     },
     {
       "id": 4,
@@ -41,7 +43,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L, XL.", 
       "colors": "Colores disponibles: Negro, Azul, Gris.",
-      "image": "4conjunto-hombre.jpg"
+      "image": "4conjunto-hombre.jpg",
+      "code": "L4882"
     },
     {
       "id": 5,
@@ -52,7 +55,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L, XL.",
       "colors": "Colores disponibles: Blanco, Gris, Negro.",
-      "image": "5remera-termica.jpg"
+      "image": "5remera-termica.jpg",
+      "code": "B4173"
     },
     {
       "id": 6,
@@ -63,18 +67,20 @@
       "category": "accessories",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "6gorra.jpg"
+      "image": "6gorra.jpg",
+      "code": "C4902"
     },
     {
       "id": 7,
       "name": "Botella térmica",
-      "description": "La botella está diseñada con tecnología de aislamiento de doble pared que mantiene las bebidas frías hasta por 24 horas y calientes hasta por 12 horas. Ideal para cualquier clima y estación. Fabricada con acero inoxidable de alta calidad, esta botella es resistente a golpes y caídas, perfecta para las rutas más exigentes. Además, es libre de BPA y materiales tóxicos, garantizando la seguridad de tus líquidos. Su diseño compacto cabe en la mayoría de los portavasos y bolsillos de mochila, lo que la hace perfecta para llevar contigo en tus travesías sin ocupar mucho espacio. La tapa hermética evita derrames y fugas, y su boquilla de fácil acceso te permite beber cómodamente mientras estás en movimiento. Disponible en una variedad de colores y diseños que se adaptan a tu estilo y personalidad, para que puedas llevar tu botella con orgullo.",
+      "description": "La botella está diseñada con tecnología de aislamiento de doble pared que mantiene las bebidas frías hasta por 24 horas y calientes hasta por 12 horas. Fabricada con acero inoxidable de alta calidad, esta botella es resistente a golpes y caídas, perfecta para las rutas más exigentes. Además, es libre de BPA y materiales tóxicos, garantizando la seguridad de tus líquidos. Disponible en una variedad de colores y diseños que se adaptan a tu estilo y personalidad.",
       "price": 9000,
       "discount": 0,
       "category": "accessories",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles: Blanco, Negro, Rojo.",
-      "image": "7botella.jpg"
+      "image": "7botella.jpg",
+      "code": "X4040"
     },
     {
       "id": 8,
@@ -85,7 +91,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: S, M, L.",
       "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "8calza-senderismo.jpg"
+      "image": "8calza-senderismo.jpg",
+      "code": "V4383"
     },
     {
       "id": 9,
@@ -96,7 +103,8 @@
       "category": "accessories",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "10linterna.jpg"
+      "image": "10linterna.jpg",
+      "code": "N4120"
     },
     {
       "id": 10,
@@ -107,18 +115,20 @@
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Negro, Azul, Marrón.",
-      "image": "shoes (0).png"
+      "image": "shoes (0).png",
+      "code": "T4618"
     },
     {
       "id": 11,
       "name": "Botas",
-      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+      "description": "Descubrí la máxima comodidad y rendimiento con nuestras Botas de Montaña. Diseñadas para aventureros apasionados que desean conquistar terrenos montañosos y explorar la naturaleza de manera segura y con estilo.",
       "price": 107000,
       "discount": 0,
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Azul, Marrón.",
-      "image": "shoes (1).jpg"
+      "image": "shoes (1).jpg",
+      "code": "Q4591"
     },
     {
       "id": 12,
@@ -129,7 +139,8 @@
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Negro, Amarillo.",
-      "image": "shoes (2).jpg"
+      "image": "shoes (2).jpg",
+      "code": "F4956"
     },
     {
       "id": 13,
@@ -140,7 +151,8 @@
       "category": "footwear",
       "sizes": "Talles disponibles: 38-45.",
       "colors": "Colores disponibles: Azul, Gris.",
-      "image": "shoes (3).jpg"
+      "image": "shoes (3).jpg",
+      "code": "A4505"
     },
     {
       "id": 14,
@@ -151,7 +163,8 @@
       "category": "hiking",
       "sizes": "Talles disponibles: Único.",
       "colors": "Colores disponibles:  Verde y Amarillo.",
-      "image": "backpack.png"
+      "image": "backpack.png",
+      "code": "R4107"
     }
   ]
   
