@@ -30,70 +30,41 @@
                     </div>
 
                     <div class="table-product">
-                        <span class="product-code">
-                            G4586
-                        </span>
-                        <div class="product-image">
-                            <img class="product" src="images\1sudadera.webp"
-                                alt="Mujer mirando hacia atrás con un gorro de lana">
-                            <span class="product-name">
-                                Sudadera impermeable
-                            </span>
-                        </div>
-                        <select class="product-category">
-                            <option value="senderism">Senderismo</option>
-                            <option value="montagne">Escalada</option>
-                            <option value="montagne">Trekking</option>
-                            <option value="shoes">Calzados</option>
-                            <option value="accessories">Accesorios</option>
-                        </select>
-                        <span class="product-price">
-                            $89.000
-                        </span>
-                        <div class="counter">
-                            <div class="button" id="decrease">-</div>
-                            <span id="count">22</span>
-                            <div class="button" id="increase">+</div>
-                        </div>
-                        <div class="edit-n-delete">
-                            <i class="fa fa-trash trash"></i>
-                            <a href="/inventory/<%= locals.products?.id %>/edit"><i class="fas fa-pencil-alt pencil-edit"></i></a>
-                        </div>
+                        <% locals.products && products.forEach(product=> { %>
+                            <div class="product-content">
+                                <span class="product-code">
+                                    <%= product.id %>
+                                </span>
+                                <div class="product-image">
+                                    <img class="product" src="/images/<%= product.image %>" alt="imagen del producto">
+                                    <span class="product-name">
+                                        <%= product.name %>
+                                    </span>
+                                </div>
+                                <select class="product-category">
+                                    <option value="senderism">Senderismo</option>
+                                    <option value="montagne">Escalada</option>
+                                    <option value="montagne">Trekking</option>
+                                    <option value="shoes">Calzados</option>
+                                    <option value="accessories">Accesorios</option>
+                                </select>
+                                <span class="product-price">
+                                    <%= product.price %>
+                                </span>
+                                <div class="counter">
+                                    <div class="button" id="decrease">-</div>
+                                    <span id="count">22</span>
+                                    <div class="button" id="increase">+</div>
+                                </div>
+                                <div class="edit-n-delete">
+                                    <i class="fa fa-trash trash"></i>
+                                    <a href="/inventory/<%= locals.products?.id %>/edit"><i
+                                            class="fas fa-pencil-alt pencil-edit"></i></a>
+                                </div>
+                            </div>
+                            <% }) %>
                     </div>
 
-                    <div class="table-product">
-                        <span class="product-code">
-                            H4782
-                        </span>
-                        <div class="product-image">
-                            <img class="product" src="images\2gorra.jpg"
-                                alt="Hombre con sudadera gris parado bajo la lluvia">
-                            <span class="product-name">
-                                Gorro térmico
-                            </span>
-                        </div>
-                        <select class="product-category">
-                            <option value="accessories">Accesorios</option>
-                            <option value="senderism">Senderismo</option>
-                            <option value="montagne">Escalada</option>
-                            <option value="montagne">Trekking</option>
-                            <option value="shoes">Calzados</option>
-                        </select>
-                        <span class="product-price">
-                            $15.000
-                        </span>
-
-                        <div class="counter">
-                            <div class="button" id="decrease">-</div>
-                            <span id="count">13</span>
-                            <div class="button" id="increase">+</div>
-                        </div>
-                        <div class="edit-n-delete">
-                            <i class="fa fa-trash trash"></i>
-                            <i class="fas fa-pencil-alt pencil-edit"></i>
-                        </div>
-                    </div>
-                    
 
                     <%- include('./partials/footer') %>
 
