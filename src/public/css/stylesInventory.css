@@ -123,6 +123,10 @@ div.edit-n-delete{
     gap: 8px;
 }
 
+.form-edit-create{
+    min-height: 100vh;
+}
+
 .product-edit {
     display: flex;
     align-items: center;

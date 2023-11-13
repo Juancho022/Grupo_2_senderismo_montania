@@ -3,7 +3,7 @@
 
         <body>
             <%- include('./partials/header') %>
-                <main>
+                <main class="form-edit-create">
                     <div class="product-edit">
                         <form class="product-edit-form" action="/inventory/create" method="post"
                             enctype="multipart/form-data">
@@ -21,7 +21,8 @@
 
                             <div class="label-product">
                                 <label for="description">Descripción</label>
-                                <textarea class="product-imput" name="description" id="description"></textarea>
+                                <input type="text" class="product-imput" name="description"
+                                    placeholder="Descripción del producto" required>
                             </div>
 
                             <div class="label-product-price">
@@ -30,7 +31,7 @@
                                     placeholder="Precio del producto" required>
                             </div>
 
-                            <div class="discount">
+                            <div class="label-product-price">
                                 <label for="discount">Descuento</label>
                                 <input type="text" id="discount" name="discount" placeholder="Ej: 15"
                                     class="product-imput-price">
