@@ -183,7 +183,7 @@ section.product-detail article.discount-product div.discount div.discount-code p
 section.product-detail article.discount-product div.discount div.discount-code div.apply-code form {
     background-color: #FFFFFF;
     border: 1px solid #D3563B;
-    border-radius: 22px;
+    border-radius: 10px;
     padding: 10px;
 }
 
