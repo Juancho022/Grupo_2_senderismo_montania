@@ -4,7 +4,7 @@
   "description": "Node.js + Express + Nodemon",
   "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon src/app.js",
+    "dev": "nodemon --ignore src/data*.json src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
