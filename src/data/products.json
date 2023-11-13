@@ -6,18 +6,18 @@
     "price": 89000,
     "discount": 0,
     "category": "hiking",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Negro",
+      "Gris",
+      "Azul"
+    ],
     "image": "1sudadera.webp"
   },
   {
@@ -27,18 +27,18 @@
     "price": 15000,
     "discount": 0,
     "category": "climbing",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Negro",
+      "Gris",
+      "Azul"
+    ],
     "image": "2gorra.jpg"
   },
   {
@@ -48,18 +48,18 @@
     "price": 162378,
     "discount": 0,
     "category": "climbing",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "3campera-impermeable.jpg"
   },
   {
@@ -69,18 +69,18 @@
     "price": 135000,
     "discount": 0,
     "category": "hiking",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanco",
+      "Negro",
+      "Azul"
+    ],
     "image": "4conjunto-hombre.jpg"
   },
   {
@@ -90,18 +90,18 @@
     "price": 42000,
     "discount": 0,
     "category": "hiking",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "5remera-termica.jpg"
   },
   {
@@ -111,18 +111,18 @@
     "price": 12000,
     "discount": 0,
     "category": "accessories",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "6gorra.jpg"
   },
   {
@@ -132,18 +132,18 @@
     "price": 9000,
     "discount": 0,
     "category": "accessories",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "7botella.jpg"
   },
   {
@@ -153,18 +153,18 @@
     "price": 33000,
     "discount": 0,
     "category": "hiking",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "8calza-senderismo.jpg"
   },
   {
@@ -174,18 +174,18 @@
     "price": 15000,
     "discount": 0,
     "category": "accessories",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "10linterna.jpg"
   },
   {
@@ -195,18 +195,18 @@
     "price": 87000,
     "discount": 0,
     "category": "footwear",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "shoes (0).png"
   },
   {
@@ -216,18 +216,18 @@
     "price": 107000,
     "discount": 0,
     "category": "footwear",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "shoes (1).jpg"
   },
   {
@@ -237,18 +237,18 @@
     "price": 180000,
     "discount": 0,
     "category": "footwear",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "shoes (2).jpg"
   },
   {
@@ -258,18 +258,18 @@
     "price": 143000,
     "discount": 0,
     "category": "footwear",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "shoes (3).jpg"
   },
   {
@@ -279,18 +279,18 @@
     "price": 95000,
     "discount": 0,
     "category": "hiking",
-    "sizes": {
-      "size1": "S",
-      "size2": "M",
-      "size3": "L",
-      "size4": "XL",
-      "size5": "UNICO"
-    },
-    "colors": {
-      "color1": "Negro",
-      "color2": "Gris",
-      "color3": "Azul"
-    },
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
     "image": "backpack.png"
   }
 ]
