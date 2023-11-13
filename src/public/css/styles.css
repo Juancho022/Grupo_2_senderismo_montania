@@ -46,6 +46,9 @@ footer {
     background-color: #000;
     display: flex;
     padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer div.copyright{
