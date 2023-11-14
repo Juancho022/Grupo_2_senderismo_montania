@@ -26,6 +26,9 @@ router.post('/create', upload.single('image'), inventoryController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', inventoryController.edit); 
-router.put('/:id/edit', inventoryController.update); 
+router.put('/:id/edit', inventoryController.update);
+
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/:id/delete', inventoryController.destroy); 
 
 module.exports = router;
