@@ -13,7 +13,7 @@
   "firstName": "Ana",
   "lastName": "Perez",
   "email": "ana@gmail.com",
-  "password": "password456", //para encriptar la contraseña se instala bcryptjs
+  "password": "password456",
   "category": "admin",
   "image": "https://i.imgur.com/def456.jpg"
  }

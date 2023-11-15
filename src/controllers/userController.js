@@ -16,6 +16,6 @@ const controller = {
 
 //Si pasa todas las validaciones va esta línea:
  User.create(userToCreate)
-return res.send ('Usuario creado con éxito'); */
-
+return res.send ('Usuario creado con éxito');
+//para encriptar la contraseña se instala bcryptjs */
 module.exports = controller;
