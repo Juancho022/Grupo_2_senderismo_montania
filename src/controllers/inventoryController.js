@@ -2,8 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const productModel = require('../models/product');
 
-
-
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -44,7 +42,15 @@ const inventoryController = {
 		};
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 		res.redirect('/products');
-	}
+	},
+
+    destroy: (req, res) => {
+        //const indexProduct = products.findIndex((product) => product.id == req.params.id);
+        //products.splice(indexProduct, 1);
+        products = products.filter((product) => product.id != req.params.id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.redirect('/products');
+    }
 }
 
 module.exports = inventoryController;

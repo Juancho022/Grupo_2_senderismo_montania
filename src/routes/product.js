@@ -16,8 +16,7 @@ router.get('/productCart', productController.productCart);
 router.get('/productDetail/:id/', productController.productDetail); 
 
 
-/*** DELETE ONE PRODUCT***/ 
-router.delete('/:id/delete', productController.destroy); 
+
 
 module.exports = router;
 
