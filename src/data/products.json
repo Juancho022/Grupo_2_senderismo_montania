@@ -1,170 +1,296 @@
 [
-    {
-      "id": 1,
-      "name": "Buzo de algodón",
-      "description": "Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
-      "price": 89000,
-      "discount": 0,
-      "category": "hiking",
-      "sizes": "Talles disponibles: S, M, L, XL.",
-      "colors": "Colores disponibles: Verde, Amarillo, Gris",
-      "image": "1sudadera.webp"
-    },
-    {
-      "id": 2,
-      "name": "Gorro de lana",
-      "description": "Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
-      "price": 15000,
-      "discount": 0,
-      "category": "climbing",
-      "sizes": "Talles disponibles: Único.",  
-      "colors": "Colores disponibles: Negro, Gris, Azul.",
-      "image": "2gorra.jpg",
-      "code": "H4782"
-    },
-    {
-      "id": 3,
-      "name": "Campera impermeable",
-      "description": "Esta campera está diseñada para retener y distribuir el calor de manera eficiente, manteniéndote cómoda y abrigada en condiciones frías. El aislamiento térmico de alta calidad te protege del frío extremo y te permite disfrutar de tu trekking al máximo. A pesar de su impresionante capacidad de retención de calor, nuestra campera es sorprendentemente liviana y compacta. Esto la convierte en una elección ideal para llevar en tu mochila, ya que no añade peso innecesario.",
-      "price": 162378,
-      "discount": 0,
-      "category": "climbing",
-      "sizes": "Talles disponibles: S, M, L.",
-      "colors": "Colores disponibles:  Negro, Blanco, Verde.",
-      "image": "3campera-impermeable.jpg",
-      "code": "I4553"
-    },
-    {
-      "id": 4,
-      "name": "Conjunto deportivo",
-      "description": "Cuando te aventuras en las rutas de trekking y senderismo, necesitas ropa que ofrezca la combinación perfecta de comodidad, versatilidad y estilo. Nuestro Conjunto Deportivo de Algodón es la elección ideal para quienes buscan un look casual y cómodo, sin sacrificar la funcionalidad en sus escapadas al aire libre.",
-      "price": 135000,
-      "discount": 0,
-      "category": "hiking",
-      "sizes": "Talles disponibles: S, M, L, XL.", 
-      "colors": "Colores disponibles: Negro, Azul, Gris.",
-      "image": "4conjunto-hombre.jpg",
-      "code": "L4882"
-    },
-    {
-      "id": 5,
-      "name": "Remera Térmica",
-      "description": "Cuando emprendes travesías de trekking y senderismo, necesitas una prenda que combine comodidad, calidez y funcionalidad. Nuestra Remera Térmica está diseñada para mantener tu cuerpo a la temperatura adecuada en cualquier aventura al aire libre. Utiliza tecnología de aislamiento avanzada para atrapar el calor corporal y mantenerlo cerca de tu piel, proporcionando una sensación de calidez y confort en condiciones frías.",
-      "price": 42000,
-      "discount": 0,
-      "category": "hiking",
-      "sizes": "Talles disponibles: S, M, L, XL.",
-      "colors": "Colores disponibles: Blanco, Gris, Negro.",
-      "image": "5remera-termica.jpg",
-      "code": "B4173"
-    },
-    {
-      "id": 6,
-      "name": "Gorra",
-      "description": " La gorra está equipada con una visera ancha que protege tu rostro y ojos de los rayos solares dañinos. Te permite disfrutar del aire libre sin preocuparte por las quemaduras solares. El diseño de esta gorra incorpora paneles transpirables que permiten que el aire fluya, manteniendo tu cabeza fresca y seca en los días más calurosos. El cierre ajustable garantiza un ajuste perfecto a cualquier tamaño de cabeza, lo que evita que la gorra se caiga o se sienta incómoda durante tus caminatas.",
-      "price": 12000,
-      "discount": 0,
-      "category": "accessories",
-      "sizes": "Talles disponibles: Único.",
-      "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "6gorra.jpg",
-      "code": "C4902"
-    },
-    {
-      "id": 7,
-      "name": "Botella térmica",
-      "description": "La botella está diseñada con tecnología de aislamiento de doble pared que mantiene las bebidas frías hasta por 24 horas y calientes hasta por 12 horas. Fabricada con acero inoxidable de alta calidad, esta botella es resistente a golpes y caídas, perfecta para las rutas más exigentes. Además, es libre de BPA y materiales tóxicos, garantizando la seguridad de tus líquidos. Disponible en una variedad de colores y diseños que se adaptan a tu estilo y personalidad.",
-      "price": 9000,
-      "discount": 0,
-      "category": "accessories",
-      "sizes": "Talles disponibles: Único.",
-      "colors": "Colores disponibles: Blanco, Negro, Rojo.",
-      "image": "7botella.jpg",
-      "code": "X4040"
-    },
-    {
-      "id": 8,
-      "name": "Calza",
-      "description": "Calza ideal para situaciones en las que se necesita mantener las piernas secas en climas húmedos o en actividades al aire libre donde puedas estar expuesto a la lluvia",
-      "price": 33000,
-      "discount": 0,
-      "category": "hiking",
-      "sizes": "Talles disponibles: S, M, L.",
-      "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "8calza-senderismo.jpg",
-      "code": "V4383"
-    },
-    {
-      "id": 9,
-      "name": "Linterna recargable",
-      "description": "Nuestra linterna utiliza tecnología LED de alta potencia que emite una luz brillante y nítida, proporcionando una visión clara en cualquier entorno. La batería recargable de larga duración asegura que tengas luz durante toda tu expedición. Recargable y Sostenible: Olvídate de gastar dinero en baterías desechables. Esta linterna es recargable, lo que la hace respetuosa con el medio ambiente y económicamente eficiente. Simplemente conéctala a una fuente de energía y estará lista para tu próxima aventura.",
-      "price": 15000,
-      "discount": 0,
-      "category": "accessories",
-      "sizes": "Talles disponibles: Único.",
-      "colors": "Colores disponibles: Rojo, Azul, Gris, Negro.",
-      "image": "10linterna.jpg",
-      "code": "N4120"
-    },
-    {
-      "id": 10,
-      "name": "Botas urbanas",
-      "description": "Estas botas son el equilibrio perfecto entre estilo y funcionalidad. Diseñadas para ofrecer un ajuste preciso, tracción en superficies variadas y comodidad duradera, estas botas son ideales para enfrentar los desafíos de la vida en la ciudad.",
-      "price": 87000,
-      "discount": 0,
-      "category": "footwear",
-      "sizes": "Talles disponibles: 38-45.",
-      "colors": "Colores disponibles: Negro, Azul, Marrón.",
-      "image": "shoes (0).png",
-      "code": "T4618"
-    },
-    {
-      "id": 11,
-      "name": "Botas",
-      "description": "Descubrí la máxima comodidad y rendimiento con nuestras Botas de Montaña. Diseñadas para aventureros apasionados que desean conquistar terrenos montañosos y explorar la naturaleza de manera segura y con estilo.",
-      "price": 107000,
-      "discount": 0,
-      "category": "footwear",
-      "sizes": "Talles disponibles: 38-45.",
-      "colors": "Colores disponibles: Azul, Marrón.",
-      "image": "shoes (1).jpg",
-      "code": "Q4591"
-    },
-    {
-      "id": 12,
-      "name": "Botines",
-      "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
-      "price": 180000,
-      "discount": 0,
-      "category": "footwear",
-      "sizes": "Talles disponibles: 38-45.",
-      "colors": "Colores disponibles: Negro, Amarillo.",
-      "image": "shoes (2).jpg",
-      "code": "F4956"
-    },
-    {
-      "id": 13,
-      "name": "Botines para nieve",
-      "description": "Son la elección perfecta para aventureros que desean enfrentar las condiciones más frías y desafiantes de la montaña. Las mismas están diseñadas para proporcionar un ajuste preciso, una tracción excepcional en superficies resbaladizas y, lo más importante, una comodidad insuperable durante largas jornadas en la montaña, incluso en climas extremos.",
-      "price": 143000,
-      "discount": 0,
-      "category": "footwear",
-      "sizes": "Talles disponibles: 38-45.",
-      "colors": "Colores disponibles: Azul, Gris.",
-      "image": "shoes (3).jpg",
-      "code": "A4505"
-    },
-    {
-      "id": 14,
-      "name": "Mochila Peak",
-      "description": "Está diseñada con múltiples compartimentos y bolsillos para organizar eficazmente el equipo, con materiales resistentes al agua y abrasión para protegerlo de las inclemencias del tiempo y el desgaste. Su sistema de suspensión ajustable incluye correas para los hombros acolchadas, un cinturón lumbar y un panel trasero transpirable para una distribución equitativa del peso y comodidad.",
-      "price": 95000,
-      "discount": 0,
-      "category": "hiking",
-      "sizes": "Talles disponibles: Único.",
-      "colors": "Colores disponibles:  Verde y Amarillo.",
-      "image": "backpack.png",
-      "code": "R4107"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Buzo de algodón",
+    "description": "Este buzo está diseñado para mantenerte cómodo en diversas condiciones climáticas. Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. Protégete del sol, el viento o la lluvia ligera, y si no la necesitas, simplemente ajústala o quítala según prefieras. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
+    "price": 89000,
+    "discount": 0,
+    "category": "hiking",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Negro",
+      "Gris",
+      "Azul"
+    ],
+    "image": "1sudadera.webp"
+  },
+  {
+    "id": 2,
+    "name": "Gorro de lana",
+    "description": "Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
+    "price": 15000,
+    "discount": 0,
+    "category": "climbing",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Negro",
+      "Gris",
+      "Azul"
+    ],
+    "image": "2gorra.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Campera impermeable",
+    "description": "Esta campera está diseñada para retener y distribuir el calor de manera eficiente, manteniéndote cómoda y abrigada en condiciones frías. El aislamiento térmico de alta calidad te protege del frío extremo y te permite disfrutar de tu trekking al máximo. A pesar de su impresionante capacidad de retención de calor, nuestra campera es sorprendentemente liviana y compacta. Esto la convierte en una elección ideal para llevar en tu mochila, ya que no añade peso innecesario.",
+    "price": 162378,
+    "discount": 0,
+    "category": "climbing",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "3campera-impermeable.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Conjunto deportivo",
+    "description": "Cuando te aventuras en las rutas de trekking y senderismo, necesitas ropa que ofrezca la combinación perfecta de comodidad, versatilidad y estilo. Nuestro Conjunto Deportivo de Algodón es la elección ideal para quienes buscan un look casual y cómodo, sin sacrificar la funcionalidad en sus escapadas al aire libre.",
+    "price": 135000,
+    "discount": 0,
+    "category": "hiking",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanco",
+      "Negro",
+      "Azul"
+    ],
+    "image": "4conjunto-hombre.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Remera Térmica",
+    "description": "Cuando emprendes travesías de trekking y senderismo, necesitas una prenda que combine comodidad, calidez y funcionalidad. Nuestra Remera Térmica está diseñada para mantener tu cuerpo a la temperatura adecuada en cualquier aventura al aire libre. Utiliza tecnología de aislamiento avanzada para atrapar el calor corporal y mantenerlo cerca de tu piel, proporcionando una sensación de calidez y confort en condiciones frías.",
+    "price": 42000,
+    "discount": 0,
+    "category": "hiking",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "5remera-termica.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Gorra",
+    "description": " La gorra está equipada con una visera ancha que protege tu rostro y ojos de los rayos solares dañinos. Te permite disfrutar del aire libre sin preocuparte por las quemaduras solares. El diseño de esta gorra incorpora paneles transpirables que permiten que el aire fluya, manteniendo tu cabeza fresca y seca en los días más calurosos. El cierre ajustable garantiza un ajuste perfecto a cualquier tamaño de cabeza, lo que evita que la gorra se caiga o se sienta incómoda durante tus caminatas.",
+    "price": 12000,
+    "discount": 0,
+    "category": "accessories",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "6gorra.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Botella térmica",
+    "description": "La botella está diseñada con tecnología de aislamiento de doble pared que mantiene las bebidas frías hasta por 24 horas y calientes hasta por 12 horas. Ideal para cualquier clima y estación. Fabricada con acero inoxidable de alta calidad, esta botella es resistente a golpes y caídas, perfecta para las rutas más exigentes. Además, es libre de BPA y materiales tóxicos, garantizando la seguridad de tus líquidos. Su diseño compacto cabe en la mayoría de los portavasos y bolsillos de mochila, lo que la hace perfecta para llevar contigo en tus travesías sin ocupar mucho espacio. La tapa hermética evita derrames y fugas, y su boquilla de fácil acceso te permite beber cómodamente mientras estás en movimiento. Disponible en una variedad de colores y diseños que se adaptan a tu estilo y personalidad, para que puedas llevar tu botella con orgullo.",
+    "price": 9000,
+    "discount": 0,
+    "category": "accessories",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "7botella.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Calza",
+    "description": "Calza ideal para situaciones en las que se necesita mantener las piernas secas en climas húmedos o en actividades al aire libre donde puedas estar expuesto a la lluvia",
+    "price": 33000,
+    "discount": 0,
+    "category": "hiking",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "8calza-senderismo.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Linterna recargable",
+    "description": "Nuestra linterna utiliza tecnología LED de alta potencia que emite una luz brillante y nítida, proporcionando una visión clara en cualquier entorno. La batería recargable de larga duración asegura que tengas luz durante toda tu expedición. Recargable y Sostenible: Olvídate de gastar dinero en baterías desechables. Esta linterna es recargable, lo que la hace respetuosa con el medio ambiente y económicamente eficiente. Simplemente conéctala a una fuente de energía y estará lista para tu próxima aventura.",
+    "price": 15000,
+    "discount": 0,
+    "category": "accessories",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "10linterna.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Botas urbanas",
+    "description": "Estas botas son el equilibrio perfecto entre estilo y funcionalidad. Diseñadas para ofrecer un ajuste preciso, tracción en superficies variadas y comodidad duradera, estas botas son ideales para enfrentar los desafíos de la vida en la ciudad.",
+    "price": 87000,
+    "discount": 0,
+    "category": "footwear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "shoes (0).png"
+  },
+  {
+    "id": 11,
+    "name": "Botas",
+    "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+    "price": 107000,
+    "discount": 0,
+    "category": "footwear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "shoes (1).jpg"
+  },
+  {
+    "id": 12,
+    "name": "Botines",
+    "description": "Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña",
+    "price": 180000,
+    "discount": 0,
+    "category": "footwear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "shoes (2).jpg"
+  },
+  {
+    "id": 13,
+    "name": "Botines para nieve",
+    "description": "Son la elección perfecta para aventureros que desean enfrentar las condiciones más frías y desafiantes de la montaña. Las mismas están diseñadas para proporcionar un ajuste preciso, una tracción excepcional en superficies resbaladizas y, lo más importante, una comodidad insuperable durante largas jornadas en la montaña, incluso en climas extremos.",
+    "price": 143000,
+    "discount": 0,
+    "category": "footwear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "shoes (3).jpg"
+  },
+  {
+    "id": 14,
+    "name": "Mochila Peak",
+    "description": "Está diseñada con múltiples compartimentos y bolsillos para organizar eficazmente el equipo, con materiales resistentes al agua y abrasión para protegerlo de las inclemencias del tiempo y el desgaste. Su sistema de suspensión ajustable incluye correas para los hombros acolchadas, un cinturón lumbar y un panel trasero transpirable para una distribución equitativa del peso y comodidad.",
+    "price": 95000,
+    "discount": 0,
+    "category": "hiking",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Blanca",
+      "Negra",
+      "Azul"
+    ],
+    "image": "backpack.png"
+  }
+]
