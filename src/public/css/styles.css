@@ -991,3 +991,46 @@ button.buttonShop #shop-cart {
         bottom: 170px;
     }
 }
+
+
+
+/*
+@media (min-width: 320px) {
+    header {
+        gap: 169px
+    }
+
+}
+
+@media (min-width: 375px) {
+    header {
+        gap: 215px;
+    }
+}
+
+@media (min-width: 425px) {
+    header {
+        gap: 257px;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        gap:0px;
+    }
+}
+
+@media (min-width: 1040px) {
+    header nav.center-bar {
+        margin-right: 149px;
+}
+}
+
+@media(min-width:2560px){
+    header ul {
+        margin-right: 430px;
+    }
+}
+
+
+
