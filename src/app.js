@@ -7,7 +7,6 @@ const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
 
-
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
