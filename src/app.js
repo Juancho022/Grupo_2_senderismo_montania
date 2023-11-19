@@ -6,6 +6,8 @@ const mainRoutes = require('./routes/main');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
+const session = require ('express-session');
+
 
 const app = express();
 
