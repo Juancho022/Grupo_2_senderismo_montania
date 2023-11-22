@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: true})); //Esto es para formData
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(session({secret:"Shh,esto es un secreto!"})) //Utilizar session como un middleware global
 
 
 app.set('view engine', 'ejs');
