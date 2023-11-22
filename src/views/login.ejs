@@ -14,8 +14,19 @@
                     <p id="paragraphTitle">
                         Para guardar elementos como favoritos o realizar compras
                     </p>
+                    <% if (typeof errors != 'undefinded') {%>
+                        <p style ="color:red">Error</p>
+                        <ul>
+                            <% for (let i = 0; i < errors.lenght; i++ { %>
+                                <li>
+                                    <%=errors[i].msg%>
+                                </li>
+                            <% } % >
+                        </ul>
+                    <% } % >
+
                     <div id="formLogin">
-                        <form action="" method="POST">
+                        <form action="/user/login" method="POST">
                             <div>
                                 <label><strong>Correo Electrónico</strong></label>
                                 <input type="email" name="emailUsuario">
