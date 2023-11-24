@@ -20,8 +20,12 @@
         </ul>
     </nav>
     <nav class="right-bar">
-        <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-        <div class="icon"><a href="/user/login"><i class="fa-solid fa-user"></i></a></div>
-        <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+        <% if (locals.user) { %>
+            <h2 color="red">Hola <%= locals.user.firstName %></h2>
+            </h2>
+            <% } %>
+                <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                <div class="icon"><a href="/user/login"><i class="fa-solid fa-user"></i></a></div>
+                <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
     </nav>
 </header>

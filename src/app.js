@@ -1,21 +1,25 @@
 const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const session = require ('express-session');
+const bodyParser = require('body-parser');
 
 const mainRoutes = require('./routes/main');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
-const session = require ('express-session');
 
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({extended: true})); //Esto es para formData
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-app.use(session({secret:"Shh,esto es un secreto!"})) //Utilizar session como un middleware global
+app.use(session({
+    secret:"ab33025avbtxop00002tqxr!"
+})) //token de encriptación
 
 
 app.set('view engine', 'ejs');
