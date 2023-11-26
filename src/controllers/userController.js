@@ -15,10 +15,14 @@ const controller = {
         let userToLog = User.findByField('email', emailUsuario);
 
         if (userToLog && userToLog.password === passwordUsuario) {
-            return res.send(`Inicio de sesión exitoso para ${userToLog.firstName} ${userToLog.lastName}`);
+            req.session.user = {
+                id: userToLog.id,
+                firstName: userToLog.firstName,
+            };
+            return res.render('index', { user: req.session.user });
         } else {
-            console.log('Usuario no encontrado o contraseña incorrecta');
-            return res.send('Usuario no encontrado o contraseña incorrecta');
+            const error = 'Correo electrónico o contraseña incorrectos'
+            return res.render('login',{ error: error });
         }
     },
 
