@@ -24,16 +24,10 @@
     "id": 2,
     "name": "Gorro de lana",
     "description": "Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
-    "price": 15000,
-    "discount": 0,
+    "price": "15000",
+    "discount": "0",
     "category": "climbing",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "UNICO"
-    ],
+    "sizes": "S",
     "colors": [
       "Negro",
       "Gris",
