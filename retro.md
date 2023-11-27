@@ -28,7 +28,7 @@
 
 
 
-# SPRINT 3
+# SPRINT 3 Y 4
 
 # ¿Que hay que comenzar a hacer?
 • Realizar reuniones para aplicar pair programming o explicar temas que necesitan ser repasados.

@@ -1,40 +1,51 @@
-<% let pageTitle = 'Ingresá a tu cuenta' %>
-<%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
+<% let pageTitle='Ingresá a tu cuenta' %>
+    <%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
 
 
-<body>
+        <body>
 
-    <%- include('./partials/header') %>
+            <%- include('./partials/header') %>
 
-    <main>
-        <div>
-            <section id="sectionLogin">
-                <div id="loginBox">
-                    <span id="loginTitle"><strong>Iniciá sesión</strong></span>
-                    <p id="paragraphTitle">
-                        Para guardar elementos como favoritos o realizar compras
-                    </p>
-                    <div id="formLogin">
-                        <form action="" method="POST">
-                            <div>
-                                <label><strong>Correo Electrónico</strong></label>
-                                <input type="email" name="emailUsuario">
-                                <label><strong>Contraseña</strong></label>
-                                <input type="password" name="passwordusuario">
+                <main>
+                    <div>
+                        <section id="sectionLogin">
+                            <div id="loginBox">
+                                <span id="loginTitle"><strong>Iniciá sesión</strong></span>
+                                <p id="paragraphTitle">
+                                    Para guardar elementos como favoritos o realizar compras
+                                </p>
+
+                                <div id="formLogin">
+                                    <form action="/user/login" method="post">
+                                        <div>
+                                            <label><strong>Correo Electrónico</strong></label>
+                                            <input type="email" name="emailUsuario" required>
+                                            <label><strong>Contraseña</strong></label>
+                                            <input type="password" name="passwordUsuario" required>
+                                        </div>
+
+                                        <% if (typeof error !=='undefined' && error) { %>
+                                            <div class="error">
+                                                <p class="error-message">
+                                                    <i class="fas fa-times-circle"></i>
+                                                    <%= error %>
+                                                </p>
+                                            </div>
+                                            <% } %>
+                                            <div id="recordarUsuario">
+                                                <label class="recordarme">Recordarme</label>
+                                                <input type="checkbox" name="recordarUsuario">
+                                            </div>
+                                            <button type="submit">Iniciar sesión</button>
+                                    </form>
+                                </div>
                             </div>
-                            <div id="recordarUsuario">
-                                <label class="recordarme">Recordarme</label>
-                                <input type="checkbox" name="recordarUsuario">
-                            </div>
-                            <button type="submit">Iniciar sesión</button>
-                        </form>
+                        </section>
                     </div>
-                </div>
-            </section>
-        </div>
-    </main>
+                </main>
 
-    <%- include('./partials/footer') %>      
- 
-</body>
-</html>
+                <%- include('./partials/footer') %>
+
+        </body>
+
+        </html>
