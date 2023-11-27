@@ -19,7 +19,9 @@ const controller = {
                 id: userToLog.id,
                 firstName: userToLog.firstName,
             };
-            return res.render('index', { user: req.session.user });
+            return req.session.save(() => { //Esta línea la eliminamos una vez hechas las COOKIES, NO VAMOS A NECESITAR EL SAVE.
+                res.redirect('/');
+            });
         } else {
             const error = 'Correo electrónico o contraseña incorrectos'
             return res.render('login',{ error: error });

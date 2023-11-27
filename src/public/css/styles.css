@@ -231,9 +231,11 @@ html {
 }
 
 main section#hero {
-    position: relative;
     width: 100%;
-    overflow: overlay;
+    overflow: hidden;
+    height: 100vh;
+    background: url(/images/hero.jpg) center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 main section img#heroImage {
@@ -430,6 +432,13 @@ section#cardsHome div.card button.buttonCard:hover {
 /*************MOBILE**************************/
 @media (max-width: 480px) {
 
+
+    main section#hero {
+    width: 110%;
+    height: 60vh;
+    background-position: -60px -331px;
+    }
+
     main section img#heroImage {
         width: 992px;
         left: -395px;
@@ -530,6 +539,7 @@ section#cardsHome div.card button.buttonCard:hover {
 
 /*************TABLET**************************/
 @media (min-width: 768px) {
+
 
     main section div#rightBox {
         top: 26%;

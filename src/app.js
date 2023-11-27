@@ -21,6 +21,10 @@ app.use(session({
     secret:"ab33025avbtxop00002tqxr!"
 })) //token de encriptación
 
+app.use((req, res, next) => {
+    res.locals.user = req.session.user;
+    next();
+}); 
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
