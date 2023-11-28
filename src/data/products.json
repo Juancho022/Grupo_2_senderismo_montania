@@ -24,21 +24,11 @@
     "id": 2,
     "name": "Gorro de lana",
     "description": "Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
-    "price": 15000,
-    "discount": 0,
+    "price": "15000",
+    "discount": "0",
     "category": "climbing",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "UNICO"
-    ],
-    "colors": [
-      "Negro",
-      "Gris",
-      "Azul"
-    ],
+    "sizes": "UNICO",
+    "colors": "Gris",
     "image": "2gorra.jpg"
   },
   {
@@ -66,16 +56,10 @@
     "id": 4,
     "name": "Conjunto deportivo",
     "description": "Cuando te aventuras en las rutas de trekking y senderismo, necesitas ropa que ofrezca la combinación perfecta de comodidad, versatilidad y estilo. Nuestro Conjunto Deportivo de Algodón es la elección ideal para quienes buscan un look casual y cómodo, sin sacrificar la funcionalidad en sus escapadas al aire libre.",
-    "price": 135000,
-    "discount": 0,
+    "price": "135000",
+    "discount": "0",
     "category": "hiking",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "UNICO"
-    ],
+    "sizes": "L",
     "colors": [
       "Blanco",
       "Negro",
