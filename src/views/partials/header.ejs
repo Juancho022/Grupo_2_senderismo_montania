@@ -7,7 +7,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="burguer-menu">
-            <a class="burguer"><i class="fa-solid fa-bars"></i></a><a href="/">
+            <a class="burguer"><i class="fa-solid fa-bars"></i></a>
         </div>
     </div>
     <nav class="center-bar">
@@ -20,8 +20,12 @@
         </ul>
     </nav>
     <nav class="right-bar">
-        <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-        <div class="icon"><a href="/user/login"><i class="fa-solid fa-user"></i></a></div>
-        <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+        <% if (locals.user) { %>
+            <h2 id="userLog">¡Hola <%= locals.user.firstName %>!</h2>
+            </h2>
+            <% } %>
+                <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                <div class="icon"><a href="/user/login"><i class="fa-solid fa-user"></i></a></div>
+                <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
     </nav>
 </header>
