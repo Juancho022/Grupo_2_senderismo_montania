@@ -1,5 +1,48 @@
 [
   {
+    "id": 1,
+    "name": "Buzo de algodón",
+    "description": "Este buzo está diseñado para mantenerte cómodo en diversas condiciones climáticas. Su suave tejido interior te mantiene abrigado en días fríos, mientras que su transpirabilidad permite una ventilación adecuada en climas más cálidos. Cuenta con una capucha que se ajusta a la perfección y se adapta a tus necesidades. Protégete del sol, el viento o la lluvia ligera, y si no la necesitas, simplemente ajústala o quítala según prefieras. El amplio bolsillo canguro en la parte delantera te permite llevar tus pertenencias esenciales, como mapas, botellas de agua o snacks, al alcance de tu mano.",
+    "price": 89000,
+    "discount": 0,
+    "category": "hiking",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Negro",
+      "Gris",
+      "Azul"
+    ],
+    "image": "1sudadera.webp"
+  },
+  {
+    "id": 2,
+    "name": "Gorro de lana",
+    "description": "Cuando te aventuras en terrenos escarpados y condiciones impredecibles, necesitas equipo confiable que te mantenga cómodo y protegido. Nuestro Gorro de Lana de Trekking es la elección perfecta para los entusiastas del aire libre que buscan un compañero resistente y cálido para sus aventuras.",
+    "price": 15000,
+    "discount": 0,
+    "category": "climbing",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "UNICO"
+    ],
+    "colors": [
+      "Negro",
+      "Gris",
+      "Azul"
+    ],
+    "image": "2gorra.jpg"
+  },
+
+  {
     "id": 3,
     "name": "Campera impermeable",
     "description": "Esta campera está diseñada para retener y distribuir el calor de manera eficiente, manteniéndote cómoda y abrigada en condiciones frías. El aislamiento térmico de alta calidad te protege del frío extremo y te permite disfrutar de tu trekking al máximo. A pesar de su impresionante capacidad de retención de calor, nuestra campera es sorprendentemente liviana y compacta. Esto la convierte en una elección ideal para llevar en tu mochila, ya que no añade peso innecesario.",
