@@ -31,21 +31,6 @@
     "image": "3campera-impermeable.jpg"
   },
   {
-    "id": 4,
-    "name": "Conjunto deportivo",
-    "description": "Cuando te aventuras en las rutas de trekking y senderismo, necesitas ropa que ofrezca la combinación perfecta de comodidad, versatilidad y estilo. Nuestro Conjunto Deportivo de Algodón es la elección ideal para quienes buscan un look casual y cómodo, sin sacrificar la funcionalidad en sus escapadas al aire libre.",
-    "price": "135000",
-    "discount": "0",
-    "category": "hiking",
-    "sizes": "L",
-    "colors": [
-      "Blanco",
-      "Negro",
-      "Azul"
-    ],
-    "image": "4conjunto-hombre.jpg"
-  },
-  {
     "id": 5,
     "name": "Remera Térmica",
     "description": "Cuando emprendes travesías de trekking y senderismo, necesitas una prenda que combine comodidad, calidez y funcionalidad. Nuestra Remera Térmica está diseñada para mantener tu cuerpo a la temperatura adecuada en cualquier aventura al aire libre. Utiliza tecnología de aislamiento avanzada para atrapar el calor corporal y mantenerlo cerca de tu piel, proporcionando una sensación de calidez y confort en condiciones frías.",
