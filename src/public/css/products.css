@@ -9,10 +9,6 @@ html {
     font-size: 100%;
 }
 
-body {
-    margin-top: 50px;
-}
-
 main {
     display: grid;
     justify-content: space-between;
