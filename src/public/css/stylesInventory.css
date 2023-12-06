@@ -9,19 +9,15 @@ html {
     font-size: 100%;
 }
 
-body {
-    margin-top: 100px;
-}
-
 div#search-products {
     position: relative;
 }
 
 div#header-products {
     display: flex;
-    margin: 32px;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 92px;
+    padding-bottom: 24px;
 }
 
 input[type="text-search"] {
@@ -77,6 +73,11 @@ i.trash {
     background-color: #2e2e2e;
     padding: 8px;
     border-radius: 8px;
+}
+
+button {
+    border: none;
+    background: transparent;
 }
 
 img.product {
