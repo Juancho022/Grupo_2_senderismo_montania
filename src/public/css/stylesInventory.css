@@ -125,6 +125,7 @@ div.edit-n-delete{
 
 .form-edit-create{
     min-height: 100vh;
+    padding: 10%;
 }
 
 .product-content {
@@ -145,7 +146,6 @@ div.edit-n-delete{
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     padding: 16px;
-    margin-bottom: 20%;
 }
 
 .edit-img {
