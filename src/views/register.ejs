@@ -1,49 +1,83 @@
-<% let pageTitle = 'Registrate' %>
-<%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
+<% let pageTitle='Registrate' %>
+    <%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
 
-<body>
-    
-    <%- include('./partials/header') %>
+        <body>
 
-    <main>
-        <div>
-            <section id="sectionRegister">
-                <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
-                <div id="registerBox">
-                    <span id="registerTitle"><strong>Crear Cuenta</strong></span>
-                    <p id="paragraphRegister">
-                        Comenzá a vivir la aventura de llegar a la cima
-                    </p>
-                    <div id="formLogin">
-                        <form action="" method="POST">
-                            <div>
-                                <label>Nombre</label>
-                                <input type="text" name="nombreUsuario" required>
-                            </div>
-                            <div>
-                                <label>Apellido</label>
-                                <input type="text" name="apellidoUsuario" required>
-                            </div>
-                            <div>
-                                <label>Correo Electrónico</label>
-                                <input type="email" name="emailUsuario" required>
-                            </div>
-                            <div>
-                                <label>Contraseña</label>
-                                <input type="password" name="passwordusuario" required>
-                            </div>
-                            <div>
-                                <label>Repetir contraseña:</label>
-                                <input type="password" name="repetirContrasena" required>
-                            </div>
-                            <button type="submit">Registrarse</button>
-                        </form>
+            <%- include('./partials/header') %>
+
+                <main>
+                    <div>
+                        <section id="sectionRegister">
+                            <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
+                            <div id="registerBox">
+                                <span id="registerTitle"><strong>Crear Cuenta</strong></span>
+                                <p id="paragraphRegister">
+                                    Comenzá a vivir la aventura de llegar a la cima
+                                </p>
+                                <div id="formLogin">
+                                    <form method="POST" action="/user/register" enctype="multipart/form-data">
+
+                                        <div>
+                                            <label>Nombre</label>
+                                            <input type="text" name="firstName" value="<%= (locals.oldData && oldData.firstName) && oldData.firstName %>">
+                                            <% if (locals.errors && errors.firstName) { %>
+                                                <span class="error-message">
+                                                    <%= errors.firstName.msg %>
+                                                </span>
+                                                <% } %>
+                                        </div>
+
+                                        <div>
+                                            <label>Apellido</label>
+                                            <input type="text" name="lastName" value="<%= (locals.oldData && oldData.lastName) && oldData.lastName %>">
+                                            <% if (locals.errors && errors.lastName) { %>
+                                                <span class="error-message">
+                                                    <%= errors.lastName.msg %>
+                                                </span>
+                                                <% } %>
+                                        </div>
+
+                                        <div>
+                                            <label>Correo Electrónico</label>
+                                            <input type="email" name="email" value="<%= (locals.oldData && oldData.email) && oldData.email %>">
+                                            <% if (locals.errors && errors.email) { %>
+                                                <span class="error-message">
+                                                    <%= errors.email.msg %>
+                                                </span>
+                                                <% } %>
+                                        </div>
+
+                                        <div>
+                                            <label>Contraseña</label>
+                                            <input type="password" name="password">
+                                            <% if (locals.errors && errors.password) { %>
+                                                <span class="error-message">
+                                                    <%= errors.password.msg %>
+                                                </span>
+                                                <% } %>
+                                        </div>
+                                        <div>
+                                            <label>Repetir contraseña:</label>
+                                            <input type="password" name="password">
+                                            <% if (locals.errors && errors.password) { %>
+                                                <span class="error-message">
+                                                    <%= errors.password.msg %>
+                                                </span>
+                                                <% } %>
+                                        </div>
+                                        <div>
+                                            <input type="file" id="image" accept="image/*" class="image-imput"
+                                                name="image">
+                                        </div>
+                                        <button type="submit">Registrarse</button>
+                                    </form>
+                                </div>
+                        </section>
                     </div>
-            </section>
-        </div>
-    </main>
+                </main>
 
-    <%- include('./partials/footer') %>
-    
-</body>
-</html>
+                <%- include('./partials/footer') %>
+
+        </body>
+
+        </html>

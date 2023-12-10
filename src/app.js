@@ -12,6 +12,7 @@ const inventoryRoutes = require('./routes/inventory');
 
 const app = express();
 
+app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

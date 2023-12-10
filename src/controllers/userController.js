@@ -1,7 +1,12 @@
-const fs = require ('fs');
+const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const User = require('../models/User');
+const { validationResult } = require('express-validator');
+const users= JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const bcryptjs = require('bcryptjs');
+const { create } = require('domain');
+
 
 
 const controller = {
@@ -24,14 +29,41 @@ const controller = {
             });
         } else {
             const error = 'Correo electrónico o contraseña incorrectos'
-            return res.render('login',{ error: error });
+            return res.render('login', { error: error });
         }
     },
 
     register(req, res) {
         res.render('register');
-    },   
-}
+    },
+
+
+    registerProcess(req, res){
+
+        const { email } = req.body
+        const errors = validationResult(req);
+        const userExists = User.findByField('email', email);
+
+        if (!errors.isEmpty()){
+            return res.render('register', {errors: errors.mapped(), oldData: req.body})
+
+        } else if (userExists){
+
+           res.send('Este correo electrónico ya se encuentra registrado')
+
+        } else {
+
+        let user = req.body;
+
+        userId = User.create(user);
+
+        res.send('usuario registrado con éxito');
+        }
+
+    }
+};
+
+
 
 
 module.exports = controller;
