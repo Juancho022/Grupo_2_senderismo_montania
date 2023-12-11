@@ -16,5 +16,45 @@
   "password": "password456",
   "category": "admin",
   "image": "https://i.imgur.com/def456.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "aa",
+  "lastName": "aa",
+  "email": "pepe@gmail.com",
+  "password": [
+   "444",
+   "444"
+  ]
+ },
+ {
+  "id": 4,
+  "firstName": "aa",
+  "lastName": "eee",
+  "email": "romar@gmail.com",
+  "password": [
+   "1",
+   "1"
+  ]
+ },
+ {
+  "id": 5,
+  "firstName": "aa",
+  "lastName": "eee",
+  "email": "romarttt@gmail.com",
+  "password": [
+   "1",
+   "1"
+  ]
+ },
+ {
+  "id": 6,
+  "firstName": "aa",
+  "lastName": "martie",
+  "email": "aaaa@gmail.com",
+  "password": [
+   "1234",
+   "123"
+  ]
  }
 ]

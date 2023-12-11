@@ -37,7 +37,6 @@ const controller = {
         res.render('register');
     },
 
-
     registerProcess(req, res){
 
         const { email } = req.body
@@ -49,7 +48,7 @@ const controller = {
 
         } else if (userExists){
 
-           res.send('Este correo electrónico ya se encuentra registrado')
+            return res.render('userExists');
 
         } else {
 
@@ -57,10 +56,9 @@ const controller = {
 
         userId = User.create(user);
 
-        res.send('usuario registrado con éxito');
-        }
-
+        return res.send('usuario registrado con éxito');
     }
+}    
 };
 
 

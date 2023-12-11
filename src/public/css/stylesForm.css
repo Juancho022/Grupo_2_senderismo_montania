@@ -390,7 +390,8 @@ footer {
 
 
 .error-message{
-    color:rgb(255, 0, 0);
-    background-color: black;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 8px;
     margin-bottom: 10px;
+    color: #FFFF;
 }
