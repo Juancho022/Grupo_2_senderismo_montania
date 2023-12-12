@@ -6,7 +6,7 @@
             <%- include('./partials/header') %>
 
                 <main>
-                    <% locals.hiking && hiking.forEach(product => { %>
+                    <% locals.Senderismo && Senderismo.forEach(product => { %>
                     <article>
                         <a href="/products/<%= product.id %>"></a>
                         <div class="img-product">
@@ -21,7 +21,7 @@
                         </div>
                     </article>
                     <% }) %>
-                    <% locals.climbing && climbing.forEach(product => { %>
+                    <% locals.Escalada && Escalada.forEach(product => { %>
                     <article>
                         <a href="/products/<%= product.id %>"></a>
                         <div class="img-product">
@@ -36,7 +36,7 @@
                         </div>
                     </article>
                     <% }) %>
-                    <% locals.accessories && accessories.forEach(product => { %>
+                    <% locals.Accesorios && Accesorios.forEach(product => { %>
                     <article>
                         <a href="/products/<%= product.id %>"></a>
                         <div class="img-product">
@@ -51,7 +51,7 @@
                         </div>
                     </article>
                     <% }) %>
-                    <% locals.footwear && footwear.forEach(product => { %>
+                    <% locals.Calzados && Calzados.forEach(product => { %>
                     <article>
                         <a href="/products/<%= product.id %>"></a>
                         <div class="img-product">

@@ -9,10 +9,10 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productController = {
     // Root - Show all products
     products: (req, res) => {
-        const hiking = products.filter((product) => product.category === 'hiking');
-        const climbing = products.filter((product) => product.category === 'climbing');
-        const accessories = products.filter((product) => product.category === 'accessories');
-        const footwear = products.filter((product) => product.category === 'footwear');
+        const hiking = products.filter((product) => product.category === 'Senderismo');
+        const climbing = products.filter((product) => product.category === 'Escalada');
+        const accessories = products.filter((product) => product.category === 'Accesorios');
+        const footwear = products.filter((product) => product.category === 'Calzados');
         res.render('products', {hiking, climbing,  accessories, footwear})
     },
 
