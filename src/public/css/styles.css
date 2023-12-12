@@ -11,8 +11,21 @@ header {
     justify-content: space-between;
     width: 100%;
     position: fixed;
-    top: -1px;
+    padding: 1px 16px;
     z-index: 2;
+}
+
+li {
+    align-items: center;
+    display: flex;
+}
+
+#userLog {
+    color: #f0f0f0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding-right: 18px;
 }
 
 header div.logo {
@@ -45,6 +58,10 @@ header nav.center-bar {
 footer {
     background-color: #000;
     display: flex;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer div.copyright{
@@ -58,6 +75,7 @@ footer div.copyright p {
     font-size: 12px;
     color: #EFC84C;
     text-align: left;
+    margin: 0px 3px;
 }
 
 
@@ -67,6 +85,9 @@ footer div.social-media-icons {
     justify-content: space-around;
     align-items: center;
     width:20%;
+    margin-left: 18px;
+    padding: 5px;
+    margin-top: 3px;   
 }
 
 footer div.social-media-icons a{
@@ -98,6 +119,7 @@ footer div.form-suscription {
     header div.logo img {
         width: 139px;
         height: 59px;
+        margin-left: 5px;
     }
 
     header div.right-elements {
@@ -126,7 +148,6 @@ footer div.form-suscription {
         justify-content: space-between;
         align-items: center;
         align-self: center;
-        margin-right: 10px;
     }
 
     header ul a {
@@ -165,7 +186,8 @@ footer div.form-suscription {
         border: none;
         margin-bottom: 10px;
         border-bottom: solid 1px white;
-        text-decoration: underline;
+        outline: none;
+        color: #ffffff;
     }
 
     footer div.form-suscription input::placeholder {
@@ -209,9 +231,11 @@ html {
 }
 
 main section#hero {
-    position: relative;
     width: 100%;
     overflow: hidden;
+    height: 100vh;
+    background: url(/images/hero.jpg) center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 main section img#heroImage {
@@ -408,6 +432,13 @@ section#cardsHome div.card button.buttonCard:hover {
 /*************MOBILE**************************/
 @media (max-width: 480px) {
 
+
+    main section#hero {
+    width: 110%;
+    height: 60vh;
+    background-position: -60px -331px;
+    }
+
     main section img#heroImage {
         width: 992px;
         left: -395px;
@@ -500,10 +531,15 @@ section#cardsHome div.card button.buttonCard:hover {
         top: 20%;
         left: 105%;
     }
+
+    section.cardsBottom {
+        margin-bottom: 15%;
+    }
 }
 
 /*************TABLET**************************/
 @media (min-width: 768px) {
+
 
     main section div#rightBox {
         top: 26%;
@@ -582,6 +618,10 @@ section#cardsHome div.card button.buttonCard:hover {
         font-size: 2.4rem;
         top: 30%;
         left: 105%;
+    }
+
+    section.cardsBottom {
+        margin-bottom: 5%;
     }
 }
 
@@ -973,3 +1013,4 @@ button.buttonShop #shop-cart {
         bottom: 170px;
     }
 }
+

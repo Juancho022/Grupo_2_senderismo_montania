@@ -21,16 +21,15 @@ article.article-detail .img-container {
   flex-wrap: wrap;
   width: 24%;
   height: 50%;
-  box-shadow: inset 0px 3px 6px #00000029;
-  border-radius: 33px 0px 0px 33px;
-  opacity: 1;
 }
 
-article.article-detail .img-container img {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
+article.article-detail img {
+  width: 24%;
+  height: 361px;
+  object-fit: cover;
+  box-shadow: inset 0px 3px 6px #00000029;
+  border-radius: 33px 0px 0px 33px;
+  border: solid 0.5px #b8b8b829;
 }
 
 .details-container {
@@ -53,9 +52,10 @@ div.title-detail h2 {
 
 div.colors {
   display: flex;
+  margin-top: -6px;
 }
 
-div.colors div.color-green {
+div.colors div.color-one {
   width: 30px;
   height: 30px;
   background-color: #358D67;
@@ -64,11 +64,19 @@ div.colors div.color-green {
   margin-right: 8px;
 }
 
-div.colors div.color-yellow {
+div.colors div.color-two {
   width: 30px;
   height: 30px;
   background-color: #EFC84C;
   border-radius: 50%;
+}
+
+div.colors div.color-three {
+  width: 30px;
+  height: 30px;
+  background-color: #6D6D6D;
+  border-radius: 50%;
+  margin-left: 8px;
 }
 
 .count-detail {
@@ -208,6 +216,7 @@ footer {
 
   article.article-detail {
     display: block;
+    margin-bottom: 40%;
   }
 
   article.article-detail .img-container {
@@ -251,6 +260,7 @@ footer {
   .count-detail {
     margin-left: 0px;
     flex-wrap: nowrap;
+    margin-top: 2px;
   }
 
   div.less, p.quantity, p.more {
@@ -324,6 +334,7 @@ footer {
 
   article.article-detail {
     display: block;
+    margin-bottom: 10%;
   }
 
   article.article-detail .img-container {
@@ -401,3 +412,108 @@ footer {
     left: -25px;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px){
+.color-n-quantity {
+    left: 48vw;
+}
+
+div.title-detail h2 {
+  margin-left: 8px;
+}
+}
+
+
+
+
+@media (min-width: 320px) and (max-width:375px){
+  article.article-detail img {
+      width: 63%;
+      height: 184px
+  }
+  .price-n-cta {
+    left: 65vw;
+}
+.color-n-quantity {
+  left: 65vw;
+}
+div.colors div.color-one {
+  width: 25px;
+  height: 25px;
+}
+div.colors div.color-two {
+  width: 25px;
+  height: 25px;
+}
+div.colors div.color-three {
+  width: 25px;
+  height: 25px;
+}
+div.title-detail h2 {
+  margin-left: 12vw;
+  width: 155px;
+  font-size: 4vw;
+  margin-top: 5px;
+}
+}
+
+  @media (min-width: 375px) and (max-width: 425px){
+  article.article-detail img {
+      width: 52%;
+      height: 210px;
+  }
+      div.title-detail h2 {
+        font-size: 4vw;
+        margin-top: 5px;
+  }
+}
+  
+  @media (min-width: 425px) and (max-width: 768px){
+   article.article-detail img {
+      width: 52%;
+      height: 234px;
+  }
+  div.title-detail h2 {
+    font-size: 4vw;
+    margin-top: 5px;
+}
+}
+  @media (min-width: 768px) and (max-width: 1024px){
+    article.article-detail img {
+      width: 50%;
+      height: 333px;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1439px){
+  article.article-detail img {
+    width: 35%;
+    height: 382px;
+}
+
+.title-detail {
+  position: absolute;
+  top: 15vw;
+  left: 39vw;
+  display: block;
+}
+
+div.title-detail h2 {
+  margin-top: -9%;
+ 
+}
+.color-n-quantity {
+  left: 36vw;
+  margin-top: -2vw;
+}
+
+.price-n-cta {
+  flex-direction: column;
+  position: absolute;
+  top: 30vw;
+  left: 40vw;
+  gap: 18px;
+}
+}
+

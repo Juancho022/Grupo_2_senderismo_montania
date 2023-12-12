@@ -9,19 +9,15 @@ html {
     font-size: 100%;
 }
 
-body {
-    margin-top: 100px;
-}
-
 div#search-products {
     position: relative;
 }
 
 div#header-products {
     display: flex;
-    margin: 32px;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding-top: 92px;
+    padding-bottom: 24px;
 }
 
 input[type="text-search"] {
@@ -72,6 +68,18 @@ i.pencil-edit {
     border-radius: 8px;
 }
 
+i.trash {
+    color: #d3573c;
+    background-color: #2e2e2e;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
 img.product {
     display: flex;
     border-radius: 20%;
@@ -80,10 +88,9 @@ img.product {
 
 .table-product {
     display: flex;
-    justify-content: space-between;
-    margin: 13px 108px;
+    flex-direction: column;
+    margin: auto;
     padding-bottom: 8px;
-    border-bottom: solid 0.5px #d4d4d4;
     align-items: center;
     font-size: 16px;
     width: 86%;
@@ -111,12 +118,28 @@ div#decrease, #increase {
     color: #efc84c;
 }
 
+div.edit-n-delete{
+    display: flex;
+    gap: 8px;
+}
+
+.form-edit-create{
+    min-height: 100vh;
+    padding: 10%;
+}
+
+.product-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: solid 1px rgb(184, 184, 184);
+    align-items: center;
+}
+
 .product-edit {
     display: flex;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 24px;
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     padding: 16px;
@@ -153,7 +176,7 @@ img.img-edit-product {
 
 button.edit-image-button {
     background-color: transparent;
-    color: #D3573C;
+    color: #164734;
     border: 20px;
     cursor: pointer;
     font-weight: 700;
@@ -188,7 +211,6 @@ input.product-imput, input.product-imput, input.product-imput-price {
     border: none;
     border-bottom: solid 0.2px rgb(147, 147, 147,0.5);
     background-color: transparent;
-    
 }
 
 .counter-edit-product {
@@ -200,13 +222,22 @@ div.product-category {
     margin-bottom: 8px;
 }
 
-input[type="submit"] {
+input.button-submit {
     background-color: #2e2e2e;
     border-radius: 45px;
     color: #efc84c;
     padding: 4px;
     width: 100%;
     margin-top: 16px;
+}
+
+input.button-delete {
+    background-color: transparent;
+    color: #d3573c;
+    width: 100%;
+    margin-top: 16px;
+    border: none;
+    font-weight: 700;
 }
 
 /* QUERIES START */
@@ -217,22 +248,74 @@ input[type="submit"] {
         font-size: 100%;
     }
 
+    input[type="text-search"] {
+        width: 435px;
+    }
+
     .table-product {
-        margin: 13px 60px;
+        margin: 16px 60px;
     }
 
     .table-row {
         justify-content: normal;
-        gap: 100px;
+        gap: 77px;
         margin: 0 60px;
     }
 
     span.first-row, span.product-code {
         display: none;
     }
+
+    div.product-image {
+        width: 20%;
+    }
+
+    div.edit-n-delete {
+        display: flex;
+        gap: 8px;
+    }
+
+
 }
 
 /*************MOBILE**************************/
+@media (min-width:320px) and (max-width: 375px){
+    .product-edit {
+        margin-left: 21px;
+        margin-right: -99px;
+        margin-bottom: 40%;
+        flex-direction: column;
+    }
+
+    div#header-products {
+        gap: 41px;
+    }
+}
+
+
+@media (min-width:375px) and (max-width: 425px){
+.product-edit {
+    margin-left: 15px;
+    margin-right: -55px;
+    flex-direction: column;
+}
+div#header-products {
+    gap: 45px;
+}
+}
+
+@media (min-width:425px) and (max-width: 767px){
+    .product-edit {
+        margin-left: 15px;
+        margin-right: -18px;
+        flex-direction: column;
+    }
+
+    div#header-products {
+        gap: 50px;
+    }
+}
+
 @media (max-width: 480px) {
     html {
         font-size: 100%;
@@ -252,14 +335,17 @@ input[type="submit"] {
     }
 
     .table-row {
-        gap: 60px;
+        gap: 99px;
         margin: 0 17px;
+    }
+
+    span.fifth-row {
+        display: none;
     }
 
     .table-product {
         margin: 13px 17px;
         justify-content: space-between;
-        gap: 33px;
     }
 
     img.product {
@@ -267,7 +353,7 @@ input[type="submit"] {
     }
 
     span.product-price {
-        margin-left: 93px;
+        margin-left: 116px;
     }
 
     i.pencil-edit {
@@ -277,20 +363,21 @@ input[type="submit"] {
         border-radius: 8px;
         position: relative;
         top: -1px;
+        left: 30px;
     }
+
+    i.trash {
+        top: -1px;
+        left: 32px;
+    }
+
 
     span.third-row, select.product-category {
         display: none;
     }
 
     .counter {
-        gap: 2px;
-    }
-
-    .product-edit {
-        margin-left: 17px;
-        margin-right: 21px;
-        flex-direction: column;
+        display: none;
     }
 
     .edit-img {

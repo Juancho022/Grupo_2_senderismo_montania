@@ -1,7 +1,13 @@
 html, body {
-    height: 100%;
     overflow: visible;
-  }
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/bg-login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 98%;
+}
+
 main div{
     display: flex;
     flex-direction: column;   
@@ -11,6 +17,20 @@ main section#sectionLogin {
     width: 100%;
     overflow: hidden;
 }
+
+p.error-message {
+    font-size: 14px;
+    padding: 8px 0px 8px 14px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+i.fa-times-circle {
+    padding-right: 6px;
+    position: static;
+}
+
+
 main section#sectionRegister {
     position: relative;
     width: 100%;
@@ -40,7 +60,7 @@ main section div#loginBox {
     display: flex;
     flex-direction: column;
     color: azure;
-    position: absolute;
+    position: fixed;
     font-size: medium;
 }
 main section div#registerBox {
@@ -72,6 +92,7 @@ main form input {
     border-left: hidden;
     border-top: hidden;
     border-right: hidden;
+    outline: none;
 }
 main section img#register-image {
     display: flex;
@@ -93,6 +114,7 @@ main section button {
     margin-top: 29px;
     width: 100%;
     color: inherit;
+    margin-top: 15%;
 }
 
 main section button:hover{
@@ -114,28 +136,31 @@ main section form div#recordarUsuario{
     align-items: center;
     top: 64%;
 }
-input[type="checkbox" i] {
+input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
-    border: 2px solid #fafafa;
-    border-radius: 3px;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
+    -moz-appearance: none;
+    outline: none;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"]:checked {
+    background-color: black; 
+    border: 2px solid black; 
+}
+
+input[type="checkbox"]:checked::before {
+    content: "✔";
+    font-size: 16px;
+    color: yellow;
     position: relative;
 }
-input[type="checkbox" i]:checked {
-    background-color:white;
-  }
-
-input[type="checkbox" i]:before {
-    content: "✔";
-    font-size: 15px;
-    color: white;
-    position: relative;
-    top: -9px;
-  }
   
   .mensaje {
     font-size: 13px;
@@ -167,11 +192,16 @@ input[type="checkbox" i]:before {
     }
 
     main section div#loginBox {
-        top: 99px;
-        left: 40px;
+        top: 150px;
+        left: 10%;
         padding-right: 74px;
         width: 100%;
     }
+
+    p.error-message {
+        margin-bottom: 24px;
+    }
+
     main section div#registerBox {
         top: 99px;
         left: 40px;
@@ -187,10 +217,12 @@ input[type="checkbox" i]:before {
     }
     
     main section div span#loginTitle {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
     }
     main section div span#registerTitle {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
     }
     
     main section div p#paragraphTitle {
@@ -204,6 +236,12 @@ input[type="checkbox" i]:before {
 }
 /*************TABLET**************************/
 @media (min-width: 768px) {
+    html body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg-login.jpg');
+        background-size: cover;
+        background-position: center bottom;
+    }
+
     main section img#login-image {
         display: flex;
         width: auto;
@@ -219,8 +257,8 @@ input[type="checkbox" i]:before {
         position: relative;
     }
     main section div#loginBox {
-        top: 20%;
-        left: 20%;
+        top: 27%;
+        left: 22%;
     }
     main section div#registerBox {
         top: 20%;
@@ -229,6 +267,7 @@ input[type="checkbox" i]:before {
     
     main section div span#loginTitle {
         font-size: 3rem;
+        margin-left: 30px;
     }
     main section div span#registerTitle {
         font-size: 3rem;
@@ -240,6 +279,7 @@ input[type="checkbox" i]:before {
         display: flex;
         position: relative;
         left: 10px;
+        margin-top: 10px;
     }
     main section div p#paragraphRegister {
         font-size: 1.6rem;
@@ -250,6 +290,15 @@ input[type="checkbox" i]:before {
 
     main section button {
         font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    main section div#loginBox {
+        margin-left: 75px; 
+    }
+    main section div#registerBox {
+        margin-left: 96px;
     }
 }
 
@@ -268,8 +317,10 @@ input[type="checkbox" i]:before {
         position: relative;
     }
     main section div#loginBox {
-        position: absolute;
-        width: 80%;
+        position: fixed;
+        width: 40%;
+        left: 20%;
+        top: 24%;
     }
     main section div#registerBox {
         position: absolute;
@@ -284,7 +335,8 @@ input[type="checkbox" i]:before {
     }
     main section div span#loginTitle {
         font-size: 4rem;
-        right: 105px;
+        text-align: center;
+        left: 23%;
     }
     main section div span#registerTitle {
         font-size: 4rem;
@@ -293,9 +345,9 @@ input[type="checkbox" i]:before {
         left: 328px;
     }
     main section div p#paragraphTitle {
-        font-size: 2.6rem;
+        font-size: 2rem;
         position: relative;
-        left: 13%;
+        left: 26%;
         top: 20px;
     }
     main section div p#paragraphRegister {
@@ -307,7 +359,39 @@ input[type="checkbox" i]:before {
 
    main section button {
         font-size: 2rem;
-
+        margin-top: 64px;
     }
 
+}
+
+@media (min-width: 1540px) and (max-width: 2560px){
+    main section div#loginBox{
+    margin-left:14%
+        
+    }
+    main section div span#loginTitle  {
+        margin-right:65%;
+    }
+    
+    main section div p#paragraphTitle {
+        margin-left:-11%;
+    }
+    main section div#registerBox {
+        margin-left: 12%;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.error-message{
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #FFFF;
 }

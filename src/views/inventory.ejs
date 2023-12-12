@@ -13,9 +13,11 @@
                             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
                         </div>
                         <div id="button-add-product">
-                            <button class="new-product">
-                                + Nuevo producto
-                            </button>
+                            <a href="/inventory/create">
+                                <button class="new-product">
+                                    + Nuevo producto
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -30,162 +32,47 @@
                     </div>
 
                     <div class="table-product">
-                        <span class="product-code">
-                            G4586
-                        </span>
-                        <div class="product-image">
-                            <img class="product" src="images\1sudadera.webp"
-                                alt="Mujer mirando hacia atrás con un gorro de lana">
-                            <span class="product-name">
-                                Sudadera impermeable
-                            </span>
-                        </div>
-                        <select class="product-category">
-                            <option value="senderism">Senderismo</option>
-                            <option value="montagne">Escalada</option>
-                            <option value="montagne">Trekking</option>
-                            <option value="shoes">Calzados</option>
-                            <option value="accessories">Accesorios</option>
-                        </select>
-                        <span class="product-price">
-                            $89.000
-                        </span>
-
-                        <div class="counter">
-                            <div class="button" id="decrease">-</div>
-                            <span id="count">22</span>
-                            <div class="button" id="increase">+</div>
-                        </div>
-                        <i class="fas fa-pencil-alt pencil-edit"></i>
-
-                    </div>
-
-
-                    <div class="table-product">
-                        <span class="product-code">
-                            H4782
-                        </span>
-                        <div class="product-image">
-                            <img class="product" src="images\2gorra.jpg"
-                                alt="Hombre con sudadera gris parado bajo la lluvia">
-                            <span class="product-name">
-                                Gorro térmico
-                            </span>
-                        </div>
-                        <select class="product-category">
-                            <option value="accessories">Accesorios</option>
-                            <option value="senderism">Senderismo</option>
-                            <option value="montagne">Escalada</option>
-                            <option value="montagne">Trekking</option>
-                            <option value="shoes">Calzados</option>
-                        </select>
-                        <span class="product-price">
-                            $15.000
-                        </span>
-
-                        <div class="counter">
-                            <div class="button" id="decrease">-</div>
-                            <span id="count">13</span>
-                            <div class="button" id="increase">+</div>
-                        </div>
-                        <i class="fas fa-pencil-alt pencil-edit"></i>
-                    </div>
-                    <!-- <div class="collapse-button-container">
-                        <button id="collapse-button"><i class="fas fa-caret-down"></i></button>
-                    </div> -->
-
-
-
-
-
-                    <!-- Edit product starts -->
-                    <div class="product-edit">
-                        <div class="edit-img">
-                            <img class="img-edit-product" src="images/3campera-impermeable.jpg"
-                                alt="Mujer con campera impermeable blanca">
-                            <button class="edit-image-button">
-                                Editar imágenes
-                            </button>
-                        </div>
-
-                        <!-- Form edit products start -->
-                        <form class="product-edit-form">
-                            <h2 id="edit-product-title">Editar producto</h2>
-                            <div class="label-product">
-                                <label for="product">Producto</label>
-                                <input type="text" class="product-imput" name="product" placeholder="Nombre del producto" required
-                                value="Campera impermeable mujer">
-                            </div>
-
-                            <div class="label-product">
-                                <label for="description">Descripción</label>
-                                <input type="text" class="product-imput" name="description"
-                                placeholder="Descripción del producto" required
-                                value="Campera resistente al agua con doble protección interna, 6 bolsillos, reversible">
-                            </div>
-
-                            <div class="label-product-price">
-                                <label for="price">Precio</label>
-                                <input type="text" class="product-imput-price" name="price" placeholder="Precio del producto" required
-                                value="$162.378">
-                            </div>
-
-                            <div class="size-options">
-                                <label for="size">Talles disponibles</label>
-                                <label>
-                                    <input type="checkbox" name="size" value="XL"> XL
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="L"> L
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="M"> M
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="S"> S
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="XS"> XS
-                                </label>
-                            </div>
-
-                            <div class="color-options">
-                                <label for="color-options">Colores disponibles</label>
-                                <label>
-                                    <input type="checkbox" name="color" value="white"> Blanca
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="color" value="yellow"> Amarilla
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="color" value="black"> Negra
-                                </label>
-                            </div>
-
-                            <div class="counter-edit-product">
-                                <span id="stock">Stock</span>
-                                <div class="button" id="decrease">-</div>
-                                <span id="count">24</span>
-                                <div class="button" id="increase">+</div>
-                            </div>
-
-                            <div class="product-category">
-                                <span id="category">Categoría</span>
-                                <select class="product-category-detail">
-                                    <option value="montagne">Escalada</option>
-                                    <option value="accessories">Accesorios</option>
-                                    <option value="senderism">Senderismo</option>
-                                    <option value="montagne">Trekking</option>
-                                    <option value="shoes">Calzados</option>
+                        <% locals.products && products.forEach(product=> { %>
+                            <div class="product-content">
+                                <span class="product-code">
+                                    <%= product.id %>
+                                </span>
+                                <div class="product-image">
+                                    <img class="product" src="/images/<%= product.image %>" alt="imagen del producto">
+                                    <span class="product-name">
+                                        <%= product.name %>
+                                    </span>
+                                </div>
+                                <select class="product-category">
+                                    <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
+                                        , 'Calzados' ]; %>
+                                        <% categories.forEach(category=> { %>
+                                            <option value="<%= category %>" <%= product.category === category ? 'selected'
+                                                : '' %>>
+                                                <%= category %>
+                                            </option>
+                                            <% }); %>
                                 </select>
+                                <span class="product-price">
+                                    <%= product.price %>
+                                </span>
+                                <div class="counter">
+                                    <div class="button" id="decrease">-</div>
+                                    <span id="count">22</span>
+                                    <div class="button" id="increase">+</div>
+                                </div>
+                                <div class="edit-n-delete">
+                                    <form action="/inventory/<%= product.id %>/delete?_method=DELETE" method="POST">
+                                        <button type="submit"><i class="fa fa-trash trash"></i></button>
+                                    </form>
+
+                                    <a href="/inventory/<%= product.id %>/edit"><i
+                                            class="fas fa-pencil-alt pencil-edit"></i></a>
+                                </div>
                             </div>
-                            <div class="button-submit">
-                                <input type="submit" value="Guardar cambios">
-                            </div>
-                        </form>
+                            <% }) %>
                     </div>
 
-                    
 
                     <%- include('./partials/footer') %>
 

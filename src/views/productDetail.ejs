@@ -6,21 +6,21 @@
     <%- include('./partials/header') %>
 
     <main>
-        <p class="step">Productos > Camping > Mochila Cap</p>
+        <p class="step">Productos > Categoría > Producto</p>
         <article class="article-detail">
-            <div class="img-container">
-                <img src="\images\<%= locals.product?.image %>" alt="Mochila Peak">
-            </div>
-            <div class="details-container">
-                <div class="title-detail" >
-                    <h2><%= locals.product?.name %></h2>
-                </div>
+            <img src="\images\<%= locals.product?.image %>" alt="Imagen del Producto">
+         <div class="details-container">
                 <div class="especs-detail">
+                    <div class="title-detail" >
+                        <h2><%= locals.product?.name %></h2>
+                    </div>
                     <div class="color-n-quantity">
                         <div class="colors">
-                            <div class="color-green">
+                            <div class="color-one">
                             </div>
-                            <div class="color-yellow">
+                            <div class="color-two">
+                            </div>
+                            <div class="color-three">
                             </div>
                         </div>
                         <div class="count-detail">
@@ -37,15 +37,12 @@
                         </div>
                     </div>
                     <div class="price-n-cta">
-                        <p class="price-final"><%= locals.product?.price %></p>
+                        <p class="price-final">$<%= locals.product?.price %></p>
                         <button class="add-cart"> Añadir al carrito </button>
                         <button class="add-fav">Agregar a favoritos</button>
                     </div>
                     <div>
-                        <div class="off">
-                            <i class="fa-solid fa-credit-card" style="color: #7ec989;"></i>
-                            <p>3 y 6 cuotas sin interés con VISA o MASTERCARD</p>
-                        </div>
+
                         <p class="article-description">
                             <%= locals.product?.description %>                            
                         </p>
@@ -54,7 +51,8 @@
                     <span class="tec-espec">Especificaciones técnicas</span>
                     <span class="personalize">Personalizar</span>
                     </div>
-                    <p class="tec-espec-description"><%= locals.product?.technical %></p>
+                    <p class="tec-espec-description"><%= locals.product?.sizes %></p>
+                    <p class="tec-espec-description"><%= locals.product?.colors %></p>
                 </div>
             </div>
         </article>
