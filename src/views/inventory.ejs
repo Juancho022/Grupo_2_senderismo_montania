@@ -13,9 +13,11 @@
                             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
                         </div>
                         <div id="button-add-product">
-                            <button class="new-product">
-                                + Nuevo producto
-                            </button>
+                            <a href="/inventory/create">
+                                <button class="new-product">
+                                    + Nuevo producto
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -41,9 +43,16 @@
                                         <%= product.name %>
                                     </span>
                                 </div>
-                                <span class="product-category">
-                                    <%= product.category %>
-                                </span>
+                                <select class="product-category">
+                                    <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
+                                        , 'Calzados' ]; %>
+                                        <% categories.forEach(category=> { %>
+                                            <option value="<%= category %>" <%= product.category === category ? 'selected'
+                                                : '' %>>
+                                                <%= category %>
+                                            </option>
+                                            <% }); %>
+                                </select>
                                 <span class="product-price">
                                     <%= product.price %>
                                 </span>
@@ -57,7 +66,7 @@
                                         <button type="submit"><i class="fa fa-trash trash"></i></button>
                                     </form>
 
-                                    <a href="/inventory/<%= locals.products?.id %>/edit"><i
+                                    <a href="/inventory/<%= product.id %>/edit"><i
                                             class="fas fa-pencil-alt pencil-edit"></i></a>
                                 </div>
                             </div>
