@@ -30,7 +30,7 @@ const validations = [
 router.get('/register', userController.register);
 
 //procesa el register
-router.post('/register', upload.single('avatar'), validations, userController.registerProcess);
+router.post('/register', upload.single('image'), validations, userController.registerProcess);
 
 
 router.get('/login', userController.login);
