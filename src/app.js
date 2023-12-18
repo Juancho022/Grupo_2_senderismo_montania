@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require ('express-session');
+const cookies = require ('cookie-parser');
+const User = require('./models/User');
 const bodyParser = require('body-parser');
 
 const mainRoutes = require('./routes/main');
@@ -11,6 +13,7 @@ const inventoryRoutes = require('./routes/inventory');
 
 
 const app = express();
+
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -22,10 +25,26 @@ app.use(session({
     secret:"ab33025avbtxop00002tqxr!"
 })) //token de encriptación
 
+
+app.use(cookies());
+
+// Middleware para verificar la cookie y loguear al usuario
+app.use((req, res, next) => {
+    if (req.cookies.userEmail && !req.session.user) {
+        const userFromCookie = User.findByField('email', req.cookies.userEmail);
+
+        if (userFromCookie) {
+            req.session.user = userFromCookie;
+        }
+    }
+
+    next();
+});
+
 app.use((req, res, next) => {
     res.locals.user = req.session.user;
     next();
-}); 
+});
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
