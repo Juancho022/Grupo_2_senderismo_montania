@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const users = require('../models/User');
 
 function forUsers (req, res, next){
-    if(!users.includes(req.query.user)){
+    const { email } = req.body
+
+    if(!users.findByField('email', email)){
         return res.redirect('/user/login');
     }
     next();
