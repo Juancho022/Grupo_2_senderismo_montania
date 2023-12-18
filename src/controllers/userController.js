@@ -62,12 +62,20 @@ const controller = {
         userId = User.create(user);
 
         return res.send('usuario registrado con éxito');
-    }
-}    
+        }
+    },
+
+    logout(req, res) {
+        // Elimina la propiedad 'user' de la sesión para cerrarla
+        req.session.destroy();
+                
+        // Borra la cookie de usuario
+        res.clearCookie('userEmail');
+
+        // Redirige al usuario a la página de inicio
+        return res.redirect('/');
+    },
+  
 };
 
-
-
-
 module.exports = controller;
-

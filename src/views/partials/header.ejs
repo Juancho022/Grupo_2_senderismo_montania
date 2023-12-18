@@ -16,16 +16,19 @@
             <li><a href="/products">PRODUCTOS</a></li>
             <li><a href="#">OUTLET</a></li>
             <li><a href="#">DEPORTES</a></li>
+            <% if (!locals.user) { %>
             <li><a href="/user/register">CREÁ TU CUENTA</a></li>
+            <% } %>
         </ul>
     </nav>
     <nav class="right-bar">
         <% if (locals.user) { %>
             <h2 id="userLog">¡Hola <%= locals.user.firstName %>!</h2>
-            </h2>
             <% } %>
-                <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-                <div class="icon"><a href="/user/login"><i class="fa-solid fa-user"></i></a></div>
-                <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            <a href="/user/logout">Cerrar sesión</a>
+        
+            <div class="icon"><a href="/user/login"><i class="fa-solid fa-user"></i></a></div>             
+            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+            <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>     
     </nav>
 </header>

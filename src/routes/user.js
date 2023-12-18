@@ -38,5 +38,9 @@ router.get('/login', userController.login);
 //Procesar el login
 router.post('/login', userController.loginProcess);
 
+// Cerrar sesión
+router.get('/logout', userController.logout);
+
+
 
 module.exports = router;

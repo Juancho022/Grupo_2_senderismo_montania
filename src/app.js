@@ -14,6 +14,7 @@ const inventoryRoutes = require('./routes/inventory');
 
 const app = express();
 
+
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,6 +24,7 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 app.use(session({
     secret:"ab33025avbtxop00002tqxr!"
 })) //token de encriptación
+
 
 app.use(cookies());
 
@@ -42,7 +44,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
     res.locals.user = req.session.user;
     next();
-}); 
+});
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
