@@ -37,7 +37,7 @@ const User = {
         }
         allUsers.push(newUser); //esto es un array, tengo que transformarlo para que lo lea el archivo JSON
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers,null, ' ')); //prestar atención que entre comillas va espacio vacio
-        return newUser;
+        return true;
     },
     
     //Traer a un usuario por ID. PK es primary key

@@ -44,22 +44,23 @@ const controller = {
 
     registerProcess(req, res){
 
-        const { email } = req.body
+        const { email } = req.body;
         const errors = validationResult(req);
         const userExists = User.findByField('email', email);
+    
+        if (!errors.isEmpty()) {  //si hay error renderiza la vista del registro con el error de validación
+            return res.render('register', { errors: errors.mapped(), oldData: req.body });
 
-        if (!errors.isEmpty()){
-            return res.render('register', {errors: errors.mapped(), oldData: req.body})
-
-        } else if (userExists){
-
+        } else if (userExists) {  //si el usuario existe muestra la vista de error y redirige a login
             return res.render('userExists');
 
-        } else {
-
-        let user = req.body;
-
-        userId = User.create(user);
+        } else { //si el usuario no existe y no hay error de validación permite el registro       
+             let user = {
+                 ...req.body,
+                 image: req.file?.filename || "default-image.jpg"    
+             }
+             userId = User.create(user);
+           
 
         return res.send('usuario registrado con éxito');
         }
