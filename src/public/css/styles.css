@@ -55,6 +55,13 @@ header nav.center-bar {
     display: none;
 }
 
+header nav.right-bar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 5px;
+
+}
+
 footer {
     background-color: #000;
     display: flex;

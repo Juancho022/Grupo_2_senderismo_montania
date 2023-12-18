@@ -30,13 +30,17 @@ const validations = [
 router.get('/register', userController.register);
 
 //procesa el register
-router.post('/register', upload.single('avatar'), validations, userController.registerProcess);
+router.post('/register', upload.single('image'), validations, userController.registerProcess);
 
 
 router.get('/login', userController.login);
 
 //Procesar el login
 router.post('/login', userController.loginProcess);
+
+// Cerrar sesión
+router.get('/logout', userController.logout);
+
 
 
 module.exports = router;
