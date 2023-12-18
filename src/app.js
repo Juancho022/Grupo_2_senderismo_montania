@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require ('express-session');
+const cookies = require ('cookie-parser');
 const bodyParser = require('body-parser');
 
 const mainRoutes = require('./routes/main');
@@ -26,6 +27,8 @@ app.use((req, res, next) => {
     res.locals.user = req.session.user;
     next();
 }); 
+
+app.use(cookies());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
