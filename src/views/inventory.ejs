@@ -13,9 +13,11 @@
                             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
                         </div>
                         <div id="button-add-product">
-                            <button class="new-product">
-                                + Nuevo producto
-                            </button>
+                            <a href="/inventory/create">
+                                <button class="new-product">
+                                    + Nuevo producto
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -42,11 +44,14 @@
                                     </span>
                                 </div>
                                 <select class="product-category">
-                                    <option value="senderism">Senderismo</option>
-                                    <option value="montagne">Escalada</option>
-                                    <option value="montagne">Trekking</option>
-                                    <option value="shoes">Calzados</option>
-                                    <option value="accessories">Accesorios</option>
+                                    <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
+                                        , 'Calzados' ]; %>
+                                        <% categories.forEach(category=> { %>
+                                            <option value="<%= category %>" <%= product.category === category ? 'selected'
+                                                : '' %>>
+                                                <%= category %>
+                                            </option>
+                                            <% }); %>
                                 </select>
                                 <span class="product-price">
                                     <%= product.price %>
@@ -57,11 +62,11 @@
                                     <div class="button" id="increase">+</div>
                                 </div>
                                 <div class="edit-n-delete">
-                                    <form  action="/inventory/<%= product.id %>/delete?_method=DELETE"  method="POST">
-                                        <button type="submit" ><i class="fa fa-trash trash"></i></button>
+                                    <form action="/inventory/<%= product.id %>/delete?_method=DELETE" method="POST">
+                                        <button type="submit"><i class="fa fa-trash trash"></i></button>
                                     </form>
-                                    
-                                    <a href="/inventory/<%= locals.products?.id %>/edit"><i
+
+                                    <a href="/inventory/<%= product.id %>/edit"><i
                                             class="fas fa-pencil-alt pencil-edit"></i></a>
                                 </div>
                             </div>

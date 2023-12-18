@@ -15,7 +15,7 @@ const controller = {
     },
 
     loginProcess(req, res) {
-        const { emailUsuario, passwordUsuario } = req.body;
+        const { emailUsuario, passwordUsuario, recordarUsuario } = req.body;
 
         let userToLog = User.findByField('email', emailUsuario);
 
@@ -24,9 +24,14 @@ const controller = {
                 id: userToLog.id,
                 firstName: userToLog.firstName,
             };
-            return req.session.save(() => { //Esta línea la eliminamos una vez hechas las COOKIES, NO VAMOS A NECESITAR EL SAVE.
-                res.redirect('/');
-            });
+            
+            // Si el usuario decidió ser recordado, establece una cookie
+            if (recordarUsuario) {
+                res.cookie('userEmail', emailUsuario, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+            }
+
+            return res.redirect('/');
+            
         } else {
             const error = 'Correo electrónico o contraseña incorrectos'
             return res.render('login', { error: error });
@@ -55,13 +60,23 @@ const controller = {
                  image: req.file?.filename || "default-image.jpg"    
              }
              userId = User.create(user);
-            
+           
 
-            return res.send('usuario registrado con éxito');
+        return res.send('usuario registrado con éxito');
         }
-    }
-}
+    },
 
+    logout(req, res) {
+        // Elimina la propiedad 'user' de la sesión para cerrarla
+        req.session.destroy();
+                
+        // Borra la cookie de usuario
+        res.clearCookie('userEmail');
+
+        // Redirige al usuario a la página de inicio
+        return res.redirect('/');
+    },
+  
+};
 
 module.exports = controller;
-
