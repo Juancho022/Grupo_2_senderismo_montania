@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const forUsers = require('../middlewares/middlewareUser');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -18,17 +19,17 @@ const upload = multer({storage: storage});
 
 
 const inventoryController = require('../controllers/inventoryController');
-router.get('/', inventoryController.inventory);
+router.get('/', forUsers ,inventoryController.inventory);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', inventoryController.create); 
+router.get('/create', forUsers ,inventoryController.create); 
 router.post('/create', upload.single('image'), inventoryController.store); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', inventoryController.edit); 
+router.get('/:id/edit', forUsers ,inventoryController.edit); 
 router.put('/:id/edit', inventoryController.update);
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/:id/delete', inventoryController.destroy); 
+router.delete('/:id/delete', forUsers ,inventoryController.destroy); 
 
 module.exports = router;
