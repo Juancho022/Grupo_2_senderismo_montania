@@ -1,4 +1,5 @@
-const User = require('./models/User');
+const fs = require('fs');
+const path = require('path');
 
 function forUsers (req, res, next){
     const userFromCookie = User.findByField('email', req.cookies.userEmail);
