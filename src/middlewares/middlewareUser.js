@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-
-const users = require('../models/User');
+const User = require('./models/User');
 
 function forUsers (req, res, next){
-    const { email } = req.body
+    const userFromCookie = User.findByField('email', req.cookies.userEmail);
 
-    if(!users.findByField('email', email)){
+    if(!userFromCookie){
         return res.redirect('/user/login');
     }
     next();
