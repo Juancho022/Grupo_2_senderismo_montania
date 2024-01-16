@@ -1,13 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-
-function forUsers (req, res, next){
-    const userFromCookie = User.findByField('email', req.cookies.userEmail);
-
-    if(!userFromCookie){
-        return res.redirect('/user/login');
+const estaAutenticado = (req, res, next) => {
+    console.log('Middleware User ejecutado');
+    console.log('Sesión del usuario:', req.session.user);
+    
+    if (!req.session.usuario) {
+      console.log('Usuario no autenticado. Redirigiendo...');
+      res.redirect('/user/login') // No autorizado
     }
-    next();
-}
-
-module.exports = forUsers;
+    return next();
+  };
+  
+  module.exports = estaAutenticado;

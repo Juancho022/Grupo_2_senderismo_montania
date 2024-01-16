@@ -10,6 +10,7 @@ const mainRoutes = require('./routes/main');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
+const middlewareUser = require('./middlewares/middlewareUser');
 
 
 const app = express();
@@ -22,19 +23,24 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(session({
-    secret:"ab33025avbtxop00002tqxr!"
-})) //token de encriptación
+    secret: "ab33025avbtxop00002tqxr!",
+    resave: true,
+    saveUninitialized: false
+  })); //token de encriptación
 
 
 app.use(cookies());
 
 // Middleware para verificar la cookie y loguear al usuario
 app.use((req, res, next) => {
+
+    console.log('Cookies:', req.cookies);
     if (req.cookies.userEmail && !req.session.user) {
         const userFromCookie = User.findByField('email', req.cookies.userEmail);
 
         if (userFromCookie) {
             req.session.user = userFromCookie;
+            console.log('Sesión del usuario establecida:', req.session.user);
         }
     }
 
@@ -48,6 +54,8 @@ app.use((req, res, next) => {
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.use(middlewareUser);
 
 app.use('/', mainRoutes);
 app.use('/user', userRoutes);
