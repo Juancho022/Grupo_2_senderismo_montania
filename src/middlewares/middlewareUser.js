@@ -1,15 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-
-const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-function forUsers (req, res, next){
-
-    if(!users.email == req.params.email){
-        return res.redirect('/user/login');
-    }
-    next();
+function forUsers(req, res, next) {
+	if(!req.session.usuario){  
+		return res.redirect('/user/login');
+	}
+	next();
 }
 
 module.exports = forUsers;

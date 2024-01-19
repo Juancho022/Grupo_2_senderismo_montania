@@ -39,6 +39,7 @@ const controller = {
     },
 
     register(req, res) {
+        console.log('Ruta de login');
         res.render('register');
     },
 
