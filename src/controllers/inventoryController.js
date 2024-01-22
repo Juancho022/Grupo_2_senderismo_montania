@@ -37,7 +37,7 @@ const inventoryController = {
         const product = products.find((product) => product.id == req.params.id);
         res.render('productEditForm', { productToEdit: product });
         */
-        async function (req, res) {
+        async (req, res)=> {
             try {
                 const product = await db.Product.findByPk(req.params.id);
                 const categories = await db.Category.findAll();
@@ -48,7 +48,7 @@ const inventoryController = {
         },
 
 
-    update: (req, res){
+    update: (req, res) => {
         /*
         const indexProduct = products.findIndex((product) => product.id == req.params.id);
         products[indexProduct] = {
