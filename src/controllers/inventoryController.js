@@ -18,41 +18,37 @@ const inventoryController = {
     },
 
     //create - Method to store
-    store: (req, res) => {
-        /*
-        const newProduct = {
-            id: products[products.length-1].id + 1,
-            ...req.body,
-            image: req.file?.filename || "default-image.jpg"
-        };
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
-        */
-        db.Product.create(req.body)
-            .then(() => {
-                res.redirect('/products');
-            })
-            .catch((err) => {
-                res.send(err);
-            })
+    store: async (req, res) => {
+        try {
+            const newProduct = {
+                ...req.body,
+                image: req.file?.filename || "default-image.jpg"
+            };
+
+            await db.Product.create(newProduct);
+            res.redirect('/products');
+        } catch (err) {
+            res.send(err);
+        }
     },
 
-    edit: (req, res) => {
+    edit:
         /*
         const product = products.find((product) => product.id == req.params.id);
         res.render('productEditForm', { productToEdit: product });
         */
-        db.Product.findByPk(req.params.id)
-            .then((product) => {
-                res.render('productEditForm', { productToEdit: product });
-            })
-            .catch((err) => {
+        async function (req, res) {
+            try {
+                const product = await db.Product.findByPk(req.params.id);
+                const categories = await db.Category.findAll();
+                res.render('productEditForm', { Product: product, Category: categories });
+            } catch (error) {
                 res.send(err);
-            })
-    },
+            }
+        },
 
-    update: (req, res) => {
+
+    update: (req, res){
         /*
         const indexProduct = products.findIndex((product) => product.id == req.params.id);
         products[indexProduct] = {
@@ -68,7 +64,8 @@ const inventoryController = {
             })
             .catch((err) => {
                 res.send(err);
-            })
+            });
+
     },
 
     destroy: (req, res) => {
@@ -77,14 +74,15 @@ const inventoryController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect('/products');
         */
-        db.Product.destroy({ where: { id: req.params.id} })
-        .then(() => {
-            res.redirect('/products');
-        })
-        .catch((err) => {
-            res.send(err);
-        });
+        db.Product.destroy({ where: { id: req.params.id } })
+            .then(() => {
+                res.redirect('/products');
+            })
+            .catch((err) => {
+                res.send(err);
+            });
     }
 }
+
 
 module.exports = inventoryController;
