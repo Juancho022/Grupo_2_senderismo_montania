@@ -11,6 +11,7 @@ const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
 
+//const middlewareForUsers = require('./middlewares/middlewareUser');
 
 const app = express();
 
@@ -48,6 +49,8 @@ app.use((req, res, next) => {
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+//app.use(middlewareForUsers);
 
 app.use('/', mainRoutes);
 app.use('/user', userRoutes);
