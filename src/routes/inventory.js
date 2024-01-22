@@ -19,6 +19,8 @@ const upload = multer({storage: storage});
 
 
 const inventoryController = require('../controllers/inventoryController');
+
+/*** LIST ***/
 router.get('/', forUsers ,inventoryController.inventory);
 
 /*** CREATE ONE PRODUCT ***/ 
