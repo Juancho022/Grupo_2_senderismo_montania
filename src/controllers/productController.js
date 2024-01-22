@@ -15,7 +15,7 @@ const productController = {
         const climbing = products.filter((product) => product.category === 'Escalada');
         const accessories = products.filter((product) => product.category === 'Accesorios');
         const footwear = products.filter((product) => product.category === 'Calzados');
-        res.render('products', {hiking, climbing,  accessories, footwear})
+        res.render('products', { hiking, climbing, accessories, footwear });
     },
 
     // Cart
