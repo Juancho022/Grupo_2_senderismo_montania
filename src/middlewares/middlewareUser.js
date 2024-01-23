@@ -1,8 +1,17 @@
+const fs = require('fs');
+const path = require('path');
+
+const usersFilePath = path.join(__dirname, '../data/users.json');
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 function forUsers(req, res, next) {
-	if(!req.session.usuario){  
-		return res.redirect('/user/login');
-	}
-	next();
+    const user = req.session.user;
+
+    if (!user || user.category == 'admin') {
+        return res.redirect('/inventory');
+    }
+
+    next();
 }
 
 module.exports = forUsers;

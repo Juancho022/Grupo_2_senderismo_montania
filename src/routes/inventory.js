@@ -15,23 +15,18 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({storage: storage});
-
+const upload = multer({ storage: storage });
 
 const inventoryController = require('../controllers/inventoryController');
 
 /*** LIST ***/
 router.get('/', forUsers ,inventoryController.inventory);
 
-/*** CREATE ONE PRODUCT ***/ 
-router.get('/create', forUsers ,inventoryController.create); 
-router.post('/create', upload.single('image'), inventoryController.store); 
-
-/*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', forUsers ,inventoryController.edit); 
-router.put('/:id/edit', inventoryController.update);
-
-/*** DELETE ONE PRODUCT***/ 
-router.delete('/:id/delete', forUsers ,inventoryController.destroy); 
+// Resto de las rutas protegidas
+router.get('/create', forUsers, inventoryController.create);
+router.post('/create', forUsers, upload.single('image'), inventoryController.store);
+router.get('/:id/edit', forUsers, inventoryController.edit);
+router.put('/:id/edit', forUsers, inventoryController.update);
+router.delete('/:id/delete', forUsers, inventoryController.destroy);
 
 module.exports = router;
