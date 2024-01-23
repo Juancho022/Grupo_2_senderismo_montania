@@ -1,0 +1,22 @@
+<% let pageTitle='Perfil de usuario' %>
+    <%- include('partials/head', { styles: ['stylesInventory'], pageTitle: pageTitle }) %>
+
+        <body>
+            <%- include('./partials/header') %>
+                <main>
+                    <body>
+                        <%- include('partials/header') %>
+                        <div class="profile">
+                            <p>Nombre: <%= user.name %></p>
+                            <p>Email: <%= user.email %></p>
+                            <p>Rol: <%= user.role?.name %></p>
+                        </div>
+                        <div class="button-edit">
+                            <button>Editar</button>
+                        </div>
+                    </body>
+                </main>
+                <%- include('./partials/footer') %>
+        </body>
+
+        </html>

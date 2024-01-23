@@ -35,6 +35,9 @@ router.post('/register', upload.single('image'), validations, userController.reg
 
 router.get('/login', userController.login);
 
+router.get('/:id/edit', userController.edit); 
+router.put('/:id/edit', userController.update);
+
 //Procesar el login
 router.post('/login', userController.loginProcess);
 

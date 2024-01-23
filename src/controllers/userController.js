@@ -10,6 +10,15 @@ const { create } = require('domain');
 
 
 const controller = {
+    edit: async (req, res)=> {
+        try {
+            const user = await db.User.findByPk(req.params.id);
+            res.render('productUserEdit', { Users: user });
+        } catch (error) {
+            res.send(err);
+        }
+    },
+
     login(req, res) {
         res.render('login');
     },
