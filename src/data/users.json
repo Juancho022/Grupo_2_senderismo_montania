@@ -5,7 +5,7 @@
   "lastName": "Garcia",
   "email": "pedro@gmail.com",
   "password": "password123",
-  "category": "user",
+  "category": "guest",
   "image": "https://i.imgur.com/abc123.jpg"
  },
  {
