@@ -36,8 +36,16 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = function (models) { //un producto pertenece a una categoria
         Product.belongsTo(models.Category, {
-            foreignKey: 'id',
+            foreignKey: 'categories_id',
             as: 'category'
+        });
+        Product.hasMany(models.Favorite, {  //un producto puede tener muchos favoritos asociados
+            foreignKey: 'products_id',
+            as: 'Favorite'
+        });
+        Product.hasMany(models.Size, {  //un producto puede tener muchos talles asociados
+            foreignKey: 'sizes_id',
+            as: 'size'
         });
     };
 

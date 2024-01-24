@@ -56,20 +56,16 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function (models) { // un usuario pertenece o tiene un rol
         User.belongsTo(models.Rol, {
-            foreignKey: 'id',
+            foreignKey: 'roles_id',
             as: 'roles'
         });
         User.hasMany(models.Order, { //un usuario puede tener muchas ordenes asociadas
-            foreignKey: 'id',
+            foreignKey: 'users_id',
             as: 'orders'
         });
-        User.hasMany(models.Favorit, { //un usuario puede tener muchos productos favoritos
-            foreignKey: 'id',
+        User.hasMany(models.Favorite, { //un usuario puede tener muchos productos favoritos
+            foreignKey: 'users_id',
             as: 'favorites'
-        });
-        User.hasMany(models.Cart, { //un usuario puede tener muchos carritos
-            foreignKey: 'id',
-            as: 'carts'
         });
     };
 

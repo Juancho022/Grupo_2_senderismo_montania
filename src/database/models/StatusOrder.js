@@ -26,5 +26,17 @@ module.exports = (sequelize, dataTypes) => {
     }
     const StatusOrder = sequelize.define(alias, cols, config);
 
+    StatusOrder.associate = function (models) { 
+      StatusOrder.hasMany(models.Status, { 
+          foreignKey: 'status_id',
+          as: 'status'
+      });
+      StatusOrder.hasMany(models.Order, { 
+        foreignKey: 'orders_id',
+        as: 'orders'
+    });
+    
+    };
+
     return StatusOrder
 };
