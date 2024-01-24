@@ -31,5 +31,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const ProductPrice = sequelize.define(alias, cols, config);
 
+    ProductPrice.associate = function (models) { 
+        ProductPrice.hasMany(models.Product, { // el precio puede tener muchos productos asociados
+            foreignKey: 'products_id',
+            as: 'productos'
+        });
+    };
+
     return ProductPrice
 };

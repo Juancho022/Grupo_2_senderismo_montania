@@ -18,5 +18,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Color = sequelize.define(alias, cols, config);
 
+    Color.associate = function (models) { //un producto pertenece a una categoria
+        Color.belongsTo(models.ProductColor, {
+            foreignKey: 'id',
+            as: 'products'
+        });
+    };
+
     return Color
 };
