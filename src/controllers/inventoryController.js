@@ -1,16 +1,24 @@
-const fs = require('fs');
+//const fs = require('fs');
 const path = require('path');
-const productModel = require('../models/product');
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/products.json');
+//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 const inventoryController = {
+    //list
     inventory: (req, res) => {
-        //const products = productModel.getProducts();
-        res.render('inventory', { products });
+        db.Product.findAll({include:['Category']})
+        .then(products => {
+            res.render('inventory.ejs', {products})
+        })
+        .catch (err=> {
+            res.send(err);
+        })
     },
     //Create -Form to create 
     create: (req, res) => {
@@ -41,7 +49,7 @@ const inventoryController = {
             try {
                 const product = await db.Product.findByPk(req.params.id);
                 const categories = await db.Category.findAll();
-                res.render('productEditForm', { Product: product, Category: categories });
+                res.render('productEditForm', { product, categories});
             } catch (error) {
                 res.send(err);
             }
@@ -60,7 +68,7 @@ const inventoryController = {
         */
         db.Product.update(req.body, { where: { id: req.params.id } })
             .then(() => {
-                res.redirect('/products');
+                res.redirect('/products/' + req.params.id);
             })
             .catch((err) => {
                 res.send(err);

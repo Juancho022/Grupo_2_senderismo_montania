@@ -19,14 +19,16 @@ const upload = multer({ storage: storage });
 
 const inventoryController = require('../controllers/inventoryController');
 
-/*** LIST ***/
+
 router.get('/', forUsers ,inventoryController.inventory);
 
 // Resto de las rutas protegidas
 router.get('/create', forUsers, inventoryController.create);
 router.post('/create', forUsers, upload.single('image'), inventoryController.store);
+
 router.get('/:id/edit', forUsers, inventoryController.edit);
 router.put('/:id/edit', forUsers, inventoryController.update);
+
 router.delete('/:id/delete', forUsers, inventoryController.destroy);
 
 module.exports = router;
