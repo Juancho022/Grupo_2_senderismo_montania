@@ -25,9 +25,10 @@ const controller = {
         }
     },
 
-    profile: (req, res)=> {
+    profile: (req, res) => {
         db.User.findByPk(req.params.id, {
-            include: ['Rol'] }
+            include: ['Rol']
+        }
         )
             .then(product => {
                 res.render('profile', { user })
@@ -40,7 +41,7 @@ const controller = {
             const roles = await db.Rol.findAll()
             res.render('productUserEdit', { user, roles });
         } catch (error) {
-            res.send(err);
+            res.send(error);
         }
     },
 
@@ -61,25 +62,28 @@ const controller = {
     loginProcess: async (req, res) => {
         const { emailUsuario, passwordUsuario, recordarUsuario } = req.body;
 
-        try{
-        const userToLog = User.findOne({where: {email: emailUsuario}});
+        try {
+            const userToLog = User.findOne({ where: { email: emailUsuario } });
 
-        if (userToLog && userToLog.password === passwordUsuario) {
-            req.session.user = {
-                id: userToLog.id,
-                firstName: userToLog.firstName,
-            };
+            if (userToLog && userToLog.password === passwordUsuario) {
+                req.session.user = {
+                    id: userToLog.id,
+                    firstName: userToLog.firstName,
+                };
 
-            // Si el usuario decidió ser recordado, establece una cookie
-            if (recordarUsuario) {
-                res.cookie('userEmail', emailUsuario, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+                // Si el usuario decidió ser recordado, establece una cookie
+                if (recordarUsuario) {
+                    res.cookie('userEmail', emailUsuario, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+                }
+
+                return res.redirect('/');
+
+            } else {
+                const error = 'Correo electrónico o contraseña incorrectos'
+                return res.render('login', { error });
             }
-
-            return res.redirect('/');
-
-        } else {
-            const error = 'Correo electrónico o contraseña incorrectos'
-            return res.render('login', { error });
+        } catch (error) {
+            res.send(error);
         }
     },
 
