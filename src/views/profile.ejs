@@ -1,0 +1,28 @@
+<% let pageTitle='Perfil de usuario' %>
+    <%- include('partials/head', { pageTitle: pageTitle }) %>
+
+        <body>
+            <%- include('./partials/header') %>
+                <main>
+
+                    <body>
+                        <%- include('partials/header') %>
+                            <div class="profile">
+                                <p>Nombre: <%= user.name %>
+                                </p>
+                                <p>Email: <%= user.email %>
+                                </p>
+                                <p>Rol: <%= user.rol?.name %>
+                                </p>
+                            </div>
+                            <div class="button-edit">
+                                <a href="/users/<%= user.id %>/edit">
+                                    <button>Editar</button>
+                                </a>
+                            </div>
+                    </body>
+                </main>
+                <%- include('./partials/footer') %>
+        </body>
+
+        </html>

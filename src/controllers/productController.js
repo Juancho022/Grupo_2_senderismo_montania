@@ -1,42 +1,38 @@
-const fs = require('fs');
+//const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const { Op } = require('sequelize');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/products.json');
+//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
     // Root - Show all products
     products: (req, res) => {
-        const hiking = products.filter((product) => product.category === 'Senderismo');
-        const climbing = products.filter((product) => product.category === 'Escalada');
-        const accessories = products.filter((product) => product.category === 'Accesorios');
-        const footwear = products.filter((product) => product.category === 'Calzados');
-        res.render('products', { hiking, climbing, accessories, footwear });
+        db.Product.findAll({ include: ['Category'] })
+            .then(products => {
+                res.render('products', { products })
+            })
+            .catch(err => {
+                res.send(err);
+            })
     },
 
     // Cart
-    productCart:(req, res)=>{
+    productCart: (req, res) => {
         res.render('productCart')
     },
-    
-    store: (req, res) => {
-        const newProduct = {
-            id: products[products.length-1].id + 1,
-            ...req.body,
-            image: req.file?.filename || "default-image.jpg"
-        };
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
-    },
-
 
     // Detail - Detail from one product
-    productDetail(req, res) {
-        const product = products.find((product) => product.id == req.params.id);
-        res.render('productDetail', { product });
+    productDetail: (req, res)=> {
+        db.Product.findByPk(req.params.id, {
+            include: { Category }
+        })
+            .then(product => {
+                res.render('productDetail', { product })
+            })
     }
 }
 

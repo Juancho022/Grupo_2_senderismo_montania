@@ -1,0 +1,35 @@
+<% let pageTitle='Listado de usuarios' %>
+    <%- include('partials/head', { pageTitle: pageTitle }) %>
+
+        <body>
+
+            <%- include('./partials/header') %>
+
+                <main>
+                    <table>
+                        <thead>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                        </thead>
+                        <tbody>
+                            <% users.forEach(user=> { %>
+                                <tr>
+                                    <td>
+                                        <%= user.name %>
+                                    </td>
+                                    <td>
+                                        <%= user.email %>
+                                    </td>
+                                    <td>
+                                        <%= user.rol?.name || 'No tiene rol' %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </main>
+                <%- include('./partials/footer') %>
+        </body>
+
+        </html>
