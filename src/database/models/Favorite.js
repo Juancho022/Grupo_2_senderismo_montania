@@ -18,14 +18,14 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'favorites',
         timestamps: true
     }
-    const Favorit = sequelize.define(alias, cols, config);
+    const Favorite = sequelize.define(alias, cols, config);
 
-    Favorit.associate = function (models) { // Favoritos tiene un usuario asociado
-        Favorit.belongsTo(models.User, {
+    Favorite.associate = function (models) { // Favoritos tiene un usuario asociado
+        Favorite.belongsTo(models.User, {
             foreignKey: 'users_id',
             as: 'users'
         });
     };
 
-    return Favorit
+    return Favorite
 };

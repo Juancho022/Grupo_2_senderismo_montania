@@ -18,5 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     }
     const Status = sequelize.define(alias, cols, config);
 
+    Status.associate = function (models) { //un producto pertenece a una categoria
+        Status.belongsTo(models.StatusOrder, {
+            foreignKey: 'id',
+            as: 'statusOrder'
+        });
+    };
+
     return Status
 };

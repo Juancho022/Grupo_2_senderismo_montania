@@ -26,5 +26,17 @@ module.exports = (sequelize, DataTypes) => {
     }
     const OrderDetail = sequelize.define(alias, cols, config);
 
+    OrderDetail.associate = function (models) { 
+        OrderDetail.hasMany(models.Product, {  //un producto asociado a muchos detalles de la orden
+            foreignKey: 'products_id',
+            as: 'products'
+        });
+        OrderDetail.hasMany(models.Order, {   
+            foreignKey: 'orders_id',
+            as: 'orders'
+        });
+    };
+
+
     return OrderDetail
 };
