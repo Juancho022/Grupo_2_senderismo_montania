@@ -31,7 +31,7 @@ const validations = [
 
 router.get('/', userController.list);
 
-router.get('/profile', userController.profile);
+router.get('/profile/:id', userController.profile);
 
 router.get('/register', userController.register);
 //procesa el register/ crea un usuario
