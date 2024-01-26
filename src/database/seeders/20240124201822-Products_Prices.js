@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     await queryInterface.bulkInsert('People', [
+     await queryInterface.bulkInsert('product_prices', [
       {
         products_id: 1,
         price: 89000,

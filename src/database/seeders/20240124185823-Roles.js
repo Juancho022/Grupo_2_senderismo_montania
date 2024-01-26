@@ -17,8 +17,9 @@ module.exports = {
         description: 'admin',
       },
       {
-        description: 'guest'
-      }], {});
+        description: 'guest',
+      }
+    ], {});
   },
 
   async down (queryInterface, Sequelize) {
