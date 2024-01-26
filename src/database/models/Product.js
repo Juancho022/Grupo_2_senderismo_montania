@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'categories_id',
             as: 'category'
         });
-        Product.hasMany(models.Favorite, {  //un producto puede tener muchos favoritos asociados
+        Product.belongsTo(models.Favorite, {  //un producto puede tener muchos favoritos asociados
             foreignKey: 'products_id',
             as: 'Favorite'
         });
