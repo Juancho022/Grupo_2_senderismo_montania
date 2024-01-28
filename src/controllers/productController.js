@@ -8,9 +8,8 @@ const productController = {
     // Root - Show all products
     products: (req, res) => {
         db.Product.findAll({
-            attributes: {
-                exclude: ['timestamp']
-            }
+            attributes: ['id','name','img'],
+            
         })
             .then(products => {
                 res.render('products.ejs', { products })
@@ -28,7 +27,10 @@ const productController = {
 
     // Detail - Detail from one product
     productDetail: (req, res) => {
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id, {
+            attributes: {exclude: ['timestamp']},
+            include: ['sizes']
+        })
             .then(product => {
                 if (product) {
                     res.render('productDetail', { product })
