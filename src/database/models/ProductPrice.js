@@ -27,14 +27,17 @@ module.exports = (sequelize, DataTypes) => {
 
     let config = {
         tableName: 'product_prices',
-        timestamps: true
+        timestamps: true,
+        createdAt: false,
+        updatedAt: false,
+        deletedAt: false
     }
     const ProductPrice = sequelize.define(alias, cols, config);
 
     ProductPrice.associate = function (models) { 
-        ProductPrice.hasMany(models.Product, { // el precio puede tener muchos productos asociados
-            foreignKey: 'products_id',
-            as: 'productos'
+        ProductPrice.belongsTo(models.Product, { 
+            foreignKey: 'id',
+            as: 'product'
         });
     };
 

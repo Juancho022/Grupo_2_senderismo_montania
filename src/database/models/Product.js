@@ -26,11 +26,18 @@ module.exports = (sequelize, DataTypes) => {
         img: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: true,
         }
     };
     let config = {
         tableName: 'products',
-        timestamps: true
+        timestamps: true,
+        createdAt: false,
+        updatedAt: false,
+        deletedAt: false
     }
     const Product = sequelize.define(alias, cols, config);
 
@@ -39,14 +46,17 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'categories_id',
             as: 'category'
         });
-        Product.belongsTo(models.Favorite, {  //un producto puede tener muchos favoritos asociados
+        Product.belongsToMany(models.Size, {
+            through: 'products_sizes',
             foreignKey: 'products_id',
-            as: 'Favorite'
+            as: 'sizes'
         });
-        Product.hasMany(models.Size, {  //un producto puede tener muchos talles asociados
-            foreignKey: 'sizes_id',
-            as: 'size'
+        Product.belongsToMany(models.Color, {
+            through: 'products_colors',
+            foreignKey: 'products_id',
+            as: 'colors'
         });
+        
     };
 
     return Product

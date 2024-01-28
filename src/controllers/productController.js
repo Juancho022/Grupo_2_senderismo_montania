@@ -1,21 +1,22 @@
-//const fs = require('fs');
+
 const path = require('path');
 const db = require('../database/models');
 const { Op } = require('sequelize');
 
-//const productsFilePath = path.join(__dirname, '../data/products.json');
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
     // Root - Show all products
     products: (req, res) => {
-        db.Product.findAll({ include: ['Category'] })
+        db.Product.findAll({
+            attributes: {
+                exclude: ['timestamp']
+            }
+        })
             .then(products => {
-                res.render('products', { products })
+                res.render('products.ejs', { products })
             })
             .catch(err => {
+                console.log(err)
                 res.send(err);
             })
     },
@@ -26,12 +27,18 @@ const productController = {
     },
 
     // Detail - Detail from one product
-    productDetail: (req, res)=> {
-        db.Product.findByPk(req.params.id, {
-            include: { Category }
-        })
+    productDetail: (req, res) => {
+        db.Product.findByPk(req.params.id)
             .then(product => {
-                res.render('productDetail', { product })
+                if (product) {
+                    res.render('productDetail', { product })
+                } else {
+                    res.send('Producto no encontrado :(')
+                }
+            })
+            .catch(err => {
+                console.log(err)
+                res.send(err)
             })
     }
 }

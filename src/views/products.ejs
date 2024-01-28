@@ -1,80 +1,31 @@
-<% let pageTitle = 'Productos' %>
-<%- include('partials/head', { styles: ['products'], pageTitle: pageTitle }) %>
+<% let pageTitle='Productos' %>
+    <%- include('partials/head', { styles: ['products'], pageTitle: pageTitle }) %>
 
-<body>
-    <%- include('./partials/header') %>
+        <body>
+            <%- include('./partials/header') %>
+                <main>
+                    <% products.forEach(product=> { %>
+                        <a href="/products/productDetail/<%=product.id %>" class="product-link">
+                            <article>
+                                <div class="img-product">
+                                    <img src="/images/<%= product.img %>" class="img-product-products"
+                                        alt="Imagen del Producto">
+                                    <div class="img-hover">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                </div>
+                                <div class="product-detail">
+                                    <h4>
+                                        <%= product.name %>
+                                    </h4>
+                                    <p class="price">$<%= product.price.price %></p>
+                                </div>
+                            </article>
+                        </a>
+                        <% }) %>
+                </main>
 
-    <main>
-        <% locals.hiking && locals.hiking.forEach(product => { %>
-        <a href="/products/productDetail/<%= product.id %>" class="product-link">
-            <article>
-                <div class="img-product">
-                    <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
-                    <div class="img-hover">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="product-detail">
-                    <h4><%= product.name %></h4>
-                    <p class="price">$<%= product.price %></p>
-                </div>
-            </article>
-        </a>
-        <% }) %>
+                <%- include('./partials/footer') %>
+        </body>
 
-        <% locals.climbing && climbing.forEach(product => { %>
-        <a href="/products/productDetail/<%= product.id %>" class="product-link">
-            <article>
-                <div class="img-product">
-                    <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
-                    <div class="img-hover">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="product-detail">
-                    <h4><%= product.name %></h4>
-                    <p class="price">$<%= product.price %></p>
-                </div>
-            </article>
-        </a>
-        <% }) %>
-
-        <% locals.accessories && accessories.forEach(product => { %>
-        <a href="/products/productDetail/<%= product.id %>" class="product-link">
-            <article>
-                <div class="img-product">
-                    <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
-                    <div class="img-hover">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="product-detail">
-                    <h4><%= product.name %></h4>
-                    <p class="price">$<%= product.price %></p>
-                </div>
-            </article>
-        </a>
-        <% }) %>
-
-        <% locals.footwear && footwear.forEach(product => { %>
-        <a href="/products/productDetail/<%= product.id %>" class="product-link">
-            <article>
-                <div class="img-product">
-                    <img src="/images/<%= product.image %>" class="img-product-products" alt="Imagen del Producto">
-                    <div class="img-hover">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="product-detail">
-                    <h4><%= product.name %></h4>
-                    <p class="price">$<%= product.price %></p>
-                </div>
-            </article>
-        </a>
-        <% }) %>
-    </main>
-
-    <%- include('./partials/footer') %>
-</body>
-
-</html>
+        </html>
