@@ -50,10 +50,10 @@ const productController = {
             attributes: ['img', 'description', 'name'],
             include: [{
                 association: 'sizes',
-                attributes: ['sizes_type'] // Aquí se especifican los atributos como un array
+                attributes: ['sizes_type'] 
             }, {
                 association: 'price',
-                attributes: ['price'] // Aquí se especifican los atributos como un array
+                attributes: ['price'] 
             }]
         })
             .then(product => {
