@@ -4,11 +4,11 @@
         <body>
             <%- include('./partials/header') %>
                 <main>
-                    <% products.forEach(product=> { %>
-                        <a href="/products/productDetail/<%=product.id %>" class="product-link">
+                    <% for (let i=0; i < products.length; i++) { %>
+                        <a href="/products/productDetail/<%= products[i].id %>" class="product-link">
                             <article>
                                 <div class="img-product">
-                                    <img src="/images/<%= product.img %>" class="img-product-products"
+                                    <img src="/images/<%= products[i].img %>" class="img-product-products"
                                         alt="Imagen del Producto">
                                     <div class="img-hover">
                                         <i class="fas fa-shopping-cart"></i>
@@ -16,12 +16,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h4>
-                                        <%= product.name %>
+                                        <%= products[i].name %>
                                     </h4>
+                                    <p class="price">$<%= products[i].prices %>
+                                    </p>
                                 </div>
                             </article>
                         </a>
-                        <% }) %>
+                        <% } %>
                 </main>
 
                 <%- include('./partials/footer') %>

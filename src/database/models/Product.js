@@ -49,16 +49,18 @@ module.exports = (sequelize, DataTypes) => {
         Product.belongsToMany(models.Size, {
             through: 'products_sizes',
             foreignKey: 'products_id',
+            otherKey: 'sizes_id',
             as: 'sizes'
         });
         Product.belongsToMany(models.Color, {
             through: 'products_colors',
             foreignKey: 'products_id',
+            otherKey:'colors_id',
             as: 'colors'
         });
         Product.hasOne(models.ProductPrice,{
             foreignKey: 'products_id',
-            as: 'productPrice'
+            as: 'price'
         })
         
     };

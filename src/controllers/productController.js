@@ -8,16 +8,35 @@ const productController = {
     // Root - Show all products
     products: (req, res) => {
         db.Product.findAll({
-            attributes: ['id','name','img'],
-            
+            attributes: ['id', 'name', 'img']
         })
             .then(products => {
-                res.render('products.ejs', { products })
+                // Obtener los IDs de los productos
+                const productIds = products.map(product => product.id);
+
+                // Buscar los precios asociados a los productos
+                db.ProductPrice.findAll({
+                    where: { products_id: productIds },
+                    attributes: ['products_id', 'price']
+                })
+                    .then(prices => {
+                        // Asociar los precios a los productos correspondientes
+                        products.forEach(product => {
+                            product.prices = prices.filter(price => price.products_id === product.id).map(price => price.price);
+                        });
+
+                        // Renderizar la vista con los productos y los precios
+                        res.render('products.ejs', { products, prices });
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        res.send(err);
+                    });
             })
             .catch(err => {
-                console.log(err)
+                console.log(err);
                 res.send(err);
-            })
+            });
     },
 
     // Cart
@@ -28,12 +47,11 @@ const productController = {
     // Detail - Detail from one product
     productDetail: (req, res) => {
         db.Product.findByPk(req.params.id, {
-            attributes: {exclude: ['timestamp']},
-            include: ['sizes']
+
         })
             .then(product => {
                 if (product) {
-                    res.render('productDetail', { product })
+                    res.render('productDetail', { product, price })
                 } else {
                     res.send('Producto no encontrado :(')
                 }
