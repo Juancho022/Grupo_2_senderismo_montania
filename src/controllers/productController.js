@@ -47,11 +47,18 @@ const productController = {
     // Detail - Detail from one product
     productDetail: (req, res) => {
         db.Product.findByPk(req.params.id, {
-
+            attributes: ['img', 'description', 'name'],
+            include: [{
+                association: 'sizes',
+                attributes: ['sizes_type'] // Aquí se especifican los atributos como un array
+            }, {
+                association: 'price',
+                attributes: ['price'] // Aquí se especifican los atributos como un array
+            }]
         })
             .then(product => {
                 if (product) {
-                    res.render('productDetail', { product, price })
+                    res.render('productDetail', { product})
                 } else {
                     res.send('Producto no encontrado :(')
                 }
