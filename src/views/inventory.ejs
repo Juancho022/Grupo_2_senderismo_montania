@@ -32,13 +32,13 @@
                     </div>
 
                     <div class="table-product">
-                        <% locals.products && products.forEach(product=> { %>
+                        <% products && products.forEach(product=> { %>
                             <div class="product-content">
                                 <span class="product-code">
                                     <%= product.id %>
                                 </span>
                                 <div class="product-image">
-                                    <img class="product" src="/images/<%= product.image %>" alt="imagen del producto">
+                                    <img class="product" src="/images/<%= product.img %>" alt="imagen del producto">
                                     <span class="product-name">
                                         <%= product.name %>
                                     </span>

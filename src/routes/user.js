@@ -29,7 +29,7 @@ const validations = [
     body('password').notEmpty().withMessage('La contraseña es requerida')
 ];
 
-router.get('/', userController.list);
+router.get('/list', userController.list);
 
 router.get('/profile/:id', userController.profile);
 

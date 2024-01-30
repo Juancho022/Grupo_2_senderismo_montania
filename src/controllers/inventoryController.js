@@ -11,15 +11,21 @@ const sequelize = db.sequelize;
 
 const inventoryController = {
     //list
-    inventory: (req, res) => {
-        db.Product.findAll({include:['Category']})
-        .then(products => {
-            res.render('inventory.ejs', {products})
-        })
-        .catch (err=> {
-            res.send(err);
-        })
-    },
+    inventory: (req,res)=>{
+    db.Product.findAll( {
+        attributes: ['img', 'description', 'name','id'],
+        include: [{
+            association: 'sizes',
+            attributes: ['sizes_type'] 
+        }, {
+            association: 'price',
+            attributes: ['price'] 
+        },{
+            association: 'category',
+            attributes: ['description']
+        }]
+    })
+},
     //Create -Form to create 
     create: (req, res) => {
         res.render('productCreateForm');
