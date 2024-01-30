@@ -24,7 +24,7 @@ const productController = {
                         products.forEach(product => {
                             product.prices = prices.filter(price => price.products_id === product.id).map(price => price.price);
                         });
-
+console.log(products)
                         // Renderizar la vista con los productos y los precios
                         res.render('products.ejs', { products, prices });
                     })

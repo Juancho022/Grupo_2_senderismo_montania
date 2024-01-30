@@ -14,7 +14,7 @@ const controller = {
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
-                include: ['rol'],
+                include: ['roles'],
                 attributes: {
                     exclude: ['password', 'roles_id']
                 }
@@ -27,7 +27,7 @@ const controller = {
 
     profile: (req, res) => {
         db.User.findByPk(req.params.id, {
-            include: ['Rol']
+            include: ['roles']
         }
         )
             .then(product => {
