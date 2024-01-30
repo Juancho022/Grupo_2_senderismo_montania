@@ -18,12 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     }
     const ProductSize = sequelize.define(alias, cols, config);
 
-    ProductSize.associate = function (models) { 
-        ProductSize.belongsTo(models.Size, {
-            foreignKey: 'products_id',
-            as: 'products'
-        });
-    };
 
     return ProductSize
 };

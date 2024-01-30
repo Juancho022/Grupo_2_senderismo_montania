@@ -8,11 +8,11 @@
                     <body>
                         <%- include('partials/header') %>
                             <div class="profile">
-                                <p>Nombre: <%= user.name %>
+                                <p>Nombre: <%= user.first_name %>
                                 </p>
                                 <p>Email: <%= user.email %>
                                 </p>
-                                <p>Rol: <%= user.rol?.name %>
+                                <p>Rol: <%= user.roles?.description %>
                                 </p>
                             </div>
                             <div class="button-edit">

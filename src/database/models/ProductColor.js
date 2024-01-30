@@ -11,21 +11,11 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     let config = {
-        tableName: 'products_color',
+        tableName: 'products_colors',
         timestamps: false
     }
     const ProductColor = sequelize.define(alias, cols, config);
-
-    ProductColor.associate = function (models) { 
-        ProductColor.hasMany(models.Product, { // un producto tiene muchos colores asociados
-            foreignKey: 'products_id',
-            as: 'products'
-        });
-        ProductColor.hasMany(models.Color, { 
-            foreignKey: 'colors_id',
-            as: 'colors'
-        });
-    };
+    
 
     return ProductColor
 };
