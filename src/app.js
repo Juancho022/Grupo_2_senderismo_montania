@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -58,7 +59,7 @@ app.use('/products', productRoutes);
 app.use('/inventory', inventoryRoutes);
 
 
-const port = 3030;
+const port = process.env.PORT || 3030;
 app.listen(port, () => {
     console.log(`Servidor iniciado en: http://localhost:${port}`);
 });
