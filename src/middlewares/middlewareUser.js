@@ -1,17 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+const forUsers = (req, res, next) => {
+    console.log('Middleware User ejecutado');
+    console.log('Sesión del usuario:', req.session.user);
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-function forUsers(req, res, next) {
-    const user = req.session.user;
-
-    if (!user || user.category == 'admin') {
-        return res.redirect('/inventory');
+    if (!req.session.usuario) {
+      console.log('Usuario no autenticado. Redirigiendo...');
+      res.redirect('/user/login') // No autorizado
     }
-
-    next();
-}
+    return next();
+};
 
 module.exports = forUsers;
