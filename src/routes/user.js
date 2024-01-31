@@ -8,6 +8,8 @@ const userController = require('../controllers/userController');
 
 const { body } = require('express-validator');
 
+const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, '../public/images/avatars'));
@@ -29,9 +31,9 @@ const validations = [
     body('password').notEmpty().withMessage('La contraseña es requerida')
 ];
 
-router.get('/list', userController.list);
+router.get('/list' , authenticationMiddleware ,userController.list);
 
-router.get('/profile/:id', userController.profile);
+router.get('/profile', authenticationMiddleware, userController.profile);
 
 router.get('/register', userController.register);
 //procesa el register/ crea un usuario
