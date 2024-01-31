@@ -11,7 +11,7 @@ router.get('/', productController.products);
 
 
 /*********     CART ROUTE    *********/ 
-router.get('/productCart', forUsers ,productController.productCart); 
+router.get('/productCart' ,productController.productCart); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/productDetail/:id/', productController.productDetail); 
