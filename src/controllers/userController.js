@@ -65,11 +65,8 @@ const controller = {
     loginProcess: async (req, res) => {
         try {
             const user = await db.User.findOne({
-                attributes: ['id', 'email', 'first_name', 'password'],
-                include: [{
-                    association: 'role',
-                    attributes: ['description']
-                }]
+                where: { email: req.body.emailUsuario },
+                limit: 1
             });
             if (!user) {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
@@ -78,11 +75,10 @@ const controller = {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
             req.session.user = {
-                id: user.id,
-                email: user.email,
-                firstName: user.first_name,
-                role: user.role.description
+                emailUsuario: user.email,
+                id: user.id
             };
+            console.log(req.session.user);
 
             // Setear cookie si el usuario desea ser recordado
             if (req.body.recordarUsuario) {
@@ -105,7 +101,7 @@ const controller = {
         const errors = validationResult(req);
 
         try {
-            const userExists = User.findOne({ where: { email : req.body.email} });
+            const userExists = User.findOne({ where: { email: req.body.email } });
 
             if (!errors.isEmpty()) {  //si hay error renderiza la vista del registro con el error de validación
                 return res.render('register', { errors: errors.mapped(), oldData: req.body });
