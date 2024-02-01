@@ -5,7 +5,7 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { validationResult } = require('express-validator');
 //const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const { create } = require('domain');
 const cookies = require('cookie-parser');
 
@@ -66,6 +66,7 @@ const controller = {
         try {
             const user = await db.User.findOne({
                 where: { email: req.body.emailUsuario },
+                include:['roles'],
                 limit: 1
             });
             if (!user) {
@@ -75,14 +76,11 @@ const controller = {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
             req.session.user = {
-                emailUsuario: user.email,
-                id: user.id
+                email: user.email,
+                id: user.roles.id
             };
-            console.log(req.session.user);
-
-            // Setear cookie si el usuario desea ser recordado
-            if (req.body.recordarUsuario) {
-                res.cookie('userEmail', user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+            if (req.body.recordarUsuario != undefined) {
+                res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
             }
 
             return res.redirect('/');
