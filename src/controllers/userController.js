@@ -5,7 +5,7 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 const { validationResult } = require('express-validator');
 //const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const { create } = require('domain');
 const cookies = require('cookie-parser');
 
@@ -65,11 +65,9 @@ const controller = {
     loginProcess: async (req, res) => {
         try {
             const user = await db.User.findOne({
-                attributes: ['id', 'email', 'first_name', 'password'],
-                include: [{
-                    association: 'role',
-                    attributes: ['description']
-                }]
+                where: { email: req.body.emailUsuario },
+                include:['roles'],
+                limit: 1
             });
             if (!user) {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
@@ -78,15 +76,11 @@ const controller = {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
             req.session.user = {
-                id: user.id,
                 email: user.email,
-                firstName: user.first_name,
-                role: user.role.description
+                id: user.roles.id
             };
-
-            // Setear cookie si el usuario desea ser recordado
-            if (req.body.recordarUsuario) {
-                res.cookie('userEmail', user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+            if (req.body.recordarUsuario != undefined) {
+                res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
             }
 
             return res.redirect('/');
@@ -105,7 +99,7 @@ const controller = {
         const errors = validationResult(req);
 
         try {
-            const userExists = User.findOne({ where: { email : req.body.email} });
+            const userExists = User.findOne({ where: { email: req.body.email } });
 
             if (!errors.isEmpty()) {  //si hay error renderiza la vista del registro con el error de validación
                 return res.render('register', { errors: errors.mapped(), oldData: req.body });

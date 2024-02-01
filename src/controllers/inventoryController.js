@@ -57,11 +57,12 @@ const inventoryController = {
         */
         async (req, res)=> {
             try {
-                const product = await db.Product.findByPk(req.params.id);
-                const categories = await db.Category.findAll();
-                res.render('productEditForm', { product, categories});
+                const product = await db.Product.findByPk(req.params.id,{
+                    include:['category']
+                });
+                res.render('productEditForm', { product});
             } catch (error) {
-                res.send(err);
+                res.send(error);
             }
         },
 
