@@ -1,4 +1,4 @@
-// const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const db = require('../database/models');
@@ -10,7 +10,7 @@ const { create } = require('domain');
 const cookies = require('cookie-parser');
 
 
-const controller = {
+const userController = {
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
@@ -61,7 +61,37 @@ const controller = {
     login: (req, res) => {
         res.render('login');
     },
-
+    
+    // loginProcess: function (req, res) {
+    //     let errors = validationResult(req);
+    //     if (errors.isEmpty()) {
+    //         let usersJSON = fs.readFileSync(usersFilePath, { encoding: 'utf-8' });
+    //         let users;
+    //         if (usersJSON === "") {
+    //             users = [];
+    //         } else {
+    //             users = JSON.parse(usersJSON);
+    //         }
+    //         let usuarioALoguearse;
+    //         for (let i = 0; i < users.length; i++) {
+    //             if (users[i].email === req.body.email) {
+    //                 if (bcryptjs.compareSync(req.body.password, users[i].password)) {
+    //                     usuarioALoguearse = users[i];
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //         if (usuarioALoguearse === undefined) {
+    //             res.render('login', { errors: [{ msg: 'Credenciales Inválidas' }] });
+    //         } else {
+    //             req.session.usuarioLogueado = usuarioALoguearse;
+    //             res.redirect('/');
+    //         }            
+    //         } else {
+    //         res.render('login', { errors: errors.errors });
+    //     }
+    // },    
+    
     loginProcess: async (req, res) => {
         try {
             const user = await db.User.findOne({
@@ -143,4 +173,4 @@ const controller = {
 
 };
 
-module.exports = controller;
+module.exports = userController;

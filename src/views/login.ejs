@@ -16,12 +16,23 @@
                                 </p>
 
                                 <div id="formLogin">
-                                    <form action="/user/login" method="post">
+                                    <!-- <% if (typeof errors != 'undefined'){ %>
+                                        <p style="color: red;">ERROR</p>
+                                        <ul>
+                                            <% for (let i = 0; i < errors.length; i++) { %>
+                                               <li>
+                                                <%=errors[i].msg%>
+                                               </li>
+                                          <%  } %>
+                                        </ul>
+                                 <%   } %> -->
+                                    <form method="POST" action="/user/login" >
                                         <div>
                                             <label><strong>Correo Electrónico</strong></label>
-                                            <input type="email" name="emailUsuario" required>
+                                            <input type="email" name="email" required>
                                             <label><strong>Contraseña</strong></label>
-                                            <input type="password" name="passwordUsuario" required>
+                                            <input type="password" name="password" required>
+                                            
                                         </div>
 
                                         <% if (locals.errors?.unauthorize) { %>
