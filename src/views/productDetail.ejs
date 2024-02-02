@@ -8,11 +8,11 @@
     <main>
         <p class="step">Productos > Categoría > Producto</p>
         <article class="article-detail">
-            <img src="\images\<%= locals.product?.image %>" alt="Imagen del Producto">
+            <img src="\images\<%= product?.img %>" alt="Imagen del Producto">
          <div class="details-container">
                 <div class="especs-detail">
                     <div class="title-detail" >
-                        <h2><%= locals.product?.name %></h2>
+                        <h2><%= product?.name %></h2>
                     </div>
                     <div class="color-n-quantity">
                         <div class="colors">
@@ -37,22 +37,24 @@
                         </div>
                     </div>
                     <div class="price-n-cta">
-                        <p class="price-final">$<%= locals.product?.price %></p>
+                        <p class="price-final">$<%= product.price.price %></p>
                         <button class="add-cart"> Añadir al carrito </button>
                         <button class="add-fav">Agregar a favoritos</button>
                     </div>
                     <div>
 
                         <p class="article-description">
-                            <%= locals.product?.description %>                            
+                            <%= product.description %>                            
                         </p>
                     </div>
                     <div class="text-detail">
                     <span class="tec-espec">Especificaciones técnicas</span>
                     <span class="personalize">Personalizar</span>
                     </div>
-                    <p class="tec-espec-description"><%= locals.product?.sizes %></p>
-                    <p class="tec-espec-description"><%= locals.product?.colors %></p>
+                    <% for (let i=0 ; i < product.sizes.length ; i++) { %>
+                        <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
+                    <% } %>
+                    <p class="tec-espec-description"><%= product.description %></p>
                 </div>
             </div>
         </article>

@@ -2,19 +2,19 @@
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const db = require('../database/models');
-const sequelize = db.sequelize;
+const { Op } = require('sequelize');
 const { validationResult } = require('express-validator');
 //const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 const { create } = require('domain');
-
+const cookies = require('cookie-parser');
 
 
 const controller = {
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
-                include: ['rol'],
+                include: ['roles'],
                 attributes: {
                     exclude: ['password', 'roles_id']
                 }
@@ -25,21 +25,24 @@ const controller = {
         }
     },
 
-    profile: (req, res) => {
-        db.User.findByPk(req.params.id, {
-            include: ['Rol']
+    profile: async (req, res) => {
+        try {
+            const user = await db.User.findByPk(req.session.user.id, {
+                attributes: { exclude: ['password'] },
+                include: ['role']
+            });
+            res.render('profile', { user: user.dataValues });
+        } catch (error) {
+
         }
-        )
-            .then(product => {
-                res.render('profile', { user })
-            })
     },
+
 
     edit: async (req, res) => {
         try {
             const user = await db.User.findByPk(req.params.id);
             const roles = await db.Rol.findAll()
-            res.render('productUserEdit', { user, roles });
+            res.render('userEditForm', { user, roles });
         } catch (error) {
             res.send(error);
         }
@@ -60,28 +63,34 @@ const controller = {
     },
 
     loginProcess: async (req, res) => {
-        const { emailUsuario, passwordUsuario, recordarUsuario } = req.body;
-
         try {
-            const userToLog = User.findOne({ where: { email: emailUsuario } });
-
-            if (userToLog && userToLog.password === passwordUsuario) {
-                req.session.user = {
-                    id: userToLog.id,
-                    firstName: userToLog.firstName,
-                };
-
-                // Si el usuario decidió ser recordado, establece una cookie
-                if (recordarUsuario) {
-                    res.cookie('userEmail', emailUsuario, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
-                }
-
-                return res.redirect('/');
-
-            } else {
-                const error = 'Correo electrónico o contraseña incorrectos'
-                return res.render('login', { error });
+            const user = await db.User.findOne({
+                attributes: ['id', 'email', 'first_name', 'password'],
+                include: [{
+                    association: 'role',
+                    attributes: ['description']
+                }]
+            });
+            if (!user) {
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
+            if (!bcrypt.compareSync(req.body.passwordUsuario, user.password)) {
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+            }
+            req.session.user = {
+                id: user.id,
+                email: user.email,
+                firstName: user.first_name,
+                role: user.role.description
+            };
+
+            // Setear cookie si el usuario desea ser recordado
+            if (req.body.recordarUsuario) {
+                res.cookie('userEmail', user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+            }
+
+            return res.redirect('/');
+
         } catch (error) {
             res.send(error);
         }
@@ -93,11 +102,10 @@ const controller = {
     },
 
     registerProcess: async (req, res) => {
-        const { email } = req.body;
         const errors = validationResult(req);
 
         try {
-            const userExists = User.findOne({ where: { email } });
+            const userExists = User.findOne({ where: { email : req.body.email} });
 
             if (!errors.isEmpty()) {  //si hay error renderiza la vista del registro con el error de validación
                 return res.render('register', { errors: errors.mapped(), oldData: req.body });
@@ -107,15 +115,18 @@ const controller = {
 
             } else { //si el usuario no existe y no hay error de validación permite el registro       
                 const user = {
-                    ...req.body,
-                    image: req.file?.filename || "default-image.jpg"
+                    first_name: req.body.firstName,
+                    last_name: req.body.lastName,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    img: req.file?.filename || "default-image.jpg"
                 };
 
-                const newUser = await User.create(user);
-                return res.send('usuario registrado con éxito');
+                await User.create(user);
+                res.redirect('/user/login');
             }
         } catch (error) {
-            res.send(err);
+            res.send(error);
         }
     },
 

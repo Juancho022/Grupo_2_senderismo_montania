@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const forUsers = require('../middlewares/middlewareUser');
+const authenticationMiddleware = require('../middlewares/authenticationMiddleware');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -20,15 +20,15 @@ const upload = multer({ storage: storage });
 const inventoryController = require('../controllers/inventoryController');
 
 
-router.get('/', forUsers ,inventoryController.inventory);
+router.get('/' ,inventoryController.inventory);
 
 // Resto de las rutas protegidas
-router.get('/create', forUsers, inventoryController.create);
-router.post('/create', forUsers, upload.single('image'), inventoryController.store);
+router.get('/create', authenticationMiddleware, inventoryController.create);
+router.post('/create', authenticationMiddleware, upload.single('image'), inventoryController.store);
 
-router.get('/:id/edit', forUsers, inventoryController.edit);
-router.put('/:id/edit', forUsers, inventoryController.update);
+router.get('/:id/edit', authenticationMiddleware, inventoryController.edit);
+router.put('/:id/edit', authenticationMiddleware, inventoryController.update);
 
-router.delete('/:id/delete', forUsers, inventoryController.destroy);
+router.delete('/:id/delete', authenticationMiddleware, inventoryController.destroy);
 
 module.exports = router;

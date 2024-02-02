@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'ProductPrice'; 
+    let alias = 'ProductPrice';
     let cols = {
         id: {
             type: DataTypes.INTEGER(10).UNSIGNED,
@@ -27,14 +27,17 @@ module.exports = (sequelize, DataTypes) => {
 
     let config = {
         tableName: 'product_prices',
-        timestamps: true
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
+        deletedAt: false
     }
     const ProductPrice = sequelize.define(alias, cols, config);
 
-    ProductPrice.associate = function (models) { 
-        ProductPrice.hasMany(models.Product, { // el precio puede tener muchos productos asociados
+    ProductPrice.associate = function(models) {
+        ProductPrice.belongsTo(models.Product, {
             foreignKey: 'products_id',
-            as: 'productos'
+            as: 'product'
         });
     };
 
