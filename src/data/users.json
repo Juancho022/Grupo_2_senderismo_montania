@@ -1,20 +1,31 @@
 [
- {
-  "id": 1,
-  "firstName": "Pedro",
-  "lastName": "Garcia",
-  "email": "pedro@gmail.com",
-  "password": "password123",
-  "category": "guest",
-  "image": "https://i.imgur.com/abc123.jpg"
- },
- {
-  "id": 2,
-  "firstName": "Ana",
-  "lastName": "Perez",
-  "email": "ana@gmail.com",
-  "password": "password456",
-  "category": "admin",
-  "image": "https://i.imgur.com/def456.jpg"
- }
-]
+    {
+     "id": 1,
+     "firstName": "Pedro",
+     "lastName": "Garcia",
+     "email": "pedro@gmail.com",
+     "password": "password123",
+     "category": "guest",
+     "image": "https://i.imgur.com/abc123.jpg"
+    },
+    {
+     "id": 2,
+     "firstName": "Ana",
+     "lastName": "Perez",
+     "email": "ana@gmail.com",
+     "password": "password456",
+     "category": "admin",
+     "image": "https://i.imgur.com/def456.jpg"
+    },
+    {
+     "id": 3,
+     "firstName": "matias",
+     "lastName": "leglise",
+     "email": "leglisematias@gmail.com",
+     "password": [
+      "22222",
+      "2222222"
+     ],
+     "image": "default-image.jpg"
+    }
+   ]

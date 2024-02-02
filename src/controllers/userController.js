@@ -1,16 +1,16 @@
-const fs = require('fs');
+// const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const db = require('../database/models');
 const { Op } = require('sequelize');
 const { validationResult } = require('express-validator');
 //const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const { create } = require('domain');
 const cookies = require('cookie-parser');
 
 
-const userController = {
+const controller = {
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
@@ -61,45 +61,13 @@ const userController = {
     login: (req, res) => {
         res.render('login');
     },
-    
-    // loginProcess: function (req, res) {
-    //     let errors = validationResult(req);
-    //     if (errors.isEmpty()) {
-    //         let usersJSON = fs.readFileSync(usersFilePath, { encoding: 'utf-8' });
-    //         let users;
-    //         if (usersJSON === "") {
-    //             users = [];
-    //         } else {
-    //             users = JSON.parse(usersJSON);
-    //         }
-    //         let usuarioALoguearse;
-    //         for (let i = 0; i < users.length; i++) {
-    //             if (users[i].email === req.body.email) {
-    //                 if (bcryptjs.compareSync(req.body.password, users[i].password)) {
-    //                     usuarioALoguearse = users[i];
-    //                     break;
-    //                 }
-    //             }
-    //         }
-    //         if (usuarioALoguearse === undefined) {
-    //             res.render('login', { errors: [{ msg: 'Credenciales Inválidas' }] });
-    //         } else {
-    //             req.session.usuarioLogueado = usuarioALoguearse;
-    //             res.redirect('/');
-    //         }            
-    //         } else {
-    //         res.render('login', { errors: errors.errors });
-    //     }
-    // },    
-    
+
     loginProcess: async (req, res) => {
         try {
             const user = await db.User.findOne({
-                attributes: ['id', 'email', 'first_name', 'password'],
-                include: [{
-                    association: 'role',
-                    attributes: ['description']
-                }]
+                where: { email: req.body.emailUsuario },
+                include:['roles'],
+                limit: 1
             });
             if (!user) {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
@@ -108,15 +76,11 @@ const userController = {
                 return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
             }
             req.session.user = {
-                id: user.id,
                 email: user.email,
-                firstName: user.first_name,
-                role: user.role.description
+                id: user.roles.id
             };
-
-            // Setear cookie si el usuario desea ser recordado
-            if (req.body.recordarUsuario) {
-                res.cookie('userEmail', user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+            if (req.body.recordarUsuario != undefined) {
+                res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
             }
 
             return res.redirect('/');
@@ -135,7 +99,7 @@ const userController = {
         const errors = validationResult(req);
 
         try {
-            const userExists = User.findOne({ where: { email : req.body.email} });
+            const userExists = User.findOne({ where: { email: req.body.email } });
 
             if (!errors.isEmpty()) {  //si hay error renderiza la vista del registro con el error de validación
                 return res.render('register', { errors: errors.mapped(), oldData: req.body });
@@ -173,4 +137,4 @@ const userController = {
 
 };
 
-module.exports = userController;
+module.exports = controller;
