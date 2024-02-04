@@ -5,6 +5,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     background-color: rgba(0, 0, 0, 0.86);
     display: flex;
@@ -66,9 +70,9 @@ footer {
     background-color: #000;
     display: flex;
     padding: 5px;
-    position: fixed;
     bottom: 0;
     width: 100%;
+    position: relative;
 }
 
 footer div.copyright{
@@ -357,6 +361,7 @@ section#cardsHome  {
     width: 100%;
     flex-wrap: wrap;
     padding: 15px;
+    padding-bottom: 48px;
     justify-content: space-around;
 }
 
