@@ -29,9 +29,9 @@ const validations = [
     body('password').notEmpty().withMessage('La contraseña es requerida')
 ];
 
-router.get('/list', userController.list);
+router.get('/list'  ,userController.list);
 
-router.get('/profile/:id', userController.profile);
+router.get('/profile', userController.profile);
 
 router.get('/register', userController.register);
 //procesa el register/ crea un usuario

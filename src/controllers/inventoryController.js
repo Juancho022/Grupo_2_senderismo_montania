@@ -1,7 +1,8 @@
 //const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
-const sequelize = db.sequelize;
+const { Op } = require('sequelize');
+
 
 //const productsFilePath = path.join(__dirname, '../data/products.json');
 //let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -12,7 +13,7 @@ const sequelize = db.sequelize;
 const inventoryController = {
     //list
     inventory: (req,res)=>{
-    db.Product.findAll( {
+    const products = db.Product.findAll( {
         attributes: ['img', 'description', 'name','id'],
         include: [{
             association: 'sizes',
@@ -24,6 +25,9 @@ const inventoryController = {
             association: 'category',
             attributes: ['description']
         }]
+    })
+    .then(products=>{
+        res.render('inventory', {products})
     })
 },
     //Create -Form to create 
@@ -53,11 +57,12 @@ const inventoryController = {
         */
         async (req, res)=> {
             try {
-                const product = await db.Product.findByPk(req.params.id);
-                const categories = await db.Category.findAll();
-                res.render('productEditForm', { product, categories});
+                const product = await db.Product.findByPk(req.params.id,{
+                    include:['category']
+                });
+                res.render('productEditForm', { product});
             } catch (error) {
-                res.send(err);
+                res.send(error);
             }
         },
 

@@ -1,9 +1,12 @@
+require('dotenv').config({path:__dirname+'/./../../.env'});
+
 module.exports = {
   "development": {
     "username": "root",
     "password": null,
     "database": "peak_database",
-    "host": "127.0.0.1",
+    "host": "localhost",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
@@ -20,4 +23,5 @@ module.exports = {
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
-}
+};
+
