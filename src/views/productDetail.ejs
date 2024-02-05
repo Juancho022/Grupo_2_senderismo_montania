@@ -47,14 +47,10 @@
                             <%= product.description %>                            
                         </p>
                     </div>
-                    <div class="text-detail">
-                    <span class="tec-espec">Especificaciones técnicas</span>
-                    <span class="personalize">Personalizar</span>
-                    </div>
+                    <p class="title-sizes">Talles disponibles</p>
                     <% for (let i=0 ; i < product.sizes.length ; i++) { %>
                         <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
                     <% } %>
-                    <p class="tec-espec-description"><%= product.description %></p>
                 </div>
             </div>
         </article>
