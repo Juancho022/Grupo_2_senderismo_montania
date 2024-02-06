@@ -7,6 +7,7 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 
 const { body } = require('express-validator');
+const { validationResult } = require('express-validator');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -22,7 +23,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 
 const validations = [
-    body('firstName').notEmpty().withMessage('El nombre es requerido'),
+    body('firstName').notEmpty().withMessage('El nombre es requerido').bail(),
     body('lastName').notEmpty().withMessage('El apellido es requerido'),
     body('email').notEmpty().withMessage('El correo es requerido')
     .isEmail().withMessage('Ingrese un formato de correo válido'),

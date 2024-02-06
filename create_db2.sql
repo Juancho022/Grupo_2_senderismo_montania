@@ -118,3 +118,4 @@ CREATE TABLE `carts_details` (
   KEY `products_id` (`products_id`),
 CONSTRAINT `carts_details_ibfk_1` FOREIGN KEY (`carts_id`) REFERENCES `carts` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+SELECT * FROM users;

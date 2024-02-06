@@ -12,28 +12,41 @@
                             <div class="label-product">
                                 <label for="name">Producto</label>
                                 <input type="text" class="product-imput" name="name" id="name"
-                                    placeholder="Nombre del producto" required>
+                                    placeholder="Nombre del producto" value="<%= (locals.oldData && locals.oldData.name) ? locals.oldData.name : '' %>"
+                                    <% if (locals.errors && locals.errors.name) { %>
+                                        <span class="error"><%= locals.errors.name.msg %></span>
+                                    <% } %>
+                                required>
                             </div>
 
                             <div class="edit-img">
-                                <input type="file" id="image" accept="image/*" class="product-imput" name="image">
+                                <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" class="product-imput" name="image">
                             </div>
 
                             <div class="label-product">
                                 <label for="description">Descripción</label>
                                 <input type="text" class="product-imput" name="description"
-                                    placeholder="Descripción del producto" required>
+                                    placeholder="Descripción del producto" value="<%= (locals.oldData && locals.oldData.description) ? locals.oldData.description : '' %>"
+                                    <% if (locals.errors && locals.errors.description) { %>
+                                        <span class="error"><%= locals.errors.description.msg %></span>
+                                    <% } %>
+                                required>
                             </div>
 
                             <div class="label-product-price">
                                 <label for="price">Precio</label>
                                 <input type="text" class="product-imput-price" name="price" id="price"
-                                    placeholder="Precio del producto" required>
+                                    placeholder="Precio del producto" value="<%= (locals.oldData && locals.oldData.price) ? locals.oldData.price : '' %>"
+                                    <% if (locals.errors && locals.errors.price) { %>
+                                        <span class="error"><%= locals.errors.price.msg %></span>
+                                    <% } %>
+                                required>
                             </div>
 
                             <div class="label-product-price">
                                 <label for="discount">Descuento</label>
                                 <input type="text" id="discount" name="discount" placeholder="Ej: 15"
+                                 value="<%= (locals.oldData && locals.oldData.discount) ? locals.oldData.discount : '' %>"
                                     class="product-imput-price">
                             </div>
 
@@ -82,10 +95,10 @@
                             <div class="product-category">
                                 <span id="category">Categoría</span>
                                 <select name="category" id="category" class="product-category-detail">
-                                    <option value="climbing">Escalada</option>
-                                    <option value="accessories">Accesorios</option>
-                                    <option value="hiking">Senderismo</option>
-                                    <option value="footwear">Calzados</option>
+                                    <option value="climbing" <%= (locals.oldData && oldData.category === 'climbing') && 'selected' %>>Escalada</option>
+                                    <option value="accessories" <%= (locals.oldData && oldData.category === 'accessories') && 'selected' %>>Accesorios</option>
+                                    <option value="hiking" <%= (locals.oldData && oldData.category === 'hiking') && 'selected' %>>Senderismo</option>
+                                    <option value="footwear" <%= (locals.oldData && oldData.category === 'footwear') && 'selected' %>>Calzados</option> 
                                 </select>
                             </div>
                             <div class="button-submit">
