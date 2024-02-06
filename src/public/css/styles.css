@@ -5,6 +5,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     background-color: rgba(0, 0, 0, 0.86);
     display: flex;
@@ -66,9 +70,9 @@ footer {
     background-color: #000;
     display: flex;
     padding: 5px;
-    position: fixed;
     bottom: 0;
     width: 100%;
+    position: relative;
 }
 
 footer div.copyright{
@@ -237,13 +241,20 @@ html {
     font-size: 62.5%;  
 }
 
+video#hero-video {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    left: -118px;
+}
+
 main section#hero {
     width: 100%;
     overflow: hidden;
-    height: 100vh;
-    background: url(/images/hero.jpg) center/cover no-repeat;
-    background-attachment: fixed;
-}
+    height: 80vh;
+   /*  background: url(/images/hero.jpg) center/cover no-repeat;
+    background-attachment: fixed; */
+} 
 
 main section img#heroImage {
     display: flex;
@@ -350,6 +361,7 @@ section#cardsHome  {
     width: 100%;
     flex-wrap: wrap;
     padding: 15px;
+    padding-bottom: 48px;
     justify-content: space-around;
 }
 
@@ -437,13 +449,16 @@ section#cardsHome div.card button.buttonCard:hover {
 /* QUERIES START */
 
 /*************MOBILE**************************/
-@media (max-width: 480px) {
-
+@media (max-width: 425px) {
+    #hero-video {
+        display: none; 
+    }
 
     main section#hero {
     width: 110%;
     height: 60vh;
-    background-position: -60px -331px;
+    background: url(/images/hero.jpg) center/cover no-repeat;
+    background-attachment: fixed; 
     }
 
     main section img#heroImage {
@@ -547,9 +562,21 @@ section#cardsHome div.card button.buttonCard:hover {
 /*************TABLET**************************/
 @media (min-width: 768px) {
 
+    main section#hero {
+        background: url(/images/hero.jpg) center/cover no-repeat;
+        background-attachment: fixed; 
+        height: 70vh;
+        }
+
+    video#hero-video {
+        height: 70vh;
+        position: relative;
+        left: -160px;
+        }
+
 
     main section div#rightBox {
-        top: 26%;
+        top: 20%;
         left: 40%;
         width: 60%;
     }
@@ -633,9 +660,17 @@ section#cardsHome div.card button.buttonCard:hover {
 }
 
 /*************PC*************************/
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
+
+    video#hero-video {
+        overflow: hidden;
+        height: 100vh;
+        position: relative;
+        left: -118px;
+    }
+
     main section div#rightBox {
-        top: 20%;
+        top: 15%;
         left: 50%;
         width: 40%;
     }
@@ -661,7 +696,24 @@ section#cardsHome div.card button.buttonCard:hover {
         margin: 24px;
     }
 
-}*{
+    @media (min-width: 1441px) {
+        video#hero-video {
+            height: 120vh;
+            position: relative;
+            left: -200px;
+        }
+
+        main section div p#paragraph {
+            font-size: 1.2vw;
+        }
+    }
+
+
+
+
+}
+
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;

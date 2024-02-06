@@ -96,6 +96,7 @@ div.less {
   padding-bottom: 2px;
   padding-left: 12px;
   padding-right: 12px;
+  cursor: pointer;
 }
 
 p.quantity {
@@ -120,6 +121,7 @@ p.more {
   padding-left: 12px;
   padding-right: 12px;
   color: white;
+  cursor: pointer;
 }
 
 .price-n-cta {
@@ -143,6 +145,7 @@ button.add-cart {
   border-radius: 4px;
   font-size: 16px;
   margin-right: 16px;
+  cursor: pointer;
 }
 
 button.add-fav {
@@ -153,6 +156,7 @@ button.add-fav {
   border-radius: 4px;
   font-size: 16px;
   margin-right: 16px;
+  cursor: pointer;
 }
 
 .off {
@@ -167,6 +171,12 @@ i.fa-solid.fa-credit-card {
   margin-right: 16px;
 }
 
+p.title-sizes {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
 p.article-description {
   font-size: 16px;
   margin-bottom: 16px;
@@ -175,23 +185,6 @@ p.article-description {
 .text-detail {
   font-size: 16px;
   display: flex;
-}
-
-div.text-detail span.tec-espec {
-  display: flex;
-  font-weight: 600;
-  border-bottom: solid 6px #EFC84C;
-  padding-bottom: 6px;
-  width: 215px;
-}
-
-div.text-detail span.personalize {
-  display: flex;
-  font-weight: 600;
-  border-bottom: solid 6px #dad9d9;
-  padding-bottom: 6px;
-  width: 124px;
-  padding-left: 6px;
 }
 
 p.tec-espec-description {
@@ -307,12 +300,6 @@ footer {
     left: -25px;
   }
 
-  .text-detail {
-    position: relative;
-    top: 45px;
-    left: -25px;
-  }
-
   p.tec-espec-description {
     position: relative;
     top: 45px;
@@ -400,13 +387,7 @@ footer {
     left: -25px;
   }
 
-  .text-detail {
-    position: relative;
-    top: 45px;
-    left: -25px;
-  }
-
-  p.tec-espec-description {
+   p.tec-espec-description {
     position: relative;
     top: 45px;
     left: -25px;

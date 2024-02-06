@@ -47,14 +47,13 @@
                                     <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
                                         , 'Calzados' ]; %>
                                         <% categories.forEach(category=> { %>
-                                            <option value="<%= category %>" <%= product.category === category ? 'selected'
-                                                : '' %>>
+                                            <option value="<%= category %>" <%= product.category === category ? 'selected' : '' %>>
                                                 <%= category %>
                                             </option>
                                             <% }); %>
                                 </select>
                                 <span class="product-price">
-                                    <%= product.price %>
+                                    <%= product.price.price %>
                                 </span>
                                 <div class="counter">
                                     <div class="button" id="decrease">-</div>
@@ -73,21 +72,44 @@
                             <% }) %>
                     </div>
 
-
                     <%- include('./partials/footer') %>
 
-
-
-
-
-
-
-
-
-
-
-
                 </main>
+
+
+                <!-- JavaScript para la funcionalidad del contador -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtener referencias a los elementos HTML
+            var decreaseButtons = document.querySelectorAll('.button#decrease');
+            var increaseButtons = document.querySelectorAll('.button#increase');
+            var countElements = document.querySelectorAll('.counter #count');
+
+            // Manejar el evento de decremento
+            decreaseButtons.forEach(function (button, index) {
+                button.addEventListener('click', function () {
+                    // Obtener el valor actual y restar 1
+                    var currentCount = parseInt(countElements[index].textContent);
+                    var newCount = currentCount - 1;
+
+                    // Actualizar el elemento con el nuevo valor
+                    countElements[index].textContent = newCount;
+                });
+            });
+
+            // Manejar el evento de incremento
+            increaseButtons.forEach(function (button, index) {
+                button.addEventListener('click', function () {
+                    // Obtener el valor actual y sumar 1
+                    var currentCount = parseInt(countElements[index].textContent);
+                    var newCount = currentCount + 1;
+
+                    // Actualizar el elemento con el nuevo valor
+                    countElements[index].textContent = newCount;
+                });
+            });
+        });
+    </script>
 
 
         </body>
