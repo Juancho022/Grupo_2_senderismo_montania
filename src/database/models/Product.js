@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         timestamp: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: false,
+            defaultValue: DataTypes.NOW
         },
         description: {
             type: DataTypes.STRING,
@@ -34,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     };
     let config = {
         tableName: 'products',
-        timestamps: true,
+        timestamps: false,
         createdAt: false,
         updatedAt: false,
         deletedAt: false
