@@ -99,7 +99,7 @@ module.exports = {
         timestamp: new Date(),
         description: 'Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña',
         //sizes_id: ,
-        img: 'shoes (1).png'
+        img: 'shoes (1).jpg'
       },
       {
         name: 'Botines',
@@ -107,7 +107,7 @@ module.exports = {
         timestamp: new Date(),
         description: 'Botas diseñadas para proporcionar un ajuste preciso, tracción en superficies rocosas y comodidad durante largas jornadas en la montaña',
         //sizes_id: ,
-        img: 'shoes (2).png'
+        img: 'shoes (2).jpg'
       },
       {
         name: 'Botines para nieve',
@@ -115,7 +115,7 @@ module.exports = {
         timestamp: new Date(),
         description: 'Son la elección perfecta para aventureros que desean enfrentar las condiciones más frías y desafiantes de la montaña. Las mismas están diseñadas para proporcionar un ajuste preciso, una tracción excepcional en superficies resbaladizas y, lo más importante, una comodidad insuperable durante largas jornadas en la montaña, incluso en climas extremos',
         //sizes_id: ,
-        img: 'shoes (3).png'
+        img: 'shoes (3).jpg'
       },
       {
         name: 'Mochila Peak',
