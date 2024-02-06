@@ -25,14 +25,14 @@
                         </div>
                         <div class="count-detail">
                             <p>Cantidad</p>
-                            <div class="less">
+                            <div class="less" onclick="decrementQuantity()">
                                 <p>-</p>
                             </div>
                             <div>
-                                <p class="quantity">1</p>
+                                <p class="quantity" id="quantity">1</p>
                             </div>
                             <div>
-                                <p class="more">+</p>
+                                <p class="more" onclick="incrementQuantity()">+</p>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,6 @@
                         <button class="add-fav">Agregar a favoritos</button>
                     </div>
                     <div>
-
                         <p class="article-description">
                             <%= product.description %>                            
                         </p>
@@ -55,6 +54,25 @@
             </div>
         </article>
     </main>
+
+    <script>
+        let quantityElement = document.getElementById('quantity');
+
+        function decrementQuantity() {
+            let currentQuantity = parseInt(quantityElement.textContent);
+            if (currentQuantity > 1) {
+                currentQuantity--;
+                quantityElement.textContent = currentQuantity;
+            }
+        }
+
+        function incrementQuantity() {
+            let currentQuantity = parseInt(quantityElement.textContent);
+            currentQuantity++;
+            quantityElement.textContent = currentQuantity;
+        }
+    </script>
+
 
     <%- include('./partials/footer') %>
 
