@@ -12,24 +12,24 @@ const { Op } = require('sequelize');
 
 const inventoryController = {
     //list
-    inventory: (req,res)=>{
-    const products = db.Product.findAll( {
-        attributes: ['img', 'description', 'name','id'],
-        include: [{
-            association: 'sizes',
-            attributes: ['sizes_type'] 
-        }, {
-            association: 'price',
-            attributes: ['price'] 
-        },{
-            association: 'category',
-            attributes: ['description']
-        }]
-    })
-    .then(products=>{
-        res.render('inventory', {products})
-    })
-},
+    inventory: (req, res) => {
+        const products = db.Product.findAll({
+            attributes: ['img', 'description', 'name', 'id'],
+            include: [{
+                association: 'sizes',
+                attributes: ['sizes_type']
+            }, {
+                association: 'price',
+                attributes: ['price']
+            }, {
+                association: 'category',
+                attributes: ['description']
+            }]
+        })
+            .then(products => {
+                res.render('inventory', { products })
+            })
+    },
     //Create -Form to create 
     create: (req, res) => {
         res.render('productCreateForm');
@@ -39,7 +39,12 @@ const inventoryController = {
     store: async (req, res) => {
         try {
             const newProduct = {
-                ...req.body,
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                sizes_id: req.body.sizes,
+                categories_id: req.body.category,
+                timestamp: new Date(),
                 image: req.file?.filename || "default-image.jpg"
             };
 
@@ -55,13 +60,14 @@ const inventoryController = {
         const product = products.find((product) => product.id == req.params.id);
         res.render('productEditForm', { productToEdit: product });
         */
-        async (req, res)=> {
+        async (req, res) => {
             try {
-                const product = await db.Product.findByPk(req.params.id);
-                const categories = await db.Category.findAll();
-                res.render('productEditForm', { product, categories});
+                const product = await db.Product.findByPk(req.params.id, {
+                    include: ['category']
+                });
+                res.render('productEditForm', { product });
             } catch (error) {
-                res.send(err);
+                res.send(error);
             }
         },
 

@@ -35,7 +35,7 @@ router.get('/profile', userController.profile);
 
 router.get('/register', userController.register);
 //procesa el register/ crea un usuario
-router.post('/register', upload.single('image'), validations, userController.registerProcess);
+router.post('/register', upload.single('image'),  validations, userController.registerProcess);
 
 
 router.get('/login', userController.login);

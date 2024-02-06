@@ -66,7 +66,7 @@ const controller = {
         try {
             const user = await db.User.findOne({
                 where: { email: req.body.emailUsuario },
-                include:['roles'],
+                include: ['roles'],
                 limit: 1
             });
             if (!user) {
@@ -81,6 +81,10 @@ const controller = {
             };
             if (req.body.recordarUsuario != undefined) {
                 res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+                id: user.roles.id
+            };
+            if (req.body.recordarUsuario != undefined) {
+                res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
             }
 
             return res.redirect('/');
@@ -91,35 +95,32 @@ const controller = {
     },
 
     register: (req, res) => {
-        console.log('Ruta de login');
         res.render('register');
     },
 
     registerProcess: async (req, res) => {
-        const errors = validationResult(req);
-
         try {
-            const userExists = User.findOne({ where: { email: req.body.email } });
-
+            const userExists = await db.User.findOne({ where: { email: req.body.email } });
+            if (userExists) {
+                return res.render('userExists');
+            }
+            const errors = validationResult(req);
             if (!errors.isEmpty()) {  //si hay error renderiza la vista del registro con el error de validación
                 return res.render('register', { errors: errors.mapped(), oldData: req.body });
-
-            } else if (userExists) {  //si el usuario existe muestra la vista de error y redirige a login
-                return res.render('userExists');
-
-            } else { //si el usuario no existe y no hay error de validación permite el registro       
-                const user = {
-                    first_name: req.body.firstName,
-                    last_name: req.body.lastName,
-                    email: req.body.email,
-                    password: bcrypt.hashSync(req.body.password, 10),
-                    img: req.file?.filename || "default-image.jpg"
-                };
-
-                await User.create(user);
-                res.redirect('/user/login');
-            }
+            } 
+            const newUser = {
+                first_name: req.body.firstName,
+                last_name: req.body.lastName,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password.toString(), 10),
+                img: req.file?.filename || "default-image.jpg",
+                roles_id: 2
+            };
+            await db.User.create(newUser);
+            console.log(newUser)
+            return res.redirect('/user/login');
         } catch (error) {
+            console.log(error)
             res.send(error);
         }
     },

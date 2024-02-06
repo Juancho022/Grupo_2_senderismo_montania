@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -12,7 +13,7 @@ const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
 
 const authentication = require('./middlewares/authentication');
-const authenticationMiddleware = require('./middlewares/authenticationMiddleware');
+const remember = require('./middlewares/rememberMiddleware');
 
 const app = express();
 
@@ -28,7 +29,7 @@ app.use(session({
 })) //token de encriptación
 app.use(cookies());
 app.use(authentication);
-app.use(authenticationMiddleware);
+app.use(remember);
 
 
 app.set('view engine', 'ejs');

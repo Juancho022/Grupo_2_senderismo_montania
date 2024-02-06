@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const forUsers = require('../middlewares/middlewareUser');
+const forAdminMiddleware = require('../middlewares/forAdminMiddleware');
 
 
 // ************ Controller Require ************

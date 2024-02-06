@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
         password: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING(20),
             allowNull: false
         },
         first_name: {
@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         roles_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         address: {
             type: DataTypes.TEXT,
