@@ -116,6 +116,7 @@ div#decrease, #increase {
     display: flex;
     justify-content: center;
     color: #efc84c;
+    cursor: pointer;
 }
 
 div.edit-n-delete{
