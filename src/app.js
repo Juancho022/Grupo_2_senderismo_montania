@@ -10,6 +10,7 @@ const mainRoutes = require('./routes/main');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
+const helpRoutes = require('./routes/ayuda');
 
 //const middlewareForUsers = require('./middlewares/middlewareUser');
 
@@ -56,6 +57,7 @@ app.use('/', mainRoutes);
 app.use('/user', userRoutes);
 app.use('/products', productRoutes);
 app.use('/inventory', inventoryRoutes);
+app.use('/help', helpRoutes);
 
 
 const port = 3030;
