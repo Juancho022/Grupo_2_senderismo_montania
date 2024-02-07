@@ -58,6 +58,9 @@ const inventoryController = {
     edit:
         async (req, res) => {
             try {
+                const allColors = await db.Color.findAll({ attributes: ['color_name'] });
+                const allSizes = await db.Size.findAll({ attributes: ['sizes_type'] });
+                const categories = await db.Category.findAll();
                 const product = await db.Product.findByPk(req.params.id,{
                         attributes: ['img', 'description', 'name', 'id'],
                         include: [{
@@ -71,7 +74,7 @@ const inventoryController = {
                             attributes: ['description']
                         }]
                 });
-                res.render('productEditForm', { product });
+                res.render('productEditForm', { product, categories, allSizes, allColors });
             } catch (error) {
                 res.send(error);
             }

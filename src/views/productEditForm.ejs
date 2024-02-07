@@ -40,26 +40,22 @@
 
                             <div class="size-options">
                                 <label for="size">Talles disponibles</label>
-                                <% product.sizes.forEach((size)=> { %>
+                                <% allSizes.forEach((size) => { %>
                                     <label>
                                         <input type="checkbox" name="sizes" value="<%= size.sizes_type %>">
                                         <%= size.sizes_type %>
                                     </label>
-                                    <% }) %>
+                                <% }); %>
                             </div>
 
                             <div class="color-options">
-                                <label for="color-options">Colores disponibles</label>
-                                <% if (product.colors && product.colors.length > 0) { %>
-                                    <% product.colors.forEach((color) => { %>
-                                        <label>
-                                            <input type="checkbox" name="colors" value="<%= color.color_name %>">
-                                            <%= color.color_name %>
-                                        </label>
-                                    <% }); %>
-                                <% } else { %>
-                                    <p>No hay colores disponibles para este producto.</p>
-                                <% } %>
+                                <label for="color">Colores disponibles</label>
+                                <% allColors.forEach((color) => { %>
+                                    <label>
+                                        <input type="checkbox" name="colors" value="<%= color.color_name %>">
+                                        <%= color.color_name %>
+                                    </label>
+                                <% }); %>
                             </div>
 
                             <div class="counter-edit-product">
@@ -75,6 +71,13 @@
                                     <option value="<%= product.category.id %>" selected>
                                         <%= product.category.description %>
                                     </option>
+                                    <% categories.forEach(category => { %>
+                                        <% if (category.id !== product.category.id) { %>
+                                            <option value="<%= category.id %>">
+                                                <%= category.description %>
+                                            </option>
+                                        <% } %>
+                                    <% }); %>
                                 </select>
                             </div>
                             <div class="button-submit">
