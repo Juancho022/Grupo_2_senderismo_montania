@@ -6,59 +6,60 @@
                 <main class="form-edit-create">
                     <div class="product-edit">
                         <div class="edit-img">
-                            <img class="img-edit-product" src="/images/<%= productToEdit.image %>">
+                            <img class="img-edit-product" src="/images/<%= product.img %>">
                             <button class="edit-image-button">
                                 Editar imágenes
                             </button>
                         </div>
-                        <form class="product-edit-form" action="/inventory/<%= productToEdit.id %>/edit?_method=PUT"
+                        <form class="product-edit-form" action="/inventory/<%= product.id %>/edit?_method=PUT"
                             method="post">
                             <h2 id="edit-product-title">Editar producto</h2>
                             <div class="label-product">
                                 <label for="product">Producto</label>
                                 <input type="text" class="product-imput" name="name" id="name"
-                                    placeholder="Nombre del producto" required value="<%= productToEdit.name %>">
+                                    placeholder="Nombre del producto" required value="<%= product.name %>">
                             </div>
 
                             <div class="label-product">
                                 <label for="description">Descripción</label>
                                 <input type="text" class="product-imput" name="description"
-                                    placeholder="Descripción del producto" required
-                                    value="<%= productToEdit.description %>">
+                                    placeholder="Descripción del producto" required value="<%= product.description %>">
                             </div>
 
                             <div class="label-product-price">
                                 <label for="price">Precio</label>
                                 <input type="text" class="product-imput-price" name="price" id="price"
-                                    placeholder="Precio del producto" required value="<%= productToEdit.price %>">
+                                    placeholder="Precio del producto" required value="<%= product.price.price %>">
                             </div>
 
                             <div class="label-product-price">
                                 <label for="discount">Descuento</label>
                                 <input type="text" id="discount" name="discount" placeholder="Ej: 15"
-                                    class="product-imput-price" value="<%= productToEdit.discount %>">
+                                    class="product-imput-price" >
                             </div>
 
                             <div class="size-options">
                                 <label for="size">Talles disponibles</label>
-                                <% productToEdit.sizes.forEach((size, index)=> { %>
+                                <% product.sizes.forEach((size)=> { %>
                                     <label>
-                                        <input type="checkbox" name="sizes"
-                                            value="<%= productToEdit.sizes[index] === size ? size : '' %>">
-                                        <%= size %>
+                                        <input type="checkbox" name="sizes" value="<%= size.sizes_type %>">
+                                        <%= size.sizes_type %>
                                     </label>
                                     <% }) %>
                             </div>
 
                             <div class="color-options">
                                 <label for="color-options">Colores disponibles</label>
-                                <% productToEdit.colors.forEach((color, index)=> { %>
-                                    <label>
-                                        <input type="checkbox" name="colors"
-                                            value="<%= productToEdit.colors[index] === color ? color : '' %>">
-                                        <%= color %>
-                                    </label>
+                                <% if (product.colors && product.colors.length > 0) { %>
+                                    <% product.colors.forEach((color) => { %>
+                                        <label>
+                                            <input type="checkbox" name="colors" value="<%= color.color_name %>">
+                                            <%= color.color_name %>
+                                        </label>
                                     <% }); %>
+                                <% } else { %>
+                                    <p>No hay colores disponibles para este producto.</p>
+                                <% } %>
                             </div>
 
                             <div class="counter-edit-product">
@@ -71,14 +72,9 @@
                             <div class="product-category">
                                 <span id="category">Categoría</span>
                                 <select class="product-category-detail" id="category">
-                                    <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
-                                        , 'Calzados' ]; %>
-                                        <% categories.forEach(category=> { %>
-                                            <option value="<%= category %>" <%=productToEdit.category===category
-                                                ? 'selected' : '' %>>
-                                                <%= category %>
-                                            </option>
-                                            <% }); %>
+                                    <option value="<%= product.category.id %>" selected>
+                                        <%= product.category.description %>
+                                    </option>
                                 </select>
                             </div>
                             <div class="button-submit">
