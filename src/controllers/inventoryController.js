@@ -56,14 +56,20 @@ const inventoryController = {
     },
 
     edit:
-        /*
-        const product = products.find((product) => product.id == req.params.id);
-        res.render('productEditForm', { productToEdit: product });
-        */
         async (req, res) => {
             try {
-                const product = await db.Product.findByPk(req.params.id, {
-                    include: ['category']
+                const product = await db.Product.findByPk(req.params.id,{
+                        attributes: ['img', 'description', 'name', 'id'],
+                        include: [{
+                            association: 'sizes',
+                            attributes: ['sizes_type']
+                        }, {
+                            association: 'price',
+                            attributes: ['price']
+                        }, {
+                            association: 'category',
+                            attributes: ['description']
+                        }]
                 });
                 res.render('productEditForm', { product });
             } catch (error) {
@@ -73,15 +79,6 @@ const inventoryController = {
 
 
     update: (req, res) => {
-        /*
-        const indexProduct = products.findIndex((product) => product.id == req.params.id);
-        products[indexProduct] = {
-            ...products[indexProduct],
-            ...req.body
-        };
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
-        */
         db.Product.update(req.body, { where: { id: req.params.id } })
             .then(() => {
                 res.redirect('/products/' + req.params.id);
@@ -89,7 +86,6 @@ const inventoryController = {
             .catch((err) => {
                 res.send(err);
             });
-
     },
 
     destroy: (req, res) => {

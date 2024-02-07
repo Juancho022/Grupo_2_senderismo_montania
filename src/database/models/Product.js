@@ -60,11 +60,12 @@ module.exports = (sequelize, DataTypes) => {
             as: 'colors'
         });
         Product.hasOne(models.ProductPrice,{
-            foreignKey: 'id',
+            foreignKey: 'products_id',
             as: 'price'
         })
         
     };
+
 
     return Product
 };
