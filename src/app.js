@@ -11,6 +11,7 @@ const mainRoutes = require('./routes/main');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
+const helpRoutes = require('./routes/ayuda');
 
 const authentication = require('./middlewares/authentication');
 const remember = require('./middlewares/rememberMiddleware');
@@ -41,6 +42,7 @@ app.use('/', mainRoutes);
 app.use('/user', userRoutes);
 app.use('/products', productRoutes);
 app.use('/inventory', inventoryRoutes);
+app.use('/help', helpRoutes);
 
 
 const port = process.env.PORT || 3030;

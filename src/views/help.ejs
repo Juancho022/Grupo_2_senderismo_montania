@@ -1,0 +1,35 @@
+<% let pageTitle='OBTENER AYUDA' %>
+    <%- include('partials/head', { styles: ['help'], pageTitle: pageTitle }) %>
+
+
+    <body>
+
+        <%- include('./partials/header') %>
+
+            <main>
+
+                    <section>
+                        <h1>OBTENER AYUDA</h1>
+                    </section>
+
+                    <div class="form">
+                        <form class="nav-search"   action="#"  method="post">
+                            <input type="text"   placeholder="¿Con que podemos ayudarte?">
+                        </form>
+                    </div>
+                     <!-- INICIA BLOQUE DE AYUDA RAPIDA -->
+                     <section class="fast-help">
+                        <div class="encabezados">
+                            <h2>SERVICIO DE ASISTENCA RAPIDA</h2>
+                            <p>Las respuestas a las preguntas mas frecuentes estan a solo un click</p>
+                        </div>
+                     </section>
+
+
+            </main>
+
+        <%- include('./partials/footer') %>
+
+    </body>
+
+</html>
