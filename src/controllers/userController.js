@@ -81,10 +81,6 @@ const controller = {
             };
             if (req.body.recordarUsuario != undefined) {
                 res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
-                id: user.roles.id
-            };
-            if (req.body.recordarUsuario != undefined) {
-                res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
             }
 
             return res.redirect('/');

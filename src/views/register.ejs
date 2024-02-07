@@ -66,14 +66,22 @@
                                                 <% } %>
                                         </div>
                                         <div>
-                                            <input type="file" id="image" accept="image/*" class="image-imput"
-                                                name="image">
+                                            <label for="image" class="custom-file-upload">
+                                                <i class="fas fa-cloud-upload-alt"></i> Subir imagen
+                                              </label>
+                                              <input type="file" id="image" accept="image/*" class="image-input" name="image" style="display: none;">
+                                              
                                         </div>
                                         <button type="submit">Registrarse</button>
+                                        <span id="register-message">¿Ya tenes cuenta? <a href="/user/login">INICIA SESIÓN</a></span>
                                     </form>
+
                                 </div>
-                        </section>
+                                
+                            </section>
+
                     </div>
+                   
                 </main>
 
                 <%- include('./partials/footer') %>
