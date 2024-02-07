@@ -44,14 +44,9 @@
                                     </span>
                                 </div>
                                 <select class="product-category">
-                                    <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
-                                        , 'Calzados' ]; %>
-                                        <% categories.forEach(category=> { %>
-                                            <option value="<%= category %>" <%=product.category===category ? 'selected'
-                                                : '' %>>
-                                                <%= category %>
-                                            </option>
-                                            <% }); %>
+                                    <option value="<%= product.category.id %>" selected>
+                                        <%= product.category.description %>
+                                    </option>
                                 </select>
                                 <span>
                                     <% if (product && product.price && product.price.price) { %>
