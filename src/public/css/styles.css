@@ -780,11 +780,11 @@ section.cardsBottom div.cards {
 }
 
 .shoesImage--1{
-    height: 39%;
+    height: 70%;
 }
 
 .shoesImage--4{
-    height: 43%;
+    height: 90%;
 }
 
 section.cardsBottom div.cards div.shoesDescription {
@@ -855,6 +855,10 @@ button.buttonShop #shop-cart {
     border-radius: 0px 0px 1px 0px;
     opacity: 1;
     background-color: grey;
+}
+
+#a-for-shoe-1 {
+    height: 40%;
 }
 /*
 #heart1 {
@@ -953,10 +957,10 @@ button.buttonShop #shop-cart {
         left: 4px;
     }
     .shoesImage--1{
-        height: 51%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 58%;
+        height: 90%;
     }
 }
 
@@ -993,14 +997,17 @@ button.buttonShop #shop-cart {
     #separate-only-769{
         display: block;
     }
+    #a-for-shoe-1 {
+        height: 53%;
+    }
     .shoesImage--1{
-        height: 34%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 34%;
+        height: 90%;
     }
     .shoesImage--2{
-        height: 34%;
+        height: 95%;
     }
     button.buttonShop{
         bottom: 22%;
@@ -1033,14 +1040,17 @@ button.buttonShop #shop-cart {
     #separate-only-769{
         display: block;
     }
+    #a-for-shoe-1 {
+        height: 35%;
+    }
     .shoesImage--1{
-        height: 37%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 37%;
+        height: 90%;
     }
     .shoesImage--2{
-        height: 37%;
+        height: 95%;
     }
     .orange-line{
         width: 75px;
@@ -1048,14 +1058,17 @@ button.buttonShop #shop-cart {
 }
 
 @media (min-width: 1900px) {
+    #a-for-shoe-1 {
+        height: 40%;
+    }
     .shoesImage--1{
-        height: 43%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 43%;
+        height: 90%;
     }
     .shoesImage--2{
-        height: 43%;
+        height: 95%;
     }
     .deportist {
         width: 55%;
@@ -1071,5 +1084,11 @@ button.buttonShop #shop-cart {
         line-height: 75px;
         bottom: 170px;
     }
+}
+
+.error-message {
+    background-color: RED;
+    margin-bottom: 10px;
+    color: #FFFF;
 }
 

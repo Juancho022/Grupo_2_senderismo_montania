@@ -25,40 +25,54 @@
                         </div>
                         <div class="count-detail">
                             <p>Cantidad</p>
-                            <div class="less">
+                            <div class="less" onclick="decrementQuantity()">
                                 <p>-</p>
                             </div>
                             <div>
-                                <p class="quantity">1</p>
+                                <p class="quantity" id="quantity">1</p>
                             </div>
                             <div>
-                                <p class="more">+</p>
+                                <p class="more" onclick="incrementQuantity()">+</p>
                             </div>
                         </div>
                     </div>
                     <div class="price-n-cta">
-                        <p class="price-final">$<%= product.price.price %></p>
+                        <p class="price-final">$<%= product.prices.price %></p>
                         <button class="add-cart"> Añadir al carrito </button>
                         <button class="add-fav">Agregar a favoritos</button>
                     </div>
                     <div>
-
                         <p class="article-description">
                             <%= product.description %>                            
                         </p>
                     </div>
-                    <div class="text-detail">
-                    <span class="tec-espec">Especificaciones técnicas</span>
-                    <span class="personalize">Personalizar</span>
-                    </div>
+                    <p class="title-sizes">Talles disponibles</p>
                     <% for (let i=0 ; i < product.sizes.length ; i++) { %>
                         <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
                     <% } %>
-                    <p class="tec-espec-description"><%= product.description %></p>
                 </div>
             </div>
         </article>
     </main>
+
+    <script>
+        let quantityElement = document.getElementById('quantity');
+
+        function decrementQuantity() {
+            let currentQuantity = parseInt(quantityElement.textContent);
+            if (currentQuantity > 1) {
+                currentQuantity--;
+                quantityElement.textContent = currentQuantity;
+            }
+        }
+
+        function incrementQuantity() {
+            let currentQuantity = parseInt(quantityElement.textContent);
+            currentQuantity++;
+            quantityElement.textContent = currentQuantity;
+        }
+    </script>
+
 
     <%- include('./partials/footer') %>
 
