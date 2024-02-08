@@ -16,18 +16,40 @@
             <li><a href="/products">PRODUCTOS</a></li>
             <li><a href="/help">AYUDA</a></li>
             <% if (!locals.user) { %>
-            <li><a href="/user/register">CREÁ TU CUENTA</a></li>
-            <% } %>
+                <li><a href="/user/register">CREÁ TU CUENTA</a></li>
+                <% } %>
         </ul>
     </nav>
     <nav class="right-bar">
         <% if (locals.user) { %>
             <h2 id="userLog">¡Hola <%= locals.user.firstName %>!</h2>
             <% } %>
-            <!-- <a id="logout-anchor" href="/user/logout">Cerrar sesión</a> -->
 
-            <div class="icon"><a href="/user/login"><i class="fa-solid fa-user"></i></a></div>             
-            <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-            <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>     
+            <div class="icon-container" onmouseenter="showPopup()" onmouseleave="hidePopup()">
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="popup" id="popup" onmouseenter="showPopup()" onmouseleave="hidePopup()">
+                    <div>
+                        <button id="login">
+                            <a href="/user/login">Iniciar sesión</a>
+                        </button>
+                    </div>
+                    <div>
+                        <p>
+                            Crear cuenta
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Inventario
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
     </nav>
+
 </header>

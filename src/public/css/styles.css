@@ -9,6 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* HEADER STYLES */
 header {
     background-color: rgba(0, 0, 0, 0.86);
     display: flex;
@@ -17,6 +18,49 @@ header {
     position: fixed;
     padding: 1px 16px;
     z-index: 2;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popup {
+    /* display: none;  */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    left: -96px; 
+    top: 100%; 
+    border-radius: 16px 8px;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup button {
+    background-color: transparent;
+    border: none;
+    margin: 16px;
+}
+
+
+.popup button a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.86);
+    font-size: small;
+}
+
+.popup button#login {
+    font-weight: 600;
+}
+
+.popup div {
+    border-bottom: 1px solid #8f015b;
+    width: 100%; 
+}
+
+
+.icon-container:hover .popup {
+    display: block;
 }
 
 li {
@@ -59,12 +103,13 @@ header nav.center-bar {
     display: none;
 }
 
-header nav.right-bar a {
+/* header nav.right-bar a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #EFC84C;
     padding: 5px;
+} */
 
-}
+/* FOOTER STYLES */
 
 footer {
     background-color: #000;
