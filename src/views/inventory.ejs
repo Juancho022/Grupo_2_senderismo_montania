@@ -44,14 +44,11 @@
                                     </span>
                                 </div>
                                 <select class="product-category">
-                                    <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
-                                        , 'Calzados' ]; %>
-                                        <% categories.forEach(category=> { %>
-                                            <option value="<%= category %>" <%= product.category === category ? 'selected' : '' %>>
-                                                <%= category %>
-                                            </option>
-                                            <% }); %>
+                                    <option value="<%= product.category.id %>" selected>
+                                        <%= product.category.description %>
+                                    </option>
                                 </select>
+
                                 <% product.prices.forEach(element => { %>
                                     <span class="product-price">
                                         <%= element.price %>
@@ -81,38 +78,38 @@
 
 
                 <!-- JavaScript para la funcionalidad del contador -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Obtener referencias a los elementos HTML
-            var decreaseButtons = document.querySelectorAll('.button#decrease');
-            var increaseButtons = document.querySelectorAll('.button#increase');
-            var countElements = document.querySelectorAll('.counter #count');
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Obtener referencias a los elementos HTML
+                        var decreaseButtons = document.querySelectorAll('.button#decrease');
+                        var increaseButtons = document.querySelectorAll('.button#increase');
+                        var countElements = document.querySelectorAll('.counter #count');
 
-            // Manejar el evento de decremento
-            decreaseButtons.forEach(function (button, index) {
-                button.addEventListener('click', function () {
-                    // Obtener el valor actual y restar 1
-                    var currentCount = parseInt(countElements[index].textContent);
-                    var newCount = currentCount - 1;
+                        // Manejar el evento de decremento
+                        decreaseButtons.forEach(function (button, index) {
+                            button.addEventListener('click', function () {
+                                // Obtener el valor actual y restar 1
+                                var currentCount = parseInt(countElements[index].textContent);
+                                var newCount = currentCount - 1;
 
-                    // Actualizar el elemento con el nuevo valor
-                    countElements[index].textContent = newCount;
-                });
-            });
+                                // Actualizar el elemento con el nuevo valor
+                                countElements[index].textContent = newCount;
+                            });
+                        });
 
-            // Manejar el evento de incremento
-            increaseButtons.forEach(function (button, index) {
-                button.addEventListener('click', function () {
-                    // Obtener el valor actual y sumar 1
-                    var currentCount = parseInt(countElements[index].textContent);
-                    var newCount = currentCount + 1;
+                        // Manejar el evento de incremento
+                        increaseButtons.forEach(function (button, index) {
+                            button.addEventListener('click', function () {
+                                // Obtener el valor actual y sumar 1
+                                var currentCount = parseInt(countElements[index].textContent);
+                                var newCount = currentCount + 1;
 
-                    // Actualizar el elemento con el nuevo valor
-                    countElements[index].textContent = newCount;
-                });
-            });
-        });
-    </script>
+                                // Actualizar el elemento con el nuevo valor
+                                countElements[index].textContent = newCount;
+                            });
+                        });
+                    });
+                </script>
 
 
         </body>

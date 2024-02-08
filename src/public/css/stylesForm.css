@@ -172,6 +172,27 @@ input[type="checkbox"]:checked::before {
     font-weight: bold;
   }
 
+#register-message {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 10px;
+    }
+#login-message {
+position: relative;
+display: flex;
+justify-content: center;
+top: 10px;
+}
+.custom-file-upload {
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
 /* QUERIES START */
 
 /*************MOBILE**************************/
