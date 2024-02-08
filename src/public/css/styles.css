@@ -26,7 +26,7 @@ header {
 }
 
 .popup {
-    /* display: none;  */
+    display: none; 
     position: absolute;
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 1;
@@ -36,14 +36,14 @@ header {
     box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
-.popup button {
+.popup button.headercollapsable {
     background-color: transparent;
     border: none;
     margin: 16px;
 }
 
 
-.popup button a {
+.popup button a  {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.86);
     font-size: small;
@@ -53,11 +53,10 @@ header {
     font-weight: 600;
 }
 
-.popup div {
-    border-bottom: 1px solid #8f015b;
+.popup div.headercollapsable {
+    border-bottom: 1px solid #a7a7a7;
     width: 100%; 
 }
-
 
 .icon-container:hover .popup {
     display: block;

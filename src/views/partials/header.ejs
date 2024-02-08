@@ -15,9 +15,6 @@
             <li><a href="/">INICIO</a></li>
             <li><a href="/products">PRODUCTOS</a></li>
             <li><a href="/help">AYUDA</a></li>
-            <% if (!locals.user) { %>
-                <li><a href="/user/register">CREÁ TU CUENTA</a></li>
-                <% } %>
         </ul>
     </nav>
     <nav class="right-bar">
@@ -30,20 +27,20 @@
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="popup" id="popup" onmouseenter="showPopup()" onmouseleave="hidePopup()">
-                    <div>
-                        <button id="login">
+                    <div class="headercollapsable">
+                        <button class="headercollapsable">
                             <a href="/user/login">Iniciar sesión</a>
                         </button>
                     </div>
-                    <div>
-                        <p>
-                            Crear cuenta
-                        </p>
+                    <div class="headercollapsable">
+                        <button class="headercollapsable">
+                            <a href="/user/register">Crear cuenta</a>
+                        </button>
                     </div>
                     <div>
-                        <p>
+                        <button class="headercollapsable - inventory">
                             Inventario
-                        </p>
+                        </button>
                     </div>
                 </div>
             </div>
