@@ -47,7 +47,7 @@ const inventoryController = {
                 sizes_id: req.body.sizes,
                 categories_id: req.body.category,
                 timestamp: new Date(),
-                image: req.file?.filename || "default-image.jpg"
+                img: req.file?.filename || "default-image.jpg"
             }
 
             const errors = validationResult(req);
@@ -66,20 +66,23 @@ const inventoryController = {
     edit:
         async (req, res) => {
             try {
-                const product = await db.Product.findByPk(req.params.id,{
-                        attributes: ['img', 'description', 'name', 'id'],
-                        include: [{
-                            association: 'sizes',
-                            attributes: ['sizes_type']
-                        }, {
-                            association: 'price',
-                            attributes: ['price']
-                        }, {
-                            association: 'category',
-                            attributes: ['description']
-                        }]
+                const allColors = await db.Color.findAll({ attributes: ['color_name'] });
+                const allSizes = await db.Size.findAll({ attributes: ['sizes_type'] });
+                const categories = await db.Category.findAll();
+                const product = await db.Product.findByPk(req.params.id, {
+                    attributes: ['img', 'description', 'name', 'id'],
+                    include: [{
+                        association: 'sizes',
+                        attributes: ['sizes_type']
+                    }, {
+                        association: 'prices',
+                        attributes: ['price']
+                    }, {
+                        association: 'category',
+                        attributes: ['description']
+                    }]
                 });
-                res.render('productEditForm', { product });
+                res.render('productEditForm', { product, categories, allSizes, allColors });
             } catch (error) {
                 res.send(error);
             }
@@ -89,26 +92,26 @@ const inventoryController = {
     update: (req, res) => {
         db.Product.update(req.body, { where: { id: req.params.id } })
             .then(() => {
-                res.redirect('/products/' + req.params.id);
+                res.redirect('/products');
             })
             .catch((err) => {
                 res.send(err);
             });
     },
 
-    destroy: (req, res) => {
-        /*
-        products = products.filter((product) => product.id != req.params.id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
-        */
-        db.Product.destroy({ where: { id: req.params.id } })
-            .then(() => {
-                res.redirect('/products');
-            })
-            .catch((err) => {
-                res.send(err);
+    destroy: async (req, res) => {
+        const productId = req.params.id;
+        try {
+            await db.ProductPrice.destroy({
+                where: { products_id: productId }
             });
+            await db.Product.destroy({
+                where: { id: productId }
+            });
+            res.redirect('/products');
+        } catch (error) {
+            res.send(error);
+        }
     }
 }
 
