@@ -20,7 +20,7 @@ const inventoryController = {
                 association: 'sizes',
                 attributes: ['sizes_type']
             }, {
-                association: 'price',
+                association: 'prices',
                 attributes: ['price']
             }, {
                 association: 'category',
@@ -47,7 +47,7 @@ const inventoryController = {
                 sizes_id: req.body.sizes,
                 categories_id: req.body.category,
                 timestamp: new Date(),
-                image: req.file?.filename || "default-image.jpg"
+                img: req.file?.filename || "default-image.jpg"
             }
 
             const errors = validationResult(req);
@@ -75,7 +75,7 @@ const inventoryController = {
                         association: 'sizes',
                         attributes: ['sizes_type']
                     }, {
-                        association: 'price',
+                        association: 'prices',
                         attributes: ['price']
                     }, {
                         association: 'category',
