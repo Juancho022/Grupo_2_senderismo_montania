@@ -84,7 +84,7 @@ const inventoryController = {
     update: (req, res) => {
         db.Product.update(req.body, { where: { id: req.params.id } })
             .then(() => {
-                res.redirect('/products/' + req.params.id);
+                res.redirect('/products');
             })
             .catch((err) => {
                 res.send(err);
@@ -92,11 +92,6 @@ const inventoryController = {
     },
 
     destroy: (req, res) => {
-        /*
-        products = products.filter((product) => product.id != req.params.id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
-        */
         db.Product.destroy({ where: { id: req.params.id } })
             .then(() => {
                 res.redirect('/products');
