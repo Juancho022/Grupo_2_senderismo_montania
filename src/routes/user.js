@@ -6,8 +6,8 @@ const router = express.Router();
 
 const userController = require('../controllers/userController');
 
-const { body } = require('express-validator');
-const { validationResult } = require('express-validator');
+const { check } = require('express-validator');
+
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -20,28 +20,37 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({storage: storage});
+const upload = multer({ storage: storage });
 
 const validations = [
-    body('firstName').notEmpty().withMessage('El nombre es requerido').bail(),
-    body('lastName').notEmpty().withMessage('El apellido es requerido'),
-    body('email').notEmpty().withMessage('El correo es requerido')
-    .isEmail().withMessage('Ingrese un formato de correo válido'),
-    body('password').notEmpty().withMessage('La contraseña es requerida')
+    check('firstName')
+        .notEmpty().withMessage('El nombre es requerido').bail()
+        .isLength({ min: 2 }).withMessage('El nombre debe ser más largo'),
+    check('lastName')
+        .notEmpty().withMessage('El apellido es requerido').bail()
+        .isLength({ min: 2 }).withMessage('El apellido debe ser más largo'),
+    check('email')
+        .notEmpty().withMessage('El correo es requerido').bail()
+        .isEmail().withMessage('Ingrese un formato de correo válido'),
+    check('password')
+        .notEmpty().withMessage('Debes completar la contraseña').bail()
+        .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
+        .matches(/^(?=.*[A-Z])(?=.*[!@#$%^&*A-Z]).{8,}$/)
+        .withMessage('Debe incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
 ];
 
-router.get('/list'  ,userController.list);
+router.get('/list', userController.list);
 
 router.get('/profile', userController.profile);
 
 router.get('/register', userController.register);
 //procesa el register/ crea un usuario
-router.post('/register', upload.single('image'),  validations, userController.registerProcess);
+router.post('/register', upload.single('image'), validations, userController.registerProcess);
 
 
 router.get('/login', userController.login);
 
-router.get('/:id/edit', userController.edit); 
+router.get('/:id/edit', userController.edit);
 router.put('/:id/edit', userController.update);
 
 //Procesar el login

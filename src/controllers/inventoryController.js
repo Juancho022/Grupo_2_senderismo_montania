@@ -2,6 +2,7 @@
 const path = require('path');
 const db = require('../database/models');
 const { Op } = require('sequelize');
+const { validationResult } = require('express-validator');
 
 
 //const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -19,7 +20,7 @@ const inventoryController = {
                 association: 'sizes',
                 attributes: ['sizes_type']
             }, {
-                association: 'price',
+                association: 'prices',
                 attributes: ['price']
             }, {
                 association: 'category',
@@ -27,6 +28,7 @@ const inventoryController = {
             }]
         })
             .then(products => {
+
                 res.render('inventory', { products })
             })
     },
@@ -38,17 +40,23 @@ const inventoryController = {
     //create - Method to store
     store: async (req, res) => {
         try {
+
             const newProduct = {
                 name: req.body.name,
                 description: req.body.description,
-                price: req.body.price,
                 sizes_id: req.body.sizes,
                 categories_id: req.body.category,
                 timestamp: new Date(),
                 image: req.file?.filename || "default-image.jpg"
+            }
+
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) {  //si hay error renderiza la vista del create con el error de validación
+                return res.render('productCreateForm', { errors: errors.mapped(), oldData: req.body });
             };
 
-            await db.Product.create(newProduct);
+            const productCreated = await db.Product.create(newProduct);
+            await db.ProductPrice.create({ products_id: productCreated.id, price: req.body.price,  timestamp: new Date() })
             res.redirect('/products');
         } catch (err) {
             res.send(err);

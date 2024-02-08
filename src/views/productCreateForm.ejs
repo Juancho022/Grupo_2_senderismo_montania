@@ -11,72 +11,106 @@
                             <h2 id="edit-product-title">Crear producto</h2>
                             <div class="label-product">
                                 <label for="name">Producto</label>
-                                <input type="text" class="product-imput" name="name" id="name"
-                                    placeholder="Nombre del producto" value="<%= (locals.oldData && locals.oldData.name) ? locals.oldData.name : '' %>"
-                                    <% if (locals.errors && locals.errors.name) { %>
-                                        <span class="error"><%= locals.errors.name.msg %></span>
-                                    <% } %>
-                                required>
+                                <input type="text" class="product-input" name="name" id="name"
+                                    placeholder="Nombre del producto"
+                                    value="<%= (locals.oldData && locals.oldData.name) ? locals.oldData.name : '' %>">
+                                <% if (locals.errors && errors.name) { %>
+                                    <span class="error-message">
+                                        <%= errors.name.msg %>
+                                    </span>
+                                <% } %>
                             </div>
+                            
 
                             <div class="edit-img">
-                                <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" class="product-imput" name="image">
+                                <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" class="product-imput"
+                                    name="image">
                             </div>
 
+                        
                             <div class="label-product">
                                 <label for="description">Descripción</label>
-                                <input type="text" class="product-imput" name="description"
-                                    placeholder="Descripción del producto" value="<%= (locals.oldData && locals.oldData.description) ? locals.oldData.description : '' %>"
-                                    <% if (locals.errors && locals.errors.description) { %>
-                                        <span class="error"><%= locals.errors.description.msg %></span>
-                                    <% } %>
-                                required>
+                                <input type="text" class="product-input" name="description"
+                                    placeholder="Descripción del producto"
+                                    value="<%= (locals.oldData && locals.oldData.description) ? locals.oldData.description : '' %>">
+                                <% if (locals.errors && locals.errors.description) { %>
+                                    <span class="error-message">
+                                        <%= locals.errors.description.msg %>
+                                    </span>
+                                <% } %>
                             </div>
+                            
 
                             <div class="label-product-price">
                                 <label for="price">Precio</label>
                                 <input type="text" class="product-imput-price" name="price" id="price"
-                                    placeholder="Precio del producto" value="<%= (locals.oldData && locals.oldData.price) ? locals.oldData.price : '' %>"
-                                    <% if (locals.errors && locals.errors.price) { %>
-                                        <span class="error"><%= locals.errors.price.msg %></span>
-                                    <% } %>
-                                required>
+                                    placeholder="Precio del producto"
+                                    value="<%= (locals.oldData && locals.oldData.price) ? locals.oldData.price : '' %>">
+                                <% if (locals.errors && locals.errors.price) { %>
+                                    <span class="error-message">
+                                        <%= locals.errors.price.msg %>
+                                    </span>
+                                <% } %>
                             </div>
-
+                            
                             <div class="label-product-price">
                                 <label for="discount">Descuento</label>
                                 <input type="text" id="discount" name="discount" placeholder="Ej: 15"
-                                 value="<%= (locals.oldData && locals.oldData.discount) ? locals.oldData.discount : '' %>"
+                                    value="<%= (locals.oldData && locals.oldData.discount) ? locals.oldData.discount : '' %>"
                                     class="product-imput-price">
                             </div>
 
                             <div class="size-options">
                                 <label for="size">Talles disponibles</label>
                                 <label>
-                                    <input type="checkbox" name="sizes" value="1" id="sizes"> XL
+                                    <input type="checkbox" name="sizes" value="1" id="sizes" <% if (locals.oldData &&
+                                        locals.oldData.sizes && locals.oldData.sizes.includes('1')) { %> checked <% } %>
+                                        > XL
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" value="2" id="sizes"> L
+                                    <input type="checkbox" name="sizes" value="2" id="sizes" <% if (locals.oldData &&
+                                        locals.oldData.sizes && locals.oldData.sizes.includes('2')) { %> checked <% } %>
+                                        > L
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" value="3" id="sizes"> M
+                                    <input type="checkbox" name="sizes" value="3" id="sizes" <% if (locals.oldData &&
+                                        locals.oldData.sizes && locals.oldData.sizes.includes('3')) { %> checked <% } %>
+                                        > M
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="sizes" value="4" id="sizes"> S
+                                    <input type="checkbox" name="sizes" value="4" id="sizes" <% if (locals.oldData &&
+                                        locals.oldData.sizes && locals.oldData.sizes.includes('4')) { %> checked <% } %>
+                                        > S
                                 </label>
+                                <% if (locals.errors && errors.sizes) { %>
+                                    <span class="error-message">
+                                        <%= errors.sizes.msg %>
+                                    </span>
+                                    <% } %>
                             </div>
 
                             <div class="color-options">
                                 <label for="color-options">Colores disponibles</label>
                                 <label>
-                                    <input type="checkbox" name="colors" value="white" id="colors"> Blanca
+                                    <input type="checkbox" name="colors" value="white" id="colors" <% if (locals.oldData
+                                        && locals.oldData.colors && locals.oldData.colors.includes('white')) { %>
+                                    checked <% } %>> Blanca
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="colors" value="yellow" id="colors"> Amarilla
+                                    <input type="checkbox" name="colors" value="yellow" id="colors" <% if
+                                        (locals.oldData && locals.oldData.colors &&
+                                        locals.oldData.colors.includes('yellow')) { %> checked <% } %>> Amarilla
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="colors" value="black" id="colors"> Negra
+                                    <input type="checkbox" name="colors" value="black" id="colors" <% if (locals.oldData
+                                        && locals.oldData.colors && locals.oldData.colors.includes('black')) { %>
+                                    checked <% } %>> Negra
                                 </label>
+                                <% if (locals.errors && errors.colors) { %>
+                                    <span class="error-message">
+                                        <%= errors.colors.msg %>
+                                    </span>
+                                    <% } %>
                             </div>
 
                             <div class="counter-edit-product">
@@ -89,11 +123,21 @@
                             <div class="product-category">
                                 <span id="category">Categoría</span>
                                 <select name="category" id="category" class="product-category-detail">
-                                    <option value="1">Escalada</option>
-                                    <option value="3">Accesorios</option>
-                                    <option value="2">Senderismo</option>
-                                    <option value="4">Calzados</option>
+                                    <option value="">Selecciona una categoría</option>
+                                    <option value="1" <% if (locals.oldData && locals.oldData.category==='1' ) { %>
+                                        selected <% } %>>Escalada</option>
+                                    <option value="3" <% if (locals.oldData && locals.oldData.category==='3' ) { %>
+                                        selected <% } %>>Accesorios</option>
+                                    <option value="2" <% if (locals.oldData && locals.oldData.category==='2' ) { %>
+                                        selected <% } %>>Senderismo</option>
+                                    <option value="4" <% if (locals.oldData && locals.oldData.category==='4' ) { %>
+                                        selected <% } %>>Calzados</option>
                                 </select>
+                                <% if (locals.errors && errors.category) { %>
+                                    <span class="error-message">
+                                        <%= errors.category.msg %>
+                                    </span>
+                                    <% } %>
                             </div>
                             <div class="button-submit">
                                 <input type="submit" class="button-submit" value="Añadir producto">

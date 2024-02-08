@@ -59,9 +59,9 @@ module.exports = (sequelize, DataTypes) => {
             otherKey:'colors_id',
             as: 'colors'
         });
-        Product.hasOne(models.ProductPrice,{
-            foreignKey: 'id',
-            as: 'price'
+        Product.hasMany(models.ProductPrice,{
+            foreignKey: 'products_id',
+            as: 'prices'
         })
         
     };

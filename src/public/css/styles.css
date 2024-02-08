@@ -1073,3 +1073,9 @@ button.buttonShop #shop-cart {
     }
 }
 
+.error-message {
+    background-color: RED;
+    margin-bottom: 10px;
+    color: #FFFF;
+}
+
