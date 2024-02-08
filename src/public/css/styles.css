@@ -285,7 +285,7 @@ main section div p#paragraph {
 button#buttonHero {
     border: 1px solid white;
     background: none;
-    color: inherit;
+    color: white;
     font-size: 1.3vw;
     padding: 10px;
     margin-top: 10px;
