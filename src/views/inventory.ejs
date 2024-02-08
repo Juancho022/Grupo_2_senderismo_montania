@@ -48,13 +48,13 @@
                                         <%= product.category.description %>
                                     </option>
                                 </select>
-                                <span>
-                                    <% if (product && product.price && product.price.price) { %>
-                                        <%= product.price.price %>
-                                            <% } else { %>
-                                                Price not available
-                                                <% } %>
-                                </span>
+
+                                <% product.prices.forEach(element => { %>
+                                    <span class="product-price">
+                                        <%= element.price %>
+                                    </span>
+
+                               <%  }) %>
                                 <div class="counter">
                                     <div class="button" id="decrease">-</div>
                                     <span id="count">22</span>

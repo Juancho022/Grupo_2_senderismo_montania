@@ -6,7 +6,7 @@
             <%- include('./partials/header') %>
 
                 <main>
-                    <div>
+                    <div> 
                         <section id="sectionRegister">
                             <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
                             <div id="registerBox">
@@ -66,11 +66,8 @@
                                                 <% } %>
                                         </div>
                                         <div>
-                                            <label for="image" class="custom-file-upload">
-                                                <i class="fas fa-cloud-upload-alt"></i> Subir imagen
-                                              </label>
-                                              <input type="file" id="image" accept="image/*" class="image-input" name="image" style="display: none;">
-                                              
+                                            <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" class="image-imput"
+                                                name="image">
                                         </div>
                                         <button type="submit">Registrarse</button>
                                         <span id="register-message">¿Ya tenes cuenta? <a href="/user/login">INICIA SESIÓN</a></span>
