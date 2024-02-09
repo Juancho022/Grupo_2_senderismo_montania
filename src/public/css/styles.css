@@ -36,12 +36,31 @@ header {
     box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
+#login:hover{
+    background-color:rgb(239, 227, 89);
+    color: rgb(239, 227, 89);
+    cursor: pointer;
+    border-radius: 16px 8px 0px 0px;
+}
+
+#register:hover{
+    background-color:rgb(239, 227, 89);
+    color: rgb(239, 227, 89);
+    cursor: pointer;
+}
+
+#inventory:hover{
+    background-color:rgb(239, 227, 89);
+    color: rgb(239, 227, 89);
+    cursor: pointer;
+    border-radius: 0px 0px 16px 8px;
+}
+
 .popup button.headercollapsable {
     background-color: transparent;
     border: none;
     margin: 16px;
 }
-
 
 .popup button a  {
     text-decoration: none;
@@ -57,6 +76,11 @@ header {
     border-bottom: 1px solid #a7a7a7;
     width: 100%; 
 }
+
+#inventory {
+    border-bottom:none;
+}
+
 
 .icon-container:hover .popup {
     display: block;
