@@ -7,11 +7,15 @@ const session = require('express-session');
 const cookies = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+//Ejecutamos el llamado a las rutas
 const mainRoutes = require('./routes/main');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
 const helpRoutes = require('./routes/ayuda');
+
+//Rutas de las APIs
+const productsApiRoutes = require('./routes/api/productRoutes'); 
 
 const authentication = require('./middlewares/authentication');
 const remember = require('./middlewares/rememberMiddleware');
@@ -43,6 +47,7 @@ app.use('/user', userRoutes);
 app.use('/products', productRoutes);
 app.use('/inventory', inventoryRoutes);
 app.use('/help', helpRoutes);
+app.use('/api/products', productsApiRoutes);
 
 
 const port = process.env.PORT || 3030;
