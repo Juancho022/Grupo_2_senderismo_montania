@@ -52,7 +52,7 @@ console.log(products)
                 association: 'sizes',
                 attributes: ['sizes_type'] 
             }, {
-                association: 'prices',
+                association: 'price',
                 attributes: ['price'] 
             }]
         })

@@ -46,15 +46,16 @@ router.get('/profile', userController.profile);
 router.get('/register', userController.register);
 //procesa el register/ crea un usuario
 router.post('/register', upload.single('image'), validations, userController.registerProcess);
+        
 
+router.get('/login', userController.login)       
+//Procesar el login
+router.post('/login', userController.loginProcess);
 
-router.get('/login', userController.login);
 
 router.get('/:id/edit', userController.edit);
 router.put('/:id/edit', userController.update);
 
-//Procesar el login
-router.post('/login', userController.loginProcess);
 
 // Cerrar sesión
 router.get('/logout', userController.logout);
