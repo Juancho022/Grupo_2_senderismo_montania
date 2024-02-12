@@ -29,7 +29,7 @@ const productController = {
                         name: product.name,
                         description: product.description,
                         categories: [product.categories_id], 
-                        detail: `api/products/${product.id}`
+                        detail: `/products/productDetail/${product.id}`
                     }))
                 };
                 res.status(200).json(response);
@@ -40,22 +40,26 @@ const productController = {
     },
 
         // Endpoint para obtener el detalle de un producto por su ID
-        getProductDetail(req, res) {
-            const productId = req.params.productId; // Obtener el ID del producto de los parámetros de la solicitud
+        getProductDetail(req, res, baseUrl) {
+            const productId = req.params.productId;
+    
             db.Product.findByPk(productId, {
-                attributes: ['id', 'categories_id', 'description', 'name']
+                attributes: ['id', 'categories_id', 'timestamp', 'description', 'sizes_id', 'name', 'img']
             })
             .then(product => {
                 if (product) {
-                    // Si se encontró el producto, devolverlo como respuesta
-                    res.status(200).json(product);
+                    // Construir la URL de la imagen del producto usando baseUrl
+                    const imgUrl = `${baseUrl}/images/${product.img}`;
+    
+                    // Agregar la URL de la imagen al objeto del producto
+                    const productWithImageUrl = { ...product.toJSON(), imgUrl };
+    
+                    res.status(200).json(productWithImageUrl);
                 } else {
-                    // Si no se encontró el producto, devolver un error 404
                     res.status(404).json({ error: 'Producto no encontrado' });
                 }
             })
             .catch(err => {
-                // Si ocurre algún error en la consulta a la base de datos, devolver un error 500
                 res.status(500).json({ error: err.message });
             });
         }
