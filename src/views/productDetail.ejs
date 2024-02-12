@@ -46,10 +46,12 @@
                             <%= product.description %>                            
                         </p>
                     </div>
-                    <p class="title-sizes">Talles disponibles</p>
-                    <% for (let i=0 ; i < product.sizes.length ; i++) { %>
-                        <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
-                    <% } %>
+                    <% if (product.sizes.length > 1 || (product.sizes.length === 1 && product.sizes[0].sizes_type !== 'Único')) { %>
+                        <p class="title-sizes">Talles disponibles</p>
+                        <% for (let i=0 ; i < product.sizes.length ; i++) { %>
+                            <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
+                        <% } %>
+                    <% } %>            
                 </div>
             </div>
         </article>
