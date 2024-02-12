@@ -8,9 +8,6 @@ const router = express.Router();
 router.get('/', productController.list);
 
 // Ruta para obtener el detalle de un producto por su ID
-//router.get('/:productId', productController.getProductDetail);
-
-// Endpoint para obtener el detalle de un producto por ID
-//router.get('/:id', productController.detail);
+router.get('/:productId', productController.getProductDetail);
 
 module.exports = router;
