@@ -16,7 +16,7 @@ const controller = {
             const users = await db.User.findAll({
                 include: ['roles'],
                 attributes: {
-                    exclude: ['password', 'roles_id']
+                    exclude: ['password']
                 }
             });
             res.render('usersList', { users });
