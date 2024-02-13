@@ -47,9 +47,9 @@ const controller = {
 
     edit: async (req, res) => {
         try {
-            const user = await db.User.findByPk(req.params.id);
+            const userToEdit = await db.User.findByPk(req.params.id);
             const roles = await db.Rol.findAll()
-            res.render('userEditForm', { user, roles });
+            res.render('userEditForm', { userToEdit, roles });
         } catch (error) {
             res.send(error);
         }
@@ -58,7 +58,7 @@ const controller = {
     update: (req, res) => {
         db.User.update(req.body, { where: { id: req.params.id } })
             .then(() => {
-                res.redirect('/');
+                res.redirect('/profile');
             })
             .catch((err) => {
                 res.send(err);

@@ -1,47 +1,55 @@
 <% let pageTitle='User edit form' %>
     <%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
 
-    <body>
+        <body>
 
-        <%- include('./partials/header') %>
+            <%- include('./partials/header') %>
 
-            <main>
-                <div>
-                    <section id="sectionRegister">
-                        <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
+                <main>
+                    <div>
+                        <section id="sectionRegister">
+                            <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
                             <div id="formLogin">
-                                <form method="POST" action="/user/<%= userToEdit.id %>/edit?_method=PUT" enctype="multipart/form-data">
+                                <form method="POST" action="/user/<%= userToEdit.id %>/edit?_method=PUT"
+                                    enctype="multipart/form-data">
                                     <div>
                                         <label>Nombre</label>
-                                        <input type="text" name="firstName" value="<%= userToedit.firstName %>">
+                                        <input type="text" name="firstName" value="<%= userToEdit.first_name %>">
                                     </div>
 
                                     <div>
                                         <label>Apellido</label>
-                                        <input type="text" name="lastName" value="<%= userToEdit.lastName %>">
+                                        <input type="text" name="lastName" value="<%= userToEdit.last_name %>">
                                     </div>
 
                                     <div>
                                         <label>Correo Electrónico</label>
                                         <input type="email" name="email" value="<%= userToEdit.email %>">
                                     </div>
-
                                     <div>
-                                        <label>Contraseña</label>
-                                        <input type="password" name="password">
-                                        <% if (locals.errors && errors.password) { %>
-                                            <span class="error-message">
-                                                <%= errors.password.msg %>
-                                            </span>
-                                            <% } %>
+                                        <label for="birthdate">Fecha de Nacimiento:</label>
+                                        <input type="date" id="birthdate" name="birthdate"
+                                            value="<%= userToEdit.birthdate %>">
                                     </div>
+                                    <div>
+                                        <label for="role">Rol:</label>
+                                        <select id="role" name="role">
+                                            <% roles.forEach(role=> { %>
+                                                <option value="<%= role.id %>" <% if (role.id===userToEdit.roles_id) { %>
+                                                    selected
+                                                    <% } %>><%= role.description %>
+                                                </option>
+                                                <% }) %>
+                                        </select>
+                                    </div>
+
                                     <button type="submit">Guardar cambios</button>
                                 </form>
                             </div>
-                    </section>
-                </div>
-            </main>
+                        </section>
+                    </div>
+                </main>
 
-            <%- include('./partials/footer') %>
+                <%- include('./partials/footer') %>
 
-    </body>
+        </body>
