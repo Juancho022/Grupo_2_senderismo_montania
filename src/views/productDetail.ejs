@@ -25,14 +25,14 @@
                         </div>
                         <div class="count-detail">
                             <p>Cantidad</p>
-                            <div class="less" onclick="decrementQuantity()">
+                            <div class="less button" id="decrease">
                                 <p>-</p>
                             </div>
                             <div>
-                                <p class="quantity" id="quantity">1</p>
+                                <p class="quantity" id="count">1</p>
                             </div>
                             <div>
-                                <p class="more" onclick="incrementQuantity()">+</p>
+                                <p class="more button" id="increase">+</p>
                             </div>
                         </div>
                     </div>
@@ -57,23 +57,7 @@
         </article>
     </main>
 
-    <script>
-        let quantityElement = document.getElementById('quantity');
-
-        function decrementQuantity() {
-            let currentQuantity = parseInt(quantityElement.textContent);
-            if (currentQuantity > 1) {
-                currentQuantity--;
-                quantityElement.textContent = currentQuantity;
-            }
-        }
-
-        function incrementQuantity() {
-            let currentQuantity = parseInt(quantityElement.textContent);
-            currentQuantity++;
-            quantityElement.textContent = currentQuantity;
-        }
-    </script>
+    <script src="/js/front.js"></script>
 
 
     <%- include('./partials/footer') %>
