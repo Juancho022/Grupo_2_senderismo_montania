@@ -2,13 +2,12 @@
     <%- include('partials/head', { pageTitle: pageTitle , styles: ['stylesInventory']}) %>
 
         <body>
-
             <%- include('./partials/header') %>
-
                 <main>
                     <table>
                         <thead>
                             <th>Nombre</th>
+                            <th>Apellido</th>
                             <th>Email</th>
                             <th>Rol</th>
                         </thead>
@@ -16,13 +15,16 @@
                             <% users.forEach(user=> { %>
                                 <tr>
                                     <td>
-                                        <%= user.name %>
+                                        <%= user.first_name %>
+                                    </td>
+                                    <td>
+                                        <%= user.last_name %>
                                     </td>
                                     <td>
                                         <%= user.email %>
                                     </td>
                                     <td>
-                                        <%= user.rol?.name || 'No tiene rol' %>
+                                        <%= user.roles?.description || 'No tiene rol' %>
                                     </td>
                                 </tr>
                                 <% }) %>
