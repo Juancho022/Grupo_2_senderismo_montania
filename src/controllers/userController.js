@@ -16,7 +16,7 @@ const controller = {
             const users = await db.User.findAll({
                 include: ['roles'],
                 attributes: {
-                    exclude: ['password', 'roles_id']
+                    exclude: ['password']
                 }
             });
             res.render('usersList', { users });
@@ -27,13 +27,20 @@ const controller = {
 
     profile: async (req, res) => {
         try {
+            if (!req.session.user) {
+                return res.send('Usuario no autenticado');
+            }
             const user = await db.User.findByPk(req.session.user.id, {
-                attributes: { exclude: ['password'] },
-                include: ['role']
+                attributes: ['id', 'first_name', 'last_name', 'email', 'birthdate', 'document_number', 'phone', 'address', 'img'],
+                include: ['roles']
             });
+            if (!user) {
+                return res.send('Usuario no encontrado');
+            }
             res.render('profile', { user: user.dataValues });
         } catch (error) {
-
+            console.error('Error al buscar el usuario:', error);
+            res.status(500).send('Error interno del servidor');
         }
     },
 

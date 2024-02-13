@@ -1,28 +1,32 @@
 <% let pageTitle='Perfil de usuario' %>
     <%- include('partials/head', { pageTitle: pageTitle }) %>
 
-        <body>
-            <%- include('./partials/header') %>
-                <main>
+    <%- include('partials/head', { pageTitle: 'Perfil de usuario', styles:['profile'] }) %>
 
-                    <body>
-                        <%- include('partials/header') %>
-                            <div class="profile">
-                                <p>Nombre: <%= user.first_name %>
-                                </p>
-                                <p>Email: <%= user.email %>
-                                </p>
-                                <p>Rol: <%= user.roles?.description %>
-                                </p>
-                            </div>
-                            <div class="button-edit">
-                                <a href="/user/<%= user.id %>/edit">
-                                    <button>Editar</button>
-                                </a>
-                            </div>
-                    </body>
-                </main>
-                <%- include('./partials/footer') %>
-        </body>
-
-        </html>
+    <body>
+        <%- include('./partials/header') %>
+        <main>
+            <div class="profile-container">
+                <h4>Tus datos</h4>
+                <p>Modifica tus datos personales a continuación para que tu cuenta esté actualizada</p>
+                <h4>Detalle</h4>
+                <div class="profile-details">
+                    <img src="<%= user.img %>" alt="Imagen de Perfil">
+                    <p><strong>Nombre:</strong> <%= user.first_name %> <%= user.last_name %></p>
+                    <p><strong>Email:</strong> <%= user.email %></p>
+                    <p><strong>Rol:</strong> <%= user.roles?.description %></p>
+                    <p><strong>Fecha de Nacimiento:</strong> <%= user.birthdate %></p>
+                    <p><strong>Número de Documento:</strong> <%= user.document_number %></p>
+                    <p><strong>Teléfono:</strong> <%= user.phone %></p>
+                    <p><strong>Dirección:</strong> <%= user.address %></p>
+                </div>
+                <div class="button-edit">
+                    <a href="/user/<%= user.id %>/edit">
+                        <button>Editar información</button>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <%- include('./partials/footer') %>
+    </body>
+    </html>
