@@ -56,9 +56,11 @@
 
                                <%  }) %>
                                 <div class="counter">
-                                    <div class="button decrease" id="decrease">-</div>
-                                    <span class="count" id="count">22</span>
-                                    <div class="button increase" id="increase">+</div>
+                                    <div class="counter">
+                                        <div class="button decrease" id="decrease">-</div>
+                                        <span class="count">22</span>
+                                        <div class="button increase" id="increase">+</div>
+                                    </div>
                                 </div>
                                 <div class="edit-n-delete">
                                     <form action="/inventory/<%= product.id %>/delete?_method=DELETE" method="POST">

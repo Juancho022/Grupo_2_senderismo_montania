@@ -1,10 +1,11 @@
-//Contador
+// Contador
 document.addEventListener('DOMContentLoaded', function () {
-    
-    let decreaseButtons = document.querySelectorAll('.counter #decrease');
-    let increaseButtons = document.querySelectorAll('.counter #increase');
-    let countElements = document.querySelectorAll('.counter #count');
+    // Obtener referencias a todos los botones de incremento y decremento
+    let decreaseButtons = document.querySelectorAll('.button.decrease');
+    let increaseButtons = document.querySelectorAll('.button.increase');
+    let countElements = document.querySelectorAll('.count');
 
+    // Manejar el evento de decremento para todos los botones
     decreaseButtons.forEach(function (button, index) {
         button.addEventListener('click', function () {
             let currentCount = parseInt(countElements[index].textContent);
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Manejar el evento de incremento para todos los botones
     increaseButtons.forEach(function (button, index) {
         button.addEventListener('click', function () {
             let currentCount = parseInt(countElements[index].textContent);
@@ -23,12 +25,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-
-
-// Obtener referencias a los elementos HTML
-
-// Manejar el evento de decremento
-
-
-// Manejar el evento de incremento
