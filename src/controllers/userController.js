@@ -12,6 +12,90 @@ const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
 
 const controller = {
+    list: async (req, res) => {
+        try {
+            const users = await db.User.findAll({
+                include: ['roles'],
+                attributes: {
+                    exclude: ['password']
+                }
+            });
+            res.render('usersList', { users });
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
+    profile: async (req, res) => {
+        try {
+            if (!req.session.user) {
+                return res.send('Usuario no autenticado');
+            }
+            const user = await db.User.findByPk(req.session.user.id, {
+                attributes: ['id', 'first_name', 'last_name', 'email', 'birthdate', 'document_number', 'phone', 'address', 'img'],
+                include: ['roles']
+            });
+            if (!user) {
+                return res.send('Usuario no encontrado');
+            }
+            res.render('profile', { user: user.dataValues });
+        } catch (error) {
+            console.error('Error al buscar el usuario:', error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
+
+    edit: async (req, res) => {
+        try {
+            const user = await db.User.findByPk(req.params.id);
+            const roles = await db.Rol.findAll()
+            res.render('userEditForm', { user, roles });
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
+    update: (req, res) => {
+        db.User.update(req.body, { where: { id: req.params.id } })
+            .then(() => {
+                res.redirect('/');
+            })
+            .catch((err) => {
+                res.send(err);
+            });
+    },
+
+    login: (req, res) => {
+        res.render('login');
+    },
+
+    loginProcess: async (req, res) => {
+        try {
+            const user = await db.User.findOne({
+                where: { email: req.body.emailUsuario },
+                include: ['roles'],
+                limit: 1
+            });
+            if (!user) {
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+            }
+            if (!bcrypt.compareSync(req.body.passwordUsuario, user.password)) {
+                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+            }
+            req.session.user = {
+                email: user.email,
+                id: user.roles.id
+            };
+            if (req.body.recordarUsuario != undefined) {
+                res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
+            }
+            return res.redirect('/');
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
     register: (req, res) => {
         res.render('register');
     },

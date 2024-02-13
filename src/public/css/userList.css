@@ -1,0 +1,27 @@
+.table-container {
+    margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
+    width: 80%; /* Opcional: ajusta el ancho del contenedor según sea necesario */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.table-content {
+    margin: 100px 100px;
+    width: 95%;
+    min-height: 600px;
+    font-size: large;
+}
+
+.main-content {
+    position: relative;
+    display: flex;
+}
