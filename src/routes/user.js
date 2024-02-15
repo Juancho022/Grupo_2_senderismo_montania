@@ -3,6 +3,7 @@ const path = require('path');
 const multer = require('multer');
 //Se crea un middleware para reemplazar VALIDATIONS
 //const validationMiddleware = require('../middlewares/validationMiddleware');
+// const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
@@ -41,14 +42,14 @@ const validations = [
         .withMessage('Debe incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
 ];
 
-router.get('/login', userController.login);
-router.post('/login', validations, userController.loginProcess);
+router.get('/login',  userController.login);
+router.post('/login',  userController.loginProcess);
 
 router.get('/logout', userController.logout);
 
 router.get('/register', userController.register);
 router.post('/register', upload.single('image'), validations, userController.registerProcess);
-router.get('/profile', userController.profile);//falta vista
+router.get('/profile', userController.profile);
 //router.get("/admin", userController.admin);//falta vista
 
 

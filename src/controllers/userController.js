@@ -44,8 +44,16 @@ const controller = {
             res.status(500).send('Error interno del servidor');
         }
     },
-
-
+    // profile: async (req, res) => {
+    //     try {
+    //         const user = await db.User.findByPk(req.session.user.id, {
+    //             attributes: { exclude: ['password'] },
+    //             include: ['role']
+    //         });
+    //         res.render('profile', { user: user.dataValues });
+    //     } catch (error) {
+    //     }
+    // },
     edit: async (req, res) => {
         try {
             const user = await db.User.findByPk(req.params.id);
@@ -70,31 +78,69 @@ const controller = {
         res.render('login');
     },
 
+    // loginProcess: async (req, res) => {
+    //     try {
+    //         const user = await db.User.findOne({
+    //             where: { email: req.body.emailUsuario },
+    //             include: ['roles'],
+    //             limit: 1
+    //         });
+    //         if (!user) {
+    //             return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+    //         }
+    //         if (!bcrypt.compareSync(req.body.passwordUsuario, user.password)) {
+    //             return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+    //         }
+    //         req.session.user = {
+    //             email: user.email,
+    //             id: user.roles.id
+    //         };
+    //         if (req.body.recordarUsuario != undefined) {
+    //             res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 });
+    //         }
+    //         return res.redirect('/user/profile');
+    //     } catch (error) {
+    //         res.send(error);
+    //     }
+    // },
     loginProcess: async (req, res) => {
         try {
-            const user = await db.User.findOne({
-                where: { email: req.body.emailUsuario },
-                include: ['roles'],
-                limit: 1
+            const userToLogin = await db.User.findOne({
+                where: { email: req.body.email }
             });
-            if (!user) {
-                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
+            if (userToLogin) {
+                const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+                if (okPassword) {
+                    const { password, ...nonSensibleUserData } = userToLogin.dataValues;
+                    req.session.user = nonSensibleUserData;
+                    const rememberMe = Boolean(req.body.recordarme);
+                    if (rememberMe) {
+                        res.cookie("recordarme", userToLogin.email, {
+                            maxAge: oneMonth,
+                            secure: true,
+                            httpOnly: true,
+                        });
+                    }
+                    if (userToLogin.roles_id==1) {
+                        return res.redirect('/')
+                    } else {
+                        return res.redirect('/user/profile');
+                    }
+                }
             }
-            if (!bcrypt.compareSync(req.body.passwordUsuario, user.password)) {
-                return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
-            }
-            req.session.user = {
-                email: user.email,
-                id: user.roles.id
-            };
-            if (req.body.recordarUsuario != undefined) {
-                res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 }); // La cookie expirará en 30 días
-            }
-            return res.redirect('/');
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: "El email y/o la contraseña son incorrectos"
+                    }
+                }
+            });
         } catch (error) {
-            res.send(error);
+            console.log(error)
+            return res.json(error);
         }
     },
+    
 
     register: (req, res) => {
         res.render('register');
@@ -135,7 +181,7 @@ const controller = {
                 if (userToLogin) {
                     const { password, ...nonSensibleUserData } = userToLogin;
                     req.session.user = nonSensibleUserData;
-                    return res.redirect('/user/profile');
+                    return res.redirect('profile');
                 }
             } catch (error) {
                 return res.json(error);
@@ -147,42 +193,6 @@ const controller = {
         req.session.destroy();
         res.clearCookie("recordarme");
         return res.redirect('/');
-    },
-    loginProcess: async (req, res) => {
-        try {
-            const userToLogin = await db.User.findOne({
-                where: { email: req.body.email }
-            });
-            const rememberMe = Boolean(req.body.recordarme);
-
-            if (userToLogin) {
-                const okPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
-
-                if (okPassword) {
-                    const { password, ...nonSensibleUserData } = userToLogin;
-                    req.session.user = nonSensibleUserData;
-                    if (rememberMe) {
-                        res.cookie("recordarme", userToLogin.email, {
-                            maxAge: oneMonth,
-                            secure: true,
-                            httpOnly: true,
-                        });
-                    }
-                    //const redirectRoute = getRedirectRouteByRole(userToLogin.roles_id);
-                    //return res.redirect(redirectRoute);
-                }
-            }
-            return res.render('login', {
-                errors: {
-                    email: {
-                        msg: "El email y/o la contraseña son incorrectos"
-                    }
-                }
-            });
-        } catch (error) {
-            console.log(error)
-            return res.json(error);
-        }
     },
     list: async (req, res) => {
         try {
@@ -205,16 +215,7 @@ const controller = {
 
         }
     },
-    profile: async (req, res) => {
-        try {
-            const user = await db.User.findByPk(req.session.user.id, {
-                attributes: { exclude: ['password'] },
-                include: ['role']
-            });
-            res.render('profile', { user: user.dataValues });
-        } catch (error) {
-        }
-    },
+
     edit: async (req, res) => {
         try {
             const user = await db.User.findByPk(req.params.id);
@@ -243,6 +244,6 @@ const controller = {
             res.json(error)
         }
     },
-   
+
 };
 module.exports = controller;
