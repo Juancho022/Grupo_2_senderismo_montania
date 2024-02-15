@@ -19,9 +19,9 @@
                                     <form action="/user/login" method="post">
                                         <div>
                                             <label><strong>Correo Electrónico</strong></label>
-                                            <input type="email" name="emailUsuario" required>
+                                            <input type="email" name="email" required>
                                             <label><strong>Contraseña</strong></label>
-                                            <input type="password" name="passwordUsuario" required>
+                                            <input type="password" name="password" required>
                                         </div>
 
                                         <% if (locals.errors?.unauthorize) { %>
@@ -32,9 +32,9 @@
                                                 </p>
                                             </div>
                                             <% } %>
-                                            <div id="recordarUsuario">
+                                            <div id="rememberMe">
                                                 <label class="recordarme">Recordarme</label>
-                                                <input type="checkbox" name="recordarUsuario">
+                                                <input type="checkbox" name="recordarme">
                                             </div>
                                             <button type="submit">Iniciar sesión</button>
                                             <span id="login-message">¿Todavía no tienes tu cuenta?<a href="/user/register">REGISTRATE</a></span>

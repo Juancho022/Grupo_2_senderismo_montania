@@ -129,7 +129,7 @@ main section button:hover{
     bottom: 4px;
     display: flex;
 }
-main section form div#recordarUsuario{
+main section form div#rememberMe{
     display: flex;
     position: absolute;
     flex-direction: row-reverse;
