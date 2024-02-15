@@ -1,52 +1,50 @@
 <% let pageTitle='User edit form' %>
-    <%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
+    <%- include('partials/head', { styles: ['userToEditForm'], pageTitle: pageTitle }) %>
 
         <body>
 
             <%- include('./partials/header') %>
 
                 <main>
-                    <div>
-                        <section id="sectionRegister">
-                            <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
-                            <div id="formLogin">
-                                <form method="POST" action="/user/<%= userToEdit.id %>/edit?_method=PUT"
-                                    enctype="multipart/form-data">
-                                    <div>
-                                        <label>Nombre</label>
-                                        <input type="text" name="firstName" value="<%= userToEdit.first_name %>">
-                                    </div>
-
-                                    <div>
-                                        <label>Apellido</label>
-                                        <input type="text" name="lastName" value="<%= userToEdit.last_name %>">
-                                    </div>
-
-                                    <div>
-                                        <label>Correo Electrónico</label>
-                                        <input type="email" name="email" value="<%= userToEdit.email %>">
-                                    </div>
-                                    <div>
-                                        <label for="birthdate">Fecha de Nacimiento:</label>
-                                        <input type="date" id="birthdate" name="birthdate"
-                                            value="<%= userToEdit.birthdate %>">
-                                    </div>
-                                    <div>
-                                        <label for="role">Rol:</label>
-                                        <select id="role" name="role">
-                                            <% roles.forEach(role=> { %>
-                                                <option value="<%= role.id %>" <% if (role.id===userToEdit.roles_id) { %>
-                                                    selected
-                                                    <% } %>><%= role.description %>
-                                                </option>
-                                                <% }) %>
-                                        </select>
-                                    </div>
-
-                                    <button type="submit">Guardar cambios</button>
-                                </form>
+                    <div class="form-container">
+                        <form method="POST" action="/user/<%= userToEdit.id %>/edit?_method=PUT"
+                            enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" name="firstName" value="<%= userToEdit.first_name %>">
                             </div>
-                        </section>
+
+                            <div class="form-group">
+                                <label>Apellido</label>
+                                <input type="text" name="lastName" value="<%= userToEdit.last_name %>">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Correo Electrónico</label>
+                                <input type="email" name="email" value="<%= userToEdit.email %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">Fecha de Nacimiento:</label>
+                                <input type="date" id="birthdate" name="birthdate" value="<%= userToEdit.birthdate %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Dirección:</label>
+                                <input type="text" id="address" name="adress" value="<%= userToEdit.address %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Rol:</label>
+                                <select id="role" name="role">
+                                    <% roles.forEach(role=> { %>
+                                        <option value="<%= role.id %>" <% if (role.id===userToEdit.roles_id) { %>
+                                            selected
+                                            <% } %>><%= role.description %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
+
+                            <button type="submit">Guardar cambios</button>
+                        </form>
                     </div>
                 </main>
 
