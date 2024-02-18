@@ -17,9 +17,8 @@ const helpRoutes = require('./routes/ayuda');
 //Rutas de las APIs
 const productsApiRoutes = require('./routes/api/productRoutes'); 
 
-const authentication = require('./middlewares/authentication');
-const remember = require('./middlewares/rememberMiddleware');
-
+const authentication = require('./middlewares/authMiddleware');
+const forAdmin = require('./middlewares/forAdminMiddleware')
 const app = express();
 
 
@@ -30,12 +29,14 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(session({
-    secret: "ab33025avbtxop00002tqxr!"
+    secret: "ab33025avbtxop00002tqxr!",
 })) //token de encriptación
 app.use(cookies());
-app.use(authentication);
-app.use(remember);
-
+// app.use(authentication.auth);
+// app.use(authentication.authorization);
+// app.use(authentication.rememberMiddleware);
+// app.use(forAdmin.isUserAdmin);
+// app.use(forAdmin.getRedirectRouteByRole);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
