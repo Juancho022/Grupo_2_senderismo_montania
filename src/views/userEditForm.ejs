@@ -7,35 +7,34 @@
 
                 <main>
                     <div class="form-container">
-                        <form method="POST" action="/user/<%= userToEdit.id %>/edit?_method=PUT"
-                            enctype="multipart/form-data">
+                        <form method="POST" action="/user/<%= user.id %>/edit?_method=PUT">
                             <div class="form-group">
                                 <label>Nombre</label>
-                                <input type="text" name="firstName" value="<%= userToEdit.first_name %>">
+                                <input type="text" name="firstName" value="<%= user.first_name %>">
                             </div>
 
                             <div class="form-group">
                                 <label>Apellido</label>
-                                <input type="text" name="lastName" value="<%= userToEdit.last_name %>">
+                                <input type="text" name="lastName" value="<%= user.last_name %>">
                             </div>
 
                             <div class="form-group">
                                 <label>Correo Electrónico</label>
-                                <input type="email" name="email" value="<%= userToEdit.email %>">
+                                <input type="email" name="email" value="<%= user.email %>">
                             </div>
                             <div class="form-group">
                                 <label for="birthdate">Fecha de Nacimiento:</label>
-                                <input type="date" id="birthdate" name="birthdate" value="<%= userToEdit.birthdate %>">
+                                <input type="date" id="birthdate" name="birthdate" value="<%= user.birthdate %>">
                             </div>
                             <div class="form-group">
                                 <label for="address">Dirección:</label>
-                                <input type="text" id="address" name="adress" value="<%= userToEdit.address %>">
+                                <input type="text" id="address" name="adress" value="<%= user.address %>">
                             </div>
                             <div class="form-group">
                                 <label for="role">Rol:</label>
                                 <select id="role" name="role">
                                     <% roles.forEach(role=> { %>
-                                        <option value="<%= role.id %>" <% if (role.id===userToEdit.roles_id) { %>
+                                        <option value="<%= role.id %>" <% if (role.id===user.roles_id) { %>
                                             selected
                                             <% } %>><%= role.description %>
                                         </option>
