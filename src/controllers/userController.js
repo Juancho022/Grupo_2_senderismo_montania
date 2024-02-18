@@ -54,24 +54,31 @@ const controller = {
     //     } catch (error) {
     //     }
     // },
-    edit: async (req, res) => {
+    edit: async(req, res) => {
         try {
-            const user = await db.User.findByPk(req.params.id);
-            const roles = await db.Rol.findAll()
-            res.render('userEditForm', { user, roles });
+            const user = db.User.findByPk(req.params.id)
+            res.render('userEditForm',{user})
+        } 
+        catch (error) {
+            console.log(error);
+        }
+
+    },
+
+    update: async (req, res) => {
+        try {
+            console.log('Llegó una solicitud de actualización de usuario');
+            const userId = req.params.id;
+            const userDataToUpdate = req.body;
+            console.log('Actualizando usuario con ID:', userId);
+        console.log('Datos a actualizar:', userDataToUpdate);
+    
+            await db.User.update(userDataToUpdate, { where: { id: userId } });
+            console.log('Usuario actualizado exitosamente.');
+            res.redirect('/profile');
         } catch (error) {
             res.send(error);
         }
-    },
-
-    update: (req, res) => {
-        db.User.update(req.body, { where: { id: req.params.id } })
-            .then(() => {
-                res.redirect('/');
-            })
-            .catch((err) => {
-                res.send(err);
-            });
     },
 
     login: (req, res) => {
