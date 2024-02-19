@@ -10,12 +10,12 @@
                         <form method="POST" action="/user/<%= user.id %>/edit?_method=PUT">
                             <div class="form-group">
                                 <label>Nombre</label>
-                                <input type="text" name="firstName" value="<%= user.first_name %>">
+                                <input type="text" name="first_name" value="<%= user.first_name %>">
                             </div>
 
                             <div class="form-group">
                                 <label>Apellido</label>
-                                <input type="text" name="lastName" value="<%= user.last_name %>">
+                                <input type="text" name="last_name" value="<%= user.last_name %>">
                             </div>
 
                             <div class="form-group">
@@ -28,7 +28,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="address">Dirección:</label>
-                                <input type="text" id="address" name="adress" value="<%= user.address %>">
+                                <input type="text" id="address" name="address" value="<%= user.address %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono:</label>
+                                <input type="text" id="phone" name="phone" value="<%= user.phone %>">
                             </div>
                             <div class="form-group">
                                 <label for="role">Rol:</label>

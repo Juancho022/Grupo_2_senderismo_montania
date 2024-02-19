@@ -54,7 +54,6 @@ router.get('/profile', userController.profile);
 
 
 router.get('/', userController.list);
-router.get('/:id', userController.detail);
 
 router.get('/:id/edit', userController.edit);
 router.put('/:id/edit', userController.update);
