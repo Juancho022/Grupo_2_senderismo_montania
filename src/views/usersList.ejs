@@ -1,11 +1,11 @@
 <% let pageTitle='Listado de usuarios' %>
-    <%- include('partials/head', { pageTitle: pageTitle , styles: ['stylesInventory']}) %>
+    <%- include('partials/head', { pageTitle: pageTitle, styles: ['userList']}) %>
 
         <body>
-
             <%- include('./partials/header') %>
 
-                <main>
+                <main class="main-content">
+                    <div class="table-content">
                     <table>
                         <thead>
                             <th>Nombre</th>
@@ -16,18 +16,19 @@
                             <% users.forEach(user=> { %>
                                 <tr>
                                     <td>
-                                        <%= user.name %>
+                                        <%= user.first_name %> <%= user.last_name %>
                                     </td>
                                     <td>
                                         <%= user.email %>
                                     </td>
                                     <td>
-                                        <%= user.rol?.name || 'No tiene rol' %>
+                                        <%= user.roles?.description || 'No tiene rol' %>
                                     </td>
                                 </tr>
                                 <% }) %>
                         </tbody>
                     </table>
+                    </div>
                 </main>
                 <%- include('./partials/footer') %>
         </body>

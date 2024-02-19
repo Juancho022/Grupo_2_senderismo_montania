@@ -17,11 +17,11 @@
             <li><a href="/help">PREGUNTAS FRECUENTES</a></li>
         </ul>
     </nav>
+
     <nav class="right-bar">
         <% if (locals.user) { %>
-            <h2 id="userLog">¡Hola <%= locals.user.firstName %>!</h2>
-            <% } %>
-
+            <h2 id="userLog">¡Hola <%= locals.user.first_name %>!</h2>
+            <% } %> 
             <div class="icon-container" onmouseenter="showPopup()" onmouseleave="hidePopup()">
                 <div class="icon">
                     <i class="fa-solid fa-user"></i>
@@ -40,6 +40,11 @@
                     <div class="headercollapsable" id="inventory">
                         <button class="headercollapsable">
                             <a href="/inventory">Inventario</a>
+                        </button>
+                    </div>
+                    <div class="headercollapsable" id="logout">
+                        <button class="headercollapsable">
+                            <a href="/user/logout">Cerrar Sesión</a>
                         </button>
                     </div>
                 </div>

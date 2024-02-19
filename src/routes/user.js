@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 const multer = require('multer');
+//Se crea un middleware para reemplazar VALIDATIONS
+//const validationMiddleware = require('../middlewares/validationMiddleware');
+// const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
@@ -39,27 +42,22 @@ const validations = [
         .withMessage('Debe incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
 ];
 
-router.get('/list', userController.list);
+router.get('/login',  userController.login);
+router.post('/login',  userController.loginProcess);
 
-router.get('/profile', userController.profile);
+router.get('/logout', userController.logout);
 
 router.get('/register', userController.register);
-//procesa el register/ crea un usuario
 router.post('/register', upload.single('image'), validations, userController.registerProcess);
-        
+router.get('/profile', userController.profile);
+//router.get("/admin", userController.admin);//falta vista
 
-router.get('/login', userController.login)       
-//Procesar el login
-router.post('/login', userController.loginProcess);
 
+router.get('/', userController.list);
+router.get('/:id', userController.detail);
 
 router.get('/:id/edit', userController.edit);
 router.put('/:id/edit', userController.update);
-
-
-// Cerrar sesión
-router.get('/logout', userController.logout);
-
-
+router.delete('/:id/delete', userController.delete);
 
 module.exports = router;

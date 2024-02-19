@@ -25,14 +25,14 @@
                         </div>
                         <div class="count-detail">
                             <p>Cantidad</p>
-                            <div class="less" onclick="decrementQuantity()">
+                            <div class="button decrease" id="less">
                                 <p>-</p>
                             </div>
                             <div>
-                                <p class="quantity" id="quantity">1</p>
+                                <p class="count" id="quantity">1</p>
                             </div>
                             <div>
-                                <p class="more" onclick="incrementQuantity()">+</p>
+                                <p class="button increase" id="more">+</p>
                             </div>
                         </div>
                     </div>
@@ -46,35 +46,20 @@
                             <%= product.description %>                            
                         </p>
                     </div>
-                    <p class="title-sizes">Talles disponibles</p>
-                    <% for (let i=0 ; i < product.sizes.length ; i++) { %>
-                        <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
-                    <% } %>
+                    <% if (product.sizes.length > 1 || (product.sizes.length === 1 && product.sizes[0].sizes_type !== 'Único')) { %>
+                        <p class="title-sizes">Talles disponibles</p>
+                        <% for (let i=0 ; i < product.sizes.length ; i++) { %>
+                            <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
+                        <% } %>
+                    <% } %>            
                 </div>
             </div>
         </article>
     </main>
 
-    <script>
-        let quantityElement = document.getElementById('quantity');
-
-        function decrementQuantity() {
-            let currentQuantity = parseInt(quantityElement.textContent);
-            if (currentQuantity > 1) {
-                currentQuantity--;
-                quantityElement.textContent = currentQuantity;
-            }
-        }
-
-        function incrementQuantity() {
-            let currentQuantity = parseInt(quantityElement.textContent);
-            currentQuantity++;
-            quantityElement.textContent = currentQuantity;
-        }
-    </script>
-
-
     <%- include('./partials/footer') %>
+
+    <script src="/js/front.js"></script>
 
 </body>
 </html>

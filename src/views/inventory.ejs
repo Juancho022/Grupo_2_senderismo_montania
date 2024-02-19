@@ -56,9 +56,11 @@
 
                                <%  }) %>
                                 <div class="counter">
-                                    <div class="button" id="decrease">-</div>
-                                    <span id="count">22</span>
-                                    <div class="button" id="increase">+</div>
+                                    <div class="counter">
+                                        <div class="button decrease" id="decrease">-</div>
+                                        <span class="count">22</span>
+                                        <div class="button increase" id="increase">+</div>
+                                    </div>
                                 </div>
                                 <div class="edit-n-delete">
                                     <form action="/inventory/<%= product.id %>/delete?_method=DELETE" method="POST">
@@ -71,46 +73,11 @@
                             </div>
                             <% }) %>
                     </div>
-
-                    <%- include('./partials/footer') %>
-
                 </main>
 
+                <%- include('./partials/footer') %>
 
-                <!-- JavaScript para la funcionalidad del contador -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        // Obtener referencias a los elementos HTML
-                        var decreaseButtons = document.querySelectorAll('.button#decrease');
-                        var increaseButtons = document.querySelectorAll('.button#increase');
-                        var countElements = document.querySelectorAll('.counter #count');
-
-                        // Manejar el evento de decremento
-                        decreaseButtons.forEach(function (button, index) {
-                            button.addEventListener('click', function () {
-                                // Obtener el valor actual y restar 1
-                                var currentCount = parseInt(countElements[index].textContent);
-                                var newCount = currentCount - 1;
-
-                                // Actualizar el elemento con el nuevo valor
-                                countElements[index].textContent = newCount;
-                            });
-                        });
-
-                        // Manejar el evento de incremento
-                        increaseButtons.forEach(function (button, index) {
-                            button.addEventListener('click', function () {
-                                // Obtener el valor actual y sumar 1
-                                var currentCount = parseInt(countElements[index].textContent);
-                                var newCount = currentCount + 1;
-
-                                // Actualizar el elemento con el nuevo valor
-                                countElements[index].textContent = newCount;
-                            });
-                        });
-                    });
-                </script>
-
+                <script src="/js/front.js"></script>
 
         </body>
 
