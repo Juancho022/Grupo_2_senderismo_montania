@@ -7,6 +7,7 @@ const methodOverride = require('method-override'); // Pasar poder usar los méto
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const bodyParser = require('body-parser');
+
 const cors = require('cors');
 
 //Ejecutamos el llamado a las rutas
@@ -23,7 +24,7 @@ const countProductApiRoutes = require('./routes/api/countProductRoutes');
 
 const authentication = require('./middlewares/authMiddleware');
 const forAdmin = require('./middlewares/forAdminMiddleware')
-const app = express();
+const app = express(); 
 
 
 app.use(express.urlencoded({ extended: false }));
