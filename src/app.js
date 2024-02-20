@@ -20,6 +20,7 @@ const helpRoutes = require('./routes/ayuda');
 //Rutas de las APIs
 const productsApiRoutes = require('./routes/api/productRoutes'); 
 const countProductApiRoutes = require('./routes/api/countProductRoutes');
+const countCategorieRoutes = require('./routes/api/countCategorieRoutes');
 
 
 const authentication = require('./middlewares/authMiddleware');
@@ -55,6 +56,7 @@ app.use('/inventory', inventoryRoutes);
 app.use('/help', helpRoutes);
 app.use('/api/products', productsApiRoutes);
 app.use('/api', countProductApiRoutes);
+app.use('/api', countCategorieRoutes);
 
 
 
