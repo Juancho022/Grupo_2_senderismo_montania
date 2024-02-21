@@ -126,8 +126,8 @@ const controller = {
                             httpOnly: true,
                         });
                     }
-                    if (userToLogin.roles_id == 1) {
-                        return res.redirect('/')
+                    if (userToLogin.roles_id==1) {
+                        return res.redirect('/inventory')
                     } else {
                         return res.redirect('/user/profile');
                     }
