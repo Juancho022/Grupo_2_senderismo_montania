@@ -1,47 +1,56 @@
 <% let pageTitle='User edit form' %>
-    <%- include('partials/head', { styles: ['stylesForm'], pageTitle: pageTitle }) %>
+    <%- include('partials/head', { styles: ['userToEditForm'], pageTitle: pageTitle }) %>
 
-    <body>
+        <body>
 
-        <%- include('./partials/header') %>
+            <%- include('./partials/header') %>
 
-            <main>
-                <div>
-                    <section id="sectionRegister">
-                        <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
-                            <div id="formLogin">
-                                <form method="POST" action="/user/<%= userToEdit.id %>/edit?_method=PUT" enctype="multipart/form-data">
-                                    <div>
-                                        <label>Nombre</label>
-                                        <input type="text" name="firstName" value="<%= userToedit.firstName %>">
-                                    </div>
-
-                                    <div>
-                                        <label>Apellido</label>
-                                        <input type="text" name="lastName" value="<%= userToEdit.lastName %>">
-                                    </div>
-
-                                    <div>
-                                        <label>Correo Electrónico</label>
-                                        <input type="email" name="email" value="<%= userToEdit.email %>">
-                                    </div>
-
-                                    <div>
-                                        <label>Contraseña</label>
-                                        <input type="password" name="password">
-                                        <% if (locals.errors && errors.password) { %>
-                                            <span class="error-message">
-                                                <%= errors.password.msg %>
-                                            </span>
-                                            <% } %>
-                                    </div>
-                                    <button type="submit">Guardar cambios</button>
-                                </form>
+                <main>
+                    <div class="form-container">
+                        <form method="POST" action="/user/<%= user.id %>/edit?_method=PUT">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" name="first_name" value="<%= user.first_name %>">
                             </div>
-                    </section>
-                </div>
-            </main>
 
-            <%- include('./partials/footer') %>
+                            <div class="form-group">
+                                <label>Apellido</label>
+                                <input type="text" name="last_name" value="<%= user.last_name %>">
+                            </div>
 
-    </body>
+                            <div class="form-group">
+                                <label>Correo Electrónico</label>
+                                <input type="email" name="email" value="<%= user.email %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">Fecha de Nacimiento:</label>
+                                <input type="date" id="birthdate" name="birthdate" value="<%= user.birthdate %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Dirección:</label>
+                                <input type="text" id="address" name="address" value="<%= user.address %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono:</label>
+                                <input type="text" id="phone" name="phone" value="<%= user.phone %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Rol:</label>
+                                <select id="role" name="role">
+                                    <% roles.forEach(role=> { %>
+                                        <option value="<%= role.id %>" <% if (role.id===user.roles_id) { %>
+                                            selected
+                                            <% } %>><%= role.description %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
+
+                            <button type="submit">Guardar cambios</button>
+                        </form>
+                    </div>
+                </main>
+
+                <%- include('./partials/footer') %>
+
+        </body>

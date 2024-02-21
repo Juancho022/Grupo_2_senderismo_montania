@@ -1,0 +1,25 @@
+<% let pageTitle='Administrador' %>
+    <%- include('partials/head', { pageTitle: pageTitle, styles: ['admin'] }) %>
+
+        <body>
+            <%- include('./partials/header') %>
+
+                <main>
+                    <div class="button-container">
+                        <a href="/inventory"><button>Inventario</button></a>
+                    </div>
+                    <div class="button-container">
+                        <a href="/user/list"> <button>Lista de usuarios</button></a>
+                    </div>
+                    <div class="button-container">
+                        <button>Métricas</button>
+                    </div>
+
+                </main>
+
+                <%- include('./partials/footer') %>
+
+        </body>
+
+
+        </html>
