@@ -122,7 +122,7 @@ const controller = {
                         });
                     }
                     if (userToLogin.roles_id==1) {
-                        return res.redirect('/')
+                        return res.redirect('/inventory')
                     } else {
                         return res.redirect('/user/profile');
                     }
