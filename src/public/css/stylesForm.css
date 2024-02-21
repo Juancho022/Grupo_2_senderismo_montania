@@ -10,7 +10,7 @@ html, body {
 
 main div{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 main section#sectionLogin {
     position: relative;

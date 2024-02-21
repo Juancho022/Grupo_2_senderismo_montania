@@ -12,6 +12,10 @@ const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
 
 const controller = {
+    admin: (req, res) =>{
+        res.render('adminView');
+    },
+
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
@@ -44,35 +48,36 @@ const controller = {
             res.status(500).send('Error interno del servidor');
         }
     },
-    // profile: async (req, res) => {
-    //     try {
-    //         const user = await db.User.findByPk(req.session.user.id, {
-    //             attributes: { exclude: ['password'] },
-    //             include: ['role']
-    //         });
-    //         res.render('profile', { user: user.dataValues });
-    //     } catch (error) {
-    //     }
-    // },
+
     edit: async (req, res) => {
         try {
             const user = await db.User.findByPk(req.params.id);
             const roles = await db.Rol.findAll()
             res.render('userEditForm', { user, roles });
         } catch (error) {
-            res.send(error);
+            console.log(error);
         }
     },
 
-    update: (req, res) => {
-        db.User.update(req.body, { where: { id: req.params.id } })
-            .then(() => {
-                res.redirect('/');
-            })
-            .catch((err) => {
-                res.send(err);
-            });
+    update: async (req, res) => {
+        try {
+            console.log('Llegó una solicitud de actualización de usuario');
+            const userId = req.params.id;
+            const userDataToUpdate = req.body;
+            console.log('Actualizando usuario con ID:', userId);
+            console.log('Datos a actualizar:', userDataToUpdate);
+    
+            const result = await db.User.update(userDataToUpdate, { where: { id: userId } });
+            console.log('Resultado de la actualización:', result); // Agrega esta línea
+    
+            console.log('Usuario actualizado exitosamente.');
+            res.redirect('/profile');
+        } catch (error) {
+            console.error('Error al actualizar el usuario:', error);
+            res.status(500).send('Error interno del servidor');
+        }
     },
+    
 
     login: (req, res) => {
         res.render('login');
@@ -140,7 +145,7 @@ const controller = {
             return res.json(error);
         }
     },
-    
+
 
     register: (req, res) => {
         res.render('register');
@@ -193,46 +198,6 @@ const controller = {
         req.session.destroy();
         res.clearCookie("recordarme");
         return res.redirect('/');
-    },
-    list: async (req, res) => {
-        try {
-            const users = await db.User.findAll({
-                include: ['roles'],
-                attributes: {
-                    exclude: ['password', 'roles_id']
-                }
-            });
-            res.render('usersList', { users });
-        } catch (error) {
-            res.send(error);
-        }
-    },
-    detail: async (req, res) => {
-        try {
-            const user = await db.User.findByPK(req.params.id);
-            return res.render('userDetail', { user });
-        } catch (error) {
-
-        }
-    },
-
-    edit: async (req, res) => {
-        try {
-            const user = await db.User.findByPk(req.params.id);
-            const roles = await db.Rol.findAll()
-            res.render('userEditForm', { user, roles });
-        } catch (error) {
-            res.send(error);
-        }
-    },
-    update: (req, res) => {
-        db.User.update(req.body, { where: { id: req.params.id } })
-            .then(() => {
-                res.redirect('/');
-            })
-            .catch((err) => {
-                res.send(err);
-            });
     },
     delete: async (req, res) => {
         try {
