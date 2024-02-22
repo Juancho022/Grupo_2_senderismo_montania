@@ -12,6 +12,10 @@ const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
 
 const controller = {
+    admin: (req, res) =>{
+        res.render('adminView');
+    },
+
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
@@ -122,8 +126,8 @@ const controller = {
                             httpOnly: true,
                         });
                     }
-                    if (userToLogin.roles_id == 1) {
-                        return res.redirect('/')
+                    if (userToLogin.roles_id==1) {
+                        return res.redirect('/inventory')
                     } else {
                         return res.redirect('/user/profile');
                     }
