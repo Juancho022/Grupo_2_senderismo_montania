@@ -39,6 +39,24 @@ console.log(products)
             });
     },
 
+    search: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({
+                where: { name: { [Op.like]: `%${req.body.name}%` } }
+            });
+    
+            if (products.length === 0) {
+                const response = '"' + req.body.name + '" no fue encontrado';
+                return res.render('noResults', { response }); 
+            }
+    
+            res.render('products', { products });
+        } catch (error) {
+            console.error('Error al buscar productos:', error);
+            return res.status(500).send('Error al buscar productos');
+        }
+    },
+
     // Cart
     productCart: (req, res) => {
         res.render('productCart')
