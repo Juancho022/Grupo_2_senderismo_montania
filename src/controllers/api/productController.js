@@ -4,31 +4,20 @@ const productController = {
  // Endpoint para obtener todos los productos
     list(req, res) {
         db.Product.findAll({
-            attributes: ['id', 'categories_id', 'description', 'name']
+                attributes: ['id', 'categories_id', 'description', 'name'],
+                include: [{
+                    association: 'category',
+                    attributes: ['description']
+                }]
             })
             .then(products => {
-                // Obtener el total de productos en la base
-                const count = products.length;
-                // Obtener el total de productos por categoría
-                const countByCategory = {};
-                products.forEach(product => {
-                    if (product.categories_id in countByCategory) {
-                        countByCategory[product.categories_id]++;
-                    } else {
-                        countByCategory[product.categories_id] = 1;
-                    }
-                });
-
-                // Construir la respuesta
+                
                 const response = {
-
-                    count: count,
-                    countByCategory: countByCategory,
                     products: products.map(product => ({
                         id: product.id,
                         name: product.name,
                         description: product.description,
-                        categories: [product.categories_id], 
+                        categories: product.category.description, 
                         detail: `/products/productDetail/${product.id}`
                     }))
                 };
