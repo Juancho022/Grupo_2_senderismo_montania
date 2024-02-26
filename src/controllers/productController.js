@@ -42,16 +42,32 @@ const productController = {
     search: async (req, res) => {
         try {
             const products = await db.Product.findAll({
+                attributes: ['id', 'name', 'img'],
                 where: { name: { [Op.like]: `%${req.body.name}%` } }
             });
     
             if (products.length === 0) {
                 const response = '"' + req.body.name + '" no fue encontrado';
-                return res.render('noResults', { response }); 
+                return res.send(response);  
             }
     
-            res.render('products', { products });
+            const productIds = products.map(product => product.id);
+    
+            const prices = await db.ProductPrice.findAll({
+                where: { products_id: productIds },
+                attributes: ['products_id', 'price']
+            });
+    
+            products.forEach(product => {
+                product.prices = prices
+                    .filter(price => price.products_id === product.id)
+                    .map(price => price.price);
+            });
+    
+            res.render('products.ejs', { products });
+
         } catch (error) {
+
             console.error('Error al buscar productos:', error);
             return res.status(500).send('Error al buscar productos');
         }

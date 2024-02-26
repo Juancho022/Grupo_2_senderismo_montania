@@ -16,7 +16,7 @@ div#search-products {
     padding-bottom: 24px;
 }
 
-input[type="text-search"] {
+input{
     padding: 8px 40px 8px 8px;
     border: 1px solid #ccc;
     border-radius: 32px;
