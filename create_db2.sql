@@ -57,7 +57,7 @@ CREATE TABLE `users` (
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `categories_id` int(11) NOT NULL,
-  `timestamp` date NOT NULL,
+  `timestamp` datetime NOT NULL,
   `description` text NOT NULL,
   `sizes_id` int(11) DEFAULT NULL,
   `img` varchar(256) DEFAULT NULL,

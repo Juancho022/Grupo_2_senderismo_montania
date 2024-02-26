@@ -40,7 +40,7 @@ const validations = [
         .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
         .matches(/^(?=.*[A-Z])(?=.*[!@#$%^&*A-Z]).{8,}$/)
         .withMessage('Debe incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
-];
+    ];
 
 router.get('/adminView', userController.admin);
 
