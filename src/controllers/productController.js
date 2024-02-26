@@ -24,7 +24,7 @@ const productController = {
                         products.forEach(product => {
                             product.prices = prices.filter(price => price.products_id === product.id).map(price => price.price);
                         });
-console.log(products)
+
                         // Renderizar la vista con los productos y los precios
                         res.render('products.ejs', { products, prices });
                     })
@@ -68,15 +68,15 @@ console.log(products)
             attributes: ['img', 'description', 'name'],
             include: [{
                 association: 'sizes',
-                attributes: ['sizes_type'] 
+                attributes: ['sizes_type']
             }, {
                 association: 'price',
-                attributes: ['price'] 
+                attributes: ['price']
             }]
         })
             .then(product => {
                 if (product) {
-                    res.render('productDetail', { product})
+                    res.render('productDetail', { product })
                 } else {
                     res.send('Producto no encontrado :(')
                 }
@@ -85,7 +85,34 @@ console.log(products)
                 console.log(err)
                 res.send(err)
             })
-    }
+    },
+    // Obtener el último producto agregado
+    getLastProduct(req, res) {
+        db.Product.findOne({
+            order: [['timestamp', 'DESC']],
+            attributes: ['id', 'name', 'description', 'timestamp', 'img'],
+        })
+            .then(product => {
+                if (product) {
+                    // Construyo la URL completa de la imagen
+                    const imageUrl = `http://localhost:3000/images/${product.img}`;
+
+                    // Agrego la URL completa de la imagen al objeto de producto
+                    const productWithImageUrl = {
+                        ...product.toJSON(),
+                        img: imageUrl
+                    };
+
+                    res.status(200).json(productWithImageUrl);
+                } else {
+                    res.status(404).json({ error: 'Producto no encontrado' });
+                }
+            })
+            .catch(err => {
+                res.status(500).json({ error: err.message });
+            });
+    },
+
 }
 
 module.exports = productController;
