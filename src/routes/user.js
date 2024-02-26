@@ -40,7 +40,9 @@ const validations = [
         .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
         .matches(/^(?=.*[A-Z])(?=.*[!@#$%^&*A-Z]).{8,}$/)
         .withMessage('Debe incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
-];
+    ];
+
+router.get('/adminView', userController.admin);
 
 router.get('/login',  userController.login);
 router.post('/login',  userController.loginProcess);
@@ -53,7 +55,7 @@ router.get('/profile', userController.profile);
 //router.get("/admin", userController.admin);//falta vista
 
 
-router.get('/', userController.list);
+router.get('/list', userController.list);
 
 router.get('/:id/edit', userController.edit);
 router.put('/:id/edit', userController.update);

@@ -12,6 +12,10 @@ const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
 
 const controller = {
+    admin: (req, res) => {
+        res.render('adminView');
+    },
+
     list: async (req, res) => {
         try {
             const users = await db.User.findAll({
@@ -25,7 +29,6 @@ const controller = {
             res.send(error);
         }
     },
-
     profile: async (req, res) => {
         try {
             if (!req.session.user) {
@@ -62,10 +65,10 @@ const controller = {
             const userDataToUpdate = req.body;
             console.log('Actualizando usuario con ID:', userId);
             console.log('Datos a actualizar:', userDataToUpdate);
-    
+
             const result = await db.User.update(userDataToUpdate, { where: { id: userId } });
             console.log('Resultado de la actualización:', result); // Agrega esta línea
-    
+
             console.log('Usuario actualizado exitosamente.');
             res.redirect('/profile');
         } catch (error) {
@@ -73,37 +76,9 @@ const controller = {
             res.status(500).send('Error interno del servidor');
         }
     },
-    
-
     login: (req, res) => {
         res.render('login');
     },
-
-    // loginProcess: async (req, res) => {
-    //     try {
-    //         const user = await db.User.findOne({
-    //             where: { email: req.body.emailUsuario },
-    //             include: ['roles'],
-    //             limit: 1
-    //         });
-    //         if (!user) {
-    //             return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
-    //         }
-    //         if (!bcrypt.compareSync(req.body.passwordUsuario, user.password)) {
-    //             return res.render('login', { errors: { unauthorize: { msg: 'Usuario y/o contraseña invalidos' } } });
-    //         }
-    //         req.session.user = {
-    //             email: user.email,
-    //             id: user.roles.id
-    //         };
-    //         if (req.body.recordarUsuario != undefined) {
-    //             res.cookie('userEmail', req.session.user.email, { maxAge: 30 * 24 * 60 * 60 * 1000 });
-    //         }
-    //         return res.redirect('/user/profile');
-    //     } catch (error) {
-    //         res.send(error);
-    //     }
-    // },
     loginProcess: async (req, res) => {
         try {
             const userToLogin = await db.User.findOne({
@@ -123,7 +98,7 @@ const controller = {
                         });
                     }
                     if (userToLogin.roles_id == 1) {
-                        return res.redirect('/')
+                        return res.redirect('http://localhost:3001/')
                     } else {
                         return res.redirect('/user/profile');
                     }
@@ -141,8 +116,6 @@ const controller = {
             return res.json(error);
         }
     },
-
-
     register: (req, res) => {
         res.render('register');
     },
@@ -152,10 +125,17 @@ const controller = {
             if (userExists) {
                 return res.render('userExists');
             }
+    
+            // Validar que las contraseñas coincidan
+            if (req.body.password !== req.body.confirmPassword) {
+                return res.render('register', { errors: { confirmPassword: { msg: 'Las contraseñas no coinciden' } }, oldData: req.body });
+            }
+    
             const errors = validationResult(req);
-            if (!errors.isEmpty()) {  //si hay error renderiza la vista del registro con el error de validación
+            if (!errors.isEmpty()) {  
                 return res.render('register', { errors: errors.mapped(), oldData: req.body });
             }
+            
             const newUser = {
                 first_name: req.body.firstName,
                 last_name: req.body.lastName,
@@ -205,6 +185,5 @@ const controller = {
             res.json(error)
         }
     },
-
 };
 module.exports = controller;

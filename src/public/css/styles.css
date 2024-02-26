@@ -514,6 +514,32 @@ section#cardsHome div.card button.buttonCard:hover {
     border: 1px solid rgb(0, 0, 0);
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 /* QUERIES START */
 
 /*************MOBILE**************************/

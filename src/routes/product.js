@@ -16,8 +16,10 @@ router.get('/productCart' ,productController.productCart);
 /*** GET ONE PRODUCT ***/ 
 router.get('/productDetail/:id/', productController.productDetail); 
 
+/*** GET LAST PRODUCT ***/ 
+router.get('/last-product', productController.getLastProduct);
 
-
+router.post('/search', productController.search)
 
 module.exports = router;
 
