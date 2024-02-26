@@ -53,7 +53,7 @@ En nuestra tienda, creemos en la importancia de equiparse adecuadamente para dis
 
 *Matias Leglise:* ¡Hola! Mi nombre es Mati, tengo 30 años, soy de Coronel Brandsen, provincia de Buenos Aires, aunque ya hace 5 años que me mude por trabajo a la hermosa ciudad de La Plata, lugar donde naci (o ciudad e las diagonales como le llaman algunos) ya que empece a trabajar en Sancor Salud. Tengo 6 hermanos y unos cuantos sobrinos. Si bien tuve trabajos muy variados y soy estudiante avanzado de la carrera de Derecho, me considero un "geek" lo que segun google es "persona fascinada por la tecnología y la informática", todo lo que tenga que ver con formatear, armar, desarmar casi cada dispositivo que pasaba por mis manos, nunca se me paso por la cabeza la programacion porque lo asimilaba a algo con una complejidad mayor a mi entendimiento lo cual hoy cambio, ya que pasa de ser un imposible a una meta. 
 
-*Camila Gon:* Buenas! Vivo en Rafaela, Santa Fe pero nací en Humberto I. Soy de julio del '93, fan de los michis (porque son los seres más lindos y esponjosos que existen) y disfruto de jugar a los videojuegos (sobre todo los de survival horror). Soy Licenciada en Comunicación Social, estudié un año y medio de diseño UX/UI y actualmente también estoy en tercer año de Inglés. Disfruto estar y aprendo todos los días de mis hermanos Alan y Alexis y de mi novio Lucas, a quienes, junto a mi mamá, les debo mucho de mis progresos. 
+*Camila Gon:* Buenas! Vivo en Rafaela, Santa Fe pero nací en Humberto I. Soy de julio del '93, fan de los michis y disfruto de jugar a los videojuegos (sobre todo los de survival horror). Soy Licenciada en Comunicación Social, estudié un año y medio de diseño UX/UI y actualmente también estoy en cuarto año de Inglés. Disfruto estar (y aprendo todos los días) de mis hermanos Alan y Alexis y de mi novio Lucas, a quienes, junto a mi mamá, les debo mucho de mis progresos. 
 
 *Andrea Toledo:* ¡Hola! Soy Andrea y resido en San Miguel de Tucumán, Tucumán. Durante más de una década, me desempeñé como Técnica en Higiene y Seguridad Laboral. Sin embargo, tomé la decisión de emprender un nuevo camino en el mundo IT. Recientemente, completé un curso de Testing QA Manual y ahora estoy embarcada en esta emocionante aventura, con el apoyo incondicional de mi novio y mis padres.
 
@@ -76,3 +76,6 @@ Elegimos estos sitios webs ya que los productos que ofrecen son semejantes a los
 https://www.figma.com/file/JErK4RRbHUTOJBHhXUsjlQ/Grupo-2---Proyecto?type=whiteboard&node-id=0-1&t=CW0wbQPGv4fV6v6l-0 
 
 https://trello.com/b/JhTLTmVy/grupo2senderismomontania
+
+## Dashboard de Admin
+https://github.com/cgon182/dashboard_peak
