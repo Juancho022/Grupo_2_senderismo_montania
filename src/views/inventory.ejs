@@ -9,8 +9,10 @@
                     <div id="header-products">
                         <h2>Inventario de productos</h2>
                         <div id="search-products">
-                            <input type="text-search" placeholder="Búsqueda rápida">
+                            <form action="/products/buscar" method="POST">
+                            <input type="text-search" name="name" placeholder="Búsqueda rápida">
                             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                        </form>
                         </div>
                         <div id="button-add-product">
                             <a href="/inventory/create">
