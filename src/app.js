@@ -16,6 +16,7 @@ const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const inventoryRoutes = require('./routes/inventory');
 const helpRoutes = require('./routes/ayuda');
+const aboutUsRoutes = require('./routes/aboutUs');
 
 //Rutas de las APIs
 const productsApiRoutes = require('./routes/api/productRoutes'); 
@@ -64,6 +65,8 @@ app.use('/api/products', productsApiRoutes);
 app.use('/api', countProductApiRoutes);
 app.use('/api', countCategorieRoutes);
 app.use('/api/categories', categoryRoutes);
+app.use('/aboutUs', aboutUsRoutes);
+
 app.use('/api/users', usersApiRoutes);
 
 
