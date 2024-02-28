@@ -59,6 +59,11 @@ div.form .nav-search input{
     padding-bottom: 15px;
   }
 
+  #map {
+    height: 500px;
+    width: 100%;
+  }
+
   @media (max-width: 380px) {
     div.form .nav-search input{
       width: 250px;
