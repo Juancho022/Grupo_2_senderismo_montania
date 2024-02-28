@@ -10,9 +10,9 @@
                         <h2>Inventario de productos</h2>
                         <div id="search-products">
                             <form action="/products/buscar" method="POST">
-                            <input type="text-search" name="name" placeholder="Búsqueda rápida">
-                            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
-                        </form>
+                                <input type="text-search" name="name" placeholder="Búsqueda rápida">
+                                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                            </form>
                         </div>
                         <div id="button-add-product">
                             <a href="/inventory/create">
@@ -45,33 +45,34 @@
                                         <%= product.name %>
                                     </span>
                                 </div>
-                                <select class="product-category">
-                                    <option value="<%= product.category.id %>" selected>
+                                <div class="product-category">
+                                    <span class="product-category">
                                         <%= product.category.description %>
-                                    </option>
-                                </select>
+                                    </span>
+                                </div>
 
-                                <% product.prices.forEach(element => { %>
+                                <% product.prices.forEach(element=> { %>
                                     <span class="product-price">
                                         <%= element.price %>
                                     </span>
 
-                               <%  }) %>
-                                <div class="counter">
-                                    <div class="counter">
-                                        <div class="button decrease" id="decrease">-</div>
-                                        <span class="count">22</span>
-                                        <div class="button increase" id="increase">+</div>
-                                    </div>
-                                </div>
-                                <div class="edit-n-delete">
-                                    <form action="/inventory/<%= product.id %>/delete?_method=DELETE" method="POST">
-                                        <button type="submit"><i class="fa fa-trash trash"></i></button>
-                                    </form>
+                                    <% }) %>
+                                        <div class="counter">
+                                            <div class="counter">
+                                                <div class="button decrease" id="decrease">-</div>
+                                                <span class="count">22</span>
+                                                <div class="button increase" id="increase">+</div>
+                                            </div>
+                                        </div>
+                                        <div class="edit-n-delete">
+                                            <form action="/inventory/<%= product.id %>/delete?_method=DELETE"
+                                                method="POST" onsubmit="return confirmDelete()">
+                                                <button type="submit"><i class="fa fa-trash trash"></i></button>
+                                            </form>
 
-                                    <a href="/inventory/<%= product.id %>/edit"><i
-                                            class="fas fa-pencil-alt pencil-edit"></i></a>
-                                </div>
+                                            <a href="/inventory/<%= product.id %>/edit"><i
+                                                    class="fas fa-pencil-alt pencil-edit"></i></a>
+                                        </div>
                             </div>
                             <% }) %>
                     </div>
@@ -79,7 +80,7 @@
 
                 <%- include('./partials/footer') %>
 
-                <script src="/js/front.js"></script>
+                    <script src="/js/front.js"></script>
 
         </body>
 
