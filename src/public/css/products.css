@@ -9,7 +9,35 @@ html {
     font-size: 100%;
 }
 
-main {
+div#search-products {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 92px;
+    padding-bottom: 24px;
+}
+
+input{
+    padding: 8px 40px 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 32px;
+    width: 469px;
+    position: relative;
+}
+
+.search-button {
+    background-color: transparent;
+    color: #ccc;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+input[type="text-search"]:focus + .search-button {
+    color: #000;
+}
+
+
+.products-container {
     display: grid;
     justify-content: space-between;
     padding: 48px;

@@ -24,6 +24,8 @@ const countProductApiRoutes = require('./routes/api/countProductRoutes');
 const countCategorieRoutes = require('./routes/api/countCategorieRoutes');
 const categoryRoutes = require('./routes/api/categoryRoutes');
 
+const usersApiRoutes = require('./routes/api/usersRoutes');
+
 
 
 
@@ -65,6 +67,7 @@ app.use('/api', countCategorieRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/aboutUs', aboutUsRoutes);
 
+app.use('/api/users', usersApiRoutes);
 
 
 
