@@ -89,15 +89,25 @@ const inventoryController = {
         },
 
 
-    update: (req, res) => {
-        db.Product.update(req.body, { where: { id: req.params.id } })
-            .then(() => {
-                res.redirect('/products');
-            })
-            .catch((err) => {
-                res.send(err);
-            });
-    },
+        update: (req, res) => {
+            const productId = req.params.id;
+            const updatedProductData = req.body;
+        
+            console.log("Datos recibidos para actualizar:", updatedProductData);
+        
+            db.Product.update(updatedProductData, { where: { id: productId } })
+                .then(() => {
+                    
+                    return db.ProductPrice.update({ price: updatedProductData.price }, { where: { products_id: productId } });
+                })
+                .then(() => {
+                    res.redirect('/products');
+                })
+                .catch((err) => {
+                    console.error("Error al actualizar el producto:", err);
+                    res.send(err);
+                });
+        },
 
     destroy: async (req, res) => {
         const productId = req.params.id;
