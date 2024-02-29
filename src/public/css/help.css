@@ -60,9 +60,9 @@ div.form .nav-search input{
   }
 
   #map {
-    height: 500px;
-    width: 100%;
-  }
+	height: 500px;
+	width: 100%;
+}
 
   @media (max-width: 380px) {
     div.form .nav-search input{
