@@ -31,9 +31,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 328px;
     flex-wrap: wrap;
-    margin-left: 20%;
+    padding: 16px;
 }
 
 .our-story-left {
@@ -54,18 +53,20 @@
     margin-top: 16px;
     font-size: 16px;
     text-align: left;
-    width: 306px;
+    width: 100%;
 }
 
 .our-story-right {
-    width: 50%;
+    width: 35%;
+    text-align: center;
 }
-
 
 .our-story-right img {
-    width: 70%;
+    width: 100%;
+    max-width: 400px;
     border-radius: 16px;
 }
+
 
 .title {
     display: flex;
@@ -166,6 +167,7 @@
     display: flex;
     justify-content: center;
     gap: 8px;
+    padding: 0px 0px 48px;
 }
 
 .sust {
@@ -192,6 +194,7 @@
     color: white;
     font-size: 24px;
     text-align: center;
+    width: 90%;
 }
 
 .overlay p {
@@ -214,3 +217,119 @@
 }
 
 
+/*Query start*/
+@media (min-width: 1440px) {
+    .all-members {
+        padding: 16px 120px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .hero-about-us p {
+        top: 27%;
+    }
+
+    .our-story {
+        gap: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-about-us h3 {
+        left: 60%;
+    }
+
+    .hero-about-us p {
+        top: 26%;
+        left: 60%;
+    }
+
+    .all-members {
+        padding: 16px 90px;
+    }
+
+    .member-img img {
+        width: auto;
+    }
+
+    .member-img .img-expanded {
+        width: auto;
+    }
+}
+
+@media (max-width: 425px) {
+
+.hero-about-us h3 {
+    position: relative;
+    top: 60%;
+    left: 48%;
+    width: 97%;
+    font-size: 24px;
+    }
+
+    .hero-about-us p {
+        top: 24%;
+        left: 26%;
+    }
+
+    .our-story-right img {
+        display: none;
+    }
+
+    .our-story-left {
+        width: 80%;
+    }
+
+    .all-members {
+        justify-content: center;
+        padding: 16px 24px;
+        gap: 8px;
+    }
+
+    .member {
+        width: 182px;
+    }
+
+    .member img {
+        width: 182px;
+    }
+
+    .member-img .img-expanded {
+        width: 182px;
+    }
+
+    .company-numbers .number .circle {
+        position: relative; /* Establece el posicionamiento relativo para el círculo */
+    }
+    
+    .company-numbers .number .circle i {
+        position: absolute;  
+        top: 50%;  
+        left: 50%;  
+        transform: translate(-50%, -50%);  
+    }
+
+    .title h2{
+        padding: 24px;
+    }
+
+    .sust {
+        position:relative;
+        width: 100%;
+        margin: 8px;
+    }
+
+    .sustainable {
+        flex-wrap: wrap;
+    }
+    
+    .sust:hover .overlay {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+
+}
