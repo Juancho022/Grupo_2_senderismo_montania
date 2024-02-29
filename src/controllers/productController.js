@@ -86,7 +86,7 @@ const productController = {
                 association: 'sizes',
                 attributes: ['sizes_type']
             }, {
-                association: 'price',
+                association: 'prices',
                 attributes: ['price']
             }]
         })
