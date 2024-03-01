@@ -69,7 +69,7 @@ app.use('/api/users', usersApiRoutes);
 
 
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor iniciado en: http://localhost:${port}`);
 });
