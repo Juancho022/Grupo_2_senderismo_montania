@@ -70,7 +70,7 @@ const controller = {
             console.log('Resultado de la actualización:', result); // Agrega esta línea
 
             console.log('Usuario actualizado exitosamente.');
-            res.redirect('/profile');
+            res.redirect('/user/profile');
         } catch (error) {
             console.error('Error al actualizar el usuario:', error);
             res.status(500).send('Error interno del servidor');
