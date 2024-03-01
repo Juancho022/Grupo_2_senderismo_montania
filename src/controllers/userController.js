@@ -102,20 +102,26 @@ const controller = {
                     } else {
                         return res.redirect('/user/profile');
                     }
+                } else {
+                    return res.render('login', {
+                        errors: {
+                            email: {
+                                msg: "El email y/o la contraseña son incorrectos"
+                            }
+                        }
+                    });
                 }
+            } else {
+                return res.render('userDoesNotExist', {
+                    message: "El usuario no está registrado"
+                });
             }
-            return res.render('login', {
-                errors: {
-                    email: {
-                        msg: "El email y/o la contraseña son incorrectos"
-                    }
-                }
-            });
         } catch (error) {
-            console.log(error)
+            console.log(error);
             return res.json(error);
         }
     },
+    
     register: (req, res) => {
         res.render('register');
     },
