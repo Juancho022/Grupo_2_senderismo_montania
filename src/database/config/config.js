@@ -3,7 +3,7 @@ require('dotenv').config({path:__dirname+'/./../../.env'});
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
+    "password": 'mp-451414',
     "database": "peak_database",
     "host": "localhost",
     "port": 3306,

@@ -21,33 +21,37 @@
 
     <nav class="right-bar">
         <% if (locals.user) { %>
-            <h2 id="userLog">¡Hola <%= locals.user.first_name %>!</h2>
+            <h2 id="userLog">¡Hola <%= locals.user?.first_name %>!</h2>
             <% } %> 
+            
             <div class="icon-container" onmouseenter="showPopup()" onmouseleave="hidePopup()">
                 <div class="icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
+
                 <div class="popup" onmouseenter="showPopup()" onmouseleave="hidePopup()">
-                    <div class="headercollapsable" id="login">
-                        <button class="headercollapsable">
-                            <a href="/user/login">Iniciar sesión</a>
-                        </button>
-                    </div>
-                    <div class="headercollapsable" id="register">
-                        <button class="headercollapsable">
-                            <a href="/user/register">Crear cuenta</a>
-                        </button>
-                    </div>
-                    <div class="headercollapsable" id="inventory">
-                        <button class="headercollapsable">
-                            <a href="/inventory">Inventario</a>
-                        </button>
-                    </div>
+                    <% if (locals.user) { %>
                     <div class="headercollapsable" id="logout">
                         <button class="headercollapsable">
                             <a href="/user/logout">Cerrar Sesión</a>
                         </button>
                     </div>
+                    <% } else { %>
+                    <div class="headercollapsable" id="login">
+                        <button class="headercollapsable">
+                            <a href="/user/login">Iniciar sesión</a>
+                        </button>
+                    </div>
+
+                    <div class="headercollapsable" id="register">
+                        <button class="headercollapsable">
+                            <a href="/user/register">Crear cuenta</a>
+                        </button>
+                    </div>
+
+                    <% } %>    
+
+
                 </div>
             </div>
 
