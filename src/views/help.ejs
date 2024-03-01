@@ -11,7 +11,7 @@
                     <section>
                         <h1>OBTENER AYUDA</h1>
                     </section>
-
+                    <br>
                     <div class="form">
                         <form class="nav-search"   action="#"  method="post">
                             <input type="text"   placeholder="¿Con que podemos ayudarte?">
@@ -20,14 +20,71 @@
                      <!-- INICIA BLOQUE DE AYUDA RAPIDA -->
                      <section class="fast-help">
                         <div class="encabezados">
-                            <h2>SERVICIO DE ASISTENCA RAPIDA</h2>
-                            <p>Las respuestas a las preguntas mas frecuentes estan a solo un click</p>
+                            <h1 class="fast-service">SERVICIO DE ASISTENCA RÁPIDA</h1>
+                            <p class="frecuent-questions">Las respuestas a las preguntas más frecuentes están a solo un click.</p>
+                        </div>
+                        <div class="general-questions">
+                            <div class="envio-entrega">
+                                <div class="title">
+                                    ENVÍO Y ENTREGA
+                                </div>
+                                <div class="questions">
+                                    <div>¿Cuáles son las opciones de entrega de Peak?</div>
+                                    <div>¿Cómo sigo mi pedido?</div>
+                                </div>
+                            </div>
+                            <div class="devoluciones">
+                                <div class="title">
+                                    DEVOLUCIONES
+                                </div>
+                                <div class="questions">
+                                    <div>¿Cuál es la política de devoluciones de Peak?</div>
+                                    <div>¿Cuándo veré mi reintegro?</div>
+                                </div>
+                            </div>
+                            <div class="pedidos">
+                                <div class="title">
+                                    PEDIDOS
+                                </div>
+                                <div class="questions">
+                                    <div>¿Qué metodos de pago puedo utilizar para hacer pedidos en Peak?</div>
+                                    <div>¿Cómo hago el seguimiento del estado de mi pedido de Peak?</div>
+                                    <div>¿Puedo cancelar o cambiar mi pedido de Peak?</div>
+                                </div>
+                            </div>
+                            <div class="informacion producto">
+                                <div class="title">
+                                    INFORMACIÓN DEL PRODUCTO
+                                </div>
+                                <div class="questions">
+                                    <div>¿Los productos Peak tienen garantía?</div>
+                                    <div>¿Cómo encuentro el talle adecuado?</div>
+                                    <div>¿Cómo puedo limpiar mi calzado, ropa o equipo Peak?</div>
+                                    <div>¿Compré calzado Peak falso?</div>
+                                </div>
+                            </div>
+                            <div class="corporativo">
+                                <div class="title">
+                                    CORPORATIVO
+                                </div>
+                                <div class="questions">
+                                    <div>¿Dónde puedo obtener más información acerca de Peak?</div>
+                                    <div>¿Cómo consigo los últimos lanzamientos de calzado de Peak?</div>
+                                </div>
+                            </div>
                         </div>
                      </section>
 
+                     <div class="asistencia">
+                        Si necesita una respuesta a alguna de las anteriores preguntas, llame al 0800-3492-569042. Es nuestro número de asistencia al cliente, estamos disponibles en días hábiles las 24hs!
+                     </div>
+
+                     <div id="map"></div>
 
             </main>
-
+            <script src="/js/maps.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+            
         <%- include('./partials/footer') %>
 
     </body>

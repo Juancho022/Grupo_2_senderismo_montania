@@ -1,10 +1,9 @@
 main {
-    padding: 50px 0px;
-    
+    padding-top: 50px;
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -15,20 +14,134 @@ h1 {
 }
 
 div.form .nav-search input{
-    width: 200px;
+    width: 350px;
+    height: 30px;
     text-align: center;
   }
 
-  section .fast-help{
-    display: flex;
-    padding: 10px;
-    border-color: black;
+  .frecuent-questions {
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 8px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 12px;
   }
 
-  h2{
+  div .questions {
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 8px;
+    padding-bottom: 15px;
     text-align: center;
+    font-size: 12px;
   }
 
-  p{
+  .fast-help {
+    margin: 35px;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    margin-top: 20px;
+  }
+
+  div .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 8px;
     text-align: center;
+    font-size: 14px;
+    padding-top:
+    10px;
+  }
+
+  .asistencia {
+    margin: 5px;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  #map {
+	height: 500px;
+	width: 100%;
+}
+
+  @media (max-width: 380px) {
+    div.form .nav-search input{
+      width: 250px;
+      height: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    main {
+      padding-top: 70px;
+    }
+    .asistencia {
+      margin: 15px;
+      padding-bottom: 25px;
+    }
+    div.form .nav-search input{
+      width: 450px;
+      height: 30px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    div .questions {
+      font-size: 14px;
+    }
+    div .title {
+      font-size: 16px;
+    }
+    .asistencia {
+      font-size: 14px;
+    }
+    .frecuent-questions {
+      font-size: 14px;
+    }
+  } 
+
+  @media (min-width: 1023px) {
+    .fast-help {
+      margin: 30px 150px 10px 150px;
+    }
+  }
+
+  @media (min-width: 1439px) {
+    .general-questions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    div .questions {
+      border-bottom: none;
+    }
+    .fast-help {
+      margin: 60px 200px 30px 200px;
+    }
+    .nav-search {
+      padding-top: 15px;
+    }
+    .asistencia{
+      padding-top: 25px;
+    }
+    div.form .nav-search input {
+      height: 40px;
+    }
+  }
+
+  @media (min-width: 1900px) {
+    .fast-help {
+      margin: 90px 340px 60px 340px;
+    }
+    main {
+      padding-top: 100px;
+    }
+    .nav-search { 
+      padding-top: 25px;
+    }
+    .general-questions {
+      padding-top: 10px;
+    }
+    .asistencia{
+      padding-bottom: 40px;
+    }
   }
