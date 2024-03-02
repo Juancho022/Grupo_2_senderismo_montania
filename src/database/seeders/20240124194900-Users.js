@@ -24,7 +24,7 @@ module.exports = {
         phone: '3492498232',
         roles_id: 2,
         address: 'Oroño 921',
-        img: 'https://i.imgur.com/abc123.jpg'
+        img: 'profile-pedro.png'
       },
       {
         first_name: 'Ana',
@@ -36,7 +36,7 @@ module.exports = {
         phone: '3492652811',
         roles_id: 1,
         address: 'Francia 222',
-        img: 'https://i.imgur.com/def456.jpg'
+        img: 'profile-ana.png'
       }
     ], {});
   },
