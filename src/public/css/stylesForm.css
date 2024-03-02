@@ -416,3 +416,20 @@ footer {
     margin-bottom: 10px;
     color: #FFFF;
 }
+
+.password-input-container {
+    position: relative;
+}
+
+.password-input-container input[type="password"] {
+    padding-right: 30px; 
+}
+
+.password-input-container i {
+    position: absolute;
+    color:black;
+    top: 20%;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+}
