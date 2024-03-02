@@ -12,7 +12,7 @@ html {
 div#search-products {
     display: flex;
     justify-content: center;
-    padding-top: 92px;
+    padding-top: 130px;
     gap: 24px;
 }
 

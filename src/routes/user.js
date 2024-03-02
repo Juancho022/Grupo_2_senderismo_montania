@@ -36,16 +36,24 @@ const validations = [
         .notEmpty().withMessage('El correo es requerido').bail()
         .isEmail().withMessage('Ingrese un formato de correo válido'),
     check('password')
-        .notEmpty().withMessage('Debes completar la contraseña').bail()
-        .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
-        .matches(/^(?=.*[A-Z])(?=.*[!@#$%^&*A-Z]).{8,}$/)
+        .notEmpty().withMessage('Debes completar la contraseña').bail(),
+    check('confirmPassword')
+    .notEmpty().withMessage('Debes completar la contraseña').bail()
+        .isLength({ min: 8 }).withMessage('Mínimo 8 caracteres')
+        .matches(/^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/)
         .withMessage('Debe incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
-    ];
+    .custom((value, { req }) => {
+        if (value !== req.body.password) {
+            throw new Error('Las contraseñas no coinciden');
+        }
+        return true;
+    })
+];
 
 router.get('/adminView', userController.admin);
 
-router.get('/login',  userController.login);
-router.post('/login',  userController.loginProcess);
+router.get('/login', userController.login);
+router.post('/login', userController.loginProcess);
 
 router.get('/logout', userController.logout);
 
