@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+    document.getElementById('product-form').addEventListener('submit', function (event) {
         event.preventDefault(); 
 
-        var name = document.getElementById('name').value.trim();  
-        var description = document.getElementById('description').value.trim();
-        var price = document.getElementById('price').value.trim();
-        var discount = document.getElementById('discount').value.trim();
-        var sizes = document.querySelectorAll('input[name="sizes"]:checked').length;
-        var colors = document.querySelectorAll('input[name="colors"]:checked').length;
-        var category = document.getElementById('category').value.trim();
+        let name = document.getElementById('name').value.trim();  
+        let description = document.getElementById('description').value.trim();
+        let price = document.getElementById('price').value.trim();
+        let discount = document.getElementById('discount').value.trim();
+        let sizes = document.querySelectorAll('input[name="sizes"]:checked').length;
+        let colors = document.querySelectorAll('input[name="colors"]:checked').length;
+        let category = document.getElementById('category').value.trim();
 
         if (name === '') {
             document.getElementById('name-error').innerText = 'El nombre es requerido';
@@ -72,4 +73,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         this.submit();
     });
-;
+});
+
