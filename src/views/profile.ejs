@@ -8,21 +8,18 @@
                     <main class="main">
                         <div class="profile-wrapper">
                             <div class="profile-container">
+                                <div class="profile-details">
+                                    <img src="/images/avatars/<%= locals.user?.img %>" alt="Imagen de Perfil">
                                 <h4>Tus datos</h4>
                                 <p>Modifica tus datos personales a continuación para que tu cuenta esté
                                     actualizada</p>
-                                <h4>Detalle</h4>
-                                <div class="profile-details">
-                                    <img src="<%= user.img %>" alt="Imagen de Perfil">
+                             
                                     <p><strong>Nombre:</strong>
                                         <%= user.first_name %>
                                             <%= user.last_name %>
                                     </p>
                                     <p><strong>Email:</strong>
                                         <%= user.email %>
-                                    </p>
-                                    <p><strong>Rol:</strong>
-                                        <%= user.roles?.description %>
                                     </p>
                                     <p><strong>Fecha de Nacimiento:</strong>
                                         <%= user.birthdate %>

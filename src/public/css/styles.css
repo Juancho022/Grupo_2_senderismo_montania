@@ -32,7 +32,7 @@ header {
     z-index: 1;
     left: -96px; 
     top: 100%; 
-    border-radius: 16px 8px;
+    border-radius: 7px 8px;
     box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -73,7 +73,7 @@ header {
 }
 
 .popup div.headercollapsable {
-    border-bottom: 1px solid #a7a7a7;
+    border-bottom: none;
     width: 100%; 
 }
 
@@ -519,7 +519,8 @@ section#cardsHome div.card button.buttonCard:hover {
     height: 100%;
   }
 
-  .swiper-slide {
+  #mySlider.swiper-slide {
+    display: initial;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -529,7 +530,7 @@ section#cardsHome div.card button.buttonCard:hover {
   }
 
   .swiper-slide img {
-    display: block;
+  
     width: 100%;
     height: 100%;
     object-fit: cover;
