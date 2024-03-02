@@ -1,5 +1,9 @@
 <%- include('./partials/head' , { pageTitle: 'Bienvenidos a Peak' }) %>
 
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
     <body>
 
         <%- include('./partials/header') %>
@@ -61,7 +65,7 @@
                 <section id="cardsHome">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div id="mySlider" class="swiper-slide">
                                 <div class="card">
                                     <div class="imgCards">
                                         <a href="http://localhost:3000/products/productDetail/14">
@@ -76,7 +80,7 @@
                                             una bolsa de hidratación, enganches y correas adicionales para sujetar
                                             equipo
                                             extra como bastones de senderismo. </span>
-                                        <p class="cost">$150.000</p>
+                                        <p class="cost">$95.000</p>
                                         <button class="buttonCard">
                                             Añadir al carrito
                                             <i class="far fa-heart favorite"></i>
@@ -85,18 +89,56 @@
                                 </div>
                                 <div class="card">
                                     <div class="imgCards">
-                                        <a href="http://localhost:3000/products/productDetail/5">
-                                            <img src="images\termic.png" alt="mochilaPeak">
+                                        <a href="http://localhost:3000/products/productDetail/8">
+                                            <img src="images\8calza-senderismo.jpg" alt="calza">
                                         </a>
                                     </div>
                                     <div class="cardDescription">
-                                        <p class="category">Escalada</p>
-                                        <h2 class="productName">REMERA TÉRMICA</h2>
-                                        <span class="productDescription"> Fabricada con un tejido transpirable y de
-                                            secado
-                                            rápido que elimina la humedad de tu piel, evitando que te enfríes por la
-                                            sudoración durante tus ascensos. </span>
-                                        <p class="cost">$87.000</p>
+                                        <p class="category">Senderismo</p>
+                                        <h2 class="productName">CALZA</h2>
+                                        <span class="productDescription">Calza ideal para situaciones en las que se necesita mantener 
+                                            las piernas secas en climas húmedos o en actividades al aire libre donde puedas estar
+                                             expuesto a la lluvia. </span>
+                                        <p class="cost">$33.000</p>
+                                        <button class="buttonCard">
+                                            Añadir al carrito
+                                            <i class="far fa-heart favorite"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="mySlider" class="swiper-slide">
+                                <div class="card">
+                                    <div class="imgCards">
+                                        <a href="http://localhost:3000/products/productDetail/2">
+                                            <img src="images\2gorra.jpg" alt="gorrroPeak">
+                                        </a>
+                                    </div>
+                                    <div class="cardDescription">
+                                        <p class="category">Senderismo</p>
+                                        <h2 class="productName">GORRO DE LANA</h2>
+                                        <span class="productDescription">Cuando te aventuras en terrenos escarpados y condiciones impredecibles, 
+                                            necesitas equipo confiable que te mantenga cómodo y protegido. </span>
+                                        <p class="cost">$15.000</p>
+                                        <button class="buttonCard">
+                                            Añadir al carrito
+                                            <i class="far fa-heart favorite"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="imgCards">
+                                        <a href="http://localhost:3000/products/productDetail/7">
+                                            <img src="images\7botella.jpg" alt="botellaTermica">
+                                        </a>
+                                    </div>
+                                    <div class="cardDescription">
+                                        <p class="category">Accesorios</p>
+                                        <h2 class="productName">BOTELLA TÉRMICA</h2>
+                                        <span class="productDescription">La botella está diseñada con tecnología de aislamiento de doble
+                                             pared que mantiene las bebidas frías hasta por 24 horas y calientes hasta por 12 horas. 
+                                             Ideal para cualquier clima y estación.</span>
+                                        <p class="cost">$9.000</p>
                                         <button class="buttonCard">
                                             Añadir al carrito
                                             <i class="far fa-heart favorite"></i>
@@ -189,10 +231,11 @@
             <%- include('./partials/footer') %>
 
     </body>
+    
 
-    <!-- Swiper JS -->
-    <script src="/swiper-bundle.min.js"></script>
-    <!-- JavaScript -->
-    <script src="/scriptCarrusel.js"></script>
+       <!-- Swiper JS -->
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+       <!-- JavaScript -->
+       <script src="/js/carrusel.js"></script>
 
     </html>

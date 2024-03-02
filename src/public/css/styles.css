@@ -519,7 +519,8 @@ section#cardsHome div.card button.buttonCard:hover {
     height: 100%;
   }
 
-  .swiper-slide {
+  #mySlider.swiper-slide {
+    display: initial;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -529,7 +530,7 @@ section#cardsHome div.card button.buttonCard:hover {
   }
 
   .swiper-slide img {
-    display: block;
+  
     width: 100%;
     height: 100%;
     object-fit: cover;
