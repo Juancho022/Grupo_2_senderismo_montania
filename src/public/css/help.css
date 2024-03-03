@@ -17,6 +17,8 @@ div.form .nav-search input{
     width: 350px;
     height: 30px;
     text-align: center;
+    border: 1px solid #c4c4c4;
+    border-radius: 16px;
   }
 
   .frecuent-questions {
@@ -40,6 +42,7 @@ div.form .nav-search input{
     padding: 20px;
     border: 1px solid #e5e5e5;
     margin-top: 20px;
+    border-radius: 16px;
   }
 
   div .title {
@@ -54,45 +57,50 @@ div.form .nav-search input{
 
   .asistencia {
     margin: 5px;
-    font-size: 12px;
+    font-size: 1.6rem;
     text-align: center;
     padding-bottom: 15px;
+    padding: 16px 147px;
   }
 
   #map {
-	height: 500px;
-	width: 100%;
+    height: 500px;
+    height: 467px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0px 124px;
 }
 
 /* ------------- Start Suscribe Button ------------- */
 .container-sub {
   width: 100%;
-  height: 200px;
-  background: url(../images/Suscripcion.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 15px;
-}
+  margin: 48px 0px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  }
 
 .conten-sub {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 22, 0, 0.7);
+  width: 40%;
+  height: 130%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 24px 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .conten-sub h2 {
-  color: #fff;
+  color: #242424;
   font-size: 30px;
   margin-bottom: 10px;
+  padding: 16px;
+  margin-top: 16px;
 }
 
 .conten-sub p {
-  color: #fff;
+  color: #242424;;
   font-size: 17px;
   margin-bottom: 25px;
   max-width: 500px;
@@ -103,6 +111,7 @@ div.form .nav-search input{
   width: 100%;
   max-width: 440px;
   display: flex;
+  padding: 16px;
 }
 
 .conten-sub .data {
@@ -112,7 +121,10 @@ div.form .nav-search input{
   border: none;
   border-radius: 3px 0px 0px 3px;
   outline: none;
-}
+  background-color: #e7e7e7;
+  border-radius: 16px 0px 0px 16px;
+  }
+
 
 .conten-sub form .btn-sub {
   padding: 15px 15px;
@@ -137,6 +149,33 @@ div.form .nav-search input{
     }
   }
 
+  @media (max-width: 767px) {
+    .asistencia {
+        padding: 16px 16px;
+    }
+
+    .conten-sub {
+      width: 90%;
+  }
+
+  .conten-sub p {
+    margin-bottom: 0px; 
+    padding: 0px 8px;
+}
+
+.conten-sub {
+  height: max-content;
+}
+
+    #map {
+        height: 500px;
+        height: 467px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 0px 24px;
+    }
+}
+
   @media (min-width: 768px) {
     main {
       padding-top: 150px;
@@ -159,17 +198,39 @@ div.form .nav-search input{
       font-size: 16px;
     }
     .asistencia {
-      font-size: 14px;
+      font-size: 20px;
     }
+
+    .asistencia span {
+      background-color: #f7dc6f;
+    }
+    
     .frecuent-questions {
       font-size: 14px;
     }
-  } 
+
+    .conten-sub h2 {
+      font-size: 24px;
+      padding: 0px 16px;
+  }
+
+  .conten-sub p {
+    margin: 0px 16px;
+    text-align: left;
+  }
+
+.conten-sub {
+    width: 80%;
+  }
+} 
 
   @media (min-width: 1023px) {
     .fast-help {
       margin: 30px 150px 10px 150px;
     }
+
+
+
   }
 
   @media (min-width: 1439px) {
