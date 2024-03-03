@@ -1,15 +1,25 @@
-// function auth(req, res, next) {
-//     if (req.session.user) {
-//         res.locals.session = req.session.user;
-//     }
-//     next();
-// }
-// function authorization(req, res, next) {
-//     if (!req.session.user) {
-//         return res.redirect('/user/login');
-//     }
-//     next();
-// }
+const { getRedirectRouteByRole } = require("../middlewares/users")
+
+function auth(req, res, next) {
+    if (req.session.user) {
+        res.locals.session = req.session.user;
+    }
+    next();
+}
+function authorization(req, res, next) {
+    if (!req.session.user) {
+        return res.status(403).send("No contas con los permisos para acceder a esta ruta");
+    }
+    next();
+}
+
+function onlyGuestUser(req,res,next){
+    if(req.session.user){
+      const routeToRedirect = getRedirectRouteByRole(req.session.user.roles_id)
+      return res.redirect(routeToRedirect);
+    }
+    next(); 
+  }
 // function rememberMiddleware(req, res, next) {
 //     // Verifica si existe una sesión de usuario y una cookie userEmail
 //     if (req.cookies.userEmail !== undefined && req.session.user !== undefined) {
@@ -22,8 +32,9 @@
 // }
 
 
-// module.exports = {
-//     auth
-//     authorization,
-//     rememberMiddleware,
-// };
+module.exports = {
+    auth,
+    authorization,
+    onlyGuestUser
+    // rememberMiddleware,
+};

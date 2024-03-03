@@ -3,7 +3,7 @@ const path = require('path');
 const multer = require('multer');
 //Se crea un middleware para reemplazar VALIDATIONS
 //const validationMiddleware = require('../middlewares/validationMiddleware');
-// const authMiddleware = require('../middlewares/authMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
@@ -52,8 +52,8 @@ const validations = [
 
 router.get('/adminView', userController.admin);
 
-router.get('/login', userController.login);
-router.post('/login', userController.loginProcess);
+router.get('/login', authMiddleware.onlyGuestUser, userController.login);
+router.post('/login',  authMiddleware.onlyGuestUser, userController.loginProcess);
 
 router.get('/logout', userController.logout);
 
@@ -65,8 +65,8 @@ router.get('/profile', userController.profile);
 
 router.get('/list', userController.list);
 
-router.get('/:id/edit', userController.edit);
-router.put('/:id/edit', userController.update);
+router.get('/:id/edit', authMiddleware.authorization, userController.edit);
+router.put('/:id/edit', authMiddleware.authorization, userController.update);
 router.delete('/:id/delete', userController.delete);
 
 module.exports = router;
