@@ -64,6 +64,72 @@ div.form .nav-search input{
 	width: 100%;
 }
 
+/* ------------- Start Suscribe Button ------------- */
+.container-sub {
+  width: 100%;
+  height: 200px;
+  background: url(../images/Suscripcion.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 15px;
+}
+
+.conten-sub {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 22, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.conten-sub h2 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.conten-sub p {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 25px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.conten-sub form {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+}
+
+.conten-sub .data {
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px 0px 0px 3px;
+  outline: none;
+}
+
+.conten-sub form .btn-sub {
+  padding: 15px 15px;
+  border: none;
+  font-size: 16px;
+  border-radius: 0px 3px 3px 0px;
+  background: #f7dc6f;
+  color:#333;
+  outline: 0px;
+}
+
+.conten-sub form .btn-sub:hover {
+  background: #145838;
+}
+/* ------------- End Subscribe Button ------------- */
+
+
   @media (max-width: 380px) {
     div.form .nav-search input{
       width: 250px;
