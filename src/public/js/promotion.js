@@ -2,12 +2,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     const promotionBar = document.getElementById("promotion-bar");
     const header = document.querySelector("header");
+    let isScrolled = false;
 
     window.onscroll = function() {
-        promotionBar.style.display = "block";
-        header.style.top = "5%";
-        header.style.position = "absolute";
-        promotionBar.style.display = "block";
+        if (!isScrolled) {
+            promotionBar.style.display = "none";
+            header.style.top = "0";
+            header.style.position = "fixed";
+            isScrolled = true;
+        }
     };
 
     const promotions = [
@@ -25,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(changePromotion, 5000);
 });
 
-// Carrusel de publicidad
+
+// Carrusel de publicidad..
 
 document.addEventListener("DOMContentLoaded", function() {
     const carousels = document.querySelectorAll(".carousel-container");
