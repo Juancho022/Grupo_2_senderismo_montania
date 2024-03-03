@@ -1200,3 +1200,19 @@ button.buttonShop #shop-cart {
     color: #FFFF;
 }
 
+.password-input-container {
+    position: relative;
+}
+
+.password-input-container input[type="password"] {
+    padding-right: 30px; 
+}
+
+.password-input-container i {
+    position: absolute;
+    color:black;
+    top: 15%;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+}

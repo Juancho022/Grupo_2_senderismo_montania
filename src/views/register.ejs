@@ -6,7 +6,7 @@
             <%- include('./partials/header') %>
 
                 <main>
-                    <div> 
+                    <div>
                         <section id="sectionRegister">
                             <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
                             <div id="registerBox">
@@ -19,7 +19,8 @@
 
                                         <div>
                                             <label>Nombre</label>
-                                            <input type="text" name="firstName" value="<%= (locals.oldData && oldData.firstName) && oldData.firstName %>">
+                                            <input type="text" name="firstName"
+                                                value="<%= (locals.oldData && oldData.firstName) && oldData.firstName %>">
                                             <% if (locals.errors && errors.firstName) { %>
                                                 <span class="error-message">
                                                     <%= errors.firstName.msg %>
@@ -29,7 +30,8 @@
 
                                         <div>
                                             <label>Apellido</label>
-                                            <input type="text" name="lastName" value="<%= (locals.oldData && oldData.lastName) && oldData.lastName %>">
+                                            <input type="text" name="lastName"
+                                                value="<%= (locals.oldData && oldData.lastName) && oldData.lastName %>">
                                             <% if (locals.errors && errors.lastName) { %>
                                                 <span class="error-message">
                                                     <%= errors.lastName.msg %>
@@ -39,7 +41,8 @@
 
                                         <div>
                                             <label>Correo Electrónico</label>
-                                            <input type="email" name="email" value="<%= (locals.oldData && oldData.email) && oldData.email %>">
+                                            <input type="email" name="email"
+                                                value="<%= (locals.oldData && oldData.email) && oldData.email %>">
                                             <% if (locals.errors && errors.email) { %>
                                                 <span class="error-message">
                                                     <%= errors.email.msg %>
@@ -47,43 +50,77 @@
                                                 <% } %>
                                         </div>
 
-                                        <div>
+                                        <div class="password-input-container">
                                             <label>Contraseña</label>
-                                            <input type="password" name="password">
+                                            <input type="password" name="password" id="passwordField"
+                                                value="<%= (locals.oldData && oldData.password) && oldData.password %>">
                                             <% if (locals.errors && errors.password) { %>
                                                 <span class="error-message">
                                                     <%= errors.password.msg %>
                                                 </span>
-                                                <% } %>
+                                            <% } %>
+                                            <!-- Move the eye icon to this div -->
+                                            <i class="fas fa-eye-slash" id="togglePassword" onclick="togglePasswordVisibility()"></i>
                                         </div>
-                                        <div>
+                                        
+                                        <!-- Repeat the same structure for the confirmPassword field -->
+                                        <div class="password-input-container">
                                             <label>Repetir contraseña:</label>
-                                            <input type="password" name="confirmPassword">
-                                            <% if (locals.errors && errors.password) { %>
+                                            <input type="password" name="confirmPassword" id="confirmPasswordField"
+                                                value="<%= (locals.oldData && oldData.password) && oldData.confirmPassword %>">
+                                            <% if (locals.errors && errors.confirmPassword) { %>
                                                 <span class="error-message">
-                                                    <%= errors.password.msg %>
+                                                    <%= errors.confirmPassword.msg %>
                                                 </span>
-                                                <% } %>
+                                            <% } %>
+                                            <i class="fas fa-eye-slash" id="toggleConfirmPassword" onclick="togglePasswordVisibility()"></i>
                                         </div>
+
                                         <div>
-                                            <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" class="image-imput"
-                                                name="image">
+                                            <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif"
+                                                class="image-imput" name="image">
                                         </div>
-                                        <button type="submit" >Registrarse</button>
-                        
-                                        <span id="register-message">¿Ya tenes cuenta? <a href="/user/login">INICIA SESIÓN</a></span>
+                                        <button type="submit">Registrarse</button>
+
+                                        <span id="register-message">¿Ya tenes cuenta? <a href="/user/login">INICIA
+                                                SESIÓN</a></span>
                                     </form>
 
                                 </div>
-                                
-                            </section>
+
+                        </section>
 
                     </div>
-                   
+
                 </main>
+
+                <script>
+                    var passwordVisible = false;
+
+                    function togglePasswordVisibility() {
+                        var passwordField = document.getElementById("passwordField");
+                        var confirmPasswordField = document.getElementById("confirmPasswordField");
+                        var toggleIcon = document.getElementById("togglePassword");
+
+                        if (passwordVisible) {
+                            passwordField.type = "password";
+                            confirmPasswordField.type = "password";
+                            toggleIcon.classList.remove("fa-eye");
+                            toggleIcon.classList.add("fa-eye-slash");
+                        } else {
+                            passwordField.type = "text";
+                            confirmPasswordField.type = "text";
+                            toggleIcon.classList.remove("fa-eye-slash");
+                            toggleIcon.classList.add("fa-eye");
+                        }
+
+                        passwordVisible = !passwordVisible;
+                    }
+                </script>
 
                 <%- include('./partials/footer') %>
 
         </body>
+
 
         </html>

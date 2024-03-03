@@ -1,0 +1,28 @@
+#promotion-bar {
+    background-color: #f7dc6f;
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#promotion-content {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.86);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    padding: 1px 16px;
+    z-index: 2;
+    top: 5%;
+}
