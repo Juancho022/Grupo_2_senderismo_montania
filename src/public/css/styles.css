@@ -825,6 +825,8 @@ section#cardsHome div.card button.buttonCard:hover {
     opacity: 1;
     margin: auto;
     z-index: 0;
+    border-radius: 2%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .box1 {
@@ -834,6 +836,7 @@ section#cardsHome div.card button.buttonCard:hover {
     height: 65px;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
+    border-radius: 2%;
 }
 
 .text {
@@ -1013,6 +1016,7 @@ button.buttonShop #shop-cart {
     .box1 {
         width: 330px;
         height: 130px;
+        border-radius: 2%;
     }
     .text {
         font-size: 25px;
@@ -1066,11 +1070,14 @@ button.buttonShop #shop-cart {
     .deportist{
         width: 55%;
         left: 130px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1{
         width: 359px;
         height: 232px;
         left: 125px;
+        border-radius: 2%;
     }
 
     .text{
@@ -1117,11 +1124,14 @@ button.buttonShop #shop-cart {
     .deportist {
         width: 55%;
         left: 188px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1 {
         width: 477px;
         height: 345px;
         left: 202px;
+        border-radius: 2%;
     }
     .text {
         font-size: 40px;
@@ -1168,11 +1178,14 @@ button.buttonShop #shop-cart {
     .deportist {
         width: 55%;
         left: 239px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1 {
         width: 616px;
         height: 436px;
         left: 275px;
+        border-radius: 2%;
     }
     .text {
         font-size: 50px;
