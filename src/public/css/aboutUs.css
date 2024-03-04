@@ -222,26 +222,35 @@
     .all-members {
         padding: 16px 120px;
     }
+    .hero-about-us p {
+        top: 23%;
+    }
 
 }
 
 @media (min-width: 1024px) {
     .hero-about-us p {
-        top: 27%;
+        top: 20%;
     }
 
     .our-story {
         gap: 36px;
     }
+
+    .hero-about-us h3 {
+        top: 15%;
+    }
+
 }
 
 @media (max-width: 768px) {
     .hero-about-us h3 {
         left: 60%;
+        top: 16%;
     }
 
     .hero-about-us p {
-        top: 26%;
+        top: 21%;
         left: 60%;
     }
 
@@ -269,8 +278,8 @@
     }
 
     .hero-about-us p {
-        top: 24%;
-        left: 26%;
+        top: 19%;
+        left: 27%;
     }
 
     .our-story-right img {

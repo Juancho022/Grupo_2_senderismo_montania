@@ -4,6 +4,7 @@
 
     <body>
 
+        <%- include('./promotion') %>
         <%- include('./partials/header') %>
 
             <main>
@@ -20,8 +21,8 @@
                      <!-- INICIA BLOQUE DE AYUDA RAPIDA -->
                      <section class="fast-help">
                         <div class="encabezados">
-                            <h1 class="fast-service">SERVICIO DE ASISTENCA RÁPIDA</h1>
-                            <p class="frecuent-questions">Las respuestas a las preguntas más frecuentes están a solo un click.</p>
+                            <h1 class="fast-service">SERVICIO DE ASISTENCIA RÁPIDA</h1>
+                            <p class="frecuent-questions">Las respuestas a las preguntas más frecuentes están a solo un clic.</p>
                         </div>
                         <div class="general-questions">
                             <div class="envio-entrega">
@@ -47,9 +48,9 @@
                                     PEDIDOS
                                 </div>
                                 <div class="questions">
-                                    <div>¿Qué metodos de pago puedo utilizar para hacer pedidos en Peak?</div>
-                                    <div>¿Cómo hago el seguimiento del estado de mi pedido de Peak?</div>
-                                    <div>¿Puedo cancelar o cambiar mi pedido de Peak?</div>
+                                    <div>¿Qué métodos de pago puedo utilizar para hacer pedidos?</div>
+                                    <div>¿Cómo hago el seguimiento del estado de mi pedido?</div>
+                                    <div>¿Puedo cancelar o cambiar mi pedido?</div>
                                 </div>
                             </div>
                             <div class="informacion producto">
@@ -57,10 +58,9 @@
                                     INFORMACIÓN DEL PRODUCTO
                                 </div>
                                 <div class="questions">
-                                    <div>¿Los productos Peak tienen garantía?</div>
+                                    <div>¿Los productos tienen garantía?</div>
                                     <div>¿Cómo encuentro el talle adecuado?</div>
-                                    <div>¿Cómo puedo limpiar mi calzado, ropa o equipo Peak?</div>
-                                    <div>¿Compré calzado Peak falso?</div>
+                                    <div>¿Cómo puedo limpiar mi calzado, ropa o equipo?</div>
                                 </div>
                             </div>
                             <div class="corporativo">
@@ -69,18 +69,28 @@
                                 </div>
                                 <div class="questions">
                                     <div>¿Dónde puedo obtener más información acerca de Peak?</div>
-                                    <div>¿Cómo consigo los últimos lanzamientos de calzado de Peak?</div>
+                                    <div>¿Cómo me entero de las promociones?</div>
                                 </div>
                             </div>
                         </div>
                      </section>
 
                      <div class="asistencia">
-                        Si necesita una respuesta a alguna de las anteriores preguntas, llame al 0800-3492-569042. Es nuestro número de asistencia al cliente, estamos disponibles en días hábiles las 24hs!
+                        Si no respondiste tus dudas, envianos un <span> WhatsApp al 01153689547</span>. Es nuestro número de asistencia al cliente, estamos disponibles en días hábiles las 24hs.
                      </div>
 
                      <div id="map"></div>
-
+                         <!--Botón Suscribirse-->
+    <div class="container-sub">
+        <div class="conten-sub">
+        <h2>Suscribite a nuestras notificaciones</h2>
+        <p>Enterate de nuestras promociones y beneficios</p>
+        <form action="#"> 
+            <input type="email" class="data" placeholder="Introducí tu correo electrónico" maxlength="25" required>
+            <input type="submit" value="Suscribirme" class="btn-sub">
+        </form>
+        </div>
+    </div>
             </main>
             <script src="/js/maps.js"></script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>

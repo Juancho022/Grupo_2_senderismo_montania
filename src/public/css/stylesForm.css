@@ -107,7 +107,7 @@ position: relative;
 }
 main section button {
     background-color: rgb(0, 0, 0);
-    color: white;
+    color: #efc84c;
     border: 1px solid rgb(0, 0, 0);
     font-size: 1.6rem;
     padding: 4px;
@@ -115,6 +115,7 @@ main section button {
     width: 100%;
     color: inherit;
     margin-top: 15%;
+    border-radius: 16px;
 }
 
 main section button:hover{
@@ -182,8 +183,10 @@ input[type="checkbox"]:checked::before {
 position: relative;
 display: flex;
 justify-content: center;
-top: 10px;
+top: 80px;
 }
+
+
 .custom-file-upload {
   background-color: #4CAF50; 
   color: white; 
@@ -191,6 +194,10 @@ top: 10px;
   border: none; 
   border-radius: 5px;
   cursor: pointer; 
+}
+
+#passwordFieldLogin, input.email, #passwordFieldRegister {
+    height: 25px;
 }
 
 /* QUERIES START */
@@ -341,7 +348,6 @@ top: 10px;
         position: fixed;
         width: 40%;
         left: 20%;
-        top: 24%;
     }
     main section div#registerBox {
         position: absolute;
@@ -381,6 +387,7 @@ top: 10px;
    main section button {
         font-size: 2rem;
         margin-top: 64px;
+        color: #efc84c;
     }
 
 }
@@ -427,9 +434,18 @@ footer {
 
 .password-input-container i {
     position: absolute;
-    color:black;
-    top: 15%;
+    color:white;
     left: 90%; 
     cursor: pointer;
     z-index: 0;
+    top: 0%;
+}
+
+.password-input-container-register i {
+    position: absolute;
+    color:white;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+    top: 20%;
 }
