@@ -140,12 +140,9 @@ footer {
     padding: 5px;
     bottom: 0;
     width: 100%;
-<<<<<<< HEAD
     position: fixed;
     z-index: 111;
-=======
->>>>>>> 612317a164b6ff70d2d01740a8c8fa24d8eda1fe
-}
+} 
 
 footer div.copyright{
     display: flex;
