@@ -12,7 +12,7 @@
 
 #promotion-content {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -23,13 +23,19 @@ header {
     width: 100%;
     position: fixed;
     padding: 1px 16px;
-    z-index: 2;
-    top: 3%;
+    z-index: 900; 
+    top: 4.5%;
 }
 
 
 @media (max-width:767px){
     header {
         top: 4.8%;
+    }
+}
+
+@media (max-width:1440px){
+    header {
+        top: 2.9%;
     }
 }
