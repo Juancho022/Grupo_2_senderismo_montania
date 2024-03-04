@@ -45,7 +45,7 @@ app.use(session({
     secret: "ab33025avbtxop00002tqxr!",
 })) //token de encriptación
 app.use(cookies());
-// app.use(authentication.auth);
+app.use(authentication.auth);
 // app.use(authentication.authorization);
 // app.use(authentication.rememberMiddleware);
 // app.use(forAdmin.isUserAdmin);
