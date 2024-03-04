@@ -8,7 +8,7 @@
                 <main>
                     <div>
                         <section id="sectionRegister">
-                            <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
+                            <img src="\images/bg-signup.webp" alt="Hombre mirando al horizonte" id="register-image">
                             <div id="registerBox">
                                 <span id="registerTitle"><strong>Crear Cuenta</strong></span>
                                 <p id="paragraphRegister">
@@ -18,9 +18,10 @@
                                     <form method="POST" action="/user/register" enctype="multipart/form-data">
 
                                         <div>
-                                            <label>Nombre</label>
-                                            <input type="text" name="firstName"
+                                            <label for="firstName">Nombre</label>
+                                            <input type="text" name="firstName" id="firstName"
                                                 value="<%= (locals.oldData && oldData.firstName) && oldData.firstName %>">
+                                                <div id="nameError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.firstName) { %>
                                                 <span class="error-message">
                                                     <%= errors.firstName.msg %>
@@ -29,9 +30,10 @@
                                         </div>
 
                                         <div>
-                                            <label>Apellido</label>
-                                            <input type="text" name="lastName"
+                                            <label for="lastName">Apellido</label>
+                                            <input type="text" name="lastName" id="lastName"
                                                 value="<%= (locals.oldData && oldData.lastName) && oldData.lastName %>">
+                                                <div id="lastNameError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.lastName) { %>
                                                 <span class="error-message">
                                                     <%= errors.lastName.msg %>
@@ -40,9 +42,10 @@
                                         </div>
 
                                         <div>
-                                            <label>Correo Electrónico</label>
-                                            <input type="email" name="email"
+                                            <label for="emailRegister">Correo electrónico</label>
+                                            <input type="email" name="email" id="emailRegister"
                                                 value="<%= (locals.oldData && oldData.email) && oldData.email %>">
+                                                <div id="emailError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.email) { %>
                                                 <span class="error-message">
                                                     <%= errors.email.msg %>
@@ -51,9 +54,10 @@
                                         </div>
 
                                         <div class="password-input-container">
-                                            <label>Contraseña</label>
-                                            <input type="password" name="password" id="passwordField"
+                                            <label for="passwordFieldRegister">Contraseña</label>
+                                            <input type="password" name="password" id="passwordFieldRegister"
                                                 value="<%= (locals.oldData && oldData.password) && oldData.password %>">
+                                                <div id="passwordError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.password) { %>
                                                 <span class="error-message">
                                                     <%= errors.password.msg %>
@@ -64,10 +68,11 @@
                                         </div>
                                         
                                         <!-- Repeat the same structure for the confirmPassword field -->
-                                        <div class="password-input-container">
-                                            <label>Repetir contraseña:</label>
+                                        <div class="password-input-container-register">
+                                            <label for="confirmPasswordField">Repetir contraseña</label>
                                             <input type="password" name="confirmPassword" id="confirmPasswordField"
                                                 value="<%= (locals.oldData && oldData.password) && oldData.confirmPassword %>">
+                                                <div id="confirmPasswordError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.confirmPassword) { %>
                                                 <span class="error-message">
                                                     <%= errors.confirmPassword.msg %>
@@ -77,13 +82,14 @@
                                         </div>
 
                                         <div>
-                                            <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif"
-                                                class="image-imput" name="image">
-                                        </div>
-                                        <button type="submit">Registrarse</button>
 
-                                        <span id="register-message">¿Ya tenes cuenta? <a href="/user/login">INICIA
-                                                SESIÓN</a></span>
+                                            <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" class="image-imput"
+                                                name="img">
+                                        </div>
+                                        <button id="submit-button" type="submit">Registrarse</button>
+
+                                        <span id="register-message">¿Ya tenés cuenta?<span style="margin-left: 10px;"><a href="/user/login" class="back-login">INICIÁ
+                                                SESIÓN</a></span></span>
                                     </form>
 
                                 </div>
@@ -98,7 +104,7 @@
                     var passwordVisible = false;
 
                     function togglePasswordVisibility() {
-                        var passwordField = document.getElementById("passwordField");
+                        var passwordField = document.getElementById("passwordFieldRegister");
                         var confirmPasswordField = document.getElementById("confirmPasswordField");
                         var toggleIcon = document.getElementById("togglePassword");
 
@@ -122,5 +128,6 @@
 
         </body>
 
+        <script src="/js/registerValidations.js"></script>
 
         </html>

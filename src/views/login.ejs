@@ -16,13 +16,17 @@
                                 </p>
 
                                 <div id="formLogin">
-                                    <form action="/user/login" method="post">
+                                    <form  class="loginForm" action="/user/login" method="post">
                                         <div>
-                                            <label><strong>Correo Electrónico</strong></label>
-                                            <input type="email" name="email" required>
-                                            <label><strong>Contraseña</strong></label>
-                                            <div class="password-input-container">
-                                                <input type="password" name="password" id="passwordField" required>
+                                            <label for="emailLogin"><strong>Correo electrónico</strong></label>
+                                            <input class="email"  type="email" name="email" id="emailLogin"  required> 
+                                            <div id="emailError" style="display: none; color: #ffa18d;"></div>
+
+                                            <label for="passwordFieldLogin"><strong>Contraseña</strong></label>
+                                            <div class="password-input-container-login">
+                                                <input type="password" name="password" id="passwordFieldLogin" required>
+                                                <div id="passwordError" style="display: none; color: #ffa18d;"></div>
+
                                                 <i id="togglePassword" class="fas fa-eye-slash"
                                                     onclick="togglePasswordVisibility()"></i>
                                             </div>
@@ -41,9 +45,7 @@
                                                     <input type="checkbox" name="recordarme">
                                                 </div>
                                                 <button type="submit">Iniciar sesión</button>
-                                                <span id="login-message">¿Todavía no tienes tu cuenta?<a
-                                                        href="/user/register">REGISTRATE</a></span>
-
+                                                <span id="login-message">¿Todavía no tenés tu cuenta? <span style="margin-left: 10px;"><a href="/user/register" class="back-register">REGISTRATE</a></span></span>
                                     </form>
                                 </div>
                             </div>
@@ -53,7 +55,7 @@
                 
                 <script>
                     function togglePasswordVisibility() {
-                        var passwordField = document.getElementById("passwordField");
+                        var passwordField = document.getElementById("passwordFieldLogin");
                         var togglePassword = document.getElementById("togglePassword");
                 
                         if (passwordField.type === "password") {
@@ -72,4 +74,5 @@
 
         </body>
 
+        <script src="/js/loginValidations.js"></script>
         </html>
