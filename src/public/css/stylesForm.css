@@ -436,3 +436,12 @@ footer {
     z-index: 0;
     top: 0%;
 }
+
+.password-input-container-register i {
+    position: absolute;
+    color:white;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+    top: 20%;
+}
