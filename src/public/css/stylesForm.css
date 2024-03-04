@@ -1,6 +1,6 @@
 html, body {
     overflow: visible;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/bg-login.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/logn-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -23,6 +23,15 @@ p.error-message {
     padding: 8px 0px 8px 14px;
     background-color: rgba(255, 0, 0, 0.5);
     border-radius: 8px;
+}
+
+input#image {
+    height: 48px;
+}
+
+.back-login {
+    text-decoration: none;
+    color: #efc84c;
 }
 
 i.fa-times-circle {
@@ -83,7 +92,6 @@ main form {
 main form input {
     margin: 5px 0;
     background: none;
-    margin-top: -3px;
     width: -webkit-fill-available;
     color: white;
     display: inline-block;
@@ -127,15 +135,21 @@ main section button:hover{
 
 .recordarme{
     position: relative;
-    bottom: 4px;
     display: flex;
 }
+
+a.back-register {
+    text-decoration: none;
+    color: #efc84c;
+}
+
+
 main section form div#rememberMe{
     display: flex;
     position: absolute;
     flex-direction: row-reverse;
     align-items: center;
-    top: 64%;
+    top: 54%;
 }
 input[type="checkbox"] {
     appearance: none;
@@ -183,7 +197,7 @@ input[type="checkbox"]:checked::before {
 position: relative;
 display: flex;
 justify-content: center;
-top: 80px;
+top: 60px;
 }
 
 
@@ -265,7 +279,7 @@ top: 80px;
 /*************TABLET**************************/
 @media (min-width: 768px) {
     html body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg-login.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/logn-bg.webp');
         background-size: cover;
         background-position: center bottom;
     }
@@ -438,7 +452,7 @@ footer {
     left: 90%; 
     cursor: pointer;
     z-index: 0;
-    top: 0%;
+    top: 130%;
 }
 
 .password-input-container-register i {
@@ -447,5 +461,17 @@ footer {
     left: 90%; 
     cursor: pointer;
     z-index: 0;
-    top: 20%;
+    top: 40%;
 }
+
+
+.password-input-container-login i {
+    position: absolute;
+    color:white;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+    top: 32%;
+}
+
+

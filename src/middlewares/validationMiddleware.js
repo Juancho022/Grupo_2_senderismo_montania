@@ -9,12 +9,12 @@ const validations = [
         .isLength({ min: 2 }).withMessage('El apellido debe ser más largo'),
     check('email')
         .notEmpty().withMessage('El correo es requerido').bail()
-        .isEmail().withMessage('Ingrese un formato de correo válido'),
+        .isEmail().withMessage('Ingresá un formato de correo válido'),
     check('password')
-        .notEmpty().withMessage('Debes completar la contraseña').bail()
+        .notEmpty().withMessage('Debés completar la contraseña').bail()
         .isLength({ min: 8 }).withMessage('La contraseña debe ser más larga')
         .matches(/^(?=.*[A-Z])(?=.*[!@#$%^&*A-Z]).{8,}$/)
-        .withMessage('Debe incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
+        .withMessage('Debés incluir al menos una letra mayúscula y un carácter especial (como !, @, #, $, %, ^, &, *)')
 ];
 
 const validationMiddleware = (req, res, next) => {

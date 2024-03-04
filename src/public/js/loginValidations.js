@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
         // Validar si el campo de email está vacío
         //console.log('blur1');
         if (emailInput.value === '') {
-            emailError.textContent = 'Por favor, completa este campo!';
+            emailError.textContent = 'Por favor, completá este campo';
             emailError.style.display = 'block';
         } else {
             emailError.style.display = 'none';
@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
         // Validar si la contraseña tiene menos de 8 caracteres
         //console.log('blur2');
         if (passwordInput.value.length < 8) {
-            passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres!';
+            passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres';
             passwordError.style.display = 'block';
         } else {
             passwordError.style.display = 'none';

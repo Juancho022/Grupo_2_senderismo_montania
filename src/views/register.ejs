@@ -8,7 +8,7 @@
                 <main>
                     <div>
                         <section id="sectionRegister">
-                            <img src="\images/bg-signup.jpg" alt="Hombre mirando al horizonte" id="register-image">
+                            <img src="\images/bg-signup.webp" alt="Hombre mirando al horizonte" id="register-image">
                             <div id="registerBox">
                                 <span id="registerTitle"><strong>Crear Cuenta</strong></span>
                                 <p id="paragraphRegister">
@@ -21,7 +21,7 @@
                                             <label for="firstName">Nombre</label>
                                             <input type="text" name="firstName" id="firstName"
                                                 value="<%= (locals.oldData && oldData.firstName) && oldData.firstName %>">
-                                                <div id="nameError" style="display: none; color: red;"></div>
+                                                <div id="nameError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.firstName) { %>
                                                 <span class="error-message">
                                                     <%= errors.firstName.msg %>
@@ -33,7 +33,7 @@
                                             <label for="lastName">Apellido</label>
                                             <input type="text" name="lastName" id="lastName"
                                                 value="<%= (locals.oldData && oldData.lastName) && oldData.lastName %>">
-                                                <div id="lastNameError" style="display: none; color: red;"></div>
+                                                <div id="lastNameError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.lastName) { %>
                                                 <span class="error-message">
                                                     <%= errors.lastName.msg %>
@@ -42,10 +42,10 @@
                                         </div>
 
                                         <div>
-                                            <label for="emailRegister">Correo Electrónico</label>
+                                            <label for="emailRegister">Correo electrónico</label>
                                             <input type="email" name="email" id="emailRegister"
                                                 value="<%= (locals.oldData && oldData.email) && oldData.email %>">
-                                                <div id="emailError" style="display: none; color: red;"></div>
+                                                <div id="emailError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.email) { %>
                                                 <span class="error-message">
                                                     <%= errors.email.msg %>
@@ -57,7 +57,7 @@
                                             <label for="passwordFieldRegister">Contraseña</label>
                                             <input type="password" name="password" id="passwordFieldRegister"
                                                 value="<%= (locals.oldData && oldData.password) && oldData.password %>">
-                                                <div id="passwordError" style="display: none; color: red;"></div>
+                                                <div id="passwordError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.password) { %>
                                                 <span class="error-message">
                                                     <%= errors.password.msg %>
@@ -69,10 +69,10 @@
                                         
                                         <!-- Repeat the same structure for the confirmPassword field -->
                                         <div class="password-input-container-register">
-                                            <label for="confirmPasswordField">Repetir contraseña:</label>
+                                            <label for="confirmPasswordField">Repetir contraseña</label>
                                             <input type="password" name="confirmPassword" id="confirmPasswordField"
                                                 value="<%= (locals.oldData && oldData.password) && oldData.confirmPassword %>">
-                                                <div id="confirmPasswordError" style="display: none; color: red;"></div>
+                                                <div id="confirmPasswordError" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.confirmPassword) { %>
                                                 <span class="error-message">
                                                     <%= errors.confirmPassword.msg %>
@@ -88,8 +88,8 @@
                                         </div>
                                         <button type="submit">Registrarse</button>
 
-                                        <span id="register-message">¿Ya tenes cuenta? <a href="/user/login">INICIA
-                                                SESIÓN</a></span>
+                                        <span id="register-message">¿Ya tenés cuenta?<span style="margin-left: 10px;"><a href="/user/login" class="back-login">INICIÁ
+                                                SESIÓN</a></span></span>
                                     </form>
 
                                 </div>

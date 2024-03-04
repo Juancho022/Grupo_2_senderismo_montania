@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
         // Validar si el campo de name posee mas de 2 caracteres
         //console.log('blur1');
         if (nameInput.value.length < 3) {
-            nameError.textContent = 'El nombre debe tener mas de 2 caracteres!';
+            nameError.textContent = 'El nombre debe tener más de 2 caracteres';
             nameError.style.display = 'block';
         } else {
             nameError.style.display = 'none';
@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
         // Validar si el campo del apellido posee mas de 2 caracteres
         //console.log('blur1');
         if (lastNameInput.value.length < 3) {
-            lastNameError.textContent = 'El apellido debe tener mas de 2 caracteres!';
+            lastNameError.textContent = 'El apellido debe tener más de 2 caracteres';
             lastNameError.style.display = 'block';
         } else {
             lastNameError.style.display = 'none';
@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
         // Validar si el campo de email está vacío
         //console.log('blur1');
         if (emailInput.value === '') {
-            emailError.textContent = 'Por favor, completa este campo!';
+            emailError.textContent = 'Por favor, completá este campo';
             emailError.style.display = 'block';
         } else {
             emailError.style.display = 'none';
@@ -53,7 +53,7 @@ window.addEventListener('load', function () {
         // Validar si el campo de email está vacío
         //console.log('blur1');
         if (passwordInput.value.length < 8) {
-            passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres!';
+            passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres';
             passwordError.style.display = 'block';
         } else {
             passwordError.style.display = 'none';
@@ -64,7 +64,7 @@ window.addEventListener('load', function () {
         // Validar si el campo de email está vacío
         //console.log('blur1');
         if (confirmPasswordInput.value.length < 8) {
-            confirmPasswordError.textContent = 'La contraseña debe tener al menos 8 caracteres!';
+            confirmPasswordError.textContent = 'La contraseña debe tener al menos 8 caracteres';
             confirmPasswordError.style.display = 'block';
         } else {
             confirmPasswordError.style.display = 'none';
