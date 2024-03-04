@@ -18,14 +18,14 @@
                                 <div id="formLogin">
                                     <form  class="loginForm" action="/user/login" method="post">
                                         <div>
-                                            <label for="emailLogin"><strong>Correo Electrónico</strong></label>
+                                            <label for="emailLogin"><strong>Correo electrónico</strong></label>
                                             <input class="email"  type="email" name="email" id="emailLogin"  required> 
-                                            <div id="emailError" style="display: none; color: red;"></div>
+                                            <div id="emailError" style="display: none; color: #ffa18d;"></div>
 
                                             <label for="passwordFieldLogin"><strong>Contraseña</strong></label>
-                                            <div class="password-input-container">
+                                            <div class="password-input-container-login">
                                                 <input type="password" name="password" id="passwordFieldLogin" required>
-                                                <div id="passwordError" style="display: none; color: red;"></div>
+                                                <div id="passwordError" style="display: none; color: #ffa18d;"></div>
 
                                                 <i id="togglePassword" class="fas fa-eye-slash"
                                                     onclick="togglePasswordVisibility()"></i>
@@ -45,10 +45,7 @@
                                                     <input type="checkbox" name="recordarme">
                                                 </div>
                                                 <button type="submit">Iniciar sesión</button>
-                                                <span id="login-message">¿Todavía no tenés tu cuenta? <span style="margin-left: 10px;"><a href="/user/register">REGISTRATE</a></span></span>
-
-
-
+                                                <span id="login-message">¿Todavía no tenés tu cuenta? <span style="margin-left: 10px;"><a href="/user/register" class="back-register">REGISTRATE</a></span></span>
                                     </form>
                                 </div>
                             </div>

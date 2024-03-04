@@ -8,7 +8,7 @@ function auth(req, res, next) {
 }
 function authorization(req, res, next) {
     if (!req.session.user) {
-        return res.status(403).send("No contas con los permisos para acceder a esta ruta");
+        return res.status(403).send("No contás con los permisos para acceder a esta ruta");
     }
     next();
 }
