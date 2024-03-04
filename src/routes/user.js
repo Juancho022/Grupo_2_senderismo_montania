@@ -28,7 +28,7 @@ router.post('/login', authMiddleware.onlyGuestUser, userController.loginProcess)
 router.get('/logout', userController.logout);
 
 router.get('/register', userController.register);
-router.post('/register', upload.single('image'), validationsMiddleware.signUpCheck, userController.registerProcess);
+router.post('/register', upload.single('img'), validationsMiddleware.signUpCheck, userController.registerProcess);
 router.get('/profile', userController.profile);
 
 //router.get("/admin", userController.admin);//falta vista
