@@ -1,8 +1,8 @@
 const { getRedirectRouteByRole } = require("../middlewares/users")
 
-function auth(req, res, next) {
+function authUser(req, res, next) {
     if (req.session.user) {
-        res.locals.session = req.session.user;
+        res.locals.user = req.session.user;
     }
     next();
 }
@@ -33,7 +33,7 @@ function onlyGuestUser(req,res,next){
 
 
 module.exports = {
-    auth,
+    authUser,
     authorization,
     onlyGuestUser
     // rememberMiddleware,
