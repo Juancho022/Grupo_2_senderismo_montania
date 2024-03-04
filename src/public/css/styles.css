@@ -140,7 +140,9 @@ footer {
     padding: 5px;
     bottom: 0;
     width: 100%;
-}
+    position: fixed;
+    z-index: 111;
+} 
 
 footer div.copyright{
     display: flex;
@@ -1204,3 +1206,4 @@ button.buttonShop #shop-cart {
     cursor: pointer;
     z-index: 0;
 }
+
