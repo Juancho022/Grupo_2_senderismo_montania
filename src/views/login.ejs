@@ -16,13 +16,17 @@
                                 </p>
 
                                 <div id="formLogin">
-                                    <form action="/user/login" method="post">
+                                    <form  class="loginForm" action="/user/login" method="post">
                                         <div>
-                                            <label><strong>Correo Electrónico</strong></label>
-                                            <input type="email" name="email" required>
-                                            <label><strong>Contraseña</strong></label>
+                                            <label for="emailLogin"><strong>Correo Electrónico</strong></label>
+                                            <input class="email"  type="email" name="email" id="emailLogin"  required> 
+                                            <div id="emailError" style="display: none; color: red;"></div>
+
+                                            <label for="passwordFieldLogin"><strong>Contraseña</strong></label>
                                             <div class="password-input-container">
-                                                <input type="password" name="password" id="passwordField" required>
+                                                <input type="password" name="password" id="passwordFieldLogin" required>
+                                                <div id="passwordError" style="display: none; color: red;"></div>
+
                                                 <i id="togglePassword" class="fas fa-eye-slash"
                                                     onclick="togglePasswordVisibility()"></i>
                                             </div>
@@ -54,7 +58,7 @@
                 
                 <script>
                     function togglePasswordVisibility() {
-                        var passwordField = document.getElementById("passwordField");
+                        var passwordField = document.getElementById("passwordFieldLogin");
                         var togglePassword = document.getElementById("togglePassword");
                 
                         if (passwordField.type === "password") {
@@ -73,4 +77,5 @@
 
         </body>
 
+        <script src="/js/loginValidations.js"></script>
         </html>

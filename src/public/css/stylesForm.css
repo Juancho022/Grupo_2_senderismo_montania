@@ -196,6 +196,10 @@ top: 80px;
   cursor: pointer; 
 }
 
+#passwordFieldLogin, input.email, #passwordFieldRegister {
+    height: 25px;
+}
+
 /* QUERIES START */
 
 /*************MOBILE**************************/
