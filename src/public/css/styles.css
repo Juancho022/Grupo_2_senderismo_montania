@@ -32,7 +32,7 @@ header {
     z-index: 1;
     left: -96px; 
     top: 100%; 
-    border-radius: 16px 8px;
+    border-radius: 7px 8px;
     box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -73,7 +73,7 @@ header {
 }
 
 .popup div.headercollapsable {
-    border-bottom: 1px solid #a7a7a7;
+    border-bottom: none;
     width: 100%; 
 }
 
@@ -140,7 +140,6 @@ footer {
     padding: 5px;
     bottom: 0;
     width: 100%;
-    position: relative;
 }
 
 footer div.copyright{
@@ -319,7 +318,7 @@ video#hero-video {
 main section#hero {
     width: 100%;
     overflow: hidden;
-    height: 80vh;
+    height: 60vh;
    /*  background: url(/images/hero.jpg) center/cover no-repeat;
     background-attachment: fixed; */
 } 
@@ -410,7 +409,6 @@ div.title2 {
     flex-direction: column;
     align-items: center;
     margin-top: 24px;
-    margin-bottom: 16px;
 }
 
 div.title2 p{
@@ -449,6 +447,7 @@ section#cardsHome div.card div.cardDescription {
     display: flex;
     flex-direction: column;
     padding-bottom: 8px;
+    align-items: flex-start;
 }
 
 .card img {
@@ -461,6 +460,7 @@ section#cardsHome div.card div.imgCards {
     align-items: center;
     justify-content: center;
     width: 90rem;
+    padding: 16px
 }
 
 p.category {
@@ -478,6 +478,7 @@ span.productDescription {
     font-size: 1.2vw;
     height: auto;
     width: 90%;
+    text-align: left;
 }
 
 p.cost {
@@ -519,20 +520,21 @@ section#cardsHome div.card button.buttonCard:hover {
     height: 100%;
   }
 
-  .swiper-slide {
+  #mySlider.swiper-slide {
+    display: initial;
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 32px;
   }
 
   .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
+    height: 268px;
     object-fit: cover;
+    border-radius: 24px;
   }
 
   .swiper {
@@ -617,7 +619,7 @@ section#cardsHome div.card button.buttonCard:hover {
     }
     
     h2.productName{
-        font-size: 2.2rem;
+        font-size: 1.7rem;
         border-bottom: 3px solid #D3573C;
         margin-bottom: 0;
         width: 100%;
@@ -659,11 +661,9 @@ section#cardsHome div.card button.buttonCard:hover {
     main section#hero {
         background: url(/images/hero.jpg) center/cover no-repeat;
         background-attachment: fixed; 
-        height: 70vh;
         }
 
     video#hero-video {
-        height: 70vh;
         position: relative;
         left: -160px;
         }
@@ -757,14 +757,11 @@ section#cardsHome div.card button.buttonCard:hover {
 @media (min-width: 1024px) {
 
     video#hero-video {
-        overflow: hidden;
-        height: 100vh;
+        height: 170%;
         position: relative;
-        left: -118px;
     }
 
     main section div#rightBox {
-        top: 15%;
         left: 50%;
         width: 40%;
     }
@@ -790,11 +787,10 @@ section#cardsHome div.card button.buttonCard:hover {
         margin: 24px;
     }
 
-    @media (min-width: 1441px) {
+    @media (min-width: 1439px) {
         video#hero-video {
-            height: 120vh;
+            height: 170%;
             position: relative;
-            left: -200px;
         }
 
         main section div p#paragraph {
@@ -824,6 +820,8 @@ section#cardsHome div.card button.buttonCard:hover {
     opacity: 1;
     margin: auto;
     z-index: 0;
+    border-radius: 2%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .box1 {
@@ -833,6 +831,7 @@ section#cardsHome div.card button.buttonCard:hover {
     height: 65px;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
+    border-radius: 2%;
 }
 
 .text {
@@ -851,6 +850,7 @@ section.cardsBottom {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    align-items: center;
 }
 
 section.cardsBottom div.cards {
@@ -865,21 +865,18 @@ section.cardsBottom div.cards {
     
 }
 
- .shoesImage--1, .shoesImage--2, .shoesImage--3, .shoesImage--4{
+.cards img {
     width: 100%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     cursor: pointer;
     border-radius: 20px;
     opacity: 1;
+    height: 180px;
+    background-size: cover;
+    object-fit: cover;
 }
 
-.shoesImage--1{
-    height: 70%;
-}
-
-.shoesImage--4{
-    height: 90%;
-}
+ 
 
 section.cardsBottom div.cards div.shoesDescription {
     height: fit-content;
@@ -1012,6 +1009,7 @@ button.buttonShop #shop-cart {
     .box1 {
         width: 330px;
         height: 130px;
+        border-radius: 2%;
     }
     .text {
         font-size: 25px;
@@ -1065,11 +1063,14 @@ button.buttonShop #shop-cart {
     .deportist{
         width: 55%;
         left: 130px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1{
         width: 359px;
         height: 232px;
         left: 125px;
+        border-radius: 2%;
     }
 
     .text{
@@ -1105,7 +1106,6 @@ button.buttonShop #shop-cart {
     }
     button.buttonShop{
         bottom: 22%;
-        left: 55%;
     }
 }
 
@@ -1116,19 +1116,19 @@ button.buttonShop #shop-cart {
     .deportist {
         width: 55%;
         left: 188px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1 {
         width: 477px;
         height: 345px;
         left: 202px;
+        border-radius: 2%;
     }
     .text {
         font-size: 40px;
         line-height: 65px;
         bottom: 126px;
-    }
-    section.cardsBottom div.cards {
-        width: 14%;
     }
     
     #separate-only-769{
@@ -1167,11 +1167,14 @@ button.buttonShop #shop-cart {
     .deportist {
         width: 55%;
         left: 239px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1 {
         width: 616px;
         height: 436px;
         left: 275px;
+        border-radius: 2%;
     }
     .text {
         font-size: 50px;
@@ -1186,3 +1189,18 @@ button.buttonShop #shop-cart {
     color: #FFFF;
 }
 
+.password-input-container {
+    position: relative;
+}
+
+.password-input-container input[type="password"] {
+    padding-right: 30px; 
+}
+
+.password-input-container i {
+    position: absolute;
+    color:black;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+}

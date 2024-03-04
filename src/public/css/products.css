@@ -11,9 +11,9 @@ html {
 
 div#search-products {
     display: flex;
-    justify-content: space-around;
-    padding-top: 92px;
-    padding-bottom: 24px;
+    justify-content: center;
+    padding-top: 130px;
+    gap: 24px;
 }
 
 input{
@@ -25,23 +25,27 @@ input{
 }
 
 .search-button {
-    background-color: transparent;
-    color: #ccc;
+    background-color: rgb(239, 227, 89);
+    padding: 8px 32px;
+    border-radius: 64px;
+    color: #000;
     border: none;
     cursor: pointer;
-    transform: translateY(-50%);
+    position: relative;
+    left: -110px;
 }
 
 input[type="text-search"]:focus + .search-button {
-    color: #000;
+    color: rgb(197, 184, 42);
 }
 
 
 .products-container {
     display: grid;
     justify-content: space-between;
-    padding: 48px;
+    padding: 24px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px
 }
 
 a {
@@ -53,7 +57,7 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 34px 10px 0px;
+    margin: 34px -3px 0px;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
     border-top-left-radius: 10%;
@@ -90,7 +94,7 @@ img.img-product-products {
     flex-direction: column;
     background-color: #eee;
     border-bottom-right-radius: 32px;
-    padding: 16px;
+    padding: 16px 8px;
     text-align: center;
 }
 

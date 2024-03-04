@@ -4,21 +4,22 @@ const productController = {
  // Endpoint para obtener todos los productos
     list(req, res) {
         db.Product.findAll({
-                attributes: ['id', 'categories_id', 'description', 'name'],
+                attributes: ['id', 'description', 'name', 'img' ],
                 include: [{
                     association: 'category',
-                    attributes: ['description']
+                   
+                },{
+                    association: 'sizes',
+                   
                 }]
             })
             .then(products => {
                 
                 const response = {
+                    count: products.length, // Contar la cantidad de usuarios
                     products: products.map(product => ({
-                        id: product.id,
-                        name: product.name,
-                        description: product.description,
-                        categories: product.category.description, 
-                        detail: `/products/productDetail/${product.id}`
+                        ...product.dataValues,    
+                        detail: `/api/products/${product.id}`
                     }))
                 };
                 res.status(200).json(response);

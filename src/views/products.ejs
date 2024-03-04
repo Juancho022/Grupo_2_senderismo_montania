@@ -2,13 +2,14 @@
     <%- include('partials/head', { styles: ['products'], pageTitle: pageTitle }) %>
 
         <body>
+            <%- include('./promotion') %>
             <%- include('./partials/header') %>
                 <main>
                     <div id="search-products">
                         <h2>Todos los productos</h2>
                         <form action="/products/search" method="POST">
-                            <input type="text" name="name" placeholder="Búsqueda rápida">
-                            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                            <input type="text" name="name" placeholder="Buscá tu prenda ideal">
+                            <button type="submit" class="search-button">Buscar</button> <!-- <i class="fa fa-search"></i> -->
                         </form>
                     </div>
                     <div class="products-container">

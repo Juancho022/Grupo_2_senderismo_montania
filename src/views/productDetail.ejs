@@ -1,65 +1,72 @@
-<% let pageTitle = 'Productos' %>
-<%- include('partials/head', { styles: ['productDetail'], pageTitle: pageTitle }) %>
+<% let pageTitle='Productos' %>
+    <%- include('partials/head', { styles: ['productDetail'], pageTitle: pageTitle }) %>
 
-<body>
-    
-    <%- include('./partials/header') %>
+        <body>
 
-    <main>
-        <p class="step">Productos > Categoría > Producto</p>
-        <article class="article-detail">
-            <img src="\images\<%= product?.img %>" alt="Imagen del Producto">
-         <div class="details-container">
-                <div class="especs-detail">
-                    <div class="title-detail" >
-                        <h2><%= product?.name %></h2>
-                    </div>
-                    <div class="color-n-quantity">
-                        <div class="colors">
-                            <div class="color-one">
-                            </div>
-                            <div class="color-two">
-                            </div>
-                            <div class="color-three">
+            <%- include('./partials/header') %>
+
+                <main class="background">
+                    <p class="step"></p>
+                    <article class="article-detail">
+                        <img src="\images\<%= product?.img %>" alt="Imagen del Producto">
+                        <div class="details-container">
+                            <div class="especs-detail">
+                                <div class="title-detail">
+                                    <h2>
+                                        <%= product?.name %>
+                                    </h2>
+                                </div>
+                                <div class="color-n-quantity">
+                                    <div class="colors">
+                                        <div class="color-one">
+                                        </div>
+                                        <div class="color-two">
+                                        </div>
+                                        <div class="color-three">
+                                        </div>
+                                    </div>
+                                    <div class="count-detail">
+                                        <p>Cantidad</p>
+                                        <div class="button decrease" id="less">
+                                            <p>-</p>
+                                        </div>
+                                        <div>
+                                            <p class="count" id="quantity">1</p>
+                                        </div>
+                                        <div>
+                                            <p class="button increase" id="more">+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-n-cta">
+                                    <p class="price-final">$<%= product.prices[0].price %>
+                                    </p>
+                                    <button class="add-cart"> Añadir al carrito </button>
+                                    <button class="add-fav">Agregar a favoritos</button>
+                                </div>
+                                <div>
+                                    <p class="article-description">
+                                        <%= product.description %>
+                                    </p>
+                                </div>
+                                <% if (product.sizes.length> 1 || (product.sizes.length === 1 &&
+                                    product.sizes[0].sizes_type !== 'Único')) { %>
+                                    <p class="title-sizes">Talles disponibles</p>
+                                    <% for (let i=0 ; i < product.sizes.length ; i++) { %>
+                                        <p class="tec-espec-description">
+                                            <%= product.sizes[i].sizes_type %>
+                                        </p>
+                                        <% } %>
+                                            <% } %>
                             </div>
                         </div>
-                        <div class="count-detail">
-                            <p>Cantidad</p>
-                            <div class="button decrease" id="less">
-                                <p>-</p>
-                            </div>
-                            <div>
-                                <p class="count" id="quantity">1</p>
-                            </div>
-                            <div>
-                                <p class="button increase" id="more">+</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price-n-cta">
-                        <p class="price-final">$<%= product.price[0].price %></p>
-                        <button class="add-cart"> Añadir al carrito </button>
-                        <button class="add-fav">Agregar a favoritos</button>
-                    </div>
-                    <div>
-                        <p class="article-description">
-                            <%= product.description %>                            
-                        </p>
-                    </div>
-                    <% if (product.sizes.length > 1 || (product.sizes.length === 1 && product.sizes[0].sizes_type !== 'Único')) { %>
-                        <p class="title-sizes">Talles disponibles</p>
-                        <% for (let i=0 ; i < product.sizes.length ; i++) { %>
-                            <p class="tec-espec-description"><%= product.sizes[i].sizes_type %></p>
-                        <% } %>
-                    <% } %>            
-                </div>
-            </div>
-        </article>
-    </main>
+                    </article>
+                </main>
 
-    <%- include('./partials/footer') %>
+                <%- include('./partials/footer') %>
 
-    <script src="/js/front.js"></script>
+                    <script src="/js/front.js"></script>
 
-</body>
-</html>
+        </body>
+
+        </html>

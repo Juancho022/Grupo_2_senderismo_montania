@@ -12,26 +12,9 @@ const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
 
 const controller = {
-    admin: (req, res) => {
-        res.render('adminView');
-    },
-
-    list: async (req, res) => {
-        try {
-            const users = await db.User.findAll({
-                include: ['roles'],
-                attributes: {
-                    exclude: ['password']
-                }
-            });
-            res.render('usersList', { users });
-        } catch (error) {
-            res.send(error);
-        }
-    },
     profile: async (req, res) => {
         try {
-            if (!req.session.user) {
+            if (!req.session || !req.session.user) {
                 return res.send('Usuario no autenticado');
             }
             const user = await db.User.findByPk(req.session.user.id, {
@@ -70,14 +53,29 @@ const controller = {
             console.log('Resultado de la actualización:', result); // Agrega esta línea
 
             console.log('Usuario actualizado exitosamente.');
-            res.redirect('/profile');
+            res.redirect('/user/profile');
         } catch (error) {
             console.error('Error al actualizar el usuario:', error);
             res.status(500).send('Error interno del servidor');
         }
     },
-    login: (req, res) => {
-        res.render('login');
+    login: async (req, res) => {
+        const userEmailFromCookie = req.cookies.recordarme;
+        if (userEmailFromCookie) {
+            try {
+                const userToLogin = await db.User.findOne({
+                    where: req.body.email
+                });
+                if (userToLogin) {
+                    const { password, ...nonSensibleUserData } = userToLogin;
+                    req.session.user = nonSensibleUserData;
+                    return res.redirect('profile');
+                }
+            } catch (error) {
+                return res.json(error);
+            }
+        }
+        return res.render('login');
     },
     loginProcess: async (req, res) => {
         try {
@@ -102,17 +100,22 @@ const controller = {
                     } else {
                         return res.redirect('/user/profile');
                     }
+                } else {
+                    return res.render('login', {
+                        errors: {
+                            email: {
+                                msg: "El email y/o la contraseña son incorrectos"
+                            }
+                        }
+                    });
                 }
+            } else {
+                return res.render('userDoesNotExist', {
+                    message: "El usuario no está registrado"
+                });
             }
-            return res.render('login', {
-                errors: {
-                    email: {
-                        msg: "El email y/o la contraseña son incorrectos"
-                    }
-                }
-            });
         } catch (error) {
-            console.log(error)
+            console.log(error);
             return res.json(error);
         }
     },
@@ -125,17 +128,14 @@ const controller = {
             if (userExists) {
                 return res.render('userExists');
             }
-    
             // Validar que las contraseñas coincidan
             if (req.body.password !== req.body.confirmPassword) {
                 return res.render('register', { errors: { confirmPassword: { msg: 'Las contraseñas no coinciden' } }, oldData: req.body });
             }
-    
             const errors = validationResult(req);
-            if (!errors.isEmpty()) {  
+            if (!errors.isEmpty()) {
                 return res.render('register', { errors: errors.mapped(), oldData: req.body });
             }
-            
             const newUser = {
                 first_name: req.body.firstName,
                 last_name: req.body.lastName,
@@ -152,28 +152,26 @@ const controller = {
             res.send(error);
         }
     },
-    login: async (req, res) => {
-        const userEmailFromCookie = req.cookies.recordarme;
-        if (userEmailFromCookie) {
-            try {
-                const userToLogin = await db.User.findOne({
-                    where: req.body.email
-                });
-                if (userToLogin) {
-                    const { password, ...nonSensibleUserData } = userToLogin;
-                    req.session.user = nonSensibleUserData;
-                    return res.redirect('profile');
-                }
-            } catch (error) {
-                return res.json(error);
-            }
-        }
-        return res.render('login');
-    },
     logout: (req, res) => {
         req.session.destroy();
         res.clearCookie("recordarme");
         return res.redirect('/');
+    },
+    admin: (req, res) => {
+        res.render('adminView');
+    },
+    list: async (req, res) => {
+        try {
+            const users = await db.User.findAll({
+                include: ['roles'],
+                attributes: {
+                    exclude: ['password']
+                }
+            });
+            res.render('usersList', { users });
+        } catch (error) {
+            res.send(error);
+        }
     },
     delete: async (req, res) => {
         try {
