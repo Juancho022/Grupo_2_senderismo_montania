@@ -1,3 +1,5 @@
+// Barra de publicidad
+
 const promotionBar = document.getElementById("promotion-bar");
 const promotions = [
     "¡Promoción especial por tiempo limitado! 20% de descuento en todos los productos. ¡Aprovéchalo ya!",
@@ -13,13 +15,23 @@ function changePromotion() {
 
 setInterval(changePromotion, 5000);
 
-const header = document.querySelector("header");
 
-window.onscroll = function() {
-    if (window.pageYOffset > 0) {
-        // Si el usuario está en la parte superior de la página, mostrar la promoción
-        promotionBar.style.display = "block";
-        header.style.top = "5%";
-        header.style.position = "absolute";
-    }
-}
+// Carrusel de publicidad..
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".carousel-container");
+
+  carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll(".carousel-image");
+    const interval = 5000;
+    let index = 0;
+
+    const showImage = () => {
+      index = (index + 1) % images.length;
+      const offset = -index * 100;
+      carousel.querySelector(".carousel-images").style.transform = `translateX(${offset}%)`;
+    };
+
+    setInterval(showImage, interval);
+  });
+});
