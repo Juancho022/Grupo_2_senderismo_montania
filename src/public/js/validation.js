@@ -1,77 +1,96 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-    document.getElementById('product-form').addEventListener('submit', function (event) {
-        event.preventDefault(); 
+document.addEventListener('DOMContentLoaded', function () {
+    let form = document.querySelector('#product-form');
+    form.addEventListener("submit", function (e) {
+        let errors = [];
 
-        let name = document.getElementById('name').value.trim();  
-        let description = document.getElementById('description').value.trim();
-        let price = document.getElementById('price').value.trim();
-        let discount = document.getElementById('discount').value.trim();
-        let sizes = document.querySelectorAll('input[name="sizes"]:checked').length;
-        let colors = document.querySelectorAll('input[name="colors"]:checked').length;
-        let category = document.getElementById('category').value.trim();
+        let nameInput = document.querySelector('#name');
+        console.log(nameInput)
+        let descriptionInput = document.querySelector('#description');
+        let priceInput = document.querySelector('#price');
+        let discountInput = document.querySelector('#discount');
+        let sizesInputs = document.querySelectorAll('input[name="sizes"]:checked');
+        let colorsInputs = document.querySelectorAll('input[name="colors"]:checked');
+        // let categoryInput = document.querySelector('#category');
 
-        if (name === '') {
-            document.getElementById('name-error').innerText = 'El nombre es requerido';
-            return;
-        } else if (name.length < 5) {
-            document.getElementById('name-error').innerText = 'El nombre debe ser más largo';
-            return;
+
+        validateName(nameInput, errors);
+        validateDescription(descriptionInput, errors);
+        validatePrice(priceInput, errors);
+        validateDiscount(discountInput, errors);
+        validateSizes(sizesInputs, errors);
+        validateColors(colorsInputs, errors);
+        // validateCategory(categoryInput, errors);
+
+        let errorsDiv = document.querySelector('.errors');
+        let ulErrors = errorsDiv.querySelector('ul');
+
+        if (errors.length > 0) {
+            e.preventDefault();
+            ulErrors.innerHTML = ''; // Limpiar errores anteriores
+            for (let i = 0; i < errors.length; i++) {
+                ulErrors.innerHTML += '<li>' + errors[i] + '</li>';
+            }
+            errorsDiv.style.display = 'block'; // Mostrar el div de errores
         } else {
-            document.getElementById('name-error').innerText = '';
+            errorsDiv.style.display = 'none'; // Ocultar el div de errores si no hay errores
         }
-
-        if (description === '') {
-            document.getElementById('description-error').innerText = 'La descripción es requerida';
-            return;
-        } else if (description.length < 20) {
-            document.getElementById('description-error').innerText = 'La descripción debe ser más larga';
-            return;
-        } else {
-            document.getElementById('description-error').innerText = '';
-        }
-
-        if (price === '') {
-            document.getElementById('price-error').innerText = 'El precio del producto es requerido';
-            return;
-        } else if (isNaN(price)) {
-            document.getElementById('price-error').innerText = 'El precio debe ser un número';
-            return;
-        } else {
-            document.getElementById('price-error').innerText = '';
-        }
-
-        if (discount === '') {
-            document.getElementById('discount-error').innerText = 'El descuento es requerido';
-            return;
-        } else if (isNaN(discount)) {
-            document.getElementById('discount-error').innerText = 'El descuento debe ser un número';
-            return;
-        } else {
-            document.getElementById('discount-error').innerText = '';
-        }
-
-        if (sizes === 0) {
-            document.getElementById('sizes-error').innerText = 'Debes seleccionar al menos un tamaño';
-            return;
-        } else {
-            document.getElementById('sizes-error').innerText = '';
-        }
-
-        if (colors === 0) {
-            document.getElementById('colors-error').innerText = 'Debes seleccionar al menos un color';
-            return;
-        } else {
-            document.getElementById('colors-error').innerText = '';
-        }
-
-        if (category === '') {
-            document.getElementById('category-error').innerText = 'Debes seleccionar una categoría';
-            return;
-        } else {
-            document.getElementById('category-error').innerText = '';
-        }
-
-        this.submit();
     });
 });
+
+function validateName(input, errors) {
+    const nameValue = input.value.trim();
+    if (nameValue === '') {
+        errors.push('Debes colocar el nombre del producto');
+    } else if (nameValue.length < 5) {
+        errors.push('El nombre del producto tiene que tener al menos 5 caracteres');
+    }
+}
+
+function validateDescription(input, errors) {
+    const descriptionValue = input.value.trim();
+    if (descriptionValue === '') {
+        errors.push('La descripción es requerida');
+    } else if (descriptionValue.length < 20) {
+        errors.push('La descripción debe tener al menos 20 caracteres');
+    }
+}
+
+function validatePrice(input, errors) {
+    const priceValue = input.value.trim();
+    if (priceValue === '') {
+        errors.push('El precio del producto es requerido');
+    } else if (isNaN(priceValue)) {
+        errors.push('El precio debe ser un número');
+    }
+}
+
+function validateDiscount(input, errors) {
+    const discountValue = input.value.trim();
+    if (discountValue === '') {
+        errors.push('El descuento es requerido');
+    } else if (isNaN(discountValue)) {
+        errors.push('El descuento debe ser un número');
+    }
+}
+
+function validateSizes(inputs, errors) {
+    if (inputs.length === 0) {
+        errors.push('Debes seleccionar al menos un tamaño');
+    }
+}
+
+function validateColors(inputs, errors) {
+    if (inputs.length === 0) {
+        errors.push('Debes seleccionar al menos un color');
+    }
+}
+
+// function validateCategory(input, errors) {
+//     const categoryValue = input.value.trim();
+//     if (categoryValue === '') {
+//         errors.push('Debes seleccionar una categoría');
+//     } 
+// }
+
+
 

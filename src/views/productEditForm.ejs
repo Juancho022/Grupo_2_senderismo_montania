@@ -11,31 +11,35 @@
                                 Editar imágenes
                             </button>
                         </div>
-                        <form class="product-edit-form" action="/inventory/<%= product.id %>/edit?_method=PUT"
+                        <form id="product-id" class="product-edit-form" action="/inventory/<%= product.id %>/edit?_method=PUT"
                             method="post">
                             <h2 id="edit-product-title">Editar producto</h2>
                             <div class="label-product">
                                 <label for="product">Producto</label>
-                                <input type="text" class="product-imput" name="name" id="name"
-                                    placeholder="Nombre del producto" required value="<%= product.name %>">
+                                <input id="name" type="text" class="product-imput" name="name"
+                                    placeholder="Nombre del producto"  value="<%= product.name %>">
+                                    <p id="err-name" class="error-message"></p>
                             </div>
 
                             <div class="label-product">
                                 <label for="description">Descripción</label>
-                                <input type="text" class="product-imput" name="description"
-                                    placeholder="Descripción del producto" required value="<%= product.description %>">
+                                <input id="description" type="text" class="product-imput" name="description"
+                                    placeholder="Descripción del producto"  value="<%= product.description %>">
+                                    <p id="err-description" class="error-message"></p>
                             </div>
 
                             <div class="label-product-price">
                                 <label for="price">Precio</label>
-                                <input type="text" class="product-imput-price" name="price" id="price"
-                                    placeholder="Precio del producto" required value="<%= product.prices[0].price %>">
+                                <input id="price" type="text" class="product-imput-price" name="price"
+                                    placeholder="Precio del producto"  value="<%= product.prices[0].price %>">
+                                    <p id="err-price" class="error-message"></p>
                             </div>
 
                             <div class="label-product-price">
                                 <label for="discount">Descuento</label>
-                                <input type="text" id="discount" name="discount" placeholder="Ej: 15"
+                                <input id="discount" type="text" name="discount" placeholder="Ej: 15"
                                     class="product-imput-price" >
+                                    <p id="err-discount" class="error-message"></p>
                             </div>
 
                             <div class="size-options">
@@ -46,6 +50,7 @@
                                         <%= size.sizes_type %>
                                     </label>
                                 <% }); %>
+                                <p id="err-sizes" class="error-message"></p>
                             </div>
 
                             <div class="color-options">
@@ -56,6 +61,7 @@
                                         <%= color.color_name %>
                                     </label>
                                 <% }); %>
+                                <p id="err-colors" class="error-message"></p>
                             </div>
 
                             <div class="counter-edit-product">
@@ -67,7 +73,7 @@
 
                             <div class="product-category">
                                 <span id="category">Categoría</span>
-                                <select class="product-category-detail" id="category">
+                                <select class="product-category-detail" id="categoryproduct">
                                     <option value="<%= product.category.id %>" selected>
                                         <%= product.category.description %>
                                     </option>
@@ -79,6 +85,7 @@
                                         <% } %>
                                     <% }); %>
                                 </select>
+                                <p id="err-categoryproduct" class="error-message"></p>
                             </div>
                             <div class="button-submit">
                                 <input type="submit" class="button-submit" value="Guardar cambios">
@@ -87,6 +94,7 @@
                     </div>
                 </main>
                 <%- include('./partials/footer') %>
+                <script src="/js/editProductValidation.js"></script>
         </body>
 
         </html>
