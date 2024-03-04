@@ -1,18 +1,18 @@
 <%- include('./partials/head' , { pageTitle: 'Bienvenidos a Peak' }) %>
 
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    </head>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
 
     <body>
 
         <%- include('./promotion') %>
 
-            <%- include('./partials/header') %>
+        <%- include('./partials/header') %>
 
-                <main>
+            <main>
 
-                    <!-- HERO SECTION STARTS -->
+                <!-- HERO SECTION STARTS -->
 
                 <section id="hero">
                     <video autoplay muted loop id="hero-video">
@@ -151,10 +151,35 @@
                         </div>
                     </section>
 
+                    <section class="benefits">
+                        <div id="delivery">
+                            <i class="fas fa-truck truck" style="color: #ffffff;"></i>
+                            <span id="titleDelivery">Envío gratis</span>
+                            <span>para compras mayores a $70.000</span>
+                        </div>
+                        <div id="personalize">
+                            <i class="far fa-heart" style="color: #ffffff;"></i>
+                            <span id="titlePersonalize">Personalizá</span>
+                            <span>tu equipamiento</span>
+                        </div>
+                        <div id="creditCard">
+                            <i class="far fa-credit-card" style="color: #ffffff;"></i>
+                            <span id="titlecreditCard">Cuotas</span>
+                            <span> sin interés según Banco</span>
+                        </div>
+                        <div id="productReturn">
+                            <i class="fas fa-exchange-alt" style="color: #ffffff;"></i>
+                            <span id="titleProductReturn">Devoluciones</span>
+                            <span>gratis dentro de los 20 días</span>
+                        </div>
+                    </section>
                     <div class="title2">
                         <p style="font-weight: 100">Destacados</p>
                         <h2> En Peak, la marca la dejás vos</h2>
                     </div>
+
+
+<<<<<<< HEAD
                     <!-- CARD SECTION STARTS -->
                     <section id="cardsHome">
                         <div class="swiper mySwiper">
@@ -252,7 +277,7 @@
                             <div class="swiper-pagination"></div>
                         </div>
 
-                    </section>
+                </section>
 
                         <div class="content-promo">
                         <%- include('./promotionIMG') %>
@@ -334,14 +359,14 @@
                         </section>
                 </main>
 
-                <%- include('./partials/footer') %>
+            <%- include('./partials/footer') %>
 
     </body>
+    
 
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- JavaScript -->
-    <script src="/js/carrusel.js"></script>
+       <!-- Swiper JS -->
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+       <!-- JavaScript -->
+       <script src="/js/carrusel.js"></script>
 
     </html>

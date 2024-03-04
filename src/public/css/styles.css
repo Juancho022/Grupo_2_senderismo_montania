@@ -140,9 +140,7 @@ footer {
     padding: 5px;
     bottom: 0;
     width: 100%;
-    position: fixed;
-    z-index: 111;
-} 
+}
 
 footer div.copyright{
     display: flex;
@@ -320,7 +318,7 @@ video#hero-video {
 main section#hero {
     width: 100%;
     overflow: hidden;
-    height: 80vh;
+    height: 60vh;
    /*  background: url(/images/hero.jpg) center/cover no-repeat;
     background-attachment: fixed; */
 } 
@@ -1202,9 +1200,7 @@ button.buttonShop #shop-cart {
 .password-input-container i {
     position: absolute;
     color:black;
-    top: 15%;
     left: 90%; 
     cursor: pointer;
     z-index: 0;
 }
-

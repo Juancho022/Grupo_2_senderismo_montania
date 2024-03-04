@@ -1,6 +1,6 @@
 html, body {
     overflow: visible;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/bg-login.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/logn-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -23,6 +23,15 @@ p.error-message {
     padding: 8px 0px 8px 14px;
     background-color: rgba(255, 0, 0, 0.5);
     border-radius: 8px;
+}
+
+input#image {
+    height: 48px;
+}
+
+.back-login {
+    text-decoration: none;
+    color: #efc84c;
 }
 
 i.fa-times-circle {
@@ -83,7 +92,6 @@ main form {
 main form input {
     margin: 5px 0;
     background: none;
-    margin-top: -3px;
     width: -webkit-fill-available;
     color: white;
     display: inline-block;
@@ -107,7 +115,7 @@ position: relative;
 }
 main section button {
     background-color: rgb(0, 0, 0);
-    color: white;
+    color: #efc84c;
     border: 1px solid rgb(0, 0, 0);
     font-size: 1.6rem;
     padding: 4px;
@@ -115,6 +123,7 @@ main section button {
     width: 100%;
     color: inherit;
     margin-top: 15%;
+    border-radius: 16px;
 }
 
 main section button:hover{
@@ -126,15 +135,21 @@ main section button:hover{
 
 .recordarme{
     position: relative;
-    bottom: 4px;
     display: flex;
 }
+
+a.back-register {
+    text-decoration: none;
+    color: #efc84c;
+}
+
+
 main section form div#rememberMe{
     display: flex;
     position: absolute;
     flex-direction: row-reverse;
     align-items: center;
-    top: 64%;
+    top: 54%;
 }
 input[type="checkbox"] {
     appearance: none;
@@ -182,8 +197,10 @@ input[type="checkbox"]:checked::before {
 position: relative;
 display: flex;
 justify-content: center;
-top: 10px;
+top: 60px;
 }
+
+
 .custom-file-upload {
   background-color: #4CAF50; 
   color: white; 
@@ -191,6 +208,10 @@ top: 10px;
   border: none; 
   border-radius: 5px;
   cursor: pointer; 
+}
+
+#passwordFieldLogin, input.email, #passwordFieldRegister {
+    height: 25px;
 }
 
 /* QUERIES START */
@@ -258,7 +279,7 @@ top: 10px;
 /*************TABLET**************************/
 @media (min-width: 768px) {
     html body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg-login.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/logn-bg.webp');
         background-size: cover;
         background-position: center bottom;
     }
@@ -341,7 +362,6 @@ top: 10px;
         position: fixed;
         width: 40%;
         left: 20%;
-        top: 24%;
     }
     main section div#registerBox {
         position: absolute;
@@ -381,6 +401,7 @@ top: 10px;
    main section button {
         font-size: 2rem;
         margin-top: 64px;
+        color: #efc84c;
     }
 
 }
@@ -428,8 +449,29 @@ footer {
 .password-input-container i {
     position: absolute;
     color:white;
-    top: 15%;
     left: 90%; 
     cursor: pointer;
     z-index: 0;
+    top: 130%;
 }
+
+.password-input-container-register i {
+    position: absolute;
+    color:white;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+    top: 40%;
+}
+
+
+.password-input-container-login i {
+    position: absolute;
+    color:white;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+    top: 32%;
+}
+
+
