@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 // Funciones de validación (puedes personalizarlas según tus necesidades)
 function validateName(input, errorElement) {
     if (input.value.trim().length < 3) {
@@ -58,6 +59,7 @@ function validateEmail(input, errorElement) {
         errorElement.style.display = 'none';
     }
 }
+
 
 function validatePassword(input, errorElement) {
     if (input.value.length < 8) {
