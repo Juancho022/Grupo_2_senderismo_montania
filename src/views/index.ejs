@@ -1,42 +1,19 @@
 <%- include('./partials/head' , { pageTitle: 'Bienvenidos a Peak' }) %>
 
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    </head>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
 
     <body>
 
         <%- include('./promotion') %>
 
-            <%- include('./partials/header') %>
+        <%- include('./partials/header') %>
 
-                <main>
+            <main>
 
-                    <!-- HERO SECTION STARTS -->
+                <!-- HERO SECTION STARTS -->
 
-<<<<<<< HEAD
-                    <section id="hero">
-                        <video autoplay muted loop id="hero-video">
-                            <source src="/images/BG_VIDEO.mp4" type="video/mp4">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div id="rightBox">
-                            <span id="heroTitle"> Si llegaste hasta acá, llegaste a la cima</span>
-                            <p id="paragraph">
-                                En Peak ofrecemos una amplia gama de productos y servicios diseñados para los amantes
-                                del
-                                senderismo, la montaña y las actividades al aire libre. Nos enorgullece brindar a
-                                nuestros
-                                clientes productos de alta calidad y equipos confiables para que puedan disfrutar al
-                                máximo
-                                de sus aventuras en la naturaleza.
-                            </p>
-                            <a href="http://localhost:3000/products">
-                                <button id="buttonHero">
-                                    Elegí tu equipamiento
-                                </button>
-                            </a>
-=======
                 <section id="hero">
                     <video autoplay muted loop id="hero-video">
                         <source src="/images/BG_VIDEO.mp4" type="video/mp4">
@@ -171,147 +148,15 @@
                                     </div>
                                 </div>
                             </div>
->>>>>>> 612317a164b6ff70d2d01740a8c8fa24d8eda1fe
                         </div>
-                    </section>
-
-                    <section class="benefits">
-                        <div id="delivery">
-                            <i class="fas fa-truck truck" style="color: #ffffff;"></i>
-                            <span id="titleDelivery">Envío gratis</span>
-                            <span>para compras mayores a $70.000</span>
-                        </div>
-                        <div id="personalize">
-                            <i class="far fa-heart" style="color: #ffffff;"></i>
-                            <span id="titlePersonalize">Personalizá</span>
-                            <span>tu equipamiento</span>
-                        </div>
-                        <div id="creditCard">
-                            <i class="far fa-credit-card" style="color: #ffffff;"></i>
-                            <span id="titlecreditCard">Cuotas</span>
-                            <span> sin interés según Banco</span>
-                        </div>
-                        <div id="productReturn">
-                            <i class="fas fa-exchange-alt" style="color: #ffffff;"></i>
-                            <span id="titleProductReturn">Devoluciones</span>
-                            <span>gratis dentro de los 20 días</span>
-                        </div>
-                    </section>
-                    <div class="title2">
-                        <p style="font-weight: 100">Destacados</p>
-                        <h2> En Peak, la marca la dejás vos</h2>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
 
+                </section>
 
-<<<<<<< HEAD
-                    <!-- CARD SECTION STARTS -->
-                    <section id="cardsHome">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div id="mySlider" class="swiper-slide">
-                                    <div class="card">
-                                        <div class="imgCards">
-                                            <a href="http://localhost:3000/products/productDetail/14">
-                                                <img src="images\backpack.png" alt="mochilaPeak">
-                                            </a>
-                                        </div>
-                                        <div class="cardDescription">
-                                            <p class="category">Senderismo</p>
-                                            <h2 class="productName">MOCHILA PEAK</h2>
-                                            <span class="productDescription"> Incluye una funda especial y puerto de
-                                                paso
-                                                para
-                                                una bolsa de hidratación, enganches y correas adicionales para sujetar
-                                                equipo
-                                                extra como bastones de senderismo. </span>
-                                            <p class="cost">$95.000</p>
-                                            <button class="buttonCard">
-                                                Añadir al carrito
-                                                <i class="far fa-heart favorite"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="imgCards">
-                                            <a href="http://localhost:3000/products/productDetail/8">
-                                                <img src="images\8calza-senderismo.jpg" alt="calza">
-                                            </a>
-                                        </div>
-                                        <div class="cardDescription">
-                                            <p class="category">Senderismo</p>
-                                            <h2 class="productName">CALZA</h2>
-                                            <span class="productDescription">Calza ideal para situaciones en las que se
-                                                necesita mantener
-                                                las piernas secas en climas húmedos o en actividades al aire libre donde
-                                                puedas estar
-                                                expuesto a la lluvia. </span>
-                                            <p class="cost">$33.000</p>
-                                            <button class="buttonCard">
-                                                Añadir al carrito
-                                                <i class="far fa-heart favorite"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="mySlider" class="swiper-slide">
-                                    <div class="card">
-                                        <div class="imgCards">
-                                            <a href="http://localhost:3000/products/productDetail/2">
-                                                <img src="images\2gorra.jpg" alt="gorrroPeak">
-                                            </a>
-                                        </div>
-                                        <div class="cardDescription">
-                                            <p class="category">Senderismo</p>
-                                            <h2 class="productName">GORRO DE LANA</h2>
-                                            <span class="productDescription">Cuando te aventuras en terrenos escarpados
-                                                y condiciones impredecibles,
-                                                necesitas equipo confiable que te mantenga cómodo y protegido. </span>
-                                            <p class="cost">$15.000</p>
-                                            <button class="buttonCard">
-                                                Añadir al carrito
-                                                <i class="far fa-heart favorite"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="imgCards">
-                                            <a href="http://localhost:3000/products/productDetail/7">
-                                                <img src="images\7botella.jpg" alt="botellaTermica">
-                                            </a>
-                                        </div>
-                                        <div class="cardDescription">
-                                            <p class="category">Accesorios</p>
-                                            <h2 class="productName">BOTELLA TÉRMICA</h2>
-                                            <span class="productDescription">La botella está diseñada con tecnología de
-                                                aislamiento de doble
-                                                pared que mantiene las bebidas frías hasta por 24 horas y calientes
-                                                hasta por 12 horas.
-                                                Ideal para cualquier clima y estación.</span>
-                                            <p class="cost">$9.000</p>
-                                            <button class="buttonCard">
-                                                Añadir al carrito
-                                                <i class="far fa-heart favorite"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-
-                    </section>
-
-                    <div class="content-promo">
-                        <%- include('./promotionIMG') %>
-                    </div>
-
-                    
-                    <section class="publicity"> <!--Section de Juan para la imagen del viejito -->
-=======
                 <section class="publicity"> 
->>>>>>> 612317a164b6ff70d2d01740a8c8fa24d8eda1fe
 
                     <div class="box1">
                         <div class="text">
@@ -319,80 +164,80 @@
                         </div>
                     </div>
                     <img src="\images\deportista.jpg" alt="Publicidad Deportista" class="deportist">
-                </section> 
-                        <br>
-                        <br>
-                        <section class="cardsBottom"> <!--Section de Juan para las ultimas 4 cards-->
-                            <div class="cards">
-                                <a id="a-for-shoe-1" href="http://localhost:3000/products/productDetail/10">
-                                    <img src="\images\shoes (0).png" alt="zapatillaNro1" class="shoesImage--1">
-                                </a>
-                                <p class="orange-line"></p>
-                                <div class="shoesDescription">
-                                    <h4 class="shoesName"><b>BOTAS P22</b></h4>
-                                    <p id="description">Entresuela de EVA para absorber impactos.</p>
-                                    <p class="price"><b>$220.000</b></p>
-                                    <button class="buttonShop">
-                                        <i id="shop-cart" class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="separate"></div>
-                            <div class="cards">
-                                <a href="http://localhost:3000/products/productDetail/11">
-                                    <img src="\images\shoes (1).jpg" alt="zapatillaNro2" class="shoesImage--2">
-                                </a>
-                                <p class="orange-line"></p>
-                                <div class="shoesDescription">
-                                    <h2 class="shoesName"><b>BOTAS BELL</b></h2>
-                                    <p id="description">Suela de caucho con patrón de agarre.</p>
-                                    <p class="price"><b>$174.056</b></p>
-                                    <button class="buttonShop">
-                                        <i id="shop-cart" class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div id="separate-only-769" class="separate"></div>
-                            <div class="cards">
-                                <a href="http://localhost:3000/products/productDetail/12">
-                                    <img src="\images\shoes (2).jpg" alt="zapatillaNro3" class="shoesImage--3">
-                                </a>
-                                <p class="orange-line"></p>
-                                <div class="shoesDescription">
-                                    <h2 class="shoesName"><b>BOTAS MAGIC</b></h2>
-                                    <p id="description">Ajuste ceñido para un mayor control y precisión.</p>
-                                    <p class="price"><b>$185.670</b></p>
-                                    <button class="buttonShop">
-                                        <i id="shop-cart" class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="separate"></div>
-                            <div class="cards">
-                                <a href="http://localhost:3000/products/productDetail/13">
-                                    <img src="\images\shoes (3).jpg" alt="zapatillaNro4" class="shoesImage--4">
-                                </a>
-                                <p class="orange-line"></p>
-                                <div class="shoesDescription">
-                                    <h2 class="shoesName"><b>Botas CBEST</b></h2>
-                                    <p id="description">Cordones y sistemas de cierre de velcro.</p>
-                                    <p class="price"><b>$124.890</b></p>
-                                    <button class="buttonShop">
-                                        <i id="shop-cart" class="fas fa-shopping-cart"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-                </main>
+                </section>
+                <br>
+                <br>
+                <section class="cardsBottom"> <!--Section de Juan para las ultimas 4 cards-->
+                    <div class="cards">
+                        <a id="a-for-shoe-1" href="http://localhost:3000/products/productDetail/10">
+                            <img src="\images\shoes (0).png" alt="zapatillaNro1" class="shoesImage--1">
+                        </a>
+                        <p class="orange-line"></p>
+                        <div class="shoesDescription">
+                            <h4 class="shoesName"><b>BOTAS P22</b></h4>
+                            <p id="description">Entresuela de EVA para absorber impactos.</p>
+                            <p class="price"><b>$220.000</b></p>
+                            <button class="buttonShop">
+                                <i id="shop-cart" class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="separate"></div>
+                    <div class="cards">
+                        <a href="http://localhost:3000/products/productDetail/11">
+                            <img src="\images\shoes (1).jpg" alt="zapatillaNro2" class="shoesImage--2">
+                        </a>
+                        <p class="orange-line"></p>
+                        <div class="shoesDescription">
+                            <h2 class="shoesName"><b>BOTAS BELL</b></h2>
+                            <p id="description">Suela de caucho con patrón de agarre.</p>
+                            <p class="price"><b>$174.056</b></p>
+                            <button class="buttonShop">
+                                <i id="shop-cart" class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="separate-only-769" class="separate"></div>
+                    <div class="cards">
+                        <a href="http://localhost:3000/products/productDetail/12">
+                            <img src="\images\shoes (2).jpg" alt="zapatillaNro3" class="shoesImage--3">
+                        </a>
+                        <p class="orange-line"></p>
+                        <div class="shoesDescription">
+                            <h2 class="shoesName"><b>BOTAS MAGIC</b></h2>
+                            <p id="description">Ajuste ceñido para un mayor control y precisión.</p>
+                            <p class="price"><b>$185.670</b></p>
+                            <button class="buttonShop">
+                                <i id="shop-cart" class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="separate"></div>
+                    <div class="cards">
+                        <a href="http://localhost:3000/products/productDetail/13">
+                            <img src="\images\shoes (3).jpg" alt="zapatillaNro4" class="shoesImage--4">
+                        </a>
+                        <p class="orange-line"></p>
+                        <div class="shoesDescription">
+                            <h2 class="shoesName"><b>Botas CBEST</b></h2>
+                            <p id="description">Cordones y sistemas de cierre de velcro.</p>
+                            <p class="price"><b>$124.890</b></p>
+                            <button class="buttonShop">
+                                <i id="shop-cart" class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
 
-                <%- include('./partials/footer') %>
+            <%- include('./partials/footer') %>
 
     </body>
+    
 
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- JavaScript -->
-    <script src="/js/carrusel.js"></script>
+       <!-- Swiper JS -->
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+       <!-- JavaScript -->
+       <script src="/js/carrusel.js"></script>
 
     </html>
