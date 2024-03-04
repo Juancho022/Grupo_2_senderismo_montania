@@ -195,6 +195,37 @@ form.product-edit-form {
     width: max-content;
 }
 
+.errors {
+    background-color: #ffe6e6;
+    border: 1px solid #d9534f;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.error-message {
+    color: red; 
+    font-size: 0.8rem; 
+    margin-top: 5px; 
+    background-color: transparent;
+    padding: 5px; 
+
+}
+
+.error-active {
+    background-color: #ffe6e6; /* Cambiar el fondo de color cuando hay errores */
+}
+
+.errors ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.errors li {
+    margin-bottom: 5px;
+}
+
 input.product-imput,
 .label-product-price,
 .size-options,
@@ -227,9 +258,34 @@ span#category {
 input.product-imput,
 input.product-imput,
 input.product-imput-price {
-    border: none;
-    border-bottom: solid 0.2px rgb(147, 147, 147, 0.5);
-    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.size-options,
+.color-options,
+.product-category-detail {
+    margin-top: 8px;
+    /* Agregar un pequeño espacio superior */
+}
+
+.product-category-detail {
+    border: 1px solid #ccc;
+    /* Añadir borde al select */
+    border-radius: 5px;
+    /* Ajustar el radio del borde */
+    padding: 8px;
+    /* Ajustar el relleno */
+    width: calc(50% - 16px);
+    /* Ajustar el ancho */
+}
+
+.error-message {
+    color: #FF0000;
+    padding: 6px;
+    border-radius: 5px;
+    margin-top: 4px;
 }
 
 .counter-edit-product {

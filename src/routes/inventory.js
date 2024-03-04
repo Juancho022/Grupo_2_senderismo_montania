@@ -52,7 +52,7 @@ router.get('/create', forAdmin, inventoryController.create);
 router.post('/create', forAdmin, upload.single('image'), validationsCreateForm, inventoryController.store);
 
 router.get('/:id/edit', forAdmin, inventoryController.edit);
-router.put('/:id/edit', forAdmin, inventoryController.update);
+router.put('/:id/edit', forAdmin, validationsCreateForm, inventoryController.update);
 
 router.delete('/:id/delete', forAdmin, inventoryController.destroy);
 
