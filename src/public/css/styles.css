@@ -1205,3 +1205,10 @@ button.buttonShop #shop-cart {
     cursor: pointer;
     z-index: 0;
 }
+
+.text-promotion-shoes {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
