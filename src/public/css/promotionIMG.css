@@ -1,0 +1,38 @@
+.carousel-wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 80%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-images {
+    display: flex;
+    animation: slide 5s infinite;
+}
+
+.carousel-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%); /*-200% para tres imágenes */
+    }
+}
