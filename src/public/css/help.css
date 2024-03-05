@@ -37,6 +37,11 @@ div.form .nav-search input{
     font-size: 12px;
   }
 
+  div .question-sub {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
   .fast-help {
     margin: 35px;
     padding: 20px;
