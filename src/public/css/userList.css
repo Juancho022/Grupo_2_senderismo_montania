@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
 .table-container {
     margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
     width: 80%; /* Opcional: ajusta el ancho del contenedor según sea necesario */
