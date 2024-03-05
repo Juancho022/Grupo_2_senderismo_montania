@@ -5,18 +5,17 @@
 
             <body>
                 <%- include('./partials/header') %>
+                <div class="img-background"></div>
                     <main class="main">
+
                         <div class="profile-wrapper">
                             <div class="profile-container">
                                 <div class="profile-details">
-                                    <div class=""></div><img src="/images/avatars/<%= locals.user?.img %>" alt="Imagen de Perfil">
+                                    <img src="/images/avatars/<%= locals.user?.img %>" alt="Imagen de Perfil">
                                 <h4>Tus datos</h4>
-                                <p>Modifica tus datos personales a continuación para que tu cuenta esté
-                                    actualizada</p>
-                             
-                                    <p><strong>Nombre:</strong>
+                                    <p class="first-name-user"><strong></strong>
                                         <%= user.first_name %>
-                                            <%= user.last_name %>
+                                            <%= user.last_name %> </strong>
                                     </p>
                                     <p><strong>Email:</strong>
                                         <%= user.email %>
@@ -41,6 +40,30 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="favorite-shops">
+                            <div class="profile-wrapper-bottom">
+                                <div class="wrapper-bottom-info">
+                                    <i class="fa-solid fa-bag-shopping" style="color: #FFD43B; font-size: xx-large;"></i>
+                                    <p>
+                                        Compras realizadas
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="profile-wrapper-bottom">
+                                <div class="wrapper-bottom-info">
+                                    <i class="fa-solid fa-heart" style="color: #FFD43B;font-size: xx-large;"></i>
+                                    <p>
+                                        Tus favoritos
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+                        
                     </main>
                     <%- include('./partials/footer') %>
             </body>

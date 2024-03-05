@@ -18,9 +18,10 @@ main {
     height: 100%;
     padding: 220px;
     background-color: white;
+    flex-direction: column;
 }
 
-.profile-wrapper {
+.profile-wrapper, .profile-wrapper-bottom  {
     max-width: 800px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco casi transparente */
@@ -35,9 +36,11 @@ main {
 }
 
 .profile-container h4 {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
     margin: 5px 0; 
-    font-family: Arial, sans-serif; 
+    font-style: italic;
+    font-weight: 700;
+    color: #e8bd36;
 }
 
 .profile-container p{
@@ -52,6 +55,7 @@ main {
     object-fit: cover;
     position: absolute;
     top: -25%;
+    border: solid #efc84c 4px;
 }
 
 .profile-details p {
@@ -82,4 +86,66 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 44px;
+}
+
+.img-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 343px;
+    background: #efc84c;
+    z-index: 0;
+    background-image: url(/images/portada_profile.jpg);
+    filter: blur(3px);
+}
+
+.profile-wrapper {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.img-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+    z-index: 1;
+}
+
+p.first-name-user {
+    font-size: large;
+    background-color: #e8bd36;
+}
+
+.favorite-shops {
+    display: flex;
+    margin-top: 32px;
+}
+
+.profile-wrapper-bottom {
+    margin: 16px;
+    height: 16rem;
+    width: 38rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-bottom-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.wrapper-bottom-info p{
+    font-size: medium;
 }
