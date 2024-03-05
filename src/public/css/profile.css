@@ -22,6 +22,7 @@ main {
     padding: 220px;
     background-color: white;
     flex-grow: 1;
+    flex-direction: column;
 }
 
 .profile-wrapper, .profile-wrapper-bottom  {
