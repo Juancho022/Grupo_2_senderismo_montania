@@ -46,6 +46,7 @@
                                             <input type="email" name="email" id="emailRegister"
                                                 value="<%= (locals.oldData && oldData.email) && oldData.email %>">
                                                 <div id="emailError" style="display: none; color: #ffa18d;"></div>
+                                                <div id="emailErrorFormat" style="display: none; color: #ffa18d;"></div>
                                             <% if (locals.errors && errors.email) { %>
                                                 <span class="error-message">
                                                     <%= errors.email.msg %>

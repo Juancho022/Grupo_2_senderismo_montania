@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', function () {
     let emailError = document.querySelector('#emailError');
     let passwordError = document.querySelector('#passwordError');
     let confirmPasswordError = document.querySelector('#confirmPasswordError');
+    let emailErrorFormat = document.querySelector('#emailErrorFormat')
 
     nameInput.addEventListener('input', function () {
         validateName();
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     emailInput.addEventListener('input', function () {
         validateEmail();
+        
     });
 
     passwordInput.addEventListener('input', function () {
@@ -79,6 +81,15 @@ window.addEventListener('DOMContentLoaded', function () {
         } else {
             emailError.textContent = '';
             emailError.style.display = 'none';
+        }
+        let expReg = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{3,63}$/i 
+        let isValid = expReg.test(emailInput.value)
+
+        if (isValid == false) {
+            emailErrorFormat.textContent = 'Ingrese un email valido!';
+            emailErrorFormat.style.display = 'block';
+        }else {
+            emailErrorFormat.style.display = 'none';
         }
     }
 

@@ -97,6 +97,7 @@ li {
     display: flex;
     align-items: center;
     padding-right: 18px;
+    font-size: large;
 }
 
 header div.logo {
@@ -1203,4 +1204,11 @@ button.buttonShop #shop-cart {
     left: 90%; 
     cursor: pointer;
     z-index: 0;
+}
+
+.text-promotion-shoes {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 400;
+    margin-bottom: 32px;
 }
