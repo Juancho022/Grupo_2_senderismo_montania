@@ -97,6 +97,7 @@ li {
     display: flex;
     align-items: center;
     padding-right: 18px;
+    font-size: large;
 }
 
 header div.logo {
