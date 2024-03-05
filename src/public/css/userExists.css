@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana del navegador */
+}
+
+main {
+    flex-grow: 1; /* Hace que el contenido principal ocupe el espacio restante */
+}
+
 .error-userExist {
     background-color: #ffe6e6;
     border: 2px solid #ff9999;
@@ -7,6 +17,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 999; 
 }
 
 .error-userExist h1 {

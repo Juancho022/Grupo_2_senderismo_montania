@@ -9,6 +9,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
@@ -18,7 +21,7 @@ main {
     height: 100%;
     padding: 220px;
     background-color: white;
-    flex-direction: column;
+    flex-grow: 1;
 }
 
 .profile-wrapper, .profile-wrapper-bottom  {

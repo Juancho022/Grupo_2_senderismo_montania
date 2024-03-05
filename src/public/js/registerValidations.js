@@ -23,6 +23,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
     emailInput.addEventListener('input', function () {
         validateEmail();
+        let expReg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+        let isValid = expReg.test(email.value)
+
+        if (isValid == false) {
+            sweetAlert('Ingrese un email válido')
+        }
     });
 
     passwordInput.addEventListener('input', function () {
