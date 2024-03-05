@@ -3,7 +3,7 @@ main {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 45px;
     text-align: center;
 }
 
@@ -38,8 +38,25 @@ div.form .nav-search input{
   }
 
   div .question-sub {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  div .answer {
+    color: gray;
+    text-align: left;
+    padding: 10px;
+  }
+
+  div .answer a {
+    text-decoration: none;
+    color: black;
   }
 
   .fast-help {
@@ -55,9 +72,10 @@ div.form .nav-search input{
     font-weight: bold;
     margin-bottom: 8px;
     text-align: center;
-    font-size: 14px;
-    padding-top:
-    10px;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    text-align: left;
   }
 
   .asistencia {
@@ -130,7 +148,6 @@ div.form .nav-search input{
   border-radius: 16px 0px 0px 16px;
   }
 
-
 .conten-sub form .btn-sub {
   padding: 15px 15px;
   border: none;
@@ -172,6 +189,13 @@ div.form .nav-search input{
   height: max-content;
 }
 
+div .question-sub {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
     #map {
         height: 500px;
         height: 467px;
@@ -194,7 +218,7 @@ div.form .nav-search input{
       height: 30px;
     }
     h1 {
-      font-size: 30px;
+      font-size: 45px;
     }
     div .questions {
       font-size: 14px;
@@ -212,6 +236,12 @@ div.form .nav-search input{
     
     .frecuent-questions {
       font-size: 14px;
+    }
+
+    div .question-sub {
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .conten-sub h2 {
@@ -234,24 +264,29 @@ div.form .nav-search input{
       margin: 30px 150px 10px 150px;
     }
 
-
-
   }
 
   @media (min-width: 1439px) {
-    .general-questions {
+   /* .general-questions {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
+      grid-template-columns: repeat(2, 1fr);
+    }*/
     div .questions {
       border-bottom: none;
     }
     .fast-help {
-      margin: 60px 200px 30px 200px;
+      margin: 30px 200px 30px 200px;
     }
-    .nav-search {
+    /*.nav-search {
       padding-top: 15px;
+    }*/
+
+    div .question-sub {
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
     .asistencia{
       padding-top: 25px;
     }
@@ -262,7 +297,7 @@ div.form .nav-search input{
 
   @media (min-width: 1900px) {
     .fast-help {
-      margin: 90px 340px 60px 340px;
+      margin: 65px 340px 60px 340px;
     }
     main {
       padding-top: 100px;
@@ -276,4 +311,11 @@ div.form .nav-search input{
     .asistencia{
       padding-bottom: 40px;
     }
+
+    div .question-sub {
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
   }

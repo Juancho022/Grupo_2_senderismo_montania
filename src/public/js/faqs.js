@@ -1,14 +1,19 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var toggles = document.querySelectorAll('.toggle');
+document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll('.question-sub');
 
-    toggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const parent = toggle.parentNode; // Obtener el contenedor padre del botón toggle
-            const siblings = Array.from(parent.parentNode.children); // Obtener todos los elementos hermanos del contenedor padre
-            const answerIndex = siblings.indexOf(parent) + 1; // Obtener el índice del siguiente elemento después del contenedor padre
-            const answer = siblings[answerIndex]; // Obtener el elemento siguiente
-            if (answer.classList.contains('answer')) { // Verificar si es la respuesta
-                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+    questions.forEach(question => {
+        const toggle = question.querySelector('.toggle');
+        const answer = question.nextElementSibling;
+
+        question.addEventListener('click', () => {
+            if (answer.classList.contains('answer')) {
+                if (answer.style.display === 'none') {
+                    answer.style.display = 'block';
+                    toggle.textContent = '-';
+                } else {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                }
             }
         });
     });
