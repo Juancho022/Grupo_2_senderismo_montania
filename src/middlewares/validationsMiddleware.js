@@ -24,12 +24,4 @@ const signUpCheck = [
         return true;
     })
 ];
-// const loginCheck = [
-//     check('email')
-//         .notEmpty().withMessage('El correo es requerido').bail()
-//         .isEmail().withMessage('Ingrese un formato de correo válido'),
-//     check('password')
-//         .notEmpty().withMessage('Debes completar la contraseña').bail(),
-// ];
-
 module.exports = {signUpCheck};
