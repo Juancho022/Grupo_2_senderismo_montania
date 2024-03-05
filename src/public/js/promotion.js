@@ -2,7 +2,7 @@
 const promotionBar = document.getElementById("promotion-bar");
 const promotions = [
     "¡Promoción especial por tiempo limitado! 20% de descuento en todos los productos. ¡Aprovéchalo ya!",
-    "¡Compra dos y llévate uno gratis! Solo por hoy.",
+    "¡Comprá dos y llévate uno gratis! Solo por hoy.",
     "Descuento del 30% en productos seleccionados. ¡No te lo pierdas!"
 ];
 

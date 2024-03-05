@@ -7,6 +7,10 @@ h1 {
     text-align: center;
 }
 
+section h1 {
+  margin-top: 10px;
+}
+
 .nav-search {
     display: flex;
     justify-content: center;
