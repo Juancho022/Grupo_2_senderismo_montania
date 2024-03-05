@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', function () {
     let emailError = document.querySelector('#emailError');
     let passwordError = document.querySelector('#passwordError');
     let confirmPasswordError = document.querySelector('#confirmPasswordError');
+    let emailErrorFormat = document.querySelector('#emailErrorFormat')
 
     nameInput.addEventListener('input', function () {
         validateName();
@@ -23,12 +24,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     emailInput.addEventListener('input', function () {
         validateEmail();
-        let expReg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-        let isValid = expReg.test(email.value)
-
-        if (isValid == false) {
-            sweetAlert('Ingrese un email válido')
-        }
+        
     });
 
     passwordInput.addEventListener('input', function () {
@@ -86,27 +82,44 @@ window.addEventListener('DOMContentLoaded', function () {
             emailError.textContent = '';
             emailError.style.display = 'none';
         }
-    }
+        let expReg = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{3,63}$/i 
+        let isValid = expReg.test(emailInput.value)
 
-    // Función para validar la contraseña en tiempo real
-    function validatePassword() {
-        if (passwordInput.value.length < 8) {
-            passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres!';
-            passwordError.style.display = 'block';
-        } else {
-            passwordError.textContent = '';
-            passwordError.style.display = 'none';
+        if (isValid == false) {
+            emailErrorFormat.textContent = 'Ingrese un email valido!';
+            emailErrorFormat.style.display = 'block';
+        }else {
+            emailErrorFormat.style.display = 'none';
         }
     }
 
-    // Función para validar la confirmación de contraseña en tiempo real
-    function validateConfirmPassword() {
-        if (confirmPasswordInput.value !== passwordInput.value) {
-            confirmPasswordError.textContent = 'Las contraseñas no coinciden!';
-            confirmPasswordError.style.display = 'block';
-        } else {
-            confirmPasswordError.textContent = '';
-            confirmPasswordError.style.display = 'none';
-        }
+  // Función para validar la contraseña en tiempo real
+  function validatePassword() {
+    let password = passwordInput.value; // Se añade esta línea para obtener el valor del campo de contraseña
+    let hasUpperCase = /[A-Z]/.test(password);
+    let hasSpecialChar = /[!@#$%^&*]/.test(password);
+
+    if (password.length < 8) {
+        passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres!';
+        passwordError.style.display = 'block';
+    } else if (!hasUpperCase || !hasSpecialChar) {
+        passwordError.textContent = 'Ingrese al menos una letra mayúscula y un carácter especial (!, @, #, $, %, ^, &, *)!';
+        passwordError.style.display = 'block';
+    } else {
+        passwordError.textContent = '';
+        passwordError.style.display = 'none';
     }
+}
+
+// Función para validar la confirmación de contraseña en tiempo real
+function validateConfirmPassword() {
+    if (confirmPasswordInput.value !== passwordInput.value) {
+        confirmPasswordError.textContent = 'Las contraseñas no coinciden!';
+        confirmPasswordError.style.display = 'block';
+    } else {
+        confirmPasswordError.textContent = '';
+        confirmPasswordError.style.display = 'none';
+    }
+}
 });
+
