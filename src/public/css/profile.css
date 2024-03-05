@@ -17,6 +17,7 @@ main {
     align-items: center;
     height: 100%;
     padding: 220px;
+    background-color: white;
 }
 
 .profile-wrapper {
@@ -26,6 +27,7 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .profile-container {
@@ -43,10 +45,13 @@ main {
 }
 
 .profile-details img {
-    width: 100px;
-    height: 100px;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     margin-bottom: 10px;
+    object-fit: cover;
+    position: absolute;
+    top: -25%;
 }
 
 .profile-details p {
@@ -70,4 +75,11 @@ main {
 
 .button-edit button:hover {
     background-color: #333333;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 44px;
 }
