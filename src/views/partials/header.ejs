@@ -22,34 +22,58 @@
     <nav class="right-bar">
         <% if (locals.user) { %>
             <h2 id="userLog">¡Hola <%= locals.user?.first_name %>!</h2>
-        <% } %>
-        
-        <div class="icon-container" onmouseenter="showPopup()" onmouseleave="hidePopup()">
-            <div class="icon">
-                <i class="fa-solid fa-user"></i>
-            </div>
-    
-            <div class="popup" onmouseenter="showPopup()" onmouseleave="hidePopup()">
-                <div class="headercollapsable" id="login">
-                    <button class="headercollapsable">
-                        <a href="<%= locals.user ? '/user/logout' : '/user/login' %>">
-                            <%= locals.user ? 'Cerrar sesión' : 'Iniciar sesión' %>
-                        </a>
-                    </button>
-                </div>
-    
-                <% if (!locals.user) { %>
-                    <div class="headercollapsable" id="register">
-                        <button class="headercollapsable">
-                            <a href="/user/register">Crear cuenta</a>
-                        </button>
-                    </div>
-                <% } %>
-            </div>
-        </div>
+            <% } %>
 
-        <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-        <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                <div class="icon-container" onmouseenter="showPopup()" onmouseleave="hidePopup()">
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="popup" onmouseenter="showPopup()" onmouseleave="hidePopup()">
+                        <% if (locals.user?.roles_id===1) { %>
+                            <div class="headercollapsable" id="dashboardButton">
+                                <button class="headercollapsable">
+                                    <a href="http://localhost:3001/">Panel de control</a>
+                                </button>
+                            </div>
+                            <div class="headercollapsable" id="logout">
+                                <button class="headercollapsable">
+                                    <a href="/user/logout">Cerrar Sesión</a>
+                                </button>
+                            </div>
+                            <% } else if (locals.user?.roles_id===2) { %>
+                                <div class="headercollapsable" id="profileButton">
+                                    <button class="headercollapsable">
+                                        <a href="/user/profile">Mi Pefil</a>
+                                    </button>
+                                </div>
+                                <div class="headercollapsable" id="logout">
+                                    <button class="headercollapsable">
+                                        <a href="/user/logout">Cerrar Sesión</a>
+                                    </button>
+                                </div>   
+                                
+                            <% } else { %>
+                                <div class="headercollapsable" id="login">
+                                    <button class="headercollapsable">
+                                        <a href="/user/login">Iniciar sesión</a>
+                                    </button>
+                                </div>
+
+                                <div class="headercollapsable" id="register">
+                                    <button class="headercollapsable">
+                                        <a href="/user/register">Crear cuenta</a>
+                                    </button>
+                                </div>
+
+                                <% } %>
+
+
+                    </div>
+                </div>
+
+                <div class="icon"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+                <div class="icon"><a href="/products/productCart"><i class="fa-solid fa-cart-shopping"></i></a></div>
     </nav>
 
 </header>

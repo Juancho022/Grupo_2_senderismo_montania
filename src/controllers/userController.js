@@ -1,13 +1,6 @@
-// const fs = require('fs');
-const path = require('path');
-const usersFilePath = path.join(__dirname, '../data/users.json');
 const db = require('../database/models');
-const { Op } = require('sequelize');
 const { validationResult } = require('express-validator');
-//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcryptjs');
-const { create } = require('domain');
-const cookies = require('cookie-parser');
 const oneMonth = 1000 * 60 * 60 * 24 * 30;
 
 

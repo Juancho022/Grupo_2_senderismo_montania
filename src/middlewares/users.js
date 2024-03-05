@@ -9,7 +9,7 @@ function isAdminUser(role) {
 
 function getRedirectRouteByRole(role) {
     const isAdmin = isAdminUser(role);
-    return isAdmin ? "/users/admin" : "/users/profile";
+    return isAdmin ? "http://localhost:3001/" : "/user/profile";
 }
 
 module.exports = {

@@ -7,6 +7,7 @@ const methodOverride = require('method-override'); // Pasar poder usar los méto
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const bodyParser = require('body-parser');
+const authMiddlewares = require("./middlewares/authMiddleware");
 
 const cors = require('cors');
 
@@ -19,11 +20,12 @@ const helpRoutes = require('./routes/ayuda');
 const aboutUsRoutes = require('./routes/aboutUs');
 
 //Rutas de las APIs
-const productsApiRoutes = require('./routes/api/productRoutes'); 
+const productsApiRoutes = require('./routes/api/productRoutes');
 const countProductApiRoutes = require('./routes/api/countProductRoutes');
 const countCategorieRoutes = require('./routes/api/countCategorieRoutes');
 const categoryRoutes = require('./routes/api/categoryRoutes');
 const usersApiRoutes = require('./routes/api/usersRoutes');
+
 
 
 
@@ -39,16 +41,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(cookies());
 app.use(session({
     secret: "ab33025avbtxop00002tqxr!",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 } // Configura las opciones de la cookie. `secure: false` significa que las cookies se pueden transmitir a través de HTTP. `maxAge` es la duración de la cookie en milisegundos.
 })) //token de encriptación
-app.use(cookies());
-app.use(authentication.auth);
-// app.use(authentication.authorization);
-// app.use(authentication.rememberMiddleware);
-// app.use(forAdmin.isUserAdmin);
-// app.use(forAdmin.getRedirectRouteByRole);
-
+app.use(authMiddlewares.authUser);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
