@@ -93,25 +93,33 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Función para validar la contraseña en tiempo real
-    function validatePassword() {
-        if (passwordInput.value.length < 8) {
-            passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres!';
-            passwordError.style.display = 'block';
-        } else {
-            passwordError.textContent = '';
-            passwordError.style.display = 'none';
-        }
-    }
+  // Función para validar la contraseña en tiempo real
+  function validatePassword() {
+    let password = passwordInput.value; // Se añade esta línea para obtener el valor del campo de contraseña
+    let hasUpperCase = /[A-Z]/.test(password);
+    let hasSpecialChar = /[!@#$%^&*]/.test(password);
 
-    // Función para validar la confirmación de contraseña en tiempo real
-    function validateConfirmPassword() {
-        if (confirmPasswordInput.value !== passwordInput.value) {
-            confirmPasswordError.textContent = 'Las contraseñas no coinciden!';
-            confirmPasswordError.style.display = 'block';
-        } else {
-            confirmPasswordError.textContent = '';
-            confirmPasswordError.style.display = 'none';
-        }
+    if (password.length < 8) {
+        passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres!';
+        passwordError.style.display = 'block';
+    } else if (!hasUpperCase || !hasSpecialChar) {
+        passwordError.textContent = 'Ingrese al menos una letra mayúscula y un carácter especial (!, @, #, $, %, ^, &, *)!';
+        passwordError.style.display = 'block';
+    } else {
+        passwordError.textContent = '';
+        passwordError.style.display = 'none';
     }
+}
+
+// Función para validar la confirmación de contraseña en tiempo real
+function validateConfirmPassword() {
+    if (confirmPasswordInput.value !== passwordInput.value) {
+        confirmPasswordError.textContent = 'Las contraseñas no coinciden!';
+        confirmPasswordError.style.display = 'block';
+    } else {
+        confirmPasswordError.textContent = '';
+        confirmPasswordError.style.display = 'none';
+    }
+}
 });
+
