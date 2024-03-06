@@ -47,8 +47,8 @@ const productController = {
             });
     
             if (products.length === 0) {
-                const response = '"' + req.body.name + '" no fue encontrado';
-                return res.render('products.ejs', { products: [], message: response });
+                const message = `No se encontraron resultados para "${req.body.name}"`;
+                return res.render('products.ejs', { products: [], message });
             }
     
             const productIds = products.map(product => product.id);

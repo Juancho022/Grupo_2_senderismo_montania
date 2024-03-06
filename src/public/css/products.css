@@ -5,6 +5,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+main{
+    min-height: 100vh;
+}
+
 html {
     font-size: 100%;
 }
@@ -33,6 +37,13 @@ input{
     cursor: pointer;
     position: relative;
     left: -110px;
+}
+
+.no-results-message {
+    display: block;
+}
+.products-container.hide {
+    display: none;
 }
 
 input[type="text-search"]:focus + .search-button {
