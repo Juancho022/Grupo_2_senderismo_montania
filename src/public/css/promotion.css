@@ -28,14 +28,38 @@ header {
 }
 
 
-@media (max-width:767px){
+@media (min-width: 320px) and (max-width: 420px) {
     header {
-        top: 4.8%;
+        top: 5%;
     }
 }
 
-@media (max-width:1440px){
+@media (min-width: 420px) and (max-width: 766px) {
     header {
-        top: 2.9%;
+        top: 5%;
+    }
+}
+
+@media (min-width: 767px) and (max-width:1440px){
+    header {
+        top: 5.9%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width:1339px){
+    header {
+        top: 5.6%
+    }
+}
+
+@media (min-width: 1440px) and (max-width:1441px){
+    header {
+        top: 4.2%;
+    }
+}
+
+@media (min-width: 2560px){
+    header {
+        top: 2.2%;
     }
 }

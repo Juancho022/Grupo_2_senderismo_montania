@@ -1,9 +1,9 @@
 // Barra de publicidad
 const promotionBar = document.getElementById("promotion-bar");
 const promotions = [
-    "¡Promoción especial por tiempo limitado! 20% de descuento en todos los productos. ¡Aprovéchalo ya!",
-    "¡Comprá dos y llévate uno gratis! Solo por hoy.",
-    "Descuento del 30% en productos seleccionados. ¡No te lo pierdas!"
+    "💸 ¡ HASTA 6 CUOTAS SIN INTERÉS ! 💸",
+    " ¡RECIBÍ TU PEDIDO AL DÍA SIGUIENTE! 🌍",
+    " 1° CAMBIO GRATIS Dentro de los 30 días ✅"
 ];
 
 function changePromotion() {
@@ -13,4 +13,5 @@ function changePromotion() {
 }
 
 setInterval(changePromotion, 5000);
+
 
