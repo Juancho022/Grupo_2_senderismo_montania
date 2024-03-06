@@ -319,7 +319,7 @@ video#hero-video {
 main section#hero {
     width: 100%;
     overflow: hidden;
-    height: 60vh;
+    height: 80vh;
    /*  background: url(/images/hero.jpg) center/cover no-repeat;
     background-attachment: fixed; */
 } 
@@ -338,7 +338,7 @@ main section div#rightBox {
     top: 182px;
     left: 40%;
     padding-right: 40px;
-    width: 40%;
+    width: 50%;
 }
 
 main section div span#heroTitle {
@@ -551,6 +551,7 @@ section#cardsHome div.card button.buttonCard:hover {
         display: none; 
     }
 
+
     main section#hero {
     width: 110%;
     height: 60vh;
@@ -563,12 +564,9 @@ section#cardsHome div.card button.buttonCard:hover {
         left: -395px;
     }
     
-/*     main section div#rightBox {
-        top: 88px;
-        left: 40px;
-        padding-right: 74px;
-        width: 100%;
-    } */
+    main section div#rightBox {
+        width: 60%;
+    } 
     
     main section div span#heroTitle {
         font-size: 2.6rem;
