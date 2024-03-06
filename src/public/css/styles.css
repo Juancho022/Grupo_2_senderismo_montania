@@ -335,8 +335,8 @@ main section div#rightBox {
     flex-direction: column;
     color: azure;
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 182px;
+    left: 40%;
     padding-right: 40px;
     width: 40%;
 }
@@ -563,12 +563,12 @@ section#cardsHome div.card button.buttonCard:hover {
         left: -395px;
     }
     
-    main section div#rightBox {
+/*     main section div#rightBox {
         top: 88px;
         left: 40px;
         padding-right: 74px;
         width: 100%;
-    }
+    } */
     
     main section div span#heroTitle {
         font-size: 2.6rem;
@@ -670,11 +670,11 @@ section#cardsHome div.card button.buttonCard:hover {
         }
 
 
-    main section div#rightBox {
+/*     main section div#rightBox {
         top: 20%;
         left: 40%;
         width: 60%;
-    }
+    } */
     
     main section div span#heroTitle {
         font-size: 3rem;
@@ -762,10 +762,10 @@ section#cardsHome div.card button.buttonCard:hover {
         position: relative;
     }
 
-    main section div#rightBox {
+/*     main section div#rightBox {
         left: 50%;
         width: 40%;
-    }
+    } */
 
     main section div span#heroTitle {
         font-size: 3.2vw;
@@ -794,9 +794,6 @@ section#cardsHome div.card button.buttonCard:hover {
             position: relative;
         }
 
-        main section div p#paragraph {
-            font-size: 1.2vw;
-        }
     }
 
 
