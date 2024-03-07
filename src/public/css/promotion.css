@@ -1,0 +1,65 @@
+#promotion-bar {
+    background-color: #f7dc6f;
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#promotion-content {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.86);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    padding: 1px 16px;
+    z-index: 900; 
+    top: 4.5%;
+}
+
+
+@media (min-width: 320px) and (max-width: 420px) {
+    header {
+        top: 5%;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 766px) {
+    header {
+        top: 5%;
+    }
+}
+
+@media (min-width: 767px) and (max-width:1440px){
+    header {
+        top: 5.9%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width:1339px){
+    header {
+        top: 5.6%
+    }
+}
+
+@media (min-width: 1440px) and (max-width:1441px){
+    header {
+        top: 4.2%;
+    }
+}
+
+@media (min-width: 2560px){
+    header {
+        top: 2.2%;
+    }
+}

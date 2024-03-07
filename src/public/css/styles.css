@@ -5,6 +5,11 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER STYLES */
 header {
     background-color: rgba(0, 0, 0, 0.86);
     display: flex;
@@ -13,6 +18,72 @@ header {
     position: fixed;
     padding: 1px 16px;
     z-index: 2;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popup {
+    display: none; 
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    left: -96px; 
+    top: 100%; 
+    border-radius: 7px 8px;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+#login:hover{
+    background-color:rgb(239, 227, 89);
+    color: rgb(239, 227, 89);
+    cursor: pointer;
+    border-radius: 16px 8px 0px 0px;
+}
+
+#register:hover{
+    background-color:rgb(239, 227, 89);
+    color: rgb(239, 227, 89);
+    cursor: pointer;
+}
+
+#inventory:hover{
+    background-color:rgb(239, 227, 89);
+    color: rgb(239, 227, 89);
+    cursor: pointer;
+    border-radius: 0px 0px 16px 8px;
+}
+
+.popup button.headercollapsable {
+    background-color: transparent;
+    border: none;
+    margin: 16px;
+}
+
+.popup button a  {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.86);
+    font-size: small;
+}
+
+.popup button#login {
+    font-weight: 600;
+}
+
+.popup div.headercollapsable {
+    border-bottom: none;
+    width: 100%; 
+}
+
+#logout {
+    border-bottom:none;
+}
+
+
+.icon-container:hover .popup {
+    display: block;
 }
 
 li {
@@ -26,6 +97,7 @@ li {
     display: flex;
     align-items: center;
     padding-right: 18px;
+    font-size: large;
 }
 
 header div.logo {
@@ -55,18 +127,18 @@ header nav.center-bar {
     display: none;
 }
 
-header nav.right-bar a {
+/* header nav.right-bar a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #EFC84C;
     padding: 5px;
+} */
 
-}
+/* FOOTER STYLES */
 
 footer {
     background-color: #000;
     display: flex;
     padding: 5px;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -237,13 +309,20 @@ html {
     font-size: 62.5%;  
 }
 
+video#hero-video {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    left: -118px;
+}
+
 main section#hero {
     width: 100%;
     overflow: hidden;
-    height: 100vh;
-    background: url(/images/hero.jpg) center/cover no-repeat;
-    background-attachment: fixed;
-}
+    height: 80vh;
+   /*  background: url(/images/hero.jpg) center/cover no-repeat;
+    background-attachment: fixed; */
+} 
 
 main section img#heroImage {
     display: flex;
@@ -256,10 +335,10 @@ main section div#rightBox {
     flex-direction: column;
     color: azure;
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 182px;
+    left: 40%;
     padding-right: 40px;
-    width: 40%;
+    width: 50%;
 }
 
 main section div span#heroTitle {
@@ -274,7 +353,7 @@ main section div p#paragraph {
 button#buttonHero {
     border: 1px solid white;
     background: none;
-    color: inherit;
+    color: white;
     font-size: 1.3vw;
     padding: 10px;
     margin-top: 10px;
@@ -331,7 +410,6 @@ div.title2 {
     flex-direction: column;
     align-items: center;
     margin-top: 24px;
-    margin-bottom: 16px;
 }
 
 div.title2 p{
@@ -350,6 +428,7 @@ section#cardsHome  {
     width: 100%;
     flex-wrap: wrap;
     padding: 15px;
+    padding-bottom: 48px;
     justify-content: space-around;
 }
 
@@ -369,6 +448,7 @@ section#cardsHome div.card div.cardDescription {
     display: flex;
     flex-direction: column;
     padding-bottom: 8px;
+    align-items: flex-start;
 }
 
 .card img {
@@ -381,6 +461,7 @@ section#cardsHome div.card div.imgCards {
     align-items: center;
     justify-content: center;
     width: 90rem;
+    padding: 16px
 }
 
 p.category {
@@ -398,6 +479,7 @@ span.productDescription {
     font-size: 1.2vw;
     height: auto;
     width: 90%;
+    text-align: left;
 }
 
 p.cost {
@@ -434,16 +516,47 @@ section#cardsHome div.card button.buttonCard:hover {
     border: 1px solid rgb(0, 0, 0);
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  #mySlider.swiper-slide {
+    display: initial;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+  }
+
+  .swiper-slide img {
+    height: 268px;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 /* QUERIES START */
 
 /*************MOBILE**************************/
-@media (max-width: 480px) {
+@media (max-width: 425px) {
+    #hero-video {
+        display: none; 
+    }
 
 
     main section#hero {
     width: 110%;
     height: 60vh;
-    background-position: -60px -331px;
+    background: url(/images/hero.jpg) center/cover no-repeat;
+    background-attachment: fixed; 
     }
 
     main section img#heroImage {
@@ -452,11 +565,8 @@ section#cardsHome div.card button.buttonCard:hover {
     }
     
     main section div#rightBox {
-        top: 88px;
-        left: 40px;
-        padding-right: 74px;
-        width: 100%;
-    }
+        width: 60%;
+    } 
     
     main section div span#heroTitle {
         font-size: 2.6rem;
@@ -508,7 +618,7 @@ section#cardsHome div.card button.buttonCard:hover {
     }
     
     h2.productName{
-        font-size: 2.2rem;
+        font-size: 1.7rem;
         border-bottom: 3px solid #D3573C;
         margin-bottom: 0;
         width: 100%;
@@ -547,12 +657,22 @@ section#cardsHome div.card button.buttonCard:hover {
 /*************TABLET**************************/
 @media (min-width: 768px) {
 
+    main section#hero {
+        background: url(/images/hero.jpg) center/cover no-repeat;
+        background-attachment: fixed; 
+        }
 
-    main section div#rightBox {
-        top: 26%;
+    video#hero-video {
+        position: relative;
+        left: -160px;
+        }
+
+
+/*     main section div#rightBox {
+        top: 20%;
         left: 40%;
         width: 60%;
-    }
+    } */
     
     main section div span#heroTitle {
         font-size: 3rem;
@@ -633,12 +753,17 @@ section#cardsHome div.card button.buttonCard:hover {
 }
 
 /*************PC*************************/
-@media (min-width: 1440px) {
-    main section div#rightBox {
-        top: 20%;
+@media (min-width: 1024px) {
+
+    video#hero-video {
+        height: 170%;
+        position: relative;
+    }
+
+/*     main section div#rightBox {
         left: 50%;
         width: 40%;
-    }
+    } */
 
     main section div span#heroTitle {
         font-size: 3.2vw;
@@ -661,7 +786,20 @@ section#cardsHome div.card button.buttonCard:hover {
         margin: 24px;
     }
 
-}*{
+    @media (min-width: 1439px) {
+        video#hero-video {
+            height: 170%;
+            position: relative;
+        }
+
+    }
+
+
+
+
+}
+
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -678,6 +816,8 @@ section#cardsHome div.card button.buttonCard:hover {
     opacity: 1;
     margin: auto;
     z-index: 0;
+    border-radius: 2%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .box1 {
@@ -687,6 +827,7 @@ section#cardsHome div.card button.buttonCard:hover {
     height: 65px;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
+    border-radius: 2%;
 }
 
 .text {
@@ -705,6 +846,7 @@ section.cardsBottom {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    align-items: center;
 }
 
 section.cardsBottom div.cards {
@@ -719,21 +861,18 @@ section.cardsBottom div.cards {
     
 }
 
- .shoesImage--1, .shoesImage--2, .shoesImage--3, .shoesImage--4{
+.cards img {
     width: 100%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     cursor: pointer;
     border-radius: 20px;
     opacity: 1;
+    height: 180px;
+    background-size: cover;
+    object-fit: cover;
 }
 
-.shoesImage--1{
-    height: 39%;
-}
-
-.shoesImage--4{
-    height: 43%;
-}
+ 
 
 section.cardsBottom div.cards div.shoesDescription {
     height: fit-content;
@@ -804,6 +943,10 @@ button.buttonShop #shop-cart {
     opacity: 1;
     background-color: grey;
 }
+
+#a-for-shoe-1 {
+    height: 40%;
+}
 /*
 #heart1 {
     position: relative;
@@ -862,6 +1005,7 @@ button.buttonShop #shop-cart {
     .box1 {
         width: 330px;
         height: 130px;
+        border-radius: 2%;
     }
     .text {
         font-size: 25px;
@@ -901,10 +1045,10 @@ button.buttonShop #shop-cart {
         left: 4px;
     }
     .shoesImage--1{
-        height: 51%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 58%;
+        height: 90%;
     }
 }
 
@@ -915,11 +1059,14 @@ button.buttonShop #shop-cart {
     .deportist{
         width: 55%;
         left: 130px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1{
         width: 359px;
         height: 232px;
         left: 125px;
+        border-radius: 2%;
     }
 
     .text{
@@ -941,18 +1088,20 @@ button.buttonShop #shop-cart {
     #separate-only-769{
         display: block;
     }
+    #a-for-shoe-1 {
+        height: 53%;
+    }
     .shoesImage--1{
-        height: 34%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 34%;
+        height: 90%;
     }
     .shoesImage--2{
-        height: 34%;
+        height: 95%;
     }
     button.buttonShop{
         bottom: 22%;
-        left: 55%;
     }
 }
 
@@ -963,32 +1112,35 @@ button.buttonShop #shop-cart {
     .deportist {
         width: 55%;
         left: 188px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1 {
         width: 477px;
         height: 345px;
         left: 202px;
+        border-radius: 2%;
     }
     .text {
         font-size: 40px;
         line-height: 65px;
         bottom: 126px;
     }
-    section.cardsBottom div.cards {
-        width: 14%;
-    }
     
     #separate-only-769{
         display: block;
     }
+    #a-for-shoe-1 {
+        height: 35%;
+    }
     .shoesImage--1{
-        height: 37%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 37%;
+        height: 90%;
     }
     .shoesImage--2{
-        height: 37%;
+        height: 95%;
     }
     .orange-line{
         width: 75px;
@@ -996,23 +1148,29 @@ button.buttonShop #shop-cart {
 }
 
 @media (min-width: 1900px) {
+    #a-for-shoe-1 {
+        height: 40%;
+    }
     .shoesImage--1{
-        height: 43%;
+        height: 95%;
     }
     .shoesImage--4{
-        height: 43%;
+        height: 90%;
     }
     .shoesImage--2{
-        height: 43%;
+        height: 95%;
     }
     .deportist {
         width: 55%;
         left: 239px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .box1 {
         width: 616px;
         height: 436px;
         left: 275px;
+        border-radius: 2%;
     }
     .text {
         font-size: 50px;
@@ -1021,3 +1179,31 @@ button.buttonShop #shop-cart {
     }
 }
 
+.error-message {
+    background-color: RED;
+    margin-bottom: 10px;
+    color: #FFFF;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.password-input-container input[type="password"] {
+    padding-right: 30px; 
+}
+
+.password-input-container i {
+    position: absolute;
+    color:black;
+    left: 90%; 
+    cursor: pointer;
+    z-index: 0;
+}
+
+.text-promotion-shoes {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 400;
+    margin-bottom: 32px;
+}

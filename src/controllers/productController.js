@@ -1,43 +1,133 @@
-const fs = require('fs');
+
 const path = require('path');
+const db = require('../database/models');
+const { Op } = require('sequelize');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
     // Root - Show all products
     products: (req, res) => {
-        const hiking = products.filter((product) => product.category === 'Senderismo');
-        const climbing = products.filter((product) => product.category === 'Escalada');
-        const accessories = products.filter((product) => product.category === 'Accesorios');
-        const footwear = products.filter((product) => product.category === 'Calzados');
-        res.render('products', {hiking, climbing,  accessories, footwear})
+        db.Product.findAll({
+            attributes: ['id', 'name', 'img']
+        })
+            .then(products => {
+                // Obtener los IDs de los productos
+                const productIds = products.map(product => product.id);
+
+                // Buscar los precios asociados a los productos
+                db.ProductPrice.findAll({
+                    where: { products_id: productIds },
+                    attributes: ['products_id', 'price']
+                })
+                    .then(prices => {
+                        // Asociar los precios a los productos correspondientes
+                        products.forEach(product => {
+                            product.prices = prices.filter(price => price.products_id === product.id).map(price => price.price);
+                        });
+
+                        // Renderizar la vista con los productos y los precios
+                        res.render('products.ejs', { products, prices });
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        res.send(err);
+                    });
+            })
+            .catch(err => {
+                console.log(err);
+                res.send(err);
+            });
+    },
+
+    search: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({
+                attributes: ['id', 'name', 'img'],
+                where: { name: { [Op.like]: `%${req.body.name}%` } }
+            });
+    
+            if (products.length === 0) {
+                const message = `No se encontraron resultados para "${req.body.name}"`;
+                return res.render('products.ejs', { products: [], message });
+            }
+    
+            const productIds = products.map(product => product.id);
+    
+            const prices = await db.ProductPrice.findAll({
+                where: { products_id: productIds },
+                attributes: ['products_id', 'price']
+            });
+    
+            products.forEach(product => {
+                product.prices = prices
+                    .filter(price => price.products_id === product.id)
+                    .map(price => price.price);
+            });
+    
+            res.render('products.ejs', { products });
+    
+        } catch (error) {
+            console.error('Error al buscar productos:', error);
+            return res.status(500).send('Error al buscar productos');
+        }
     },
 
     // Cart
-    productCart:(req, res)=>{
+    productCart: (req, res) => {
         res.render('productCart')
     },
-    
-    store: (req, res) => {
-        const newProduct = {
-            id: products[products.length-1].id + 1,
-            ...req.body,
-            image: req.file?.filename || "default-image.jpg"
-        };
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
-    },
-
 
     // Detail - Detail from one product
-    productDetail(req, res) {
-        const product = products.find((product) => product.id == req.params.id);
-        res.render('productDetail', { product });
-    }
+    productDetail: (req, res) => {
+        db.Product.findByPk(req.params.id, {
+            attributes: ['img', 'description', 'name'],
+            include: [{
+                association: 'sizes',
+                attributes: ['sizes_type']
+            }, {
+                association: 'prices',
+                attributes: ['price']
+            }]
+        })
+            .then(product => {
+                if (product) {
+                    res.render('productDetail', { product })
+                } else {
+                    res.send('Producto no encontrado :(')
+                }
+            })
+            .catch(err => {
+                console.log(err)
+                res.send(err)
+            })
+    },
+    // Obtener el último producto agregado
+    getLastProduct(req, res) {
+        db.Product.findOne({
+            order: [['timestamp', 'DESC']],
+            attributes: ['id', 'name', 'description', 'timestamp', 'img'],
+        })
+            .then(product => {
+                if (product) {
+                    // Construyo la URL completa de la imagen
+                    const imageUrl = `http://localhost:3000/images/${product.img}`;
+
+                    // Agrego la URL completa de la imagen al objeto de producto
+                    const productWithImageUrl = {
+                        ...product.toJSON(),
+                        img: imageUrl
+                    };
+
+                    res.status(200).json(productWithImageUrl);
+                } else {
+                    res.status(404).json({ error: 'Producto no encontrado' });
+                }
+            })
+            .catch(err => {
+                res.status(500).json({ error: err.message });
+            });
+    },
+
 }
 
 module.exports = productController;

@@ -16,36 +16,63 @@
                                 </p>
 
                                 <div id="formLogin">
-                                    <form action="/user/login" method="post">
+                                    <form  class="loginForm" action="/user/login" method="post">
                                         <div>
-                                            <label><strong>Correo Electrónico</strong></label>
-                                            <input type="email" name="emailUsuario" required>
-                                            <label><strong>Contraseña</strong></label>
-                                            <input type="password" name="passwordUsuario" required>
+                                            <label for="emailLogin"><strong>Correo electrónico</strong></label>
+                                            <input class="email"  type="email" name="email" id="emailLogin"  required> 
+                                            <div id="emailError" style="display: none; color: #ffa18d;"></div>
+
+                                            <label for="passwordFieldLogin"><strong>Contraseña</strong></label>
+                                            <div class="password-input-container-login">
+                                                <input type="password" name="password" id="passwordFieldLogin" required>
+                                                <div id="passwordError" style="display: none; color: #ffa18d;"></div>
+
+                                                <i id="togglePassword" class="fas fa-eye-slash"
+                                                    onclick="togglePasswordVisibility()"></i>
+                                            </div>
                                         </div>
 
-                                        <% if (typeof error !=='undefined' && error) { %>
+                                        <% if (locals.errors?.unauthorize) { %>
                                             <div class="error">
                                                 <p class="error-message">
                                                     <i class="fas fa-times-circle"></i>
-                                                    <%= error %>
+                                                    <%= errors.unauthorize.msg %>
                                                 </p>
                                             </div>
                                             <% } %>
-                                            <div id="recordarUsuario">
-                                                <label class="recordarme">Recordarme</label>
-                                                <input type="checkbox" name="recordarUsuario">
-                                            </div>
-                                            <button type="submit">Iniciar sesión</button>
+                                                <div id="rememberMe">
+                                                    <label class="recordarme">Recordarme</label>
+                                                    <input type="checkbox" name="recordarme">
+                                                </div>
+                                                <button type="submit">Iniciar sesión</button>
+                                                <span id="login-message">¿Todavía no tenés tu cuenta? <span style="margin-left: 10px;"><a href="/user/register" class="back-register">REGISTRATE</a></span></span>
                                     </form>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </main>
+                
+                <script>
+                    function togglePasswordVisibility() {
+                        var passwordField = document.getElementById("passwordFieldLogin");
+                        var togglePassword = document.getElementById("togglePassword");
+                
+                        if (passwordField.type === "password") {
+                            passwordField.type = "text";
+                            togglePassword.classList.remove("fa-eye-slash");
+                            togglePassword.classList.add("fa-eye");
+                        } else {
+                            passwordField.type = "password";
+                            togglePassword.classList.remove("fa-eye");
+                            togglePassword.classList.add("fa-eye-slash");
+                        }
+                    }
+                </script>
 
                 <%- include('./partials/footer') %>
 
         </body>
 
+        <script src="/js/loginValidations.js"></script>
         </html>

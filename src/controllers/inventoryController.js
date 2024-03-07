@@ -1,16 +1,36 @@
-const fs = require('fs');
+//const fs = require('fs');
 const path = require('path');
-const productModel = require('../models/product');
+const db = require('../database/models');
+const { Op } = require('sequelize');
+const { validationResult } = require('express-validator');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+//const productsFilePath = path.join(__dirname, '../data/products.json');
+//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 const inventoryController = {
-    inventory: (req, res) =>{
-        //const products = productModel.getProducts();
-        res.render('inventory', { products });
+    //list
+    inventory: (req, res) => {
+        const products = db.Product.findAll({
+            attributes: ['img', 'description', 'name', 'id'],
+            include: [{
+                association: 'sizes',
+                attributes: ['sizes_type']
+            }, {
+                association: 'prices',
+                attributes: ['price']
+            }, {
+                association: 'category',
+                attributes: ['description']
+            }]
+        })
+            .then(products => {
+
+                res.render('inventory', { products })
+            })
     },
     //Create -Form to create 
     create: (req, res) => {
@@ -18,39 +38,92 @@ const inventoryController = {
     },
 
     //create - Method to store
-    store: (req, res) => {
-        const newProduct = {
-            id: products[products.length-1].id + 1,
-            ...req.body,
-            image: req.file?.filename || "default-image.jpg"
-        };
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
+    store: async (req, res) => {
+        try {
+
+            const newProduct = {
+                name: req.body.name,
+                description: req.body.description,
+                sizes_id: req.body.sizes,
+                categories_id: req.body.category,
+                timestamp: new Date(),
+                img: req.file?.filename || "default-image.jpg"
+            }
+
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) {  //si hay error renderiza la vista del create con el error de validación
+                return res.render('productCreateForm', { errors: errors.mapped(), oldData: req.body });
+            };
+
+            const productCreated = await db.Product.create(newProduct);
+            await db.ProductPrice.create({ products_id: productCreated.id, price: req.body.price,  timestamp: new Date() })
+            res.redirect('/products');
+        } catch (err) {
+            res.send(err);
+        }
     },
 
-    edit: (req, res)=>{
-        const product = products.find((product) => product.id == req.params.id);
-		res.render('productEditForm', { productToEdit: product });
-    },
+    edit:
+        async (req, res) => {
+            try {
+                const allColors = await db.Color.findAll({ attributes: ['color_name'] });
+                const allSizes = await db.Size.findAll({ attributes: ['sizes_type'] });
+                const categories = await db.Category.findAll();
+                const product = await db.Product.findByPk(req.params.id, {
+                    attributes: ['img', 'description', 'name', 'id'],
+                    include: [{
+                        association: 'sizes',
+                        attributes: ['sizes_type']
+                    }, {
+                        association: 'prices',
+                        attributes: ['price']
+                    }, {
+                        association: 'category',
+                        attributes: ['description']
+                    }]
+                });
+                res.render('productEditForm', { product, categories, allSizes, allColors });
+            } catch (error) {
+                res.send(error);
+            }
+        },
 
-    update: (req, res) => {
-		const indexProduct = products.findIndex((product) => product.id == req.params.id);
-		products[indexProduct] = {
-			...products[indexProduct],
-			...req.body
-		};
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		res.redirect('/products');
-	},
 
-    destroy: (req, res) => {
-        //const indexProduct = products.findIndex((product) => product.id == req.params.id);
-        //products.splice(indexProduct, 1);
-        products = products.filter((product) => product.id != req.params.id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products');
+        update: (req, res) => {
+            const productId = req.params.id;
+            const updatedProductData = req.body;
+        
+            console.log("Datos recibidos para actualizar:", updatedProductData);
+        
+            db.Product.update(updatedProductData, { where: { id: productId } })
+                .then(() => {
+                    
+                    return db.ProductPrice.update({ price: updatedProductData.price }, { where: { products_id: productId } });
+                })
+                .then(() => {
+                    res.redirect('/products');
+                })
+                .catch((err) => {
+                    console.error("Error al actualizar el producto:", err);
+                    res.send(err);
+                });
+        },
+
+    destroy: async (req, res) => {
+        const productId = req.params.id;
+        try {
+            await db.ProductPrice.destroy({
+                where: { products_id: productId }
+            });
+            await db.Product.destroy({
+                where: { id: productId }
+            });
+            res.redirect('/products');
+        } catch (error) {
+            res.send(error);
+        }
     }
 }
+
 
 module.exports = inventoryController;

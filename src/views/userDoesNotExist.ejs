@@ -1,0 +1,25 @@
+<% let pageTitle='Ingresá a tu cuenta' %>
+    <%- include('partials/head', { styles: ['userExists'], pageTitle: pageTitle }) %>
+
+    <body>
+
+        <main>
+    
+            <%- include('./partials/header') %>
+    
+            <div class="error-userExist">
+    
+                <h1>Cuenta no registrada</h1>
+                <p>El correo electrónico que ingresaste no se encuentra registrado en nuestro sistema. Por favor, ingresá otro correo electrónico o inicia sesión si ya tenés una cuenta.</p>
+                <a href="/user/login">Iniciar sesión</a>
+    
+            </div>
+    
+          
+    
+        </main>
+        <%- include('./partials/footer') %>
+    
+    </body>
+    
+    </html>

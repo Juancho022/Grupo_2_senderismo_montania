@@ -6,59 +6,62 @@
                 <main class="form-edit-create">
                     <div class="product-edit">
                         <div class="edit-img">
-                            <img class="img-edit-product" src="/images/<%= productToEdit.image %>">
+                            <img class="img-edit-product" src="/images/<%= product.img %>">
                             <button class="edit-image-button">
                                 Editar imágenes
                             </button>
                         </div>
-                        <form class="product-edit-form" action="/inventory/<%= productToEdit.id %>/edit?_method=PUT"
+                        <form id="product-id" class="product-edit-form" action="/inventory/<%= product.id %>/edit?_method=PUT"
                             method="post">
                             <h2 id="edit-product-title">Editar producto</h2>
                             <div class="label-product">
                                 <label for="product">Producto</label>
-                                <input type="text" class="product-imput" name="name" id="name"
-                                    placeholder="Nombre del producto" required value="<%= productToEdit.name %>">
+                                <input id="name" type="text" class="product-imput" name="name"
+                                    placeholder="Nombre del producto"  value="<%= product.name %>">
+                                    <p id="err-name" class="error-message"></p>
                             </div>
 
                             <div class="label-product">
                                 <label for="description">Descripción</label>
-                                <input type="text" class="product-imput" name="description"
-                                    placeholder="Descripción del producto" required
-                                    value="<%= productToEdit.description %>">
+                                <input id="description" type="text" class="product-imput" name="description"
+                                    placeholder="Descripción del producto"  value="<%= product.description %>">
+                                    <p id="err-description" class="error-message"></p>
                             </div>
 
                             <div class="label-product-price">
                                 <label for="price">Precio</label>
-                                <input type="text" class="product-imput-price" name="price" id="price"
-                                    placeholder="Precio del producto" required value="<%= productToEdit.price %>">
+                                <input id="price" type="text" class="product-imput-price" name="price"
+                                    placeholder="Precio del producto"  value="<%= product.prices[0].price %>">
+                                    <p id="err-price" class="error-message"></p>
                             </div>
 
                             <div class="label-product-price">
                                 <label for="discount">Descuento</label>
-                                <input type="text" id="discount" name="discount" placeholder="Ej: 15"
-                                    class="product-imput-price" value="<%= productToEdit.discount %>">
+                                <input id="discount" type="text" name="discount" placeholder="Ej: 15"
+                                    class="product-imput-price" >
+                                    <p id="err-discount" class="error-message"></p>
                             </div>
 
                             <div class="size-options">
                                 <label for="size">Talles disponibles</label>
-                                <% productToEdit.sizes.forEach((size, index)=> { %>
+                                <% allSizes.forEach((size) => { %>
                                     <label>
-                                        <input type="checkbox" name="sizes"
-                                            value="<%= productToEdit.sizes[index] === size ? size : '' %>">
-                                        <%= size %>
+                                        <input type="checkbox" name="sizes" value="<%= size.sizes_type %>">
+                                        <%= size.sizes_type %>
                                     </label>
-                                    <% }) %>
+                                <% }); %>
+                                <p id="err-sizes" class="error-message"></p>
                             </div>
 
                             <div class="color-options">
-                                <label for="color-options">Colores disponibles</label>
-                                <% productToEdit.colors.forEach((color, index)=> { %>
+                                <label for="color">Colores disponibles</label>
+                                <% allColors.forEach((color) => { %>
                                     <label>
-                                        <input type="checkbox" name="colors"
-                                            value="<%= productToEdit.colors[index] === color ? color : '' %>">
-                                        <%= color %>
+                                        <input type="checkbox" name="colors" value="<%= color.color_name %>">
+                                        <%= color.color_name %>
                                     </label>
-                                    <% }); %>
+                                <% }); %>
+                                <p id="err-colors" class="error-message"></p>
                             </div>
 
                             <div class="counter-edit-product">
@@ -70,16 +73,19 @@
 
                             <div class="product-category">
                                 <span id="category">Categoría</span>
-                                <select class="product-category-detail" id="category">
-                                    <% const categories=['Escalada', 'Accesorios' , 'Senderismo' , 'Trekking'
-                                        , 'Calzados' ]; %>
-                                        <% categories.forEach(category=> { %>
-                                            <option value="<%= category %>" <%=productToEdit.category===category
-                                                ? 'selected' : '' %>>
-                                                <%= category %>
+                                <select class="product-category-detail" id="categoryproduct">
+                                    <option value="<%= product.category.id %>" selected>
+                                        <%= product.category.description %>
+                                    </option>
+                                    <% categories.forEach(category => { %>
+                                        <% if (category.id !== product.category.id) { %>
+                                            <option value="<%= category.id %>">
+                                                <%= category.description %>
                                             </option>
-                                            <% }); %>
+                                        <% } %>
+                                    <% }); %>
                                 </select>
+                                <p id="err-categoryproduct" class="error-message"></p>
                             </div>
                             <div class="button-submit">
                                 <input type="submit" class="button-submit" value="Guardar cambios">
@@ -88,6 +94,7 @@
                     </div>
                 </main>
                 <%- include('./partials/footer') %>
+                <script src="/js/editProductValidation.js"></script>
         </body>
 
         </html>

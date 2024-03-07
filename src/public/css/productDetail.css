@@ -13,7 +13,10 @@ article.article-detail {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 24px;
-  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 33px 0px 33px 33px;
+  backdrop-filter: blur(4px); 
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 article.article-detail .img-container {
@@ -25,12 +28,20 @@ article.article-detail .img-container {
 
 article.article-detail img {
   width: 24%;
-  height: 361px;
+  height: 444px;
   object-fit: cover;
   box-shadow: inset 0px 3px 6px #00000029;
   border-radius: 33px 0px 0px 33px;
   border: solid 0.5px #b8b8b829;
 }
+
+.background{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/Fondo-productdetail.jpg'); 
+  background-size: cover;
+}
+
 
 .details-container {
   display: flex;
@@ -40,7 +51,7 @@ article.article-detail img {
 }
 
 div.title-detail h2 {
-  font-size: 2.2vw;
+  font-size: xx-large;
   display: flex;
   margin-bottom: 6px;
 }
@@ -88,7 +99,7 @@ div.colors div.color-three {
   font-size: 16px;
 }
 
-div.less {
+#less {
   border: 1px solid #000000;
   border-radius: 7px;
   margin: 6px;
@@ -96,9 +107,10 @@ div.less {
   padding-bottom: 2px;
   padding-left: 12px;
   padding-right: 12px;
+  cursor: pointer;
 }
 
-p.quantity {
+#quantity {
   margin-left: 8px;
   margin-right: 8px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
@@ -110,7 +122,7 @@ p.quantity {
   padding-right: 12px;
 }
 
-p.more {
+#more {
   border: 1px solid #D3563B;
   background-color: #D3563B;
   border-radius: 7px;
@@ -120,6 +132,7 @@ p.more {
   padding-left: 12px;
   padding-right: 12px;
   color: white;
+  cursor: pointer;
 }
 
 .price-n-cta {
@@ -130,9 +143,11 @@ p.more {
 }
 
 div.price-n-cta p.price-final {
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-weight: 800;
   margin-right: 16px;
+  align-items: center;
+  display: flex;
 }
 
 button.add-cart {
@@ -143,6 +158,7 @@ button.add-cart {
   border-radius: 4px;
   font-size: 16px;
   margin-right: 16px;
+  cursor: pointer;
 }
 
 button.add-fav {
@@ -153,6 +169,7 @@ button.add-fav {
   border-radius: 4px;
   font-size: 16px;
   margin-right: 16px;
+  cursor: pointer;
 }
 
 .off {
@@ -167,6 +184,12 @@ i.fa-solid.fa-credit-card {
   margin-right: 16px;
 }
 
+p.title-sizes {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
 p.article-description {
   font-size: 16px;
   margin-bottom: 16px;
@@ -175,23 +198,6 @@ p.article-description {
 .text-detail {
   font-size: 16px;
   display: flex;
-}
-
-div.text-detail span.tec-espec {
-  display: flex;
-  font-weight: 600;
-  border-bottom: solid 6px #EFC84C;
-  padding-bottom: 6px;
-  width: 215px;
-}
-
-div.text-detail span.personalize {
-  display: flex;
-  font-weight: 600;
-  border-bottom: solid 6px #dad9d9;
-  padding-bottom: 6px;
-  width: 124px;
-  padding-left: 6px;
 }
 
 p.tec-espec-description {
@@ -207,313 +213,46 @@ footer {
 
 /* MEDIA QUERIES START********************************** */
 
-@media (max-width: 481px) {
- 
-  p.step {
-    font-size: 4vw;
-    margin: 45px 0 0 10px;
-  }
+@media (max-width: 425px) {
+  div.title-detail h2 {
+    font-size: 2.2vw;
+}
 
-  article.article-detail {
-    display: block;
-    margin-bottom: 40%;
-  }
-
-  article.article-detail .img-container {
-    display: block; 
-    width: 50%;
-    height: auto;
+  article.article-detail img {
+    width: 100%;
   }
 
   .details-container {
     width: 100%;
   }
 
-  .title-detail {
-    position: absolute;
-    top: 25vw;
-    left: 54vw;
-  }
-
   div.title-detail h2 {
-    font-size: 5vw;
-  }
-
-  .color-n-quantity {
-    position: absolute;
-    top: 35vw;
-    left: 54vw;
-    flex-direction: column;
-    align-items: baseline;
-  }
-
-  div.colors div.color-green {
-    width: 25px;
-    height: 25px; 
-  }
-
-  div.colors div.color-yellow {
-    width: 25px;
-    height: 25px; 
-  }
-
-  .count-detail {
-    margin-left: 0px;
-    flex-wrap: nowrap;
-    margin-top: 2px;
-  }
-
-  div.less, p.quantity, p.more {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .price-n-cta {
-    flex-direction: column;
-    position: absolute;
-    top: 45vw;
-    left: 54vw;
-    gap: 8px;
-  }
-
-  div.price-n-cta p.price-final {
     font-size: 6vw;
-  }
-
-  button.add-cart, button.add-fav {
-    width: 151px;
-    height: 42px;
-    padding: 0px;
-  }
-
-  .off {
-    position: relative;
-    top: 40px;
-    left: -25px;
-    align-items: center;
-  }
-
-  p.article-description {
-    position: relative;
-    top: 76px;
-  }
-
-  p.article-description {
-    position: relative;
-    top: 35px;
-    left: -25px;
-  }
-
-  .text-detail {
-    position: relative;
-    top: 45px;
-    left: -25px;
-  }
-
-  p.tec-espec-description {
-    position: relative;
-    top: 45px;
-    left: -25px;
-  }
+    margin-bottom: 6px;
+    margin-top: 8px;
 }
 
-@media (min-width: 482px) and (max-width: 1279px) {
-
-  main {
-    height: auto;
-    margin-bottom: 100px;
-  }
-
-  p.step {
-    font-size: 2vw;
-    margin: 55px 0 0 5px;
-  }
-
-  article.article-detail {
-    display: block;
-    margin-bottom: 10%;
-  }
-
-  article.article-detail .img-container {
-    display: block; 
-    width: 50%;
-    height: auto;
-  }
-
-  .details-container {
-    width: 100%;
-  }
-
-  .title-detail {
-    position: absolute;
-    top: 15vw;
-    left: 51vw;
-  }
-
-  div.title-detail h2 {
-    font-size: 4.5vw;
-  }
-
-  .color-n-quantity {
-    position: absolute;
-    top: 23vw;
-    left: 46vw;
-    flex-direction: column;
-    align-items: baseline;
-    padding: 10px;
-  }
-
-  .count-detail {
-    margin-top: 10px;
-  }
-
-  .price-n-cta {
-    flex-direction: column;
-    position: absolute;
-    top: 35vw;
-    left: 52vw;
-    gap: 18px;
-  }
-
-  div.price-n-cta p.price-final {
-    font-size: 4vw;
-  }
-
-  .off {
-    position: relative;
-    top: 40px;
-    left: -25px;
-    align-items: center;
-  }
-
-  p.article-description {
-    position: relative;
-    top: 76px;
-  }
-
-  p.article-description {
-    position: relative;
-    top: 35px;
-    left: -25px;
-  }
-
-  .text-detail {
-    position: relative;
-    top: 45px;
-    left: -25px;
-  }
-
-  p.tec-espec-description {
-    position: relative;
-    top: 45px;
-    left: -25px;
-  }
+div.price-n-cta p.price-final {
+  font-size: 6vw;
 }
 
-@media (min-width: 769px) and (max-width: 1024px){
-.color-n-quantity {
-    left: 48vw;
+.especs-detail {
+  margin-bottom: 16px;
 }
 
-div.title-detail h2 {
+p.article-description {
+  font-size: 16px;
+  margin-bottom: 16px;
+  margin: 0px 16px;
+}
+
+.details-container {
+  margin-bottom: 64px;
+}
+
+.count-detail {
   margin-left: 8px;
 }
-}
 
 
-
-
-@media (min-width: 320px) and (max-width:375px){
-  article.article-detail img {
-      width: 63%;
-      height: 184px
-  }
-  .price-n-cta {
-    left: 65vw;
 }
-.color-n-quantity {
-  left: 65vw;
-}
-div.colors div.color-one {
-  width: 25px;
-  height: 25px;
-}
-div.colors div.color-two {
-  width: 25px;
-  height: 25px;
-}
-div.colors div.color-three {
-  width: 25px;
-  height: 25px;
-}
-div.title-detail h2 {
-  margin-left: 12vw;
-  width: 155px;
-  font-size: 4vw;
-  margin-top: 5px;
-}
-}
-
-  @media (min-width: 375px) and (max-width: 425px){
-  article.article-detail img {
-      width: 52%;
-      height: 210px;
-  }
-      div.title-detail h2 {
-        font-size: 4vw;
-        margin-top: 5px;
-  }
-}
-  
-  @media (min-width: 425px) and (max-width: 768px){
-   article.article-detail img {
-      width: 52%;
-      height: 234px;
-  }
-  div.title-detail h2 {
-    font-size: 4vw;
-    margin-top: 5px;
-}
-}
-  @media (min-width: 768px) and (max-width: 1024px){
-    article.article-detail img {
-      width: 50%;
-      height: 333px;
-  }
-}
-
-
-@media (min-width: 1024px) and (max-width: 1439px){
-  article.article-detail img {
-    width: 35%;
-    height: 382px;
-}
-
-.title-detail {
-  position: absolute;
-  top: 15vw;
-  left: 39vw;
-  display: block;
-}
-
-div.title-detail h2 {
-  margin-top: -9%;
- 
-}
-.color-n-quantity {
-  left: 36vw;
-  margin-top: -2vw;
-}
-
-.price-n-cta {
-  flex-direction: column;
-  position: absolute;
-  top: 30vw;
-  left: 40vw;
-  gap: 18px;
-}
-}
-

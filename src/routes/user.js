@@ -1,9 +1,12 @@
 const express = require('express');
-const router = express.Router();
-const multer = require('multer');
 const path = require('path');
 const userController = require('../controllers/userController');
-const { body } = require('express-validator');
+const router = express.Router();
+
+const multer = require('multer');
+
+const authMiddleware = require('../middlewares/authMiddleware');
+const validationsMiddleware = require('../middlewares/validationsMiddleware');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -15,32 +18,26 @@ const storage = multer.diskStorage({
         cb(null, filename);
     }
 });
-
-const upload = multer({storage: storage});
-
-const validations = [
-    body('firstName').notEmpty().withMessage('El nombre es requerido'),
-    body('lastName').notEmpty().withMessage('El apellido es requerido'),
-    body('email').notEmpty().withMessage('El correo es requerido')
-    .isEmail().withMessage('Ingrese un formato de correo válido'),
-    body('password').notEmpty().withMessage('La contraseña es requerida')
-];
+const upload = multer({ storage: storage });
 
 
-router.get('/register', userController.register);
 
-//procesa el register
-router.post('/register', upload.single('image'), validations, userController.registerProcess);
+router.get('/login', authMiddleware.onlyGuestUser, userController.login);
+router.post('/login', authMiddleware.onlyGuestUser, userController.loginProcess);
 
-
-router.get('/login', userController.login);
-
-//Procesar el login
-router.post('/login', userController.loginProcess);
-
-// Cerrar sesión
 router.get('/logout', userController.logout);
 
+router.get('/register', userController.register);
+router.post('/register', upload.single('img'), validationsMiddleware.signUpCheck, userController.registerProcess);
+router.get('/profile', userController.profile);
 
+//router.get("/admin", userController.admin);//falta vista
+// router.get('/adminView', userController.admin);
+
+router.get('/list', userController.list);
+
+router.get('/:id/edit', authMiddleware.authUser, userController.edit);
+router.put('/:id/edit', authMiddleware.authUser, userController.update);
+router.delete('/:id/delete', userController.delete);
 
 module.exports = router;

@@ -1,0 +1,141 @@
+<% let pageTitle='OBTENER AYUDA' %>
+    <%- include('partials/head', { styles: ['help'], pageTitle: pageTitle }) %>
+
+
+    <body>
+
+        <%- include('./promotion') %>
+        <%- include('./partials/header') %>
+
+            <main>
+
+                    <section>
+                        <h1>OBTENER AYUDA</h1>
+                    </section>
+                    <br>
+                    <div class="form">
+                        <form class="nav-search"   action="#"  method="post">
+                            <input type="text"   placeholder="¿Con qué podemos ayudarte?">
+                        </form>
+                    </div>
+                     <!-- INICIA BLOQUE DE AYUDA RAPIDA -->
+                     <section class="fast-help">
+                        <div class="encabezados">
+                            <h1 class="fast-service">PREGUNTAS FRECUENTES</h1>
+                            <p class="frecuent-questions">Las respuestas a las preguntas más frecuentes están a solo un click.</p>
+                        </div>
+                        <div class="general-questions">
+                            <div class="envio-entrega">
+                                <div class="title">
+                                    ENVÍO Y ENTREGA
+                                </div>
+                                <div class="questions">
+                                    <div class="question-sub">
+                                        ¿Cuáles son las opciones de envío de Peak?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Realizamos envíos a todo el país utilizando Correo Argentino y Andreani.</div>
+                                    <div class="question-sub">
+                                        ¿Ofrecen envío gratis?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Si! Para compras mayores a $150.000.</div>
+                                </div>
+                            </div>
+                            <div class="devoluciones">
+                                <div class="title">
+                                    DEVOLUCIONES
+                                </div>
+                                <div class="questions">
+                                    <div class="question-sub">
+                                        ¿Cuál es la política de devoluciones de Peak?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Tenés 30 días para devolver tu producto siempre que cuente con su etiqueta. Y lo mejor es que el envío es gratis.</div>
+                                    <div class="question-sub">
+                                        ¿Cuándo veré mi reintegro?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">El reintegro se procesa dentro de los 5-7 días hábiles después de recibir el producto devuelto.</div>
+                                </div>
+                            </div>
+                            <div class="pedidos">
+                                <div class="title">
+                                    PEDIDOS
+                                </div>
+                                <div class="questions">
+                                    <div class="question-sub">
+                                        ¿Qué métodos de pago puedo utilizar para hacer pedidos?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Aceptamos MercadoPago, Tarjetas de crédito/débito y Transferencia bancaria.</div>
+                                    <div class="question-sub">
+                                        ¿Puedo cancelar o cambiar mi pedido?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Sí, puedes cancelar o cambiar tu pedido antes de que sea enviado.</div>
+                                </div>
+                            </div>
+                            <div class="informacion producto">
+                                <div class="title">
+                                    INFORMACIÓN DEL PRODUCTO
+                                </div>
+                                <div class="questions">
+                                    <div class="question-sub">
+                                        ¿Los productos tienen garantía?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Todas nuestras prendas tienen garantía de un año por desperfecto de fabricación.</div>
+                                    <div class="question-sub">
+                                        ¿Cómo encuentro el talle adecuado?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Podés encontrar tu talle buscando las medidas en la tabla de talles que indica cada producto.</div>
+                                </div>
+                            </div>
+                            <div class="corporativo">
+                                <div class="title">
+                                    CORPORATIVO
+                                </div>
+                                <div class="questions">
+                                    <div class="question-sub">
+                                        ¿Dónde puedo obtener más información acerca de Peak?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">En nuestra página en la sección de <a href="/aboutus">QUIÉNES SOMOS</a>.</div>
+                                    <div class="question-sub">
+                                        ¿Cómo me entero de las promociones?
+                                        <span class="toggle">+</span>
+                                    </div>
+                                    <div class="answer" style="display:none;">Suscribiéndote a nuestras notificaciones al final de esta página.</div>
+                                </div>
+                            </div>
+                        </div>
+                     </section>
+
+                     <div class="asistencia">
+                        Si no respondiste tus dudas, envianos un <span> WhatsApp al 01153689547</span>. Es nuestro número de asistencia al cliente. Estamos disponibles en días hábiles las 24hs.
+                     </div>
+
+                     <div id="map"></div>
+                         <!--Botón Suscribirse-->
+    <div class="container-sub">
+        <div class="conten-sub">
+        <h2>Suscribite a nuestras notificaciones</h2>
+        <p>Enterate de nuestras promociones y beneficios</p>
+        <form action="#"> 
+            <input type="email" class="data" placeholder="Introducí tu correo electrónico" maxlength="25" required>
+            <input type="submit" value="Suscribirme" class="btn-sub">
+        </form>
+        </div>
+    </div>
+            </main>
+            <script src="/js/maps.js"></script>
+            <script src="/js/faqs.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+            
+        <%- include('./partials/footer') %>
+
+    </body>
+
+</html>
